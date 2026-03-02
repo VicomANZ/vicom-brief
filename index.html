@@ -130,8 +130,8 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--light-grey);c
 
 <script>
 // ====== CONFIG — UPDATE AFTER DEPLOY ======
-const DATA_URL = './';
-const INDEX_URL = './index.json'; // auto-generated list of available dates
+const DATA_URL = './data/';
+const INDEX_URL = './data/index.json'; // auto-generated list of available dates
 
 // ====== STATE ======
 let allDates = [];
@@ -468,15 +468,107 @@ function aggregateKpis(datesInRange) {
   return data;
 }
 
-function renderAggregateView(title, subtitle, datesInRange) {
+// KPI target scaling rules
+// Weekly targets (per week): LinkedIn Posts 3, EDMs 1, Website Pages 1, Product Pages 1, SEO Pages 1, LinkedIn Connections 1
+// Monthly targets (per month): VIAVI EDM 1, Tektronix EDM 1
+const weeklyKpis = {'LinkedIn Posts':3,'EDMs Sent':1,'Website Pages Built':1,'Product Pages Built':1,'SEO Pages Optimised':1,'LinkedIn Connections':1};
+const monthlyKpis = {'VIAVI EDM (month)':1,'Tektronix EDM (month)':1};
+
+function scaleTarget(label, period) {
+  // period: 'weekly','monthly','quarterly','annual'
+  if (weeklyKpis[label] !== undefined) {
+    const wt = weeklyKpis[label];
+    if (period === 'weekly') return wt;
+    if (period === 'monthly') return wt * 4;
+    if (period === 'quarterly') return wt * 13;
+    if (period === 'annual') return wt * 52;
+  }
+  if (monthlyKpis[label] !== undefined) {
+    const mt = monthlyKpis[label];
+    if (period === 'weekly') return mt; // show monthly target even in weekly
+    if (period === 'monthly') return mt;
+    if (period === 'quarterly') return mt * 3;
+    if (period === 'annual') return mt * 12;
+  }
+  return null; // unknown, use latest snapshot
+}
+
+function getCumulativeKpis(datesInRange, period) {
+  // Use the LATEST day's "current" values as cumulative (agents already track cumulative within their period)
+  // For multi-week/month periods, sum the MAX "current" from each week/month
+  const latest = allData[datesInRange[datesInRange.length - 1]];
+  if (!latest) return { content: [], website: [] };
+
+  // For weekly view, just use latest snapshot (agents track weekly cumulative)
+  if (period === 'weekly') {
+    return {
+      content: (latest.kpis?.content||[]).map(k => ({
+        label: k.label, current: k.current, target: scaleTarget(k.label, period) ?? k.target
+      })),
+      website: (latest.kpis?.website||[]).map(k => ({
+        label: k.label, current: k.current, target: scaleTarget(k.label, period) ?? k.target
+      }))
+    };
+  }
+
+  // For monthly/quarterly/annual, find the peak "current" per week for weekly KPIs
+  // and per month for monthly KPIs, then sum across periods
+  const weekBuckets = {};
+  const monthBuckets = {};
+  datesInRange.forEach(d => {
+    const dd = allData[d];
+    if (!dd) return;
+    const wk = getWeek(d).start;
+    const mo = getMonth(d);
+    if (!weekBuckets[wk]) weekBuckets[wk] = {};
+    if (!monthBuckets[mo]) monthBuckets[mo] = {};
+    // Track max per KPI per week
+    [...(dd.kpis?.content||[]), ...(dd.kpis?.website||[])].forEach(k => {
+      if (weeklyKpis[k.label] !== undefined) {
+        weekBuckets[wk][k.label] = Math.max(weekBuckets[wk][k.label]||0, k.current);
+      }
+      if (monthlyKpis[k.label] !== undefined) {
+        monthBuckets[mo][k.label] = Math.max(monthBuckets[mo][k.label]||0, k.current);
+      }
+    });
+  });
+
+  // Sum across weeks for weekly KPIs
+  const weeklyTotals = {};
+  Object.values(weekBuckets).forEach(wk => {
+    Object.entries(wk).forEach(([label, val]) => {
+      weeklyTotals[label] = (weeklyTotals[label]||0) + val;
+    });
+  });
+
+  // Sum across months for monthly KPIs
+  const monthlyTotals = {};
+  Object.values(monthBuckets).forEach(mo => {
+    Object.entries(mo).forEach(([label, val]) => {
+      monthlyTotals[label] = (monthlyTotals[label]||0) + val;
+    });
+  });
+
+  const buildKpi = (k) => {
+    let current = k.current;
+    if (weeklyKpis[k.label] !== undefined && weeklyTotals[k.label] !== undefined) current = weeklyTotals[k.label];
+    if (monthlyKpis[k.label] !== undefined && monthlyTotals[k.label] !== undefined) current = monthlyTotals[k.label];
+    return { label: k.label, current, target: scaleTarget(k.label, period) ?? k.target };
+  };
+
+  return {
+    content: (latest.kpis?.content||[]).map(buildKpi),
+    website: (latest.kpis?.website||[]).map(buildKpi)
+  };
+}
+
+function renderAggregateView(title, subtitle, datesInRange, period) {
   if (!datesInRange.length) {
     $('content').innerHTML = `<div class="no-data">No data available for ${title}.</div>`;
     return;
   }
 
-  // Load all needed data
   const latest = allData[datesInRange[datesInRange.length - 1]];
-  const earliest = allData[datesInRange[0]];
   if (!latest) {
     $('content').innerHTML = `<div class="no-data">No data available for ${title}.</div>`;
     return;
@@ -484,6 +576,7 @@ function renderAggregateView(title, subtitle, datesInRange) {
 
   const daysReporting = datesInRange.filter(d => allData[d]).length;
   const totalDays = datesInRange.length;
+  const numWeeks = Object.keys((() => { const b={}; datesInRange.forEach(d => b[getWeek(d).start]=1); return b; })()).length;
 
   // Count agents across period
   let totalAgentReports = 0, totalPossible = 0;
@@ -495,40 +588,63 @@ function renderAggregateView(title, subtitle, datesInRange) {
     }
   });
 
+  // Get cumulative KPIs
+  const kpis = getCumulativeKpis(datesInRange, period);
+  const allK = [...kpis.content, ...kpis.website];
+  const onTrack = allK.filter(k => k.current >= k.target).length;
+
   let h = `<div class="cd" style="margin-bottom:16px;border-left:3px solid var(--dark-blue)">
     <div style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px">${title}</div>
-    <div style="font-size:13px;color:var(--text-dim)">${subtitle} · ${daysReporting} day${daysReporting!==1?'s':''} of data</div>
+    <div style="font-size:13px;color:var(--text-dim)">${subtitle} · ${daysReporting} day${daysReporting!==1?'s':''} of data · ${numWeeks} week${numWeeks!==1?'s':''}</div>
+  </div>`;
+
+  // Stats row
+  h += `<div class="sr" style="margin-bottom:16px">
+    <div class="sc"><div class="sl">KPIs On Track</div><div class="sv" style="color:var(--green)">${onTrack}<span class="sub">/${allK.length}</span></div></div>
+    <div class="sc"><div class="sl">Days Reporting</div><div class="sv" style="color:var(--dark-blue)">${daysReporting}<span class="sub">/${totalDays}</span></div></div>
+    <div class="sc"><div class="sl">Overdue Renewals</div><div class="sv" style="color:var(--red)">${latest.finance?.overdue?.length||0}</div></div>
+    <div class="sc"><div class="sl">Active Subs</div><div class="sv" style="color:var(--dark-blue)">${latest.finance?.totals?.active_subs||0}</div></div>
   </div>`;
 
   h += '<div class="g2">';
 
-  // Content KPIs (latest snapshot)
+  // Content KPIs with progress bars
   h += '<div class="cd"><div class="wst">Content & Campaigns</div>';
-  (latest.kpis?.content||[]).forEach(k => {
-    const col = k.current >= k.target ? 'var(--green)' : 'var(--red)';
-    h += `<div class="wm"><span class="mn">${k.label}</span><span class="mv" style="color:${col}">${k.current}/${k.target}</span></div>`;
+  kpis.content.forEach(k => {
+    const ok = k.current >= k.target;
+    const pct = k.target > 0 ? Math.min((k.current/k.target)*100, 100) : 0;
+    const col = ok ? 'var(--green)' : 'var(--red)';
+    const lbl = ok ? '&#10003; ON TRACK' : '&#10007; BEHIND';
+    h += `<div class="kr"><div class="kh"><span class="kl">${k.label}</span><span class="ks" style="color:${col}">${lbl}</span></div><div class="pw"><div class="pt"><div class="pf" style="width:${pct}%;background:${col}"></div></div><span style="font-size:13px;font-weight:700;color:${col};min-width:40px;text-align:right">${k.current}/${k.target}</span></div></div>`;
   });
-  if (latest.content?.promotions) h += `<div class="wm"><span class="mn">Active Promotions</span><span class="mv" style="color:var(--navy)">${latest.content.promotions.count}</span></div>`;
+  if (latest.content?.promotions) h += `<div style="margin-top:10px" class="wm"><span class="mn">Active Promotions</span><span class="mv" style="color:var(--navy)">${latest.content.promotions.count}</span></div>`;
   h += '</div>';
 
-  // Website KPIs
+  // Website KPIs with progress bars
   h += '<div class="cd"><div class="wst">Website & SEO</div>';
-  (latest.kpis?.website||[]).forEach(k => {
-    const col = k.current >= k.target ? 'var(--green)' : 'var(--red)';
-    h += `<div class="wm"><span class="mn">${k.label}</span><span class="mv" style="color:${col}">${k.current}/${k.target}</span></div>`;
+  kpis.website.forEach(k => {
+    const ok = k.current >= k.target;
+    const pct = k.target > 0 ? Math.min((k.current/k.target)*100, 100) : 0;
+    const col = ok ? 'var(--green)' : 'var(--red)';
+    const lbl = ok ? '&#10003; ON TRACK' : '&#10007; BEHIND';
+    h += `<div class="kr"><div class="kh"><span class="kl">${k.label}</span><span class="ks" style="color:${col}">${lbl}</span></div><div class="pw"><div class="pt"><div class="pf" style="width:${pct}%;background:${col}"></div></div><span style="font-size:13px;font-weight:700;color:${col};min-width:40px;text-align:right">${k.current}/${k.target}</span></div></div>`;
   });
   if (latest.website?.backlogs) {
+    h += '<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)">';
     h += `<div class="wm"><span class="mn">Website Pages Backlog</span><span class="mv" style="color:var(--navy)">${latest.website.backlogs.website_pages}</span></div>`;
     h += `<div class="wm"><span class="mn">Product Pages Backlog</span><span class="mv" style="color:var(--navy)">${latest.website.backlogs.product_pages}</span></div>`;
     h += `<div class="wm"><span class="mn">SEO Backlog</span><span class="mv" style="color:${latest.website.backlogs.seo===0?'var(--red)':'var(--navy)'}">${latest.website.backlogs.seo}</span></div>`;
+    h += '</div>';
   }
   h += '</div>';
 
   // Events
   h += '<div class="cd"><div class="wst">Events & Exhibitions</div>';
   (latest.events||[]).forEach(evt => {
-    h += `<div class="wm"><span class="mn">${evt.name}</span><span class="mv" style="color:var(--dark-blue)">${evt.tasks_complete}/${evt.tasks_total} tasks</span></div>`;
-    h += `<div class="wm"><span class="mn" style="padding-left:12px;font-size:12px">Days until event</span><span class="mv" style="color:var(--navy)">${evt.days_out}</span></div>`;
+    const pct = evt.tasks_total > 0 ? Math.round((evt.tasks_complete/evt.tasks_total)*100) : 0;
+    h += `<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span class="mn" style="font-weight:600">${evt.name}</span><span class="badge b-navy">${evt.days_out} DAYS</span></div>`;
+    h += `<div class="ls" style="margin-bottom:6px">${evt.date} · ${evt.location}</div>`;
+    h += `<div class="pw"><div class="pt"><div class="pf" style="width:${pct}%;background:var(--dark-blue)"></div></div><span style="font-size:12px;font-weight:700;color:var(--dark-blue);min-width:50px;text-align:right">${evt.tasks_complete}/${evt.tasks_total}</span></div></div>`;
   });
   h += '</div>';
 
@@ -536,25 +652,30 @@ function renderAggregateView(title, subtitle, datesInRange) {
   h += '<div class="cd"><div class="wst">Finance & Admin</div>';
   if (latest.finance?.totals) {
     h += `<div class="wm"><span class="mn">Monthly Software Cost</span><span class="mv" style="color:var(--navy)">$${latest.finance.totals.monthly}/mo</span></div>`;
-    h += `<div class="wm"><span class="mn">Annual Equivalent</span><span class="mv" style="color:var(--navy)">$${latest.finance.totals.annual?.toLocaleString()}/yr</span></div>`;
+    h += `<div class="wm"><span class="mn">Annual Equivalent</span><span class="mv" style="color:var(--navy)">$${(latest.finance.totals.annual||0).toLocaleString()}/yr</span></div>`;
     h += `<div class="wm"><span class="mn">Active Subscriptions</span><span class="mv" style="color:var(--navy)">${latest.finance.totals.active_subs}</span></div>`;
     h += `<div class="wm"><span class="mn">Thomas Card Owed</span><span class="mv" style="color:#b45309">$${latest.finance.totals.thomas_monthly}/mo</span></div>`;
     h += `<div class="wm"><span class="mn">Overdue Renewals</span><span class="mv" style="color:var(--red)">${latest.finance.overdue?.length||0}</span></div>`;
   }
+  if (latest.finance?.overdue?.length) {
+    h += '<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">';
+    latest.finance.overdue.forEach(r => h += `<div class="wm"><span class="mn" style="color:var(--red)">${r.name} <span style="font-weight:400;color:var(--text-dim)">(${r.days}d overdue)</span></span><span class="mv" style="color:var(--red)">${r.cost}</span></div>`);
+    h += '</div>';
+  }
   h += '</div>';
 
-  // Meetings summary across period
-  h += '<div class="cd"><div class="wst">Meetings (Period)</div>';
+  // Meetings
+  h += '<div class="cd"><div class="wst">Meetings</div>';
   let meetingsScheduled = 0, followUps = 0;
   datesInRange.forEach(d => {
     const dd = allData[d];
     if (dd?.meetings) {
-      meetingsScheduled += (dd.meetings.today?.length||0) + (dd.meetings.tomorrow?.length||0);
+      meetingsScheduled += (dd.meetings.today?.length||0);
       followUps = Math.max(followUps, dd.meetings.follow_up?.length||0);
     }
   });
-  h += `<div class="wm"><span class="mn">Days with Data</span><span class="mv" style="color:var(--navy)">${daysReporting}</span></div>`;
-  h += `<div class="wm"><span class="mn">Outstanding Follow-Ups</span><span class="mv" style="color:var(--red)">${followUps}</span></div>`;
+  h += `<div class="wm"><span class="mn">Meetings Held</span><span class="mv" style="color:var(--navy)">${meetingsScheduled}</span></div>`;
+  h += `<div class="wm"><span class="mn">Outstanding Follow-Ups</span><span class="mv" style="color:${followUps>0?'var(--red)':'var(--green)'}">${followUps}</span></div>`;
   h += '</div>';
 
   // Agent Health
@@ -576,9 +697,8 @@ function renderAggregateView(title, subtitle, datesInRange) {
 function renderWeeklySummary(ds) {
   const wk = getWeek(ds);
   const datesInRange = allDates.filter(d => d >= wk.start && d <= wk.end);
-  // Preload
   Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
-    renderAggregateView(`Week of ${wk.label}`, 'Weekly KPI tracking and operational overview', datesInRange);
+    renderAggregateView(`Week of ${wk.label}`, 'Weekly KPI tracking', datesInRange, 'weekly');
   });
 }
 
@@ -586,7 +706,7 @@ function renderMonthlySummary(ds) {
   const mo = getMonth(ds);
   const datesInRange = allDates.filter(d => getMonth(d) === mo);
   Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
-    renderAggregateView(monthLabel(ds), 'Monthly performance summary', datesInRange);
+    renderAggregateView(monthLabel(ds), 'Monthly performance', datesInRange, 'monthly');
   });
 }
 
@@ -601,7 +721,7 @@ function renderQuarterlySummary(ds) {
     return d.slice(0,4) === y && dm >= qStart && dm <= qEnd;
   });
   Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
-    renderAggregateView(qLabel(q), 'Quarterly performance summary', datesInRange);
+    renderAggregateView(qLabel(q), 'Quarterly performance', datesInRange, 'quarterly');
   });
 }
 
@@ -609,7 +729,7 @@ function renderAnnualSummary(ds) {
   const y = getYear(ds);
   const datesInRange = allDates.filter(d => getYear(d) === y);
   Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
-    renderAggregateView(y + ' Annual Summary', 'Year-to-date performance overview', datesInRange);
+    renderAggregateView(y + ' Annual Summary', 'Year-to-date performance', datesInRange, 'annual');
   });
 }
 
