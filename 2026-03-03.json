@@ -1,0 +1,132 @@
+{
+  "date": "2026-03-03",
+  "date_label": "Tue 3 Mar 2026",
+  "week_label": "Week of 2 Mar — 6 Mar 2026",
+  "agents": {
+    "reporting": ["Event Coordinator", "Operations & Meetings", "Finance & Admin", "Content & Campaigns", "Website & SEO"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    {"text": "Vicom Marketing Meeting TODAY (9AM) — no agenda or prep materials set.", "source": "Meetings", "severity": "critical"},
+    {"text": "Canva Pro annual renewal TODAY — $164.99/yr Vicom CC. Confirm renewal.", "source": "Finance", "severity": "critical"},
+    {"text": "Claude AI 1 day overdue — $29/mo Thomas's card. Cancel/downgrade to Manus per notes.", "source": "Finance", "severity": "critical"},
+    {"text": "ClickUp Pro 6 days overdue — $26.60/mo Thomas's card. Switch to annual?", "source": "Finance", "severity": "critical"},
+    {"text": "Sucuri 21 days overdue — $860/yr Vicom CC. Confirm payment or cancel.", "source": "Finance", "severity": "critical"},
+    {"text": "No EDMs scheduled this week or month — VIAVI and Tektronix both at 0 for March.", "source": "Content", "severity": "critical"},
+    {"text": "Buffer annual renewal & auto-upgrade Mar 11 — $420/yr Thomas's card. Confirm.", "source": "Finance", "severity": "high"},
+    {"text": "Marketing Plan Tracking (Feb 26) — no action items logged, 5 days since meeting.", "source": "Meetings", "severity": "high"},
+    {"text": "Cognito Forms renewal date not recorded — $162/yr Vicom CC. Add renewal date.", "source": "Finance", "severity": "high"},
+    {"text": "Quantum Australia & Comms Connect NZ have zero content planned.", "source": "Events", "severity": "high"},
+    {"text": "SEO backlog jumped to 100 pages but 0 optimised this week — start optimisation.", "source": "Website", "severity": "high"},
+    {"text": "4 Thomas-paid subs without PEC claims — Claude, Buffer, ClickUp, Zapier ($119.60/mo).", "source": "Finance", "severity": "high"}
+  ],
+  "kpis": {
+    "content": [
+      {"label": "LinkedIn Posts", "current": 2, "target": 3},
+      {"label": "EDMs Sent", "current": 0, "target": 1},
+      {"label": "VIAVI EDM (month)", "current": 0, "target": 1},
+      {"label": "Tektronix EDM (month)", "current": 0, "target": 1},
+      {"label": "LinkedIn Connections", "current": 0, "target": 1}
+    ],
+    "website": [
+      {"label": "Website Pages Built", "current": 7, "target": 1},
+      {"label": "Product Pages Built", "current": 1, "target": 1},
+      {"label": "SEO Pages Optimised", "current": 0, "target": 1}
+    ]
+  },
+  "meetings": {
+    "today": [
+      {"name": "Vicom Marketing Meeting", "time": "9:00 AM", "type": "Vicom Internal", "participants": "Aveet, Thomas, Andrew, Shaneel", "warning": "NO AGENDA"}
+    ],
+    "tomorrow": [],
+    "upcoming": [],
+    "follow_up": [
+      {"name": "Marketing Plan Tracking & Analysis (Feb 26)", "issue": "No action items logged — 5 days since meeting. Review notes and create follow-ups."}
+    ]
+  },
+  "content": {
+    "due_today": [
+      {"name": "X EDGE Mining", "partner": "VIAVI", "type": "LinkedIn + GMB", "status": "published"}
+    ],
+    "due_this_week": [],
+    "promotions": {
+      "count": 7,
+      "items": ["Keithley 4200A-SCS Trade-In", "AI Wave Oscilloscope Upgrade", "50% Off 4/5/6 Series Upgrades", "Power Play Bundle", "2 Series Free Upgrade", "3 Series Bandwidth Upgrade", "Trade-In 30% Off"],
+      "ending_soon": 0,
+      "end_note": "6 end 31 Mar 2026, 1 ends 31 Dec 2026. None ending within 14 days."
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "15-16 Apr 2026",
+      "location": "Canberra ACT",
+      "days_out": 43,
+      "tasks_complete": 10,
+      "tasks_total": 12,
+      "flags": ["Website banner & LinkedIn event creation due tomorrow (Mar 4) — already marked complete", "All pre-event content milestones complete", "Ship to Sydney warehouse still upcoming"]
+    },
+    {
+      "name": "Quantum Australia Conference",
+      "date": "27-29 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 56,
+      "tasks_complete": 0,
+      "tasks_total": 5,
+      "flags": ["No EDMs, LinkedIn, or website content planned", "No travel or accommodation booked", "No COOP or budget recorded", "No booth number assigned"]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "26-27 May 2026",
+      "location": "Auckland NZ",
+      "days_out": 85,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["No content planned (EDMs, LinkedIn, website)", "No travel, staffing, or shipping planned", "No COOP or budget recorded"]
+    }
+  ],
+  "website": {
+    "backlogs": {"website_pages": 41, "product_pages": 2, "seo": 100},
+    "suggested": [
+      {"name": "DMA Product Collections", "type": "Website"},
+      {"name": "EA-BIM 20000 Series Battery Impedance Meters", "type": "Product"},
+      {"name": "Oscilloscopes & Probes", "type": "SEO"}
+    ],
+    "seo_warning": "100 SEO backlog items added this week but 0 optimised. Start with Oscilloscopes & Probes."
+  },
+  "finance": {
+    "totals": {"monthly": 335, "annual": 4021, "thomas_monthly": 120, "active_subs": 12},
+    "overdue": [
+      {"name": "Sucuri", "days": 21, "cost": "$860/yr", "card": "Vicom CC"},
+      {"name": "ClickUp Pro", "days": 6, "cost": "$26.60/mo", "card": "Thomas"},
+      {"name": "Claude AI", "days": 1, "cost": "$29/mo", "card": "Thomas"}
+    ],
+    "renewals_this_week": [
+      {"name": "Canva Pro", "date": "TODAY", "cost": "$164.99/yr", "card": "Vicom CC", "note": "Confirm renewal"},
+      {"name": "Buffer", "date": "Mar 11", "cost": "$420/yr", "card": "Thomas", "note": "Auto-upgrade planned, confirm"}
+    ],
+    "thomas_card": [
+      {"name": "Claude AI", "cost": "$29/mo", "pec": "unknown"},
+      {"name": "Buffer", "cost": "$35/mo equiv", "pec": "unknown"},
+      {"name": "ClickUp Pro", "cost": "$26.60/mo", "pec": "unknown"},
+      {"name": "Zapier PRO", "cost": "$29/mo equiv", "pec": "unknown"}
+    ],
+    "pec_note": "4 subs, $119.60/mo total on Thomas's card. No PEC claims matching by service name."
+  },
+  "actions": [
+    {"category": "Finance — Act NOW", "items": ["Confirm Canva Pro renewal TODAY ($164.99/yr Vicom CC)", "Cancel/downgrade Claude AI — 1 day overdue, notes say switch to Manus", "Confirm ClickUp Pro charge (6 days overdue), decide annual switch", "Check Sucuri status — 21 days overdue, still needed?"]},
+    {"category": "Finance — This Week", "items": ["Review Buffer auto-upgrade before Mar 11", "Submit PEC claims for Thomas-paid subs (Claude, Buffer, ClickUp, Zapier)", "Add Cognito Forms renewal date to tracking"]},
+    {"category": "Meetings — Act NOW", "items": ["Add agenda to Vicom Marketing Meeting (TODAY 9AM)"]},
+    {"category": "Meetings — This Week", "items": ["Process Marketing Plan Tracking notes (Feb 26) into action items", "Capture notes and actions from today's marketing meeting"]},
+    {"category": "Content", "items": ["Schedule VIAVI EDM this month", "Schedule Tektronix EDM this month", "Create LinkedIn Connection request task for this week", "Add custom fields to LinkedIn Connections & Webinars lists"]},
+    {"category": "Events", "items": ["Plan Quantum Australia content sequence (EDMs + LinkedIn)", "Plan Comms Connect NZ content sequence", "Book Quantum Australia travel & accommodation", "Submit Quantum Australia COOP request"]},
+    {"category": "Website & SEO", "items": ["Start first SEO optimisation — Oscilloscopes & Probes", "Finish EA-PUB/PUL/PU Industrial Power Units (in progress)", "Set Page URL and Target Keywords on in-progress pages", "Pick next website page from backlog (DMA Collections suggested)"]}
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 1,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 1
+  }
+}
