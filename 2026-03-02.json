@@ -1,0 +1,146 @@
+{
+  "date": "2026-03-02",
+  "date_label": "Mon 2 Mar 2026",
+  "week_label": "Week of 2 Mar — 6 Mar 2026",
+  "agents": {
+    "reporting": ["Event Coordinator", "Operations & Meetings", "Finance & Admin", "Content & Campaigns", "Website & SEO"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    {"text": "Claude AI renews TODAY — cancel/downgrade to Manus per notes. $29/mo on Thomas's card.", "source": "Finance", "severity": "critical"},
+    {"text": "Vicom Marketing Meeting TOMORROW (Tue Mar 3, 9AM) — no agenda, checklist, or prep materials.", "source": "Meetings", "severity": "critical"},
+    {"text": "Sucuri 20 days overdue — $860/yr Vicom CC. Confirm payment or cancel.", "source": "Finance", "severity": "critical"},
+    {"text": "ClickUp Pro 5 days overdue — $26.60/mo Thomas's card. Switch to annual?", "source": "Finance", "severity": "critical"},
+    {"text": "Quantum Australia — 4 prep tasks due TOMORROW (EDM, SketchUp, Merch, Website).", "source": "Events", "severity": "critical"},
+    {"text": "No VIAVI or Tektronix EDM this month yet — new month starts today.", "source": "Content", "severity": "critical"},
+    {"text": "Canva Pro annual renewal tomorrow (Mar 3) — $164.99/yr Vicom CC, confirm.", "source": "Finance", "severity": "high"},
+    {"text": "Buffer annual renewal & auto-upgrade Mar 11 — $35/mo equiv, Thomas's card.", "source": "Finance", "severity": "high"},
+    {"text": "Tektronix QBR Mar 19 — no description, agenda, or deck. Start prep.", "source": "Meetings", "severity": "high"},
+    {"text": "4 past meetings with no notes/follow-up (Southern Lights, StudioHawk, Marketing Feb 16 & 23).", "source": "Meetings", "severity": "high"},
+    {"text": "4 Thomas-paid subs without PEC claims — Claude, Buffer, ClickUp, Zapier ($119.60/mo).", "source": "Finance", "severity": "high"}
+  ],
+  "kpis": {
+    "content": [
+      {"label": "LinkedIn Posts", "current": 2, "target": 3},
+      {"label": "EDMs Sent", "current": 0, "target": 1},
+      {"label": "VIAVI EDM (month)", "current": 0, "target": 1},
+      {"label": "Tektronix EDM (month)", "current": 0, "target": 1},
+      {"label": "LinkedIn Connections", "current": 0, "target": 1}
+    ],
+    "website": [
+      {"label": "Website Pages Built", "current": 0, "target": 1},
+      {"label": "Product Pages Built", "current": 0, "target": 1},
+      {"label": "SEO Pages Optimised", "current": 0, "target": 1}
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [
+      {"name": "Vicom Marketing Meeting", "time": "9:00 AM", "type": "Vicom Internal", "participants": "Aveet, Thomas, Andrew, Shaneel", "warning": "NO AGENDA"}
+    ],
+    "upcoming": [
+      {"name": "Tektronix QBR Meeting", "date": "Thu Mar 19", "time": "4:00 AM", "type": "Partner", "warning": "NO PREP"}
+    ],
+    "follow_up": [
+      {"name": "Southern Lights Disrupt Meeting (Feb 17)", "issue": "No notes/summary/action items — 13 days ago"},
+      {"name": "Vicom X StudioHawk (Feb 17)", "issue": "No notes/summary/action items — 13 days ago"},
+      {"name": "Marketing Plan Tracking (Feb 26)", "issue": "Notes in description but no explicit summary or action items — 4 days ago"},
+      {"name": "Cancelled Marketing Meeting (Feb 23)", "issue": "Cancelled — confirm agenda items moved to Mar 3 replacement"},
+      {"name": "Vicom Marketing Meeting (Feb 16)", "issue": "Complete with no notes or action items — 15 days ago"}
+    ]
+  },
+  "content": {
+    "due_today": [
+      {"name": "Electrification of Aviation [EA Bidirectional Power Supplies]", "partner": "Tektronix", "type": "LinkedIn + GMB", "status": "published"}
+    ],
+    "due_this_week": [
+      {"name": "X EDGE Mining", "partner": "VIAVI", "date": "Tue Mar 3", "status": "scheduled"}
+    ],
+    "promotions": {
+      "count": 7,
+      "items": ["Keithley 4200A-SCS Trade-In", "AI Wave Oscilloscope Upgrade", "50% Off 4/5/6 Series Upgrades", "Power Play Bundle", "2 Series Free Upgrade", "3 Series Bandwidth Upgrade", "Trade-In 30% Off"],
+      "ending_soon": 0,
+      "end_note": "6 end 30 Mar 2026, 1 ends 30 Dec 2026. None ending within 14 days."
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "16 Apr 2026",
+      "location": "Canberra ACT",
+      "days_out": 45,
+      "tasks_complete": 7,
+      "tasks_total": 12,
+      "flags": ["Ship to Sydney warehouse — due 8 Mar", "Transport van booking — due 15 Mar", "No event-specific EDMs or LinkedIn posts scheduled"]
+    },
+    {
+      "name": "Quantum Australia Conference",
+      "date": "29 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 58,
+      "tasks_complete": 0,
+      "tasks_total": 5,
+      "flags": ["4 tasks due TOMORROW (Mar 3): EDM, SketchUp, Merch, Website", "No content promoting the conference", "COOP not yet submitted"]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "Auckland NZ",
+      "days_out": 86,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["4 prep tasks due 31 Mar"]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Location TBD",
+      "days_out": 93,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["4 prep tasks due 7 Apr", "Location not set"]
+    }
+  ],
+  "website": {
+    "backlogs": {"website_pages": 12, "product_pages": 3, "seo": 0},
+    "suggested": [
+      {"name": "DMA Product Collections", "type": "Website"},
+      {"name": "EA-BIM 20000 Series Battery Impedance Meters", "type": "Product"}
+    ],
+    "seo_warning": "SEO backlog empty — add pages to enable weekly optimisation KPI."
+  },
+  "finance": {
+    "totals": {"monthly": 335, "annual": 4021, "thomas_monthly": 120, "active_subs": 13},
+    "overdue": [
+      {"name": "Sucuri", "days": 20, "cost": "$860/yr", "card": "Vicom CC"},
+      {"name": "ClickUp Pro", "days": 5, "cost": "$26.60/mo", "card": "Thomas"}
+    ],
+    "renewals_this_week": [
+      {"name": "Claude AI", "date": "TODAY", "cost": "$29/mo", "card": "Thomas", "note": "Cancel/downgrade to Manus"},
+      {"name": "Canva Pro", "date": "Mar 3", "cost": "$164.99/yr", "card": "Vicom CC", "note": "Confirm continued use"}
+    ],
+    "thomas_card": [
+      {"name": "Claude AI", "cost": "$29/mo", "pec": "unknown"},
+      {"name": "Buffer", "cost": "$35/mo equiv", "pec": "unknown"},
+      {"name": "ClickUp Pro", "cost": "$26.60/mo", "pec": "unknown"},
+      {"name": "Zapier PRO", "cost": "$29/mo equiv", "pec": "unknown"}
+    ],
+    "pec_note": "4 subs, $119.60/mo total on Thomas's card. No PEC claims by service name. 1 PEC (12 Feb) approved, awaiting reimbursement."
+  },
+  "actions": [
+    {"category": "Finance — Act NOW", "items": ["Cancel/downgrade Claude AI — renews TODAY", "Confirm ClickUp Pro charge (5 days overdue), decide annual switch", "Check Sucuri status — 20 days overdue, still needed?"]},
+    {"category": "Finance — This Week", "items": ["Confirm Canva Pro renewal tomorrow (Mar 3)", "Review Buffer auto-upgrade before Mar 11", "Submit PEC claims for Thomas-paid subs", "Close PEC Claim 12.02.2026 once reimbursement confirmed"]},
+    {"category": "Meetings — Act TODAY", "items": ["Prep agenda for Vicom Marketing Meeting TOMORROW (9AM)", "Confirm cancelled Feb 23 items moved to Mar 3 agenda"]},
+    {"category": "Meetings — This Week", "items": ["Close out Southern Lights meeting (Feb 17)", "Close out StudioHawk meeting (Feb 17)", "Close out Feb 16 Marketing Meeting", "Start Tektronix QBR deck prep (Mar 19)", "Get Mark's decision on business card wording"]},
+    {"category": "Content", "items": ["Schedule VIAVI EDM this month", "Schedule Tektronix EDM this month", "Complete LinkedIn Connection sends", "Set due date for E2AGLE Customer Story or park as backlog"]},
+    {"category": "Events", "items": ["Complete 4 Quantum Australia tasks due TOMORROW", "Ship Southern Lights items to Sydney — due 8 Mar", "Plan Southern Lights event content (LinkedIn + EDM)", "Plan Quantum Australia pre-event content"]},
+    {"category": "Website", "items": ["Pick & start 1 website page (DMA Collections or brand page)", "Pick & start 1 product page (EA-BIM 20000)", "Add 1-3 SEO optimisation pages to backlog"]}
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 1,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 5
+  }
+}

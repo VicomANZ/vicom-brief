@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vicom — Marketing Brief</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1D2327;--dark-blue:#295790;--light-blue:#2D92FF;--orange:#FDBC25;--light-grey:#F4F4F4;--white:#FFFFFF;--body-text:#3a3f44;--text-dim:#6b7280;--border:#e2e5e9;--card-bg:#FFF;--green:#16a34a;--green-bg:#f0fdf4;--green-border:#bbf7d0;--red:#dc2626;--red-bg:#fef2f2;--red-border:#fecaca;--orange-bg:#fffbeb;--orange-border:#fde68a;--blue-bg:#eff6ff;--blue-border:#bfdbfe}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--light-grey);color:var(--body-text);min-height:100vh;font-size:14px;line-height:1.5}
+.ctr{max-width:1100px;margin:0 auto;padding:20px}
+.header{background:var(--navy);color:#fff;padding:20px 24px;border-radius:10px;margin-bottom:16px}
+.header-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.hb{display:flex;align-items:center;gap:14px}
+.hb h1{font-size:22px;font-weight:800;letter-spacing:-0.3px}
+.hb .div{width:1px;height:28px;background:rgba(255,255,255,.2)}
+.hb .lbl{font-size:12px;font-weight:500;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px}
+.dn{display:flex;align-items:center;gap:8px}
+.dn button{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;width:32px;height:32px;border-radius:6px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.dn button:hover:not(:disabled){background:rgba(255,255,255,.2)}
+.dn button:disabled{opacity:.3;cursor:default}
+.dn .dd{font-size:14px;font-weight:600;min-width:180px;text-align:center}
+.as{display:flex;align-items:center;gap:8px;padding:10px 0 0;flex-wrap:wrap}
+.ap{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.ap.ok{background:rgba(22,163,74,.15);color:#16a34a}.ap.warn{background:rgba(253,188,37,.2);color:#b45309}.ap.bad{background:rgba(220,38,38,.1);color:#dc2626}
+.ap .dot{width:6px;height:6px;border-radius:50%}.ap.ok .dot{background:#16a34a}.ap.warn .dot{background:#b45309}.ap.bad .dot{background:#dc2626}
+/* View tabs */
+.vtw{display:flex;gap:4px;margin-bottom:16px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:4px;width:fit-content;flex-wrap:wrap}
+.vt{padding:7px 16px;border:none;border-radius:6px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;background:transparent;color:var(--text-dim);transition:all .2s;white-space:nowrap}
+.vt.active{background:var(--dark-blue);color:#fff}
+/* Stats */
+.sr{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.sc{background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.sc .sl{font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.sc .sv{font-size:28px;font-weight:800}.sc .sub{font-size:14px;font-weight:400;color:var(--text-dim)}
+/* Section tabs */
+.st{display:flex;gap:2px;margin-bottom:16px;overflow-x:auto;border-bottom:2px solid var(--border)}
+.stb{padding:8px 14px;border:none;background:transparent;font-size:13px;font-weight:600;font-family:'Inter',sans-serif;color:var(--text-dim);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;white-space:nowrap}
+.stb:hover{color:var(--dark-blue)}.stb.active{color:var(--dark-blue);border-bottom-color:var(--dark-blue)}
+/* Section */
+.sec{margin-bottom:24px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.sht{font-size:15px;font-weight:700;color:var(--navy)}
+.sha{width:3px;height:18px;border-radius:2px}
+/* Card */
+.cd{background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:10px}
+.cl{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+/* Progress */
+.pw{display:flex;align-items:center;gap:10px;width:100%}
+.pt{flex:1;height:8px;background:#e5e7eb;border-radius:4px;overflow:hidden}
+.pf{height:100%;border-radius:4px;transition:width .8s}
+/* Badge */
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.b-red{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)}
+.b-green{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border)}
+.b-orange{background:var(--orange-bg);color:#b45309;border:1px solid var(--orange-border)}
+.b-blue{background:var(--blue-bg);color:var(--dark-blue);border:1px solid var(--blue-border)}
+.b-navy{background:var(--navy);color:#fff}
+/* Critical */
+.ci{display:flex;align-items:flex-start;padding:10px 12px;border-radius:6px;font-size:13px;margin-bottom:6px;gap:10px}
+.ci.crit{background:var(--red-bg);border:1px solid var(--red-border)}
+.ci.high{background:var(--orange-bg);border:1px solid var(--orange-border)}
+.sd{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.sd.c{background:var(--red)}.sd.h{background:#d97706}
+.ctx{flex:1;line-height:1.4;color:var(--navy)}
+/* KPI */
+.kr{margin-bottom:12px}.kh{display:flex;justify-content:space-between;margin-bottom:4px}
+.kl{font-size:13px;color:var(--body-text)}.ks{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.3px}
+/* Grid */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+/* List */
+.li{padding:8px 0;border-bottom:1px solid var(--light-grey)}.li:last-child{border-bottom:none}
+.ln{font-size:13px;font-weight:600;color:var(--navy)}.ls{font-size:12px;color:var(--text-dim)}
+/* Event flag */
+.ef{font-size:12px;color:#b45309;padding:3px 0;display:flex;align-items:flex-start;gap:6px}
+/* Big number */
+.bn{text-align:center}.bn .bv{font-size:28px;font-weight:800}
+/* Action */
+.ai{display:flex;align-items:flex-start;gap:10px;padding:7px 0;cursor:pointer;border-bottom:1px solid var(--light-grey);user-select:none}.ai:last-child{border-bottom:none}
+.ac{width:20px;height:20px;border-radius:5px;border:2px solid #d1d5db;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all .2s}
+.ac.ck{border-color:var(--green);background:var(--green-bg)}.acm{color:var(--green);font-size:12px;font-weight:700;display:none}.ac.ck .acm{display:block}
+.al{font-size:13px;line-height:1.4;color:var(--navy)}.al.ck{color:#9ca3af;text-decoration:line-through}
+/* Tab content */
+.tc{display:none}.tc.active{display:block}
+/* Weekly metric */
+.wm{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--light-grey)}.wm:last-child{border-bottom:none}
+.wm .mn{font-size:13px;font-weight:500;color:var(--navy)}.wm .mv{font-size:14px;font-weight:700}
+.wst{font-size:13px;font-weight:700;color:var(--dark-blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+/* Trend indicator */
+.trend{font-size:11px;font-weight:600;margin-left:6px}
+.trend.up{color:var(--green)}.trend.down{color:var(--red)}.trend.flat{color:var(--text-dim)}
+/* Loading / Error */
+.loading{text-align:center;padding:60px 20px;color:var(--text-dim)}
+.spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--dark-blue);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.errmsg{text-align:center;padding:40px 20px;background:var(--red-bg);border:1px solid var(--red-border);border-radius:8px;color:var(--red)}
+.no-data{text-align:center;padding:40px 20px;background:var(--white);border:1px solid var(--border);border-radius:8px;color:var(--text-dim)}
+/* Responsive */
+@media(max-width:640px){.sr{grid-template-columns:repeat(2,1fr)}.g2,.g3,.g4{grid-template-columns:1fr}.header-row{flex-direction:column;align-items:flex-start}}
+@media print{.st,.vtw,.dn{display:none}.tc{display:block!important;page-break-inside:avoid;margin-bottom:20px}}
+</style>
+</head>
+<body>
+<div class="ctr">
+  <div class="header">
+    <div class="header-row">
+      <div class="hb"><h1>Vicom</h1><div class="div"></div><span class="lbl">Marketing Brief</span></div>
+      <div class="dn">
+        <button id="prevBtn" onclick="nav(-1)">&#8249;</button>
+        <span class="dd" id="dateDisplay">Loading...</span>
+        <button id="nextBtn" onclick="nav(1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="as" id="agentStatus"></div>
+  </div>
+
+  <div class="vtw">
+    <button class="vt active" data-view="daily" onclick="switchView('daily',this)">Daily</button>
+    <button class="vt" data-view="weekly" onclick="switchView('weekly',this)">Weekly</button>
+    <button class="vt" data-view="monthly" onclick="switchView('monthly',this)">Monthly</button>
+    <button class="vt" data-view="quarterly" onclick="switchView('quarterly',this)">Quarterly</button>
+    <button class="vt" data-view="annual" onclick="switchView('annual',this)">Annual</button>
+  </div>
+
+  <div id="content"><div class="loading"><div class="spinner"></div>Loading brief data...</div></div>
+</div>
+
+<script>
+// ====== CONFIG — UPDATE AFTER DEPLOY ======
+const DATA_URL = './data/';
+const INDEX_URL = './data/index.json'; // auto-generated list of available dates
+
+// ====== STATE ======
+let allDates = [];
+let allData = {};
+let currentIdx = 0;
+let currentView = 'daily';
+let checkedActions = {};
+
+// ====== UTILS ======
+const $ = id => document.getElementById(id);
+const fmtDate = ds => {
+  const d = new Date(ds+'T12:00:00');
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const mos = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${days[d.getDay()]} ${d.getDate()} ${mos[d.getMonth()]} ${d.getFullYear()}`;
+};
+const getWeek = ds => {
+  const d = new Date(ds+'T12:00:00');
+  const day = d.getDay();
+  const mon = new Date(d); mon.setDate(d.getDate() - ((day + 6) % 7));
+  const fri = new Date(mon); fri.setDate(mon.getDate() + 4);
+  return { start: mon.toISOString().split('T')[0], end: fri.toISOString().split('T')[0], label: `${fmtDate(mon.toISOString().split('T')[0]).slice(4)} — ${fmtDate(fri.toISOString().split('T')[0]).slice(4)}` };
+};
+const getMonth = ds => ds.slice(0,7);
+const getQuarter = ds => { const m = parseInt(ds.slice(5,7)); return ds.slice(0,4) + '-Q' + Math.ceil(m/3); };
+const getYear = ds => ds.slice(0,4);
+const monthLabel = ds => {
+  const mos = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return mos[parseInt(ds.slice(5,7))-1] + ' ' + ds.slice(0,4);
+};
+const qLabel = q => { const [y,qn] = q.split('-'); return qn.toUpperCase() + ' ' + y; };
+
+// ====== INIT ======
+async function init() {
+  try {
+    // Try loading index.json first (maintained by Zapier cleanup script)
+    const idxResp = await fetch(INDEX_URL);
+    if (idxResp.ok) {
+      const idx = await idxResp.json();
+      allDates = idx.dates || idx;
+    }
+  } catch(e) {}
+
+  // If no index, generate last 90 days and probe
+  if (!allDates.length) {
+    const probe = [];
+    const today = new Date();
+    for (let i = 90; i >= 0; i--) {
+      const d = new Date(today); d.setDate(d.getDate() - i);
+      probe.push(d.toISOString().split('T')[0]);
+    }
+    // Try fetching each (in parallel, fast failures)
+    const results = await Promise.allSettled(probe.map(async ds => {
+      const r = await fetch(`${DATA_URL}${ds}.json`);
+      if (!r.ok) throw new Error();
+      return { date: ds, data: await r.json() };
+    }));
+    results.forEach(r => {
+      if (r.status === 'fulfilled') {
+        allDates.push(r.value.date);
+        allData[r.value.date] = r.value.data;
+      }
+    });
+  }
+
+  if (!allDates.length) {
+    $('content').innerHTML = '<div class="no-data">No brief data found yet. Data will appear here once the daily automation starts pushing JSON files.</div>';
+    $('dateDisplay').textContent = 'No data';
+    return;
+  }
+
+  allDates.sort();
+  currentIdx = allDates.length - 1;
+  await loadAndRender();
+}
+
+async function loadDate(ds) {
+  if (allData[ds]) return allData[ds];
+  try {
+    const r = await fetch(`${DATA_URL}${ds}.json`);
+    if (!r.ok) return null;
+    const data = await r.json();
+    allData[ds] = data;
+    return data;
+  } catch(e) { return null; }
+}
+
+async function loadAndRender() {
+  const ds = allDates[currentIdx];
+  $('dateDisplay').textContent = fmtDate(ds);
+  $('prevBtn').disabled = currentIdx <= 0;
+  $('nextBtn').disabled = currentIdx >= allDates.length - 1;
+  checkedActions = {};
+
+  const data = await loadDate(ds);
+  if (!data) {
+    $('content').innerHTML = `<div class="errmsg">No data for ${fmtDate(ds)}.</div>`;
+    $('agentStatus').innerHTML = '';
+    return;
+  }
+
+  renderAgents(data);
+  renderView(data, ds);
+}
+
+async function nav(dir) {
+  currentIdx = Math.max(0, Math.min(allDates.length - 1, currentIdx + dir));
+  await loadAndRender();
+}
+
+function switchView(view, btn) {
+  currentView = view;
+  document.querySelectorAll('.vt').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const ds = allDates[currentIdx];
+  const data = allData[ds];
+  if (data) renderView(data, ds);
+}
+
+// ====== AGENTS ======
+function renderAgents(data) {
+  let h = '';
+  (data.agents?.reporting||[]).forEach(a => { h += `<span class="ap ok"><span class="dot"></span>${a}</span>`; });
+  (data.agents?.partial||[]).forEach(a => { h += `<span class="ap warn"><span class="dot"></span>${a}</span>`; });
+  (data.agents?.missing||[]).forEach(a => { h += `<span class="ap bad"><span class="dot"></span>${a}</span>`; });
+  $('agentStatus').innerHTML = h;
+}
+
+// ====== VIEW ROUTER ======
+function renderView(data, ds) {
+  switch(currentView) {
+    case 'daily': renderDaily(data); break;
+    case 'weekly': renderWeeklySummary(ds); break;
+    case 'monthly': renderMonthlySummary(ds); break;
+    case 'quarterly': renderQuarterlySummary(ds); break;
+    case 'annual': renderAnnualSummary(ds); break;
+  }
+}
+
+// ====== DAILY VIEW ======
+function renderDaily(d) {
+  const crit = d.critical?.filter(c => c.severity === 'critical').length || 0;
+  const allK = [...(d.kpis?.content||[]), ...(d.kpis?.website||[])];
+  const onTrack = allK.filter(k => k.current >= k.target).length;
+  const totalAct = (d.actions||[]).reduce((s,c) => s + c.items.length, 0);
+  const decisions = (d.critical?.length||0);
+
+  let h = `<div class="sr">
+    <div class="sc"><div class="sl">Critical</div><div class="sv" style="color:var(--red)">${crit}</div></div>
+    <div class="sc"><div class="sl">KPIs On Track</div><div class="sv" style="color:var(--green)">${onTrack}<span class="sub">/${allK.length}</span></div></div>
+    <div class="sc"><div class="sl">Decisions</div><div class="sv" style="color:var(--dark-blue)">${decisions}</div></div>
+    <div class="sc"><div class="sl">Actions</div><div class="sv" style="color:var(--dark-blue)">${totalAct}</div></div>
+  </div>`;
+
+  const secs = ['overview','meetings','content','events','website','finance','actions'];
+  const labels = ['Overview','Meetings','Content','Events','Website & SEO','Finance','Actions'];
+  h += '<div class="st">';
+  secs.forEach((s,i) => h += `<button class="stb ${i===0?'active':''}" onclick="showSec('${s}',this)">${labels[i]}</button>`);
+  h += '</div>';
+
+  // OVERVIEW
+  h += '<div id="sec-overview" class="tc active">';
+  h += '<div class="sec"><div class="sh"><div class="sha" style="background:var(--red)"></div><div class="sht">Critical & Urgent</div></div>';
+  (d.critical||[]).forEach(c => {
+    const sev = c.severity === 'critical' ? 'crit' : 'high';
+    const dot = c.severity === 'critical' ? 'c' : 'h';
+    const badge = c.severity === 'critical' ? 'b-red' : 'b-orange';
+    h += `<div class="ci ${sev}"><span class="sd ${dot}"></span><span class="ctx">${c.text}</span><span class="badge ${badge}">${c.source}</span></div>`;
+  });
+  h += '</div>';
+
+  // KPI Dashboard
+  h += '<div class="sec"><div class="sh"><div class="sha" style="background:var(--dark-blue)"></div><div class="sht">KPI Dashboard</div></div><div class="g2">';
+  h += '<div class="cd"><div class="cl" style="color:var(--dark-blue)">Content & Campaigns</div>';
+  (d.kpis?.content||[]).forEach(k => h += kpiRow(k));
+  h += '</div><div class="cd"><div class="cl" style="color:var(--dark-blue)">Website & SEO</div>';
+  (d.kpis?.website||[]).forEach(k => h += kpiRow(k));
+  if (d.website?.seo_warning) h += `<div style="margin-top:12px;padding:10px;background:var(--orange-bg);border:1px solid var(--orange-border);border-radius:6px;font-size:12px;color:#92400e">&#9888; ${d.website.seo_warning}</div>`;
+  h += '</div></div></div></div>';
+
+  // MEETINGS
+  h += '<div id="sec-meetings" class="tc"><div class="sec">';
+  h += '<div class="sh"><div class="sha" style="background:var(--dark-blue)"></div><div class="sht">Meetings & Calendar</div></div>';
+  h += meetingCard('Today', d.meetings?.today);
+  h += meetingCard('Tomorrow', d.meetings?.tomorrow);
+  if (d.meetings?.upcoming?.length) {
+    h += '<div class="cd"><div class="cl" style="color:var(--dark-blue)">Coming Up</div>';
+    d.meetings.upcoming.forEach(m => h += `<div class="li" style="display:flex;justify-content:space-between;align-items:center"><div><div class="ln">${m.name}</div><div class="ls">${m.date||''}, ${m.time||''} · ${m.type||''}</div></div>${m.warning?`<span class="badge b-red">${m.warning}</span>`:''}</div>`);
+    h += '</div>';
+  }
+  if (d.meetings?.follow_up?.length) {
+    h += '<div class="cd"><div class="cl" style="color:#b45309">Needs Follow-Up</div>';
+    d.meetings.follow_up.forEach(m => h += `<div class="li"><div class="ln">${m.name}</div><div class="ls" style="color:#b45309">${m.issue}</div></div>`);
+    h += '</div>';
+  }
+  h += '</div></div>';
+
+  // CONTENT
+  h += '<div id="sec-content" class="tc"><div class="sec">';
+  h += '<div class="sh"><div class="sha" style="background:var(--green)"></div><div class="sht">Content & Campaigns</div></div>';
+  if (d.content?.due_today?.length) {
+    h += '<div class="cd"><div class="cl" style="color:var(--green)">Due Today</div>';
+    d.content.due_today.forEach(c => h += `<div style="display:flex;justify-content:space-between;align-items:center"><div><div class="ln">${c.name}</div><div class="ls">${c.partner} · ${c.type}</div></div><span class="badge ${c.status==='published'?'b-green':'b-blue'}">${c.status==='published'?'PUBLISHED &#10003;':c.status.toUpperCase()}</span></div>`);
+    h += '</div>';
+  }
+  if (d.content?.due_this_week?.length) {
+    h += '<div class="cd"><div class="cl" style="color:var(--dark-blue)">Due This Week</div>';
+    d.content.due_this_week.forEach(c => h += `<div style="display:flex;justify-content:space-between;align-items:center"><div><div class="ln">${c.name}</div><div class="ls">${c.partner} · ${c.date||''}</div></div><span class="badge b-blue">${(c.status||'scheduled').toUpperCase()}</span></div>`);
+    h += '</div>';
+  }
+  if (d.content?.promotions) {
+    h += `<div class="cd"><div class="cl" style="color:var(--dark-blue)">Active Promotions</div><p style="font-size:13px;color:var(--text-dim);margin-bottom:8px">${d.content.promotions.count} active. ${d.content.promotions.end_note||''}</p><div style="display:flex;flex-wrap:wrap;gap:5px">`;
+    (d.content.promotions.items||[]).forEach(p => h += `<span class="badge b-blue">${p}</span>`);
+    h += '</div></div>';
+  }
+  h += '</div></div>';
+
+  // EVENTS
+  h += '<div id="sec-events" class="tc"><div class="sec">';
+  h += '<div class="sh"><div class="sha" style="background:var(--dark-blue)"></div><div class="sht">Events & Exhibitions</div></div>';
+  (d.events||[]).forEach(evt => {
+    const pct = evt.tasks_total > 0 ? Math.round((evt.tasks_complete/evt.tasks_total)*100) : 0;
+    h += `<div class="cd"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px"><div><div style="font-size:16px;font-weight:700;color:var(--navy)">${evt.name}</div><div class="ls">${evt.date} · ${evt.location}</div></div><span class="badge b-navy">${evt.days_out} DAYS</span></div>`;
+    h += `<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:12px;color:var(--text-dim)">Tasks</span><span style="font-size:12px;font-weight:700;color:var(--dark-blue)">${evt.tasks_complete}/${evt.tasks_total}</span></div><div class="pw"><div class="pt"><div class="pf" style="width:${pct}%;background:var(--dark-blue)"></div></div></div></div>`;
+    (evt.flags||[]).forEach(f => h += `<div class="ef"><span>&#9888;</span> ${f}</div>`);
+    h += '</div>';
+  });
+  h += '</div></div>';
+
+  // WEBSITE
+  h += '<div id="sec-website" class="tc"><div class="sec">';
+  h += '<div class="sh"><div class="sha" style="background:var(--light-blue)"></div><div class="sht">Website & SEO</div></div>';
+  if (d.website?.backlogs) {
+    h += '<div class="g3" style="margin-bottom:12px">';
+    h += `<div class="cd bn"><div class="sl">Website Pages Backlog</div><div class="bv" style="color:var(--dark-blue)">${d.website.backlogs.website_pages}</div></div>`;
+    h += `<div class="cd bn"><div class="sl">Product Pages Backlog</div><div class="bv" style="color:var(--dark-blue)">${d.website.backlogs.product_pages}</div></div>`;
+    h += `<div class="cd bn"><div class="sl">SEO Backlog</div><div class="bv" style="color:${d.website.backlogs.seo===0?'var(--red)':'var(--dark-blue)'}">${d.website.backlogs.seo}</div></div>`;
+    h += '</div>';
+  }
+  if (d.website?.suggested?.length) {
+    h += '<div class="cd"><div class="cl" style="color:var(--dark-blue)">Suggested Next</div>';
+    d.website.suggested.forEach(s => h += `<div class="li" style="display:flex;justify-content:space-between;align-items:center"><span class="ln">${s.name}</span><span class="badge b-blue">${s.type.toUpperCase()}</span></div>`);
+    h += '</div>';
+  }
+  h += '</div></div>';
+
+  // FINANCE
+  h += '<div id="sec-finance" class="tc"><div class="sec">';
+  h += '<div class="sh"><div class="sha" style="background:var(--orange)"></div><div class="sht">Finance & Admin</div></div>';
+  if (d.finance?.totals) {
+    h += `<div class="g3" style="margin-bottom:12px">
+      <div class="cd bn"><div class="sl">Monthly Cost</div><div class="bv" style="color:var(--navy)">$${d.finance.totals.monthly}</div></div>
+      <div class="cd bn"><div class="sl">Thomas Owed</div><div class="bv" style="color:#b45309">$${d.finance.totals.thomas_monthly}</div></div>
+      <div class="cd bn"><div class="sl">Active Subs</div><div class="bv" style="color:var(--dark-blue)">${d.finance.totals.active_subs}</div></div>
+    </div>`;
+  }
+  if (d.finance?.overdue?.length) {
+    h += '<div class="cd" style="border-color:var(--red-border)"><div class="cl" style="color:var(--red)">&#9888; Overdue</div>';
+    d.finance.overdue.forEach(r => h += `<div class="li" style="display:flex;justify-content:space-between;align-items:center"><div><span class="ln" style="color:var(--red)">${r.name}</span><span class="ls" style="margin-left:8px">${r.days} days · ${r.card}</span></div><span style="font-weight:700;color:var(--red)">${r.cost}</span></div>`);
+    h += '</div>';
+  }
+  if (d.finance?.renewals_this_week?.length) {
+    h += '<div class="cd"><div class="cl" style="color:var(--dark-blue)">Renewals This Week</div>';
+    d.finance.renewals_this_week.forEach(r => h += `<div class="li" style="display:flex;justify-content:space-between;align-items:center"><div><span class="ln">${r.name}</span><span class="ls" style="margin-left:8px">${r.date} · ${r.card}</span></div><div style="text-align:right"><div style="font-weight:700;color:var(--navy)">${r.cost}</div>${r.note?`<div style="font-size:10px;color:#b45309">${r.note}</div>`:''}</div></div>`);
+    h += '</div>';
+  }
+  h += '</div></div>';
+
+  // ACTIONS
+  h += '<div id="sec-actions" class="tc"><div class="sec">';
+  h += '<div class="sh"><div class="sha" style="background:var(--green)"></div><div class="sht">Recommended Actions</div></div>';
+  h += `<div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:12px;color:var(--text-dim)">Progress</span><span id="actr" style="font-size:12px;font-weight:700;color:var(--dark-blue)">0/${totalAct}</span></div><div class="pw"><div class="pt"><div id="actprog" class="pf" style="width:0%;background:var(--dark-blue);transition:width .3s"></div></div></div></div>`;
+  h += '<div id="actbox"></div>';
+  h += '</div></div>';
+
+  $('content').innerHTML = h;
+  renderActions(d.actions || []);
+}
+
+function kpiRow(k) {
+  const ok = k.current >= k.target;
+  const pct = k.target > 0 ? Math.min((k.current/k.target)*100, 100) : 0;
+  const col = ok ? 'var(--green)' : 'var(--red)';
+  const cls = ok ? 'green' : 'red';
+  const lbl = ok ? '&#10003; ON TRACK' : '&#10007; BEHIND';
+  return `<div class="kr"><div class="kh"><span class="kl">${k.label}</span><span class="ks" style="color:${col}">${lbl}</span></div><div class="pw"><div class="pt"><div class="pf" style="width:${pct}%;background:${col}"></div></div><span style="font-size:13px;font-weight:700;color:${col};min-width:40px;text-align:right">${k.current}/${k.target}</span></div></div>`;
+}
+
+function meetingCard(title, items) {
+  let h = `<div class="cd"><div class="cl" style="color:var(--dark-blue)">${title}</div>`;
+  if (!items?.length) h += '<span style="color:var(--text-dim);font-size:13px">None.</span>';
+  else items.forEach(m => h += `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0"><div><div class="ln">${m.name}</div><div class="ls">${m.time||''} · ${m.type||''}${m.participants?' · '+m.participants:''}</div></div>${m.warning?`<span class="badge b-red">${m.warning}</span>`:''}</div>`);
+  return h + '</div>';
+}
+
+function showSec(id, btn) {
+  document.querySelectorAll('.stb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('[id^="sec-"]').forEach(el => el.classList.remove('active'));
+  document.getElementById('sec-'+id)?.classList.add('active');
+}
+
+function renderActions(groups) {
+  const box = $('actbox'); if (!box) return;
+  const total = groups.reduce((s,c) => s + c.items.length, 0);
+  box.innerHTML = '';
+  groups.forEach((cat,ci) => {
+    const card = document.createElement('div'); card.className = 'cd';
+    let inner = `<div class="cl" style="color:var(--dark-blue)">${cat.category}</div>`;
+    cat.items.forEach((item,ii) => {
+      const k = ci+'-'+ii; const ch = checkedActions[k]||false;
+      inner += `<div class="ai" onclick="toggleAct('${k}')"><div class="ac ${ch?'ck':''}"><span class="acm">&#10003;</span></div><span class="al ${ch?'ck':''}">${item}</span></div>`;
+    });
+    card.innerHTML = inner; box.appendChild(card);
+  });
+  updActProg(total);
+}
+function toggleAct(k) { checkedActions[k] = !checkedActions[k]; const d = allData[allDates[currentIdx]]; if (d) renderActions(d.actions||[]); }
+function updActProg(total) {
+  const done = Object.values(checkedActions).filter(Boolean).length;
+  const ctr = $('actr'); const bar = $('actprog');
+  if (ctr) ctr.textContent = done+'/'+total;
+  if (bar) bar.style.width = ((done/total)*100)+'%';
+}
+
+// ====== AGGREGATE VIEWS ======
+function getDatesInRange(dates, filterFn) { return dates.filter(filterFn); }
+
+function aggregateKpis(datesInRange) {
+  // Use the LATEST date's data as the "current" snapshot
+  const latest = datesInRange[datesInRange.length - 1];
+  const data = allData[latest];
+  if (!data) return null;
+  return data;
+}
+
+function renderAggregateView(title, subtitle, datesInRange) {
+  if (!datesInRange.length) {
+    $('content').innerHTML = `<div class="no-data">No data available for ${title}.</div>`;
+    return;
+  }
+
+  // Load all needed data
+  const latest = allData[datesInRange[datesInRange.length - 1]];
+  const earliest = allData[datesInRange[0]];
+  if (!latest) {
+    $('content').innerHTML = `<div class="no-data">No data available for ${title}.</div>`;
+    return;
+  }
+
+  const daysReporting = datesInRange.filter(d => allData[d]).length;
+  const totalDays = datesInRange.length;
+
+  // Count agents across period
+  let totalAgentReports = 0, totalPossible = 0;
+  datesInRange.forEach(d => {
+    const dd = allData[d];
+    if (dd?.agents) {
+      totalAgentReports += (dd.agents.reporting?.length||0);
+      totalPossible += (dd.agents.reporting?.length||0) + (dd.agents.partial?.length||0) + (dd.agents.missing?.length||0);
+    }
+  });
+
+  let h = `<div class="cd" style="margin-bottom:16px;border-left:3px solid var(--dark-blue)">
+    <div style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px">${title}</div>
+    <div style="font-size:13px;color:var(--text-dim)">${subtitle} · ${daysReporting} day${daysReporting!==1?'s':''} of data</div>
+  </div>`;
+
+  h += '<div class="g2">';
+
+  // Content KPIs (latest snapshot)
+  h += '<div class="cd"><div class="wst">Content & Campaigns</div>';
+  (latest.kpis?.content||[]).forEach(k => {
+    const col = k.current >= k.target ? 'var(--green)' : 'var(--red)';
+    h += `<div class="wm"><span class="mn">${k.label}</span><span class="mv" style="color:${col}">${k.current}/${k.target}</span></div>`;
+  });
+  if (latest.content?.promotions) h += `<div class="wm"><span class="mn">Active Promotions</span><span class="mv" style="color:var(--navy)">${latest.content.promotions.count}</span></div>`;
+  h += '</div>';
+
+  // Website KPIs
+  h += '<div class="cd"><div class="wst">Website & SEO</div>';
+  (latest.kpis?.website||[]).forEach(k => {
+    const col = k.current >= k.target ? 'var(--green)' : 'var(--red)';
+    h += `<div class="wm"><span class="mn">${k.label}</span><span class="mv" style="color:${col}">${k.current}/${k.target}</span></div>`;
+  });
+  if (latest.website?.backlogs) {
+    h += `<div class="wm"><span class="mn">Website Pages Backlog</span><span class="mv" style="color:var(--navy)">${latest.website.backlogs.website_pages}</span></div>`;
+    h += `<div class="wm"><span class="mn">Product Pages Backlog</span><span class="mv" style="color:var(--navy)">${latest.website.backlogs.product_pages}</span></div>`;
+    h += `<div class="wm"><span class="mn">SEO Backlog</span><span class="mv" style="color:${latest.website.backlogs.seo===0?'var(--red)':'var(--navy)'}">${latest.website.backlogs.seo}</span></div>`;
+  }
+  h += '</div>';
+
+  // Events
+  h += '<div class="cd"><div class="wst">Events & Exhibitions</div>';
+  (latest.events||[]).forEach(evt => {
+    h += `<div class="wm"><span class="mn">${evt.name}</span><span class="mv" style="color:var(--dark-blue)">${evt.tasks_complete}/${evt.tasks_total} tasks</span></div>`;
+    h += `<div class="wm"><span class="mn" style="padding-left:12px;font-size:12px">Days until event</span><span class="mv" style="color:var(--navy)">${evt.days_out}</span></div>`;
+  });
+  h += '</div>';
+
+  // Finance
+  h += '<div class="cd"><div class="wst">Finance & Admin</div>';
+  if (latest.finance?.totals) {
+    h += `<div class="wm"><span class="mn">Monthly Software Cost</span><span class="mv" style="color:var(--navy)">$${latest.finance.totals.monthly}/mo</span></div>`;
+    h += `<div class="wm"><span class="mn">Annual Equivalent</span><span class="mv" style="color:var(--navy)">$${latest.finance.totals.annual?.toLocaleString()}/yr</span></div>`;
+    h += `<div class="wm"><span class="mn">Active Subscriptions</span><span class="mv" style="color:var(--navy)">${latest.finance.totals.active_subs}</span></div>`;
+    h += `<div class="wm"><span class="mn">Thomas Card Owed</span><span class="mv" style="color:#b45309">$${latest.finance.totals.thomas_monthly}/mo</span></div>`;
+    h += `<div class="wm"><span class="mn">Overdue Renewals</span><span class="mv" style="color:var(--red)">${latest.finance.overdue?.length||0}</span></div>`;
+  }
+  h += '</div>';
+
+  // Meetings summary across period
+  h += '<div class="cd"><div class="wst">Meetings (Period)</div>';
+  let meetingsScheduled = 0, followUps = 0;
+  datesInRange.forEach(d => {
+    const dd = allData[d];
+    if (dd?.meetings) {
+      meetingsScheduled += (dd.meetings.today?.length||0) + (dd.meetings.tomorrow?.length||0);
+      followUps = Math.max(followUps, dd.meetings.follow_up?.length||0);
+    }
+  });
+  h += `<div class="wm"><span class="mn">Days with Data</span><span class="mv" style="color:var(--navy)">${daysReporting}</span></div>`;
+  h += `<div class="wm"><span class="mn">Outstanding Follow-Ups</span><span class="mv" style="color:var(--red)">${followUps}</span></div>`;
+  h += '</div>';
+
+  // Agent Health
+  h += '<div class="cd"><div class="wst">Agent Health</div>';
+  const agentRate = totalPossible > 0 ? Math.round((totalAgentReports/totalPossible)*100) : 0;
+  h += `<div class="wm"><span class="mn">Agent Reporting Rate</span><span class="mv" style="color:${agentRate>=80?'var(--green)':'var(--red)'}">${agentRate}%</span></div>`;
+  h += `<div class="wm"><span class="mn">Days Reporting</span><span class="mv" style="color:var(--navy)">${daysReporting}/${totalDays}</span></div>`;
+  if (latest.agents) {
+    (latest.agents.reporting||[]).forEach(a => h += `<div class="wm"><span class="mn">${a}</span><span class="mv" style="color:var(--green)">&#10003;</span></div>`);
+    (latest.agents.partial||[]).forEach(a => h += `<div class="wm"><span class="mn">${a}</span><span class="mv" style="color:#b45309">Partial</span></div>`);
+    (latest.agents.missing||[]).forEach(a => h += `<div class="wm"><span class="mn">${a}</span><span class="mv" style="color:var(--red)">&#10007;</span></div>`);
+  }
+  h += '</div>';
+
+  h += '</div>'; // g2
+  $('content').innerHTML = h;
+}
+
+function renderWeeklySummary(ds) {
+  const wk = getWeek(ds);
+  const datesInRange = allDates.filter(d => d >= wk.start && d <= wk.end);
+  // Preload
+  Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
+    renderAggregateView(`Week of ${wk.label}`, 'Weekly KPI tracking and operational overview', datesInRange);
+  });
+}
+
+function renderMonthlySummary(ds) {
+  const mo = getMonth(ds);
+  const datesInRange = allDates.filter(d => getMonth(d) === mo);
+  Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
+    renderAggregateView(monthLabel(ds), 'Monthly performance summary', datesInRange);
+  });
+}
+
+function renderQuarterlySummary(ds) {
+  const q = getQuarter(ds);
+  const m = parseInt(ds.slice(5,7));
+  const qStart = Math.floor((m-1)/3)*3 + 1;
+  const qEnd = qStart + 2;
+  const y = ds.slice(0,4);
+  const datesInRange = allDates.filter(d => {
+    const dm = parseInt(d.slice(5,7));
+    return d.slice(0,4) === y && dm >= qStart && dm <= qEnd;
+  });
+  Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
+    renderAggregateView(qLabel(q), 'Quarterly performance summary', datesInRange);
+  });
+}
+
+function renderAnnualSummary(ds) {
+  const y = getYear(ds);
+  const datesInRange = allDates.filter(d => getYear(d) === y);
+  Promise.all(datesInRange.map(d => loadDate(d))).then(() => {
+    renderAggregateView(y + ' Annual Summary', 'Year-to-date performance overview', datesInRange);
+  });
+}
+
+// ====== INIT ======
+init();
+</script>
+</body>
+</html>

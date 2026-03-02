@@ -1,0 +1,42 @@
+name: Update Index
+
+on:
+  push:
+    paths:
+      - 'data/*.json'
+      - '!data/index.json'
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate index.json
+        run: |
+          cd data
+          # List all date JSON files (exclude index.json), sort them
+          dates=$(ls -1 *.json 2>/dev/null | grep -v index.json | sed 's/.json//' | sort)
+          # Build JSON array
+          echo -n '{"dates":[' > index.json
+          first=true
+          for d in $dates; do
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo -n ',' >> index.json
+            fi
+            echo -n "\"$d\"" >> index.json
+          done
+          echo ']}' >> index.json
+          cat index.json
+
+      - name: Commit index
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add data/index.json
+          git diff --cached --quiet || git commit -m "Update data index"
+          git push

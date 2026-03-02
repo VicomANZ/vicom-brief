@@ -1,0 +1,39 @@
+name: Cleanup Old Data
+
+on:
+  schedule:
+    # Run weekly on Sunday at midnight UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remove files older than 365 days
+        run: |
+          cd data
+          cutoff=$(date -d "365 days ago" +%Y-%m-%d)
+          echo "Cutoff date: $cutoff"
+          count=0
+          for f in *.json; do
+            [ "$f" = "index.json" ] && continue
+            datepart="${f%.json}"
+            if [[ "$datepart" < "$cutoff" ]]; then
+              echo "Removing $f (older than $cutoff)"
+              git rm "$f"
+              count=$((count + 1))
+            fi
+          done
+          echo "Removed $count files"
+
+      - name: Commit if changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git diff --cached --quiet || git commit -m "Cleanup: removed data older than 365 days"
+          git push
