@@ -1,0 +1,141 @@
+{
+  "date": "2026-03-09",
+  "date_label": "Mon 9 Mar 2026",
+  "week_label": "Week of 9 Mar — 13 Mar 2026",
+  "agents": {
+    "reporting": ["Event Coordinator", "Operations & Meetings", "Finance & Admin", "Content & Campaigns", "Website & SEO"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    {"text": "Buffer annual renewal TOMORROW (Tue Mar 10) — $420/yr Thomas's card. Decide NOW: renew, downgrade, or cancel.", "source": "Finance", "severity": "critical"},
+    {"text": "ALL content KPIs at 0 this week — no LinkedIn posts, no EDMs, nothing scheduled. New week starts empty.", "source": "Content", "severity": "critical"},
+    {"text": "ALL website KPIs at 0 this week — no pages built, no products, no SEO. Reset from last week's strong output.", "source": "Website", "severity": "critical"},
+    {"text": "VIAVI EDM still at 0 for March (9 days in). Tektronix EDM also reset to 0 for new week.", "source": "Content", "severity": "critical"},
+    {"text": "Tektronix QBR Mar 19 — 10 days away, still no agenda, deck, or prep.", "source": "Meetings", "severity": "critical"},
+    {"text": "Southern Lights & Quantum logistics mostly untracked — event template tasks creating noise.", "source": "Events", "severity": "high"},
+    {"text": "6 Tektronix promotions ending 30 Mar — 21 days. Plan last-push content.", "source": "Content", "severity": "high"},
+    {"text": "Event template tasks overdue and creating noise — need cleanup or conversion to live tasks.", "source": "Events", "severity": "high"},
+    {"text": "4 Thomas-paid subs without PEC claims — $124.60/mo.", "source": "Finance", "severity": "high"},
+    {"text": "LinkedIn Connections not done — last completed 9 Feb (1 month ago).", "source": "Content", "severity": "high"},
+    {"text": "5014 RF Power Sensor page still needs bug fix — Bird Technologies.", "source": "Website", "severity": "high"},
+    {"text": "DMA products for website — decision from Friday's meeting needs actioning.", "source": "Meetings", "severity": "high"},
+    {"text": "Management meeting showcase — decide what marketing presents.", "source": "Meetings", "severity": "high"}
+  ],
+  "kpis": {
+    "content": [
+      {"label": "LinkedIn Posts", "current": 0, "target": 3},
+      {"label": "EDMs Sent", "current": 0, "target": 1},
+      {"label": "VIAVI EDM (month)", "current": 0, "target": 1},
+      {"label": "Tektronix EDM (month)", "current": 0, "target": 1},
+      {"label": "LinkedIn Connections", "current": 0, "target": 1}
+    ],
+    "website": [
+      {"label": "Website Pages Built", "current": 0, "target": 1},
+      {"label": "Product Pages Built", "current": 0, "target": 1},
+      {"label": "SEO Pages Optimised", "current": 0, "target": 1}
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [
+      {"name": "Tektronix QBR Meeting", "date": "Thu Mar 19", "time": "4:00 AM", "type": "Partner", "warning": "NO PREP"}
+    ],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [],
+    "due_this_week": [],
+    "promotions": {
+      "count": 7,
+      "items": ["Keithley 4200A-SCS Trade-In", "AI Wave Oscilloscope Upgrade", "50% Off 4/5/6 Series Upgrades", "Power Play Bundle", "2 Series Free Upgrade", "3 Series Bandwidth Upgrade", "Trade-In 30% Off"],
+      "ending_soon": 0,
+      "end_note": "6 ending 30 Mar (21 days). 1 ends 30 Dec 2026. Plan last-push promo content."
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "16 Apr 2026",
+      "location": "Canberra ACT",
+      "days_out": 38,
+      "tasks_complete": 10,
+      "tasks_total": 14,
+      "flags": ["Sydney warehouse shipping was due 8 Mar — confirm completed", "Floor screen video still blocked on Mark's product list", "Transport van due 15 Mar (6 days)", "Event template tasks creating noise — clean up"]
+    },
+    {
+      "name": "Quantum Australia Conference",
+      "date": "28-29 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 51,
+      "tasks_complete": 0,
+      "tasks_total": 5,
+      "flags": ["8-week prep tasks ~6 days overdue", "No travel booked (2 months away)", "No COOP/budget", "No event-specific content scheduled", "Clean up template vs live tasks"]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "26-27 May 2026",
+      "location": "Auckland NZ",
+      "days_out": 79,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["No logistics configured", "No content planned"]
+    },
+    {
+      "name": "Electronex",
+      "date": "2-3 Jun 2026",
+      "location": "Sydney NSW",
+      "days_out": 86,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["No logistics configured", "No content planned"]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14-15 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 219,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["Template tasks set for Aug/Sep — on track"]
+    }
+  ],
+  "website": {
+    "backlogs": {"website_pages": 41, "product_pages": 4, "seo": 93},
+    "suggested": [
+      {"name": "DMA Product Collections", "type": "Website"},
+      {"name": "EA-BIM 20000 Series Battery Impedance Meters", "type": "Product"},
+      {"name": "Optical Fibre & Network Deployment", "type": "SEO"}
+    ],
+    "seo_warning": "93 SEO backlog pages. All KPIs reset to 0 — start this week's output."
+  },
+  "finance": {
+    "totals": {"monthly": 353, "annual": 4241, "thomas_monthly": 125, "active_subs": 12},
+    "overdue": [],
+    "renewals_this_week": [
+      {"name": "Buffer", "date": "TOMORROW", "cost": "$420/yr", "card": "Thomas", "note": "Decide TODAY: renew, downgrade, or cancel. Auto-upgrade planned."}
+    ],
+    "thomas_card": [
+      {"name": "Claude AI", "cost": "$34/mo", "pec": "unknown"},
+      {"name": "Buffer", "cost": "$35/mo equiv", "pec": "unknown"},
+      {"name": "ClickUp Pro", "cost": "$26.60/mo", "pec": "unknown"},
+      {"name": "Zapier PRO", "cost": "$29/mo equiv", "pec": "unknown"}
+    ],
+    "pec_note": "4 subs, $124.60/mo on Thomas's card. No PEC claims submitted."
+  },
+  "actions": [
+    {"category": "Finance — Act TODAY", "items": ["Decide on Buffer renewal TOMORROW ($420/yr): renew, downgrade, or cancel", "Decide: move Thomas-paid subs to Vicom CC or submit PEC claims"]},
+    {"category": "Content — Plan This Week", "items": ["Schedule 3 LinkedIn posts (min 1 VIAVI, 1 Tektronix)", "Schedule 1 EDM this week", "Schedule VIAVI EDM for March (still at 0, day 9)", "Create LinkedIn Connection request task (last done 9 Feb)", "Plan last-push content for 6 Tektronix promos ending 30 Mar"]},
+    {"category": "Meetings", "items": ["Start Tektronix QBR prep NOW — agenda and deck (10 days away)", "Action DMA product decision from Friday's meeting", "Decide what marketing presents at management meeting"]},
+    {"category": "Events — Urgent", "items": ["Confirm Southern Lights Sydney warehouse shipping completed (was due 8 Mar)", "Chase Mark for final product list (screen video blocked)", "Clear Quantum Australia overdue prep tasks", "Clean up event template tasks — separate templates from live work"]},
+    {"category": "Events — Planning", "items": ["Book Quantum Australia travel & accommodation", "Submit Quantum Australia COOP", "Create event-specific content plans for Southern Lights + Quantum", "Set standard lead times: travel 6+ weeks prior, shipping 3-4 weeks prior"]},
+    {"category": "Website & SEO", "items": ["Start DMA Product Collections (confirmed at Friday's meeting)", "Fix 5014 RF Power Sensor page (Bird Technologies bug)", "Start EA-BIM 20000 from product backlog", "Start SEO: Optical Fibre & Network Deployment", "Continue Electromagnetic Warfare page"]}
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 0,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
