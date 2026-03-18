@@ -1,0 +1,150 @@
+{
+  "date": "2026-03-18",
+  "date_label": "Wed 18 Mar 2026",
+  "week_label": "Week of 16 Mar — 20 Mar 2026",
+  "agents": {
+    "reporting": ["Event Coordinator", "Operations & Meetings", "Finance & Admin", "Content & Campaigns", "Website & SEO"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    {"text": "Tektronix QBR Meeting TODAY (6PM) — NO agenda, deck, or prep materials. Prepare NOW.", "source": "Meetings", "severity": "critical"},
+    {"text": "Vicom Management Meeting Melbourne TOMORROW (6PM) — placeholder description only, no agenda or pack.", "source": "Meetings", "severity": "critical"},
+    {"text": "VIAVI EDM still at 0 for March — day 18. Only 13 days left in March.", "source": "Content", "severity": "critical"},
+    {"text": "6 Tektronix promotions ending 31 Mar (13 days) — plan last-push EDM and LinkedIn content.", "source": "Content", "severity": "critical"},
+    {"text": "All website KPIs at 0 — THIRD consecutive week with zero output.", "source": "Website", "severity": "critical"},
+    {"text": "ClickUp Pro renewal in 6 days (Tue Mar 24) — decide monthly vs annual.", "source": "Finance", "severity": "high"},
+    {"text": "Quantum Australia — 6 weeks away, no travel, budget, or logistics subtasks created.", "source": "Events", "severity": "high"},
+    {"text": "Quantum & Hayden meeting (Mar 11) — 7 days, notes but no action items.", "source": "Meetings", "severity": "high"},
+    {"text": "Mar 6 Marketing Meeting — 12 days, detailed notes but no action items created.", "source": "Meetings", "severity": "high"},
+    {"text": "Southern Lights — booth power/carpet and product list still not confirmed. 29 days out.", "source": "Events", "severity": "high"},
+    {"text": "No future Marketing Meeting occurrences scheduled after Mar 13.", "source": "Meetings", "severity": "high"},
+    {"text": "Southern Lights meeting (Feb 17) — 29 days, no notes or follow-up.", "source": "Meetings", "severity": "high"},
+    {"text": "Mark's business card segment wording — still pending since Feb 10.", "source": "Meetings", "severity": "high"},
+    {"text": "LinkedIn Connections not done — no task exists for this week.", "source": "Content", "severity": "high"},
+    {"text": "PEC Claim 12.02.2026 — $650.20 approved, now covering all 4 Thomas subs. Confirm reimbursement received.", "source": "Finance", "severity": "high"}
+  ],
+  "kpis": {
+    "content": [
+      {"label": "LinkedIn Posts", "current": 1, "target": 3},
+      {"label": "EDMs Sent", "current": 0, "target": 1},
+      {"label": "VIAVI EDM (month)", "current": 0, "target": 1},
+      {"label": "Tektronix EDM (month)", "current": 1, "target": 1},
+      {"label": "LinkedIn Connections", "current": 0, "target": 1}
+    ],
+    "website": [
+      {"label": "Website Pages Built", "current": 0, "target": 1},
+      {"label": "Product Pages Built", "current": 0, "target": 1},
+      {"label": "SEO Pages Optimised", "current": 0, "target": 1}
+    ]
+  },
+  "meetings": {
+    "today": [
+      {"name": "Tektronix QBR Meeting", "time": "6:00 PM", "type": "Partner", "participants": "Thomas", "warning": "NO PREP"}
+    ],
+    "tomorrow": [
+      {"name": "Vicom Management Meeting - Melbourne", "time": "6:00 PM", "type": "Vicom Internal", "participants": "Aveet, Thomas, Andrew, Shaneel", "warning": "NO AGENDA"}
+    ],
+    "upcoming": [],
+    "follow_up": [
+      {"name": "Quantum & Hayden Meeting (Mar 11)", "issue": "7 days, notes but no action items. Brochure work needs tasking."},
+      {"name": "Vicom Marketing Meeting (Mar 6)", "issue": "12 days, detailed notes but no action items created."}
+    ]
+  },
+  "content": {
+    "due_today": [
+      {"name": "Engineering Fundamentals 101 | On-Demand Webinar", "partner": "Tektronix", "type": "LinkedIn + GMB", "status": "published"}
+    ],
+    "due_this_week": [],
+    "promotions": {
+      "count": 6,
+      "items": ["Keithley 4200A-SCS Trade-In", "50% Off 4/5/6 Series Upgrades", "AI Wave Oscilloscope Upgrade", "Power Play Bundle", "3 Series Bandwidth Upgrade", "2 Series Free Upgrade"],
+      "ending_soon": 6,
+      "end_note": "ALL 6 ending 31 Mar (13 days). Plan final-push EDM and LinkedIn content this week."
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "16 Apr 2026",
+      "location": "Canberra ACT",
+      "days_out": 29,
+      "tasks_complete": 10,
+      "tasks_total": 14,
+      "flags": ["Booth power/carpet still not confirmed with Mark", "Product list for floor screen video still outstanding", "29 days — time getting tight for remaining logistics"]
+    },
+    {
+      "name": "Quantum Australia Conference",
+      "date": "28-29 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 42,
+      "tasks_complete": 0,
+      "tasks_total": 5,
+      "flags": ["6 weeks away — no travel, shipping, staffing, or budget subtasks", "No booth number assigned", "No event-specific content in Content Calendar", "Need logistics build-out decision within 7-10 days"]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27-28 May 2026",
+      "location": "Auckland NZ",
+      "days_out": 71,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["No travel, staffing, or shipping subtasks", "No content planned", "Exhibitor portal PDF attached but not actioned"]
+    },
+    {
+      "name": "Electronex",
+      "date": "3-4 Jun 2026",
+      "location": "Sydney NSW",
+      "days_out": 78,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["No travel, staffing, or shipping subtasks", "No content planned"]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "16 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 212,
+      "tasks_complete": 0,
+      "tasks_total": 4,
+      "flags": ["On track — no action needed yet"]
+    }
+  ],
+  "website": {
+    "backlogs": {"website_pages": 41, "product_pages": 4, "seo": 93},
+    "suggested": [
+      {"name": "DMA Product Collections", "type": "Website"},
+      {"name": "EA-BIM 20000 Series Battery Impedance Meters", "type": "Product"},
+      {"name": "Optical Fibre & Network Deployment", "type": "SEO"}
+    ],
+    "seo_warning": "THIRD consecutive week with all website KPIs at 0. 93 SEO backlog pages untouched since Week 1."
+  },
+  "finance": {
+    "totals": {"monthly": 353, "annual": 4241, "thomas_monthly": 125, "active_subs": 12},
+    "overdue": [],
+    "renewals_this_week": [
+      {"name": "ClickUp Pro", "date": "Mar 24", "cost": "$26.60/mo", "card": "Thomas", "note": "6 days — decide monthly vs annual"}
+    ],
+    "thomas_card": [
+      {"name": "Claude AI", "cost": "$34/mo", "pec": "submitted"},
+      {"name": "Buffer", "cost": "$35/mo equiv", "pec": "submitted"},
+      {"name": "ClickUp Pro", "cost": "$26.60/mo", "pec": "submitted"},
+      {"name": "Zapier PRO", "cost": "$29/mo equiv", "pec": "submitted"}
+    ],
+    "pec_note": "PEC Claim 12.02.2026 — $650.20 approved covering all 4 Thomas subs (Feb 2026). Confirm reimbursement received."
+  },
+  "actions": [
+    {"category": "TODAY — Meetings", "items": ["Prepare for Tektronix QBR at 6PM — create agenda and talking points NOW", "Prepare management pack for Melbourne meeting TOMORROW 6PM"]},
+    {"category": "Meetings — Follow-up", "items": ["Create action items from Quantum & Hayden meeting (Mar 11) — brochure work", "Create action items from Marketing Meeting (Mar 6) — DMA products, Tektronix EDMs, service brochures", "Schedule next recurring Marketing Meeting", "Get Mark's business card segment decision", "Confirm QBR ongoing cadence"]},
+    {"category": "Content — Urgent", "items": ["Schedule VIAVI EDM for March (day 18, still at 0)", "Schedule 2 more LinkedIn posts (need VIAVI specifically)", "Plan last-push EDM + LinkedIn for 6 Tektronix promos ending 31 Mar", "Create LinkedIn Connection request task"]},
+    {"category": "Events", "items": ["Confirm Southern Lights booth power/carpet with Mark (29 days out)", "Chase Mark for product list (floor screen video blocked)", "Build logistics subtasks for Quantum Australia (travel, shipping, staffing, budget)", "Decide content plan for Comms Connect NZ and Electronex"]},
+    {"category": "Finance", "items": ["Decide ClickUp Pro monthly vs annual before Mar 24", "Confirm PEC 12.02.2026 reimbursement ($650.20) received"]},
+    {"category": "Website & SEO", "items": ["Start ANY page — 3 weeks of zero output is critical", "DMA Product Collections (waiting since 9 Feb)", "Start SEO: Optical Fibre & Network Deployment", "Start EA-BIM 20000 product page"]}
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 2,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 2
+  }
+}
