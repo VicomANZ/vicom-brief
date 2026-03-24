@@ -1,0 +1,274 @@
+{
+  "date": "2026-03-25",
+  "date_label": "Wednesday 25 Mar 2026",
+  "week_label": "Week of 23 Mar — 29 Mar 2026",
+  "agents": {
+    "reporting": [
+      "Content Calendar",
+      "Promotion Tracking",
+      "Weekly LinkedIn Connection Requests",
+      "Pages to Optimise & Update",
+      "Pages Building & Updating",
+      "Product Page Building & Updating",
+      "Events Calendar & Tasks",
+      "Cost Tracking",
+      "PEC Tracking",
+      "Marketing Meetings",
+      "Google Calendar"
+    ],
+    "partial": [
+      "Cost Tracking"
+    ],
+    "missing": []
+  },
+  "critical": [
+    {
+      "text": "Southern Lights Disrupt is 21 days away (15 Apr) with 4 overdue prep tasks — Transport Van (12 days overdue), Booth Banner, Tables & Chairs, and pick items for Melbourne office (all 5 days overdue). All still in template status with 0 of 6 tasks complete.",
+      "source": "Events & Exhibitions",
+      "severity": "critical"
+    },
+    {
+      "text": "QAC Adelaide 2026 is 35 days away (29 Apr) with 7 overdue prep tasks — Build Layout, Website Event, Promo Merch, EDMs, EDM 1 all 22 days overdue; LinkedIn Event Creation and Website Banner 8 days overdue. 0 of 16 tasks complete.",
+      "source": "Events & Exhibitions",
+      "severity": "critical"
+    },
+    {
+      "text": "6 Tektronix promotions ending 30 Mar (5 days away): Keithley 4200A-SCS Trade-In, 50% Off Scope Upgrades, AI Wave Oscilloscope Offer, Power Play Bundle, 2 Series Free Upgrade, 3 Series MDO Bandwidth. No end-of-promo EDM or LinkedIn content scheduled.",
+      "source": "Content & Campaigns",
+      "severity": "critical"
+    },
+    {
+      "text": "QAC Adelaide is 35 days out but no event EDM has been created or scheduled in the Content Calendar. EDM 1 was due 8 weeks prior (3 Mar) and is 22 days overdue.",
+      "source": "Cross-reference: Content × Events",
+      "severity": "critical"
+    },
+    {
+      "text": "VIAVI EDM for March is still in draft status with no due date set. Month ends in 6 days.",
+      "source": "Content & Campaigns",
+      "severity": "high"
+    },
+    {
+      "text": "Zero content published this week — no LinkedIn posts, no EDMs. All weekly content KPIs at 0.",
+      "source": "Content & Campaigns",
+      "severity": "high"
+    },
+    {
+      "text": "LinkedIn Connection Requests not completed this week.",
+      "source": "Content & Campaigns",
+      "severity": "high"
+    },
+    {
+      "text": "No marketing meetings scheduled this week. Risk of losing alignment with stakeholders.",
+      "source": "Operations",
+      "severity": "high"
+    }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 0, "target": 3 },
+      { "label": "EDMs Sent", "current": 0, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 0, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 0, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [
+      {
+        "name": "GOOGLE ADS CALLING YOU",
+        "time": "All day",
+        "type": "Reminder",
+        "participants": "",
+        "warning": "Reminder to expect Google Ads call today"
+      },
+      {
+        "name": "Claude Code Advanced Patterns: Subagents, MCP, and Scaling to Real Codebases",
+        "time": "03:00 — 04:00 AEST",
+        "type": "Webinar",
+        "participants": "Anthropic Webinars, Thomas Flood",
+        "warning": "Response status: needsAction — confirm attendance"
+      }
+    ],
+    "tomorrow": [],
+    "upcoming": [],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [],
+    "due_this_week": [],
+    "promotions": {
+      "count": 7,
+      "items": [
+        "Keithley 4200A-SCS — Competitive Trade-In Discount",
+        "Unlock Your Scope's Potential — 50% Off 4/5/6 Series Upgrades",
+        "Ride the AI Wave — Performance Oscilloscope Upgrade Offer",
+        "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
+        "4/5 Series B MSO — Power Play Bundle Discounts",
+        "2 Series MSO — Choose Your Free Upgrade",
+        "3 Series MDO — Free Bandwidth Upgrade"
+      ],
+      "ending_soon": 6,
+      "end_note": "6 Tektronix promotions ending 30 Mar 2026. Only the Trade-In 30% offer (active until Sep 2026) continues beyond this week. Consider a last-chance EDM and LinkedIn post before Friday."
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "15 Apr 2026",
+      "location": "Melbourne VIC",
+      "days_out": 21,
+      "tasks_complete": 0,
+      "tasks_total": 6,
+      "flags": [
+        "Transport Van 12 days overdue (due 13 Mar)",
+        "Booth Banner 5 days overdue (due 20 Mar)",
+        "Tables & Chairs 5 days overdue (due 20 Mar)",
+        "Pick items for Melbourne office 5 days overdue (due 20 Mar)",
+        "Floor Screen Video due 31 Mar",
+        "Get final products list from Mark due 31 Mar",
+        "0 of 6 tasks complete — all still in template status"
+      ]
+    },
+    {
+      "name": "Quantum Australia Conference Adelaide (QAC2026)",
+      "date": "29 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 35,
+      "tasks_complete": 0,
+      "tasks_total": 16,
+      "flags": [
+        "Build Layout in SketchUp 22 days overdue (due 3 Mar)",
+        "Website Event Created 22 days overdue (due 3 Mar)",
+        "Promotional Merchandise 22 days overdue (due 3 Mar)",
+        "EDMs planning 22 days overdue (due 3 Mar)",
+        "EDM 1 (8 weeks prior) 22 days overdue (due 3 Mar)",
+        "LinkedIn Event Creation 8 days overdue (due 17 Mar)",
+        "Website Banner 8 days overdue (due 17 Mar)",
+        "Email Banner due 27 Mar (2 days)",
+        "Transport Van due 27 Mar (2 days)",
+        "EDM 2 (4 weeks prior) due 28 Mar (3 days)",
+        "No event EDM in Content Calendar",
+        "0 of 16 tasks complete — all still in template status"
+      ]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 63,
+      "tasks_complete": 0,
+      "tasks_total": 13,
+      "flags": [
+        "8-week prep milestone approaching (1 Apr)",
+        "0 of 13 tasks complete — all still in template status"
+      ]
+    },
+    {
+      "name": "Electronex",
+      "date": "03 Jun 2026",
+      "location": "TBC",
+      "days_out": 70,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "8-week prep milestone approaching (8 Apr)",
+        "0 of 14 tasks complete — all still in template status"
+      ]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 203,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "Planned — no immediate action required"
+      ]
+    }
+  ],
+  "website": {
+    "backlogs": {
+      "website_pages": 41,
+      "product_pages": 4,
+      "seo": 92
+    },
+    "suggested": [
+      { "name": "Electromagnetic Warfare (Military)", "type": "Website" },
+      { "name": "EA-BIM 20000 Series Battery Impedance Meters", "type": "Product" },
+      { "name": "Oscilloscopes & Probes | Oscilloscope Probes & Accessories", "type": "SEO" }
+    ],
+    "seo_warning": "All website KPIs at zero this week. 92 SEO pages, 41 website pages, and 4 product pages remain in backlog with no movement. Electromagnetic Warfare page is the only page in progress (content gathering)."
+  },
+  "finance": {
+    "totals": {
+      "monthly": 0,
+      "annual": 0,
+      "thomas_monthly": 0,
+      "active_subs": 12
+    },
+    "overdue": [],
+    "renewals_this_week": [],
+    "thomas_card": [],
+    "pec_note": "1 PEC claim (12 Feb 2026) approved. No pending reimbursements. Cost amounts unavailable from task data — custom fields not returned in filter. Recommend reviewing Cost Tracking list for dollar values."
+  },
+  "actions": [
+    {
+      "category": "Events — Southern Lights Disrupt (URGENT)",
+      "items": [
+        "Book transport van TODAY — 12 days overdue",
+        "Confirm booth banner has been picked and sent — 5 days overdue",
+        "Confirm tables and chairs booking — 5 days overdue",
+        "Chase Mark for final products list (due 31 Mar)",
+        "Move all Southern Lights Disrupt tasks from template to in progress status"
+      ]
+    },
+    {
+      "category": "Events — QAC Adelaide 2026 (URGENT)",
+      "items": [
+        "Create QAC event page on vicom.com.au — 22 days overdue",
+        "Start QAC EDM 1 content immediately — 22 days overdue, combine with EDM 2 if needed",
+        "Create LinkedIn event for QAC Adelaide — 8 days overdue",
+        "Upload website banner for QAC — 8 days overdue",
+        "Order promotional merchandise — 22 days overdue, may need expedited shipping",
+        "Build booth layout in Google SketchUp",
+        "Book email banner and transport van by Friday (due 27 Mar)"
+      ]
+    },
+    {
+      "category": "Content & Promotions",
+      "items": [
+        "Create and send a 'Last Chance' EDM for the 6 Tektronix promos ending 30 Mar — schedule for Thursday 26 Mar",
+        "Publish a LinkedIn post today about the ending Tektronix promotions",
+        "Finalise and send VIAVI EDM for March before month end (31 Mar)",
+        "Complete LinkedIn Connection Requests for this week"
+      ]
+    },
+    {
+      "category": "Website & SEO",
+      "items": [
+        "Move Electromagnetic Warfare page from content gathering to in progress, set due date Friday 27 Mar",
+        "Move EA-BIM 20000 Series Battery Impedance Meters product page to in progress, set due date Friday 27 Mar",
+        "Move Oscilloscope Probes & Accessories SEO page to in progress, set due date Friday 27 Mar"
+      ]
+    },
+    {
+      "category": "Operations",
+      "items": [
+        "Schedule a marketing catch-up meeting for this week — no meetings currently booked",
+        "Review Cost Tracking custom fields to populate dollar amounts for finance reporting"
+      ]
+    }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 0,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
