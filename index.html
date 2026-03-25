@@ -896,8 +896,8 @@ function renderDaily(d){
     <div class="stat-card"><div class="stat-label">Actions</div><div class="stat-val" style="color:var(--accent)">${totalAct}</div></div>
   </div>`;
 
-  const secs=['overview','meetings','content','events','website','finance','actions'];
-  const labels=['Overview','Meetings','Content','Events','Website & SEO','Finance','Actions'];
+  const secs=['overview','meetings','content','events','website','actions'];
+  const labels=['Overview','Meetings','Content','Events','Website & SEO','Actions'];
   h+='<div class="sec-tabs">';
   secs.forEach((s,i)=>h+=`<button class="sec-tab ${i===0?'active':''}" onclick="showSec('${s}',this)">${labels[i]}</button>`);
   h+='</div>';
@@ -952,14 +952,6 @@ function renderDaily(d){
   h+='<div class="section-head"><div class="section-accent" style="background:var(--blue)"></div><div class="section-title">Website & SEO</div></div>';
   if(d.website?.backlogs){h+='<div class="g3" style="margin-bottom:14px">';h+=`<div class="glass-card big-num"><div class="stat-label">Website pages</div><div class="bv" style="color:var(--navy)">${d.website.backlogs.website_pages}</div></div>`;h+=`<div class="glass-card big-num"><div class="stat-label">Product pages</div><div class="bv" style="color:var(--navy)">${d.website.backlogs.product_pages}</div></div>`;h+=`<div class="glass-card big-num"><div class="stat-label">SEO backlog</div><div class="bv" style="color:var(--accent)">${d.website.backlogs.seo}</div></div>`;h+='</div>'}
   if(d.website?.suggested?.length){h+='<div class="glass-card"><div class="card-title" style="color:var(--accent)">Suggested next</div>';d.website.suggested.forEach(s=>h+=`<div class="list-item"><span class="list-name">${s.name}</span><span class="badge b-blue">${s.type}</span></div>`);h+='</div>'}
-  h+='</div>';
-
-  // FINANCE
-  h+='<div id="sec-finance" class="tab-content">';
-  h+='<div class="section-head"><div class="section-accent" style="background:var(--amber)"></div><div class="section-title">Finance & admin</div></div>';
-  if(d.finance?.totals){h+=`<div class="g3" style="margin-bottom:14px"><div class="glass-card big-num"><div class="stat-label">Monthly cost</div><div class="bv" style="color:var(--navy)">$${d.finance.totals.monthly}</div></div><div class="glass-card big-num"><div class="stat-label">Thomas owed</div><div class="bv" style="color:var(--amber)">$${d.finance.totals.thomas_monthly}</div></div><div class="glass-card big-num"><div class="stat-label">Active subs</div><div class="bv" style="color:var(--accent)">${d.finance.totals.active_subs}</div></div></div>`}
-  if(d.finance?.renewals_this_week?.length){h+='<div class="glass-card"><div class="card-title" style="color:var(--blue)">Renewals this week</div>';d.finance.renewals_this_week.forEach(r=>h+=`<div class="list-item"><div><span class="list-name">${r.name}</span><span class="list-sub" style="margin-left:8px">${r.date} · ${r.card}</span></div><div style="text-align:right"><div style="font-weight:700;color:var(--navy)">${r.cost}</div>${r.note?`<div style="font-size:10px;color:var(--amber)">${r.note}</div>`:''}</div></div>`);h+='</div>'}
-  if(d.finance?.thomas_card?.length){h+='<div class="glass-card"><div class="card-title" style="color:var(--accent)">Thomas card subscriptions</div>';d.finance.thomas_card.forEach(t=>h+=`<div class="list-item"><span class="list-name">${t.name}</span><div><span style="font-weight:700">${t.cost}</span> <span class="badge ${t.pec==='submitted'?'b-green':'b-amber'}">${t.pec||'pending'}</span></div></div>`);h+='</div>'}
   h+='</div>';
 
   // ACTIONS
