@@ -1241,8 +1241,8 @@ function renderDaily(d){
     <div class="stat-card"><div class="stat-label">Actions</div><div class="stat-val" style="color:var(--accent)">${totalAct}</div></div>
   </div>`;
 
-  const secs=['overview','meetings','content','events','website','actions'];
-  const labels=['Overview','Meetings','Content','Events','Website & SEO','Actions'];
+  const secs=['overview','actions'];
+  const labels=['Overview','Actions'];
   h+='<div class="sec-tabs">';
   secs.forEach((s,i)=>h+=`<button class="sec-tab ${i===0?'active':''}" onclick="showSec('${s}',this)">${labels[i]}</button>`);
   h+='</div>';
@@ -1263,41 +1263,6 @@ function renderDaily(d){
   (d.kpis?.website||[]).forEach(k=>h+=kpiRow(k));
   if(d.website?.seo_warning)h+=`<div style="margin-top:12px;padding:10px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm);font-size:12px;color:var(--amber)">&#9888; ${d.website.seo_warning}</div>`;
   h+='</div></div></div>';
-
-  // MEETINGS
-  h+='<div id="sec-meetings" class="tab-content">';
-  h+='<div class="section-head"><div class="section-accent" style="background:var(--blue)"></div><div class="section-title">Meetings & calendar</div></div>';
-  h+=meetingCard('Today',d.meetings?.today);
-  h+=meetingCard('Tomorrow',d.meetings?.tomorrow);
-  if(d.meetings?.follow_up?.length){h+='<div class="glass-card"><div class="card-title" style="color:var(--amber)">Needs follow-up</div>';d.meetings.follow_up.forEach(m=>h+=`<div class="list-item"><div><div class="list-name">${m.name}</div><div class="list-sub" style="color:var(--amber)">${m.issue}</div></div></div>`);h+='</div>'}
-  h+='</div>';
-
-  // CONTENT
-  h+='<div id="sec-content" class="tab-content">';
-  h+='<div class="section-head"><div class="section-accent" style="background:var(--green)"></div><div class="section-title">Content & campaigns</div></div>';
-  if(d.content?.due_today?.length){h+='<div class="glass-card"><div class="card-title" style="color:var(--green)">Due today</div>';d.content.due_today.forEach(c=>h+=`<div class="list-item"><div><div class="list-name">${c.name}</div><div class="list-sub">${c.partner} · ${c.type}</div></div><span class="badge ${c.status==='published'?'b-green':'b-blue'}">${c.status==='published'?'Published ✓':c.status}</span></div>`);h+='</div>'}
-  if(d.content?.due_this_week?.length){h+='<div class="glass-card"><div class="card-title" style="color:var(--blue)">Due this week</div>';d.content.due_this_week.forEach(c=>h+=`<div class="list-item"><div><div class="list-name">${c.name}</div><div class="list-sub">${c.partner} · ${c.date||''}</div></div><span class="badge b-blue">${(c.status||'scheduled')}</span></div>`);h+='</div>'}
-  if(d.content?.promotions){h+=`<div class="glass-card"><div class="card-title" style="color:var(--accent)">Active promotions</div><p style="font-size:13px;color:var(--text-tertiary);margin-bottom:10px">${d.content.promotions.count} active. ${d.content.promotions.end_note||''}</p><div style="display:flex;flex-wrap:wrap;gap:5px">`;(d.content.promotions.items||[]).forEach(p=>h+=`<span class="badge b-blue">${p}</span>`);h+='</div></div>'}
-  h+='</div>';
-
-  // EVENTS
-  h+='<div id="sec-events" class="tab-content">';
-  h+='<div class="section-head"><div class="section-accent" style="background:var(--navy)"></div><div class="section-title">Events & exhibitions</div></div>';
-  (d.events||[]).forEach(evt=>{
-    const pct=evt.tasks_total>0?Math.round((evt.tasks_complete/evt.tasks_total)*100):0;
-    h+=`<div class="glass-card event-card"><div class="event-header"><div><div class="event-name">${evt.name}</div><div class="event-meta">${evt.date} · ${evt.location}</div></div><span class="badge b-navy">${evt.days_out} days</span></div>`;
-    h+=`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:12px;color:var(--text-tertiary)">Tasks</span><span style="font-size:12px;font-weight:700;color:var(--accent)">${evt.tasks_complete}/${evt.tasks_total}</span></div><div class="progress-wrap"><div class="progress-track"><div class="progress-fill" style="width:${pct}%;background:var(--accent)"></div></div></div></div>`;
-    (evt.flags||[]).forEach(f=>h+=`<div class="event-flag"><span>&#9888;</span> ${f}</div>`);
-    h+='</div>';
-  });
-  h+='</div>';
-
-  // WEBSITE
-  h+='<div id="sec-website" class="tab-content">';
-  h+='<div class="section-head"><div class="section-accent" style="background:var(--blue)"></div><div class="section-title">Website & SEO</div></div>';
-  if(d.website?.backlogs){h+='<div class="g3" style="margin-bottom:14px">';h+=`<div class="glass-card big-num"><div class="stat-label">Website pages</div><div class="bv" style="color:var(--navy)">${d.website.backlogs.website_pages}</div></div>`;h+=`<div class="glass-card big-num"><div class="stat-label">Product pages</div><div class="bv" style="color:var(--navy)">${d.website.backlogs.product_pages}</div></div>`;h+=`<div class="glass-card big-num"><div class="stat-label">SEO backlog</div><div class="bv" style="color:var(--accent)">${d.website.backlogs.seo}</div></div>`;h+='</div>'}
-  if(d.website?.suggested?.length){h+='<div class="glass-card"><div class="card-title" style="color:var(--accent)">Suggested next</div>';d.website.suggested.forEach(s=>h+=`<div class="list-item"><span class="list-name">${s.name}</span><span class="badge b-blue">${s.type}</span></div>`);h+='</div>'}
-  h+='</div>';
 
   // ACTIONS
   h+='<div id="sec-actions" class="tab-content">';
