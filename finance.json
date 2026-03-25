@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-03-25T04:00:00+10:00",
+  "active": [
+    {"name":"Sucuri","category":"Security","cycle":"Annual","annual":860,"monthly":71.66,"renewal":"2027-02-10","payment":"Vicom CC","url":"sucuri.net"},
+    {"name":"Google One Drive","category":"Asset Storage","cycle":"Annual","annual":44.99,"monthly":3.71,"renewal":"2026-10-31","payment":"Vicom CC","url":"one.google.com"},
+    {"name":"LinkedIn Premium","category":"Social Media","cycle":"Annual","annual":704.07,"monthly":58.60,"renewal":"2026-10-26","payment":"Vicom CC","url":"linkedin.com"},
+    {"name":"Stripo","category":"Email Marketing","cycle":"Annual","annual":290,"monthly":24.10,"renewal":"2027-01-24","payment":"Vicom CC","url":"my.stripo.email"},
+    {"name":"ClickUp Pro","category":"CMS","cycle":"Monthly","annual":320,"monthly":26.60,"renewal":"2026-04-24","payment":"Thomas Flood","url":"app.clickup.com"},
+    {"name":"Canva Pro","category":"Design","cycle":"Annual","annual":164.99,"monthly":13.70,"renewal":"2027-03-03","payment":"Vicom CC","url":"canva.com"},
+    {"name":"Cognito Forms","category":"Communication","cycle":"Annual","annual":322,"monthly":26.85,"renewal":"2027-03-05","payment":"Vicom CC","url":"cognitoforms.com"},
+    {"name":"Website Hosting AUS","category":"Hosting","cycle":"Biennially","annual":136.80,"monthly":11.40,"renewal":"2026-11-28","payment":"Vicom CC","url":"ventraip.com.au"},
+    {"name":"Website Hosting NZ","category":"Hosting","cycle":"Biennially","annual":222,"monthly":18.50,"renewal":"2027-10-29","payment":"Vicom CC","url":"ventraip.com.au"},
+    {"name":"Claude AI","category":"AI Tools","cycle":"Monthly","annual":408,"monthly":34,"renewal":"2026-04-03","payment":"Thomas Flood","url":"claude.ai"},
+    {"name":"Zapier PRO","category":"AI Tools","cycle":"Annual","annual":348.40,"monthly":29,"renewal":"2027-02-12","payment":"Thomas Flood","url":"zapier.com"},
+    {"name":"Buffer","category":"Social Media","cycle":"Annual","annual":420,"monthly":35,"renewal":"2027-03-11","payment":"Thomas Flood","url":"publish.buffer.com"}
+  ],
+  "cancelled": [
+    {"name":"Chat GPT","category":"AI Tools","payment":"Vicom CC"},
+    {"name":"Planable","category":"Social Media","payment":"Vicom CC"},
+    {"name":"Trello Pro","category":"CMS","payment":"Vicom CC"},
+    {"name":"PastePixel","category":"Analytics","payment":"Vicom CC"}
+  ]
+}
