@@ -590,7 +590,8 @@ body {
 
   <div class="sidebar-section">Overview</div>
   <ul class="sidebar-nav">
-    <li><a class="active" data-page="brief" onclick="navPage('brief',this)"><span class="icon">&#9783;</span> Daily Brief</a></li>
+    <li><a class="active" data-page="overview" onclick="navPage('overview',this)"><span class="icon">&#9672;</span> Overview</a></li>
+    <li><a data-page="brief" onclick="navPage('brief',this)"><span class="icon">&#9783;</span> Daily Brief</a></li>
     <li><a data-page="meetings" onclick="navPage('meetings',this)"><span class="icon">&#128197;</span> Meetings</a></li>
     <li><a data-page="promotions" onclick="navPage('promotions',this)"><span class="icon">&#127942;</span> Promotions</a></li>
     <li><a data-page="events" onclick="navPage('events',this)"><span class="icon">&#127915;</span> Events</a></li>
@@ -620,8 +621,14 @@ body {
 </nav>
 
 <main class="main">
+  <!-- OVERVIEW PAGE -->
+  <div id="page-overview">
+    <div class="main-header"><h1 class="main-title">Overview</h1></div>
+    <div id="overview-content"><div class="loading"><div class="spinner"></div>Loading overview...</div></div>
+  </div>
+
   <!-- DAILY BRIEF PAGE -->
-  <div id="page-brief">
+  <div id="page-brief" style="display:none">
     <div class="main-header">
       <h1 class="main-title">Daily Brief</h1>
       <div class="date-nav">
@@ -708,10 +715,164 @@ function navPage(page, el) {
   document.querySelectorAll('[id^="page-"]').forEach(p=>p.style.display='none');
   document.getElementById('page-'+page).style.display='block';
   document.querySelector('.sidebar').classList.remove('open');
+  if(page==='overview') renderOverviewPage();
   if(page==='finance') renderFinancePage();
   if(page==='meetings') renderMeetingsPage();
   if(page==='promotions') renderPromotionsPage();
   if(page==='events') renderEventsPage();
+}
+
+// ===== OVERVIEW PAGE =====
+function renderOverviewPage(){
+  const d = getLatestData();
+  if(!d){ $('overview-content').innerHTML='<div class="no-data">No data available yet. Waiting for first daily brief.</div>';return; }
+  let h='';
+
+  // Date banner
+  h+=`<div class="glass-card-dark animate-in" style="margin-bottom:18px"><div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:16px;font-weight:700">${d.date_label||fmtDate(d.date)}</div><div style="font-size:13px;opacity:0.6">${d.week_label||''}</div></div><div style="display:flex;gap:6px">`;
+  (d.agents?.reporting||[]).length && (h+=`<span class="badge" style="background:rgba(42,157,92,0.2);color:#6fdb9e;border:none">${(d.agents?.reporting||[]).length} sources</span>`);
+  (d.agents?.missing||[]).length && (h+=`<span class="badge" style="background:rgba(214,58,58,0.2);color:#f08080;border:none">${(d.agents?.missing||[]).length} missing</span>`);
+  h+=`</div></div></div>`;
+
+  // Top-level stats
+  const crit = d.critical?.filter(c=>c.severity==='critical').length||0;
+  const high = d.critical?.filter(c=>c.severity==='high').length||0;
+  const allK = [...(d.kpis?.content||[]),...(d.kpis?.website||[])];
+  const onTrack = allK.filter(k=>k.current>=k.target).length;
+  const totalAct = (d.actions||[]).reduce((s,c)=>s+c.items.length,0);
+  const nextEvent = (d.events||[]).sort((a,b)=>a.days_out-b.days_out)[0];
+
+  h+=`<div class="stats-row animate-in" style="animation-delay:0.05s">
+    <div class="stat-card"><div class="stat-label">Critical</div><div class="stat-val" style="color:var(--red)">${crit}</div><div class="stat-sub">${high} high priority</div></div>
+    <div class="stat-card"><div class="stat-label">KPIs on track</div><div class="stat-val" style="color:${onTrack>=allK.length*0.5?'var(--green)':'var(--red)'}">${onTrack}<span class="stat-sub">/${allK.length}</span></div></div>
+    <div class="stat-card"><div class="stat-label">Next event</div><div class="stat-val" style="color:var(--accent)">${nextEvent?nextEvent.days_out:'-'}</div><div class="stat-sub">${nextEvent?'days':'no events'}</div></div>
+    <div class="stat-card"><div class="stat-label">Actions today</div><div class="stat-val" style="color:var(--navy)">${totalAct}</div></div>
+  </div>`;
+
+  h+=`<div class="g2 animate-in" style="animation-delay:0.1s">`;
+
+  // LEFT COLUMN
+  h+=`<div>`;
+
+  // Critical snapshot (top 3)
+  const topCritical = (d.critical||[]).slice(0,4);
+  if(topCritical.length){
+    h+=`<div class="glass-card"><div class="card-title" style="color:var(--red)">Critical & urgent</div>`;
+    topCritical.forEach(c=>{
+      const sev=c.severity==='critical'?'critical':'high';
+      const dot=c.severity==='critical'?'c':'h';
+      h+=`<div class="crit-item ${sev}" style="margin-bottom:4px"><span class="crit-dot ${dot}"></span><span class="crit-text" style="font-size:12px">${c.text}</span></div>`;
+    });
+    if((d.critical||[]).length>4) h+=`<div style="text-align:center;padding-top:8px"><a style="font-size:12px;color:var(--accent);cursor:pointer;text-decoration:none;font-weight:600" onclick="document.querySelector('[data-page=brief]').click()">View all ${d.critical.length} items →</a></div>`;
+    h+=`</div>`;
+  }
+
+  // KPI snapshot
+  h+=`<div class="glass-card"><div class="card-title" style="color:var(--accent)">KPI snapshot</div>`;
+  h+=`<div class="g2" style="gap:8px">`;
+  h+=`<div><div style="font-size:11px;font-weight:600;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Content</div>`;
+  (d.kpis?.content||[]).forEach(k=>{
+    const ok=k.current>=k.target;
+    h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:12px"><span style="color:var(--text-secondary)">${k.label}</span><span style="font-weight:700;color:${ok?'var(--green)':'var(--red)'}">${k.current}/${k.target}</span></div>`;
+  });
+  h+=`</div><div><div style="font-size:11px;font-weight:600;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Website & SEO</div>`;
+  (d.kpis?.website||[]).forEach(k=>{
+    const ok=k.current>=k.target;
+    h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:12px"><span style="color:var(--text-secondary)">${k.label}</span><span style="font-weight:700;color:${ok?'var(--green)':'var(--red)'}">${k.current}/${k.target}</span></div>`;
+  });
+  h+=`</div></div></div>`;
+
+  // Meetings snapshot
+  h+=`<div class="glass-card"><div class="card-title" style="color:var(--blue)">Today's calendar</div>`;
+  if(d.meetings?.today?.length){
+    d.meetings.today.forEach(m=>{
+      h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border)"><div><div style="font-size:13px;font-weight:600;color:var(--navy)">${m.name}</div><div class="list-sub">${m.time||''} · ${m.type||''}</div></div>${m.warning?`<span class="badge b-red">${m.warning}</span>`:''}</div>`;
+    });
+  } else { h+=`<div style="font-size:13px;color:var(--text-tertiary)">No meetings today.</div>`; }
+  if(d.meetings?.follow_up?.length){
+    h+=`<div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Needs follow-up</div>`;
+    d.meetings.follow_up.slice(0,3).forEach(m=>{
+      h+=`<div style="font-size:12px;color:var(--amber);padding:3px 0">${m.name} — ${m.issue}</div>`;
+    });
+    h+=`</div>`;
+  }
+  h+=`</div>`;
+
+  h+=`</div>`; // end left
+
+  // RIGHT COLUMN
+  h+=`<div>`;
+
+  // Events snapshot
+  h+=`<div class="glass-card"><div class="card-title" style="color:var(--navy)">Upcoming events</div>`;
+  (d.events||[]).slice(0,3).forEach(evt=>{
+    const pct=evt.tasks_total>0?Math.round((evt.tasks_complete/evt.tasks_total)*100):0;
+    const urgCol=evt.days_out<=21?'var(--red)':evt.days_out<=60?'var(--amber)':'var(--blue)';
+    h+=`<div style="padding:8px 0;border-bottom:1px solid var(--border)"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px"><span style="font-size:13px;font-weight:600;color:var(--navy)">${evt.name}</span><span class="badge" style="background:${urgCol};color:#fff;border:none">${evt.days_out}d</span></div>`;
+    h+=`<div class="list-sub" style="margin-bottom:4px">${evt.date} · ${evt.location}</div>`;
+    h+=`<div class="progress-wrap"><div class="progress-track" style="height:5px"><div class="progress-fill" style="width:${pct}%;background:${urgCol};height:5px"></div></div><span style="font-size:11px;font-weight:700;color:${urgCol};min-width:35px;text-align:right">${pct}%</span></div>`;
+    h+=`</div>`;
+  });
+  if((d.events||[]).length>3) h+=`<div style="text-align:center;padding-top:8px"><a style="font-size:12px;color:var(--accent);cursor:pointer;text-decoration:none;font-weight:600" onclick="document.querySelector('[data-page=events]').click()">View all ${d.events.length} events →</a></div>`;
+  h+=`</div>`;
+
+  // Promotions snapshot
+  const promos = d.content?.promotions;
+  h+=`<div class="glass-card"><div class="card-title" style="color:var(--accent)">Promotions</div>`;
+  if(promos?.count){
+    h+=`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><span style="font-size:24px;font-weight:700;color:var(--navy)">${promos.count}</span>`;
+    if(promos.ending_soon) h+=`<span class="badge b-red">${promos.ending_soon} ending soon</span>`;
+    h+=`</div>`;
+    if(promos.end_note) h+=`<div style="font-size:12px;color:var(--amber);padding:8px 10px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm)">${promos.end_note}</div>`;
+  } else { h+=`<div style="font-size:13px;color:var(--text-tertiary)">No active promotions.</div>`; }
+  h+=`</div>`;
+
+  // Finance snapshot
+  h+=`<div class="glass-card"><div class="card-title" style="color:var(--amber)">Finance</div>`;
+  // Try from finance.json first, fallback to brief data
+  if(SUBS.length){
+    const totalM=SUBS.reduce((s,x)=>s+x.monthly,0);
+    const thomasM=SUBS.filter(s=>s.payment==='Thomas Flood').reduce((s,x)=>s+x.monthly,0);
+    h+=`<div class="g2" style="gap:8px;margin-bottom:8px"><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--navy)">$${Math.round(totalM)}</div><div style="font-size:11px;color:var(--text-tertiary)">/month total</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--amber)">$${Math.round(thomasM)}</div><div style="font-size:11px;color:var(--text-tertiary)">/month Thomas</div></div></div>`;
+    h+=`<div style="font-size:12px;color:var(--text-secondary);text-align:center">${SUBS.length} active subscriptions</div>`;
+    // Nearest renewal
+    const now=new Date();
+    const nextRenewal=SUBS.filter(s=>{const r=new Date(s.renewal);return(r-now)/(1000*60*60*24)>0}).sort((a,b)=>new Date(a.renewal)-new Date(b.renewal))[0];
+    if(nextRenewal){
+      const diff=Math.ceil((new Date(nextRenewal.renewal)-now)/(1000*60*60*24));
+      h+=`<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:12px;display:flex;justify-content:space-between"><span style="color:var(--text-secondary)">Next renewal: ${nextRenewal.name}</span><span class="badge ${diff<=7?'b-red':diff<=30?'b-amber':'b-blue'}">${diff}d</span></div>`;
+    }
+  } else if(d.finance?.totals){
+    h+=`<div class="g2" style="gap:8px"><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--navy)">$${d.finance.totals.monthly||0}</div><div style="font-size:11px;color:var(--text-tertiary)">/month</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--amber)">$${d.finance.totals.thomas_monthly||0}</div><div style="font-size:11px;color:var(--text-tertiary)">Thomas</div></div></div>`;
+  }
+  h+=`</div>`;
+
+  // Website & SEO snapshot
+  if(d.website?.backlogs){
+    h+=`<div class="glass-card"><div class="card-title" style="color:var(--blue)">Website & SEO backlog</div>`;
+    h+=`<div class="g3" style="gap:8px;text-align:center">`;
+    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--navy)">${d.website.backlogs.website_pages}</div><div style="font-size:11px;color:var(--text-tertiary)">Website</div></div>`;
+    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--navy)">${d.website.backlogs.product_pages}</div><div style="font-size:11px;color:var(--text-tertiary)">Product</div></div>`;
+    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--accent)">${d.website.backlogs.seo}</div><div style="font-size:11px;color:var(--text-tertiary)">SEO</div></div>`;
+    h+=`</div></div>`;
+  }
+
+  h+=`</div>`; // end right
+  h+=`</div>`; // end g2
+
+  // Top actions (first 5)
+  const topActions = [];
+  (d.actions||[]).forEach(cat=>{cat.items.forEach(item=>{if(topActions.length<5)topActions.push({cat:cat.category,item})})});
+  if(topActions.length){
+    h+=`<div class="glass-card animate-in" style="animation-delay:0.2s;border-left:3px solid var(--green)"><div class="card-title" style="color:var(--green)">Top priority actions</div>`;
+    topActions.forEach((a,i)=>{
+      h+=`<div style="display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--border)"><span style="font-size:12px;font-weight:700;color:var(--accent);min-width:18px">${i+1}.</span><div><div style="font-size:13px;color:var(--navy)">${a.item}</div><div class="list-sub">${a.cat}</div></div></div>`;
+    });
+    h+=`<div style="text-align:center;padding-top:10px"><a style="font-size:12px;color:var(--accent);cursor:pointer;text-decoration:none;font-weight:600" onclick="document.querySelector('[data-page=brief]').click()">View all ${totalAct} actions →</a></div>`;
+    h+=`</div>`;
+  }
+
+  $('overview-content').innerHTML=h;
 }
 
 // ===== MEETINGS PAGE =====
@@ -1022,7 +1183,7 @@ async function init(){
   try{const r=await fetch(INDEX_URL);if(r.ok){const idx=await r.json();allDates=idx.dates||idx}}catch(e){}
   if(!allDates.length){const probe=[];const today=new Date();for(let i=90;i>=0;i--){const d=new Date(today);d.setDate(d.getDate()-i);probe.push(d.toISOString().split('T')[0])}const results=await Promise.allSettled(probe.map(async ds=>{const r=await fetch(`${DATA_URL}${ds}.json`);if(!r.ok)throw new Error();return{date:ds,data:await r.json()}}));results.forEach(r=>{if(r.status==='fulfilled'){allDates.push(r.value.date);allData[r.value.date]=r.value.data}})}
   if(!allDates.length){$('content').innerHTML='<div class="no-data">No brief data found yet.</div>';$('dateDisplay').textContent='No data';return}
-  allDates.sort();currentIdx=allDates.length-1;await loadAndRender();
+  allDates.sort();currentIdx=allDates.length-1;await loadAndRender();renderOverviewPage();
 }
 
 async function loadDate(ds){if(allData[ds])return allData[ds];try{const r=await fetch(`${DATA_URL}${ds}.json`);if(!r.ok)return null;const data=await r.json();allData[ds]=data;return data}catch(e){return null}}
