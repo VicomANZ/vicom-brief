@@ -1,0 +1,240 @@
+{
+  "date": "2026-03-29",
+  "date_label": "Sunday 29 Mar 2026",
+  "week_label": "Week of 23 Mar — 29 Mar 2026",
+  "agents": {
+    "reporting": [
+      "Promotion Tracking",
+      "Pages to Optimise & Update",
+      "Pages Building & Updating",
+      "Product Page Building & Updating",
+      "Events Calendar & Tasks",
+      "Cost Tracking",
+      "PEC Tracking",
+      "Marketing Meetings",
+      "Google Calendar"
+    ],
+    "partial": [],
+    "missing": [
+      "Content Calendar (no tasks due this week)",
+      "Weekly LinkedIn Connection Requests (no tasks this week)"
+    ]
+  },
+  "critical": [
+    {
+      "text": "6 Tektronix promotions expire 31 Mar (2 days): Keithley 4200A-SCS Competitive Trade-In, 50% Off 4/5/6 Series Upgrades, AI Wave Performance Oscilloscope Upgrade, 4/5 Series B MSO Power Play Bundle, 2 Series MSO Free Upgrade, 3 Series MDO Free Bandwidth Upgrade. No EDM or LinkedIn post sent this week to promote them before expiry.",
+      "source": "Content & Campaigns / Promotions",
+      "severity": "critical"
+    },
+    {
+      "text": "Southern Lights Disrupt is 18 days away with 0 of 6 prep tasks complete — 4 tasks overdue: Transport Van (due 13 Mar), Booth Banner (due 17 Mar), Tables & Chairs (due 17 Mar), pick items for Melbourne office (due 17 Mar). Floor Screen Video and product list from Mark are due today.",
+      "source": "Events & Exhibitions",
+      "severity": "critical"
+    },
+    {
+      "text": "QAC Adelaide is 31 days away with 0 of 14 prep tasks complete — 8 tasks overdue including EDMs (due 3 Mar), Promotional Merchandise (due 3 Mar), Website Event Created (due 3 Mar), Build Layout (due 3 Mar), Website Banner (due 17 Mar), LinkedIn Event (due 17 Mar), Email Banner (due 28 Mar), Transport Van (due 28 Mar). No event EDM sent despite being 4+ weeks overdue.",
+      "source": "Events & Exhibitions",
+      "severity": "critical"
+    },
+    {
+      "text": "No QAC event EDM has been sent despite event being 31 days out. EDM 1 was due 8 weeks prior (3 Mar) and is still not started. Tektronix promos expiring 31 Mar could be tied into a QAC + promo EDM to maximise impact before expiry.",
+      "source": "Events / Content cross-reference",
+      "severity": "critical"
+    },
+    {
+      "text": "No content published this week — 0 LinkedIn posts, 0 EDMs. All weekly content KPIs at zero. Week ends today.",
+      "source": "Content & Campaigns",
+      "severity": "high"
+    },
+    {
+      "text": "LinkedIn Connection Requests not completed this week.",
+      "source": "Content & Campaigns",
+      "severity": "high"
+    }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 0, "target": 3 },
+      { "label": "EDMs Sent", "current": 0, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 0, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 0, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [],
+    "follow_up": [
+      { "name": "Vicom Marketing Meeting (24 Mar)", "issue": "Check if action items were captured and followed up" }
+    ]
+  },
+  "content": {
+    "due_today": [],
+    "due_this_week": [],
+    "promotions": {
+      "count": 7,
+      "items": [
+        "Keithley 4200A-SCS — Competitive Trade-In Discount",
+        "Unlock Your Scope's Potential — 50% Off 4/5/6 Series Upgrades",
+        "Ride the AI Wave — Performance Oscilloscope Upgrade Offer",
+        "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
+        "4/5 Series B MSO — Power Play Bundle Discounts",
+        "2 Series MSO — Choose Your Free Upgrade",
+        "3 Series MDO — Free Bandwidth Upgrade"
+      ],
+      "ending_soon": 6,
+      "end_note": "6 Tektronix promos expire 31 Mar 2026 (2 days). Only the Trade-In 30% promo (due Oct 2026) continues. Publish a final LinkedIn post or EDM on Monday to capture last-minute interest."
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "16 Apr 2026",
+      "location": "Melbourne VIC",
+      "days_out": 18,
+      "tasks_complete": 0,
+      "tasks_total": 6,
+      "flags": [
+        "4 overdue prep tasks: Transport Van (13 Mar), Booth Banner (17 Mar), Tables & Chairs (17 Mar), pick items (17 Mar)",
+        "Floor Screen Video and product list from Mark due today (29 Mar)",
+        "No event EDM or LinkedIn event created yet"
+      ]
+    },
+    {
+      "name": "Quantum Australia Conference (QAC) Adelaide",
+      "date": "29 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 31,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "8 overdue prep tasks including EDMs, Promo Merch, Website Event, Build Layout (due 3 Mar), Website Banner, LinkedIn Event (due 17 Mar), Email Banner, Transport Van (due 28 Mar)",
+        "No event EDM sent — EDM 1 was due 3 Mar (26 days overdue)",
+        "No website event page created yet",
+        "Cross-ref: Tektronix promos expiring 31 Mar — tie promo messaging into QAC EDM"
+      ]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 59,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "EDMs due 8 weeks prior (~1 Apr) — approaching deadline",
+        "Website Event and Build Layout also due ~1 Apr"
+      ]
+    },
+    {
+      "name": "Electronex",
+      "date": "03 Jun 2026",
+      "location": "Australia",
+      "days_out": 66,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "Prep tasks begin 8 weeks prior (~8 Apr)"
+      ]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "15 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 200,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": {
+      "website_pages": 41,
+      "product_pages": 4,
+      "seo": 92
+    },
+    "suggested": [
+      { "name": "Oscilloscopes & Probes | Oscilloscope Probes & Accessories", "type": "SEO" },
+      { "name": "Electromagnetic Warfare (Military)", "type": "Website" },
+      { "name": "EA-BIM 20000 Series Battery Impedance Meters", "type": "Product" }
+    ],
+    "seo_warning": "All website KPIs at zero this week. 92 SEO pages in backlog, 4 product pages in backlog, 41 website pages in backlog. No pages moved to complete or optimised this week. Prioritise moving one SEO page (Oscilloscope Probes & Accessories) to in progress."
+  },
+  "finance": {
+    "totals": {
+      "monthly": 353.12,
+      "annual": 4241,
+      "thomas_monthly": 124.60,
+      "active_subs": 12
+    },
+    "overdue": [],
+    "renewals_this_week": [],
+    "thomas_card": [
+      { "name": "Claude AI", "cost": "$34.00/mo", "pec": "none" },
+      { "name": "Clickup Pro", "cost": "$26.60/mo", "pec": "none" },
+      { "name": "Buffer", "cost": "$35.00/mo (annual)", "pec": "none" },
+      { "name": "Zapier PRO", "cost": "$29.00/mo (annual)", "pec": "none" }
+    ],
+    "pec_note": "Last PEC claim (12 Feb 2026) approved. No pending reimbursements. Claude AI renews 2 Apr — consider submitting next PEC before renewal."
+  },
+  "actions": [
+    {
+      "category": "Promotions (URGENT — 2 days)",
+      "items": [
+        "Draft and schedule a LinkedIn post for Monday 30 Mar highlighting the 6 expiring Tektronix promos — focus on '50% Off Scope Upgrades' and 'Power Play Bundle' as highest-value offers",
+        "Send a last-chance EDM on Monday combining Tektronix promo expiry (31 Mar) with QAC Adelaide event awareness"
+      ]
+    },
+    {
+      "category": "Southern Lights Disrupt (18 days)",
+      "items": [
+        "Chase Mark for the final products list today so the animated screen video can be created this week",
+        "Confirm Floor Screen Video timeline — due today, needs product list first",
+        "Resolve overdue tasks: confirm Transport Van is booked, Booth Banner is ready to ship, Tables & Chairs are arranged, items for Melbourne office are picked"
+      ]
+    },
+    {
+      "category": "QAC Adelaide (31 days)",
+      "items": [
+        "Create QAC event page on vicom.com.au immediately — was due 3 Mar",
+        "Draft QAC EDM 1 combining event awareness with expiring Tektronix promos — send by Wednesday 1 Apr",
+        "Create LinkedIn Event for QAC — was due 17 Mar",
+        "Start Build Layout in Google SketchUp — was due 3 Mar",
+        "Order promotional merchandise this week — was due 3 Mar"
+      ]
+    },
+    {
+      "category": "Content & SEO",
+      "items": [
+        "Move 'Oscilloscopes & Probes | Oscilloscope Probes & Accessories' to in progress in Pages to Optimise, set due date Friday 4 Apr",
+        "Move 'EA-BIM 20000 Series Battery Impedance Meters' to in progress in Product Pages, set due date Friday 4 Apr",
+        "Complete weekly LinkedIn Connection Requests before end of day"
+      ]
+    },
+    {
+      "category": "Comms Connect NZ (59 days)",
+      "items": [
+        "EDMs and website event due ~1 Apr (8 weeks prior) — begin planning Comms Connect NZ EDM content this week to avoid repeating QAC delays"
+      ]
+    },
+    {
+      "category": "Finance",
+      "items": [
+        "Claude AI renews 2 Apr ($34.00) on Thomas's card — submit PEC claim if grouping with other expenses",
+        "Consider switching Clickup Pro to annual billing to save (currently $26.60/mo monthly vs potential annual discount)"
+      ]
+    }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 1,
+    "meetings_completed": 1,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 1
+  }
+}
