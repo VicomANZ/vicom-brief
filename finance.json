@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-01T18:16:34Z",
+  "updated_at": "2026-04-02T18:07:25Z",
   "active": [
     {
       "name": "Buffer",
@@ -10,72 +10,6 @@
       "renewal": "2027-03-10",
       "payment": "Thomas Flood",
       "url": "publish.buffer.com",
-      "notes": ""
-    },
-    {
-      "name": "Zapier PRO",
-      "category": "AI Tools",
-      "cycle": "Annual",
-      "annual": 348,
-      "monthly": 29.0,
-      "renewal": "2027-02-11",
-      "payment": "Thomas Flood",
-      "url": "zapier.com",
-      "notes": ""
-    },
-    {
-      "name": "Sucuri",
-      "category": "Security",
-      "cycle": "Annual",
-      "annual": 860,
-      "monthly": 71.66,
-      "renewal": "2027-02-09",
-      "payment": "Vicom CC",
-      "url": "sucuri.net/website-security-platform/signup",
-      "notes": ""
-    },
-    {
-      "name": "Claude AI",
-      "category": "AI Tools",
-      "cycle": "Monthly",
-      "annual": 408,
-      "monthly": 34.0,
-      "renewal": "2026-04-02",
-      "payment": "Thomas Flood",
-      "url": "claude.ai/new",
-      "notes": ""
-    },
-    {
-      "name": "Website Hosting NZ",
-      "category": "Hosting",
-      "cycle": "Biennually",
-      "annual": 222,
-      "monthly": 18.5,
-      "renewal": "2027-10-28",
-      "payment": "Vicom CC",
-      "url": "ventraip.com.au/?",
-      "notes": ""
-    },
-    {
-      "name": "Website Hosting AUS",
-      "category": "Hosting",
-      "cycle": "Biennually",
-      "annual": 137,
-      "monthly": 11.4,
-      "renewal": "2026-11-27",
-      "payment": "Vicom CC",
-      "url": "ventraip.com.au/?",
-      "notes": ""
-    },
-    {
-      "name": "Cognito Forms",
-      "category": "Communication",
-      "cycle": "Annual",
-      "annual": 322,
-      "monthly": 26.85,
-      "renewal": "2027-03-04",
-      "payment": "Vicom CC",
-      "url": "www.cognitoforms.com",
       "notes": ""
     },
     {
@@ -90,6 +24,17 @@
       "notes": ""
     },
     {
+      "name": "Claude AI",
+      "category": "AI Tools",
+      "cycle": "Monthly",
+      "annual": 408,
+      "monthly": 34.0,
+      "renewal": "2026-05-02",
+      "payment": "Thomas Flood",
+      "url": "claude.ai/new",
+      "notes": ""
+    },
+    {
       "name": "Clickup Pro",
       "category": "CMS",
       "cycle": "Monthly",
@@ -101,14 +46,25 @@
       "notes": "update to annual"
     },
     {
-      "name": "Stripo",
-      "category": "Email Marketing",
+      "name": "Cognito Forms",
+      "category": "Communication",
       "cycle": "Annual",
-      "annual": 290,
-      "monthly": 24.1,
-      "renewal": "2027-01-23",
+      "annual": 322,
+      "monthly": 26.85,
+      "renewal": "2027-03-04",
       "payment": "Vicom CC",
-      "url": "my.stripo.email/cabinet/#/my-templates/794209?folder=382469",
+      "url": "www.cognitoforms.com",
+      "notes": ""
+    },
+    {
+      "name": "Google One Drive",
+      "category": "Asset Storage",
+      "cycle": "Annual",
+      "annual": 45,
+      "monthly": 3.71,
+      "renewal": "2026-10-30",
+      "payment": "Vicom CC",
+      "url": "one.google.com",
       "notes": ""
     },
     {
@@ -123,36 +79,80 @@
       "notes": ""
     },
     {
-      "name": "Google One Drive",
-      "category": "Asset Storage",
+      "name": "Stripo",
+      "category": "Email Marketing",
       "cycle": "Annual",
-      "annual": 45,
-      "monthly": 3.71,
-      "renewal": "2026-10-30",
+      "annual": 290,
+      "monthly": 24.1,
+      "renewal": "2027-01-23",
       "payment": "Vicom CC",
-      "url": "one.google.com",
+      "url": "my.stripo.email/cabinet/#/my-templates/794209?folder=382469",
+      "notes": ""
+    },
+    {
+      "name": "Sucuri",
+      "category": "Security",
+      "cycle": "Annual",
+      "annual": 860,
+      "monthly": 71.66,
+      "renewal": "2027-02-09",
+      "payment": "Vicom CC",
+      "url": "sucuri.net/website-security-platform/signup",
+      "notes": ""
+    },
+    {
+      "name": "Website Hosting AUS",
+      "category": "Hosting",
+      "cycle": "Biennually",
+      "annual": 137,
+      "monthly": 11.4,
+      "renewal": "2026-11-27",
+      "payment": "Vicom CC",
+      "url": "ventraip.com.au/?",
+      "notes": ""
+    },
+    {
+      "name": "Website Hosting NZ",
+      "category": "Hosting",
+      "cycle": "Biennually",
+      "annual": 222,
+      "monthly": 18.5,
+      "renewal": "2027-10-28",
+      "payment": "Vicom CC",
+      "url": "ventraip.com.au/?",
+      "notes": ""
+    },
+    {
+      "name": "Zapier PRO",
+      "category": "AI Tools",
+      "cycle": "Annual",
+      "annual": 348,
+      "monthly": 29.0,
+      "renewal": "2027-02-11",
+      "payment": "Thomas Flood",
+      "url": "zapier.com",
       "notes": ""
     }
   ],
   "cancelled": [
-    {
-      "name": "Planable",
-      "category": "Social Media",
-      "payment": "Vicom CC"
-    },
     {
       "name": "Chat GPT",
       "category": "AI Tools",
       "payment": "Vicom CC"
     },
     {
-      "name": "Trello Pro",
-      "category": "CMS",
+      "name": "PastePixel",
+      "category": "Analytics",
       "payment": "Vicom CC"
     },
     {
-      "name": "PastePixel",
-      "category": "Analytics",
+      "name": "Planable",
+      "category": "Social Media",
+      "payment": "Vicom CC"
+    },
+    {
+      "name": "Trello Pro",
+      "category": "CMS",
       "payment": "Vicom CC"
     }
   ]
