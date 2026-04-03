@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02T18:07:25Z",
+  "updated_at": "2026-04-03T18:18:08Z",
   "active": [
     {
       "name": "Buffer",
@@ -14,12 +14,12 @@
     },
     {
       "name": "Canva Pro",
-      "category": "Design",
+      "category": "",
       "cycle": "Annual",
       "annual": 165,
       "monthly": 13.7,
       "renewal": "2027-03-02",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "www.canva.com/folder/FAFWxLAV_WU",
       "notes": ""
     },
@@ -32,7 +32,7 @@
       "renewal": "2026-05-02",
       "payment": "Thomas Flood",
       "url": "claude.ai/new",
-      "notes": ""
+      "notes": "\n\n\n"
     },
     {
       "name": "Clickup Pro",
@@ -43,7 +43,7 @@
       "renewal": "2026-04-23",
       "payment": "Thomas Flood",
       "url": "app.clickup.com/90161465641/v/l/li/901613314863",
-      "notes": "update to annual"
+      "notes": "update to annual\n\n"
     },
     {
       "name": "Cognito Forms",
@@ -52,7 +52,7 @@
       "annual": 322,
       "monthly": 26.85,
       "renewal": "2027-03-04",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "www.cognitoforms.com",
       "notes": ""
     },
@@ -63,7 +63,7 @@
       "annual": 45,
       "monthly": 3.71,
       "renewal": "2026-10-30",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "one.google.com",
       "notes": ""
     },
@@ -74,7 +74,7 @@
       "annual": 704,
       "monthly": 58.6,
       "renewal": "2026-10-25",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "www.linkedin.com/feed",
       "notes": ""
     },
@@ -85,7 +85,7 @@
       "annual": 290,
       "monthly": 24.1,
       "renewal": "2027-01-23",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "my.stripo.email/cabinet/#/my-templates/794209?folder=382469",
       "notes": ""
     },
@@ -96,7 +96,7 @@
       "annual": 860,
       "monthly": 71.66,
       "renewal": "2027-02-09",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "sucuri.net/website-security-platform/signup",
       "notes": ""
     },
@@ -107,7 +107,7 @@
       "annual": 137,
       "monthly": 11.4,
       "renewal": "2026-11-27",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "ventraip.com.au/?",
       "notes": ""
     },
@@ -118,7 +118,7 @@
       "annual": 222,
       "monthly": 18.5,
       "renewal": "2027-10-28",
-      "payment": "Vicom CC",
+      "payment": "",
       "url": "ventraip.com.au/?",
       "notes": ""
     },
@@ -138,22 +138,22 @@
     {
       "name": "Chat GPT",
       "category": "AI Tools",
-      "payment": "Vicom CC"
+      "payment": ""
     },
     {
       "name": "PastePixel",
       "category": "Analytics",
-      "payment": "Vicom CC"
+      "payment": ""
     },
     {
       "name": "Planable",
       "category": "Social Media",
-      "payment": "Vicom CC"
+      "payment": ""
     },
     {
       "name": "Trello Pro",
       "category": "CMS",
-      "payment": "Vicom CC"
+      "payment": ""
     }
   ]
 }
