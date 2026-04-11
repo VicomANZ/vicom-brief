@@ -1,0 +1,292 @@
+{
+  "date": "2026-04-12",
+  "date_label": "Sunday 12 Apr 2026",
+  "week_label": "Week of 06 Apr \u2014 12 Apr 2026",
+  "agents": {
+    "reporting": [
+      "Content Calendar",
+      "Promotion Tracking",
+      "Pages to Optimise & Update",
+      "Pages Building & Updating",
+      "Product Page Building & Updating",
+      "Events Calendar & Tasks",
+      "Cost Tracking",
+      "PEC Tracking",
+      "Google Calendar (Vicom)"
+    ],
+    "partial": [
+      "Weekly LinkedIn Connection Requests"
+    ],
+    "missing": [
+      "Marketing Meetings"
+    ]
+  },
+  "critical": [
+    {
+      "text": "Southern Lights Disrupt is in 4 days (16 Apr) \u2014 3 prep tasks still incomplete: Floor Screen Video, Transport Van, and get final product list from Mark. Action required TODAY.",
+      "source": "Events & Exhibitions",
+      "severity": "critical"
+    },
+    {
+      "text": "QAC Adelaide is in 18 days (30 Apr) \u2014 0 of 9 prep tasks complete. LinkedIn Event, Website Banner, Email Banner, and Transport Van are all overdue. No event EDM found in Content Calendar.",
+      "source": "Events & Exhibitions / Content",
+      "severity": "critical"
+    },
+    {
+      "text": "6 Tektronix promotions marked 'ending soon' expired on 31 Mar (12 days ago). Update statuses to expired or confirm extensions with Tektronix.",
+      "source": "Promotion Tracking",
+      "severity": "high"
+    },
+    {
+      "text": "Electronex 8-week prep tasks (Build Layout, Promo Merch, Website Event, EDMs) were due 7 Apr \u2014 5 days overdue, 0/14 tasks complete.",
+      "source": "Events & Exhibitions",
+      "severity": "high"
+    },
+    {
+      "text": "Comms Connect NZ 8-week prep tasks (Build Layout, Promo Merch, Website Event, EDMs) were due ~3 Apr \u2014 9 days overdue, 0/14 tasks complete.",
+      "source": "Events & Exhibitions",
+      "severity": "high"
+    },
+    {
+      "text": "Weekly LinkedIn connection requests not completed this week.",
+      "source": "Content & Campaigns",
+      "severity": "high"
+    },
+    {
+      "text": "All weekly content KPIs at zero or behind target \u2014 0 EDMs sent, 0 pages built, 0 SEO pages optimised this week.",
+      "source": "KPIs",
+      "severity": "high"
+    }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 1, "target": 3 },
+      { "label": "EDMs Sent", "current": 0, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 0, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 0, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [
+      {
+        "name": "Comms Connect NZ \u2014 LinkedIn Event Creation (6 weeks prior)",
+        "date": "14 Apr 2026",
+        "time": "All day",
+        "type": "Event prep deadline",
+        "warning": "Due Tuesday \u2014 create LinkedIn event for Comms Connect NZ"
+      },
+      {
+        "name": "Comms Connect NZ \u2014 Website Banner (6 weeks prior)",
+        "date": "14 Apr 2026",
+        "time": "All day",
+        "type": "Event prep deadline",
+        "warning": "Due Tuesday \u2014 build website banner for Comms Connect NZ"
+      },
+      {
+        "name": "Southern Lights Disrupt",
+        "date": "15\u201316 Apr 2026",
+        "time": "21:00\u201315:00",
+        "type": "Exhibition",
+        "warning": "EVENT IN 4 DAYS \u2014 finalise remaining prep"
+      }
+    ],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [],
+    "due_this_week": [
+      {
+        "name": "Multichannel, Mixed Domain Analysis",
+        "partner": "Tektronix",
+        "date": "08 Apr 2026",
+        "status": "published"
+      }
+    ],
+    "promotions": {
+      "count": 7,
+      "items": [
+        "Keithley 4200A-SCS \u2014 Competitive Trade-In Discount",
+        "Unlock Your Scope's Potential \u2014 50% Off 4/5/6 Series Upgrades",
+        "Ride the AI Wave \u2014 Performance Oscilloscope Upgrade Offer",
+        "Trade-In \u2014 Save Up to 30% on 4/5/6 Series B MSO",
+        "4/5 Series B MSO \u2014 Power Play Bundle Discounts",
+        "2 Series MSO \u2014 Choose Your Free Upgrade",
+        "3 Series MDO \u2014 Free Bandwidth Upgrade"
+      ],
+      "ending_soon": 6,
+      "end_note": "6 Tektronix promos expired 31 Mar \u2014 statuses still show 'ending soon'. 1 active promo (Trade-In 4/5/6 Series B MSO) runs until 31 Dec 2026."
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "16 Apr 2026",
+      "location": "Sydney NSW",
+      "days_out": 4,
+      "tasks_complete": 13,
+      "tasks_total": 16,
+      "flags": [
+        "Floor Screen Video not started \u2014 need final product list from Mark",
+        "Transport Van task still in template status",
+        "Get final products list from Mark still outstanding"
+      ]
+    },
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "30 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 18,
+      "tasks_complete": 0,
+      "tasks_total": 9,
+      "flags": [
+        "0/9 prep tasks complete \u2014 all still in template status",
+        "LinkedIn Event Creation overdue (was due ~17 Mar)",
+        "Website Banner overdue (was due ~17 Mar)",
+        "Email Banner overdue (was due ~28 Mar)",
+        "Transport Van overdue (was due ~28 Mar)",
+        "No event EDM found in Content Calendar"
+      ]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "28 May 2026",
+      "location": "New Zealand",
+      "days_out": 46,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "0/14 prep tasks complete",
+        "8-week prep tasks (Build Layout, Promo Merch, Website Event, EDMs) overdue by 9 days",
+        "6-week tasks (LinkedIn Event, Website Banner) due 14 Apr \u2014 action this week"
+      ]
+    },
+    {
+      "name": "Electronex",
+      "date": "04 Jun 2026",
+      "location": "TBC",
+      "days_out": 53,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "0/14 prep tasks complete",
+        "8-week prep tasks (Build Layout, Promo Merch, Website Event, EDMs) overdue by 5 days (due 7 Apr)"
+      ]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "15 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 186,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "No immediate action required \u2014 8-week prep begins ~Aug 2026"
+      ]
+    }
+  ],
+  "website": {
+    "backlogs": {
+      "website_pages": 34,
+      "product_pages": 5,
+      "seo": 92
+    },
+    "suggested": [
+      {
+        "name": "Electromagnetic Warfare (Military)",
+        "type": "Website"
+      },
+      {
+        "name": "Signal Workshop",
+        "type": "Product"
+      },
+      {
+        "name": "Oscilloscopes & Probes | Oscilloscope Probes & Accessories",
+        "type": "SEO"
+      }
+    ],
+    "seo_warning": "0 SEO pages optimised this week. 92 pages in backlog. Prioritise high-traffic categories like Oscilloscope Probes & Accessories and RF Power Sensors."
+  },
+  "finance": {
+    "totals": {
+      "monthly": 353.12,
+      "annual": 4241.25,
+      "thomas_monthly": 124.60,
+      "active_subs": 12
+    },
+    "overdue": [],
+    "renewals_this_week": [
+      {
+        "name": "ClickUp Pro",
+        "date": "24 Apr 2026",
+        "cost": "$320.00/yr",
+        "card": "Thomas Flood",
+        "note": "Renewal in 12 days \u2014 note to update to annual billing"
+      }
+    ],
+    "thomas_card": [
+      { "name": "Buffer", "cost": "$35.00/m", "pec": "none" },
+      { "name": "Zapier PRO", "cost": "$29.00/m", "pec": "none" },
+      { "name": "Claude AI", "cost": "$34.00/m", "pec": "none" },
+      { "name": "ClickUp Pro", "cost": "$26.60/m", "pec": "none" }
+    ],
+    "pec_note": "Last PEC claim (12 Feb 2026) approved. No pending reimbursements. Thomas card subs total $124.60/m \u2014 consider submitting next PEC claim."
+  },
+  "actions": [
+    {
+      "category": "Events \u2014 URGENT",
+      "items": [
+        "Southern Lights Disrupt (4 days): Chase Mark for final product list TODAY so Floor Screen Video can be built before Wednesday",
+        "Southern Lights Disrupt: Confirm transport van arrangements or mark as not required",
+        "QAC Adelaide (18 days): Create LinkedIn event page immediately \u2014 6 weeks overdue",
+        "QAC Adelaide: Build website event page and banner, order promo merchandise, plan 1st EDM this week",
+        "Comms Connect NZ: Complete overdue 8-week tasks (Build Layout, Promo Merch, Website Event, EDMs) \u2014 9 days overdue",
+        "Electronex: Start overdue 8-week prep tasks \u2014 Build Layout, Promo Merch, Website Event, EDMs"
+      ]
+    },
+    {
+      "category": "Promotions",
+      "items": [
+        "Update 6 expired Tektronix promos (ended 31 Mar) to 'expired' status in ClickUp, or confirm with Tektronix if extended",
+        "Plan a Trade-In promo EDM for the active 4/5/6 Series B MSO offer (runs until 31 Dec)"
+      ]
+    },
+    {
+      "category": "Content & Social",
+      "items": [
+        "Complete weekly LinkedIn connection requests before end of day",
+        "Schedule 2 more LinkedIn posts this week to hit target of 3",
+        "Plan and draft VIAVI EDM for April \u2014 none sent this month",
+        "Plan and draft Tektronix EDM for April \u2014 none sent this month"
+      ]
+    },
+    {
+      "category": "Website & SEO",
+      "items": [
+        "Move 'Electromagnetic Warfare (Military)' from content gathering to in progress, set due date Friday 17 Apr",
+        "Move 'Signal Workshop' product page to in progress, set due date Friday 17 Apr \u2014 flagged high priority",
+        "Move 'Oscilloscopes & Probes | Oscilloscope Probes & Accessories' to in progress in SEO list \u2014 parent category already optimised"
+      ]
+    },
+    {
+      "category": "Finance",
+      "items": [
+        "ClickUp Pro renewal coming 24 Apr on Thomas's card ($320/yr) \u2014 switch to annual billing as noted",
+        "Submit PEC claim for Thomas card expenses \u2014 $124.60/m accumulating since last claim in Feb"
+      ]
+    }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 0,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
