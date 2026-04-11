@@ -1,59 +1,70 @@
 {
-  "updated_at": "2026-04-10T18:02:23.985501+00:00",
+  "updated_at": "2026-04-12T00:00:00.000Z",
   "active": [
     {
-      "name": "Google One Drive",
-      "category": "Asset Storage",
-      "cycle": "Annual",
-      "annual": 45,
-      "monthly": 3.71,
-      "renewal": "2026-10-30",
-      "payment": "Vicom CC",
-      "url": "one.google.com",
-      "notes": ""
-    },
-    {
-      "name": "LinkedIn Premium",
+      "name": "Buffer",
       "category": "Social Media",
       "cycle": "Annual",
-      "annual": 704,
-      "monthly": 58.6,
-      "renewal": "2026-10-25",
-      "payment": "Vicom CC",
-      "url": "www.linkedin.com/feed",
-      "notes": ""
-    },
-    {
-      "name": "Stripo",
-      "category": "Email Marketing",
-      "cycle": "Annual",
-      "annual": 290,
-      "monthly": 24.1,
-      "renewal": "2027-01-23",
-      "payment": "Vicom CC",
-      "url": "my.stripo.email/cabinet/#/my-templates/794209?folder=382469",
-      "notes": ""
-    },
-    {
-      "name": "Clickup Pro",
-      "category": "CMS",
-      "cycle": "Monthly",
-      "annual": 320,
-      "monthly": 26.6,
-      "renewal": "2026-04-23",
+      "annual": 420,
+      "monthly": 35.00,
+      "renewal": "2027-03-10",
       "payment": "Thomas Flood",
-      "url": "app.clickup.com/90161465641/v/l/li/901613314863",
-      "notes": "update to annual"
+      "url": "publish.buffer.com",
+      "notes": ""
     },
     {
-      "name": "Canva Pro",
-      "category": "Design",
+      "name": "Zapier PRO",
+      "category": "AI Tools",
       "cycle": "Annual",
-      "annual": 165,
-      "monthly": 13.7,
-      "renewal": "2027-03-02",
+      "annual": 348,
+      "monthly": 29.00,
+      "renewal": "2027-02-11",
+      "payment": "Thomas Flood",
+      "url": "zapier.com",
+      "notes": ""
+    },
+    {
+      "name": "Sucuri",
+      "category": "Security",
+      "cycle": "Annual",
+      "annual": 860,
+      "monthly": 71.66,
+      "renewal": "2027-02-09",
       "payment": "Vicom CC",
-      "url": "www.canva.com/folder/FAFWxLAV_WU",
+      "url": "sucuri.net",
+      "notes": ""
+    },
+    {
+      "name": "Claude AI",
+      "category": "AI Tools",
+      "cycle": "Monthly",
+      "annual": 408,
+      "monthly": 34.00,
+      "renewal": "2026-05-02",
+      "payment": "Thomas Flood",
+      "url": "claude.ai",
+      "notes": ""
+    },
+    {
+      "name": "Website Hosting NZ",
+      "category": "Hosting",
+      "cycle": "Biennually",
+      "annual": 222,
+      "monthly": 18.50,
+      "renewal": "2027-10-28",
+      "payment": "Vicom CC",
+      "url": "ventraip.com.au",
+      "notes": ""
+    },
+    {
+      "name": "Website Hosting AUS",
+      "category": "Hosting",
+      "cycle": "Biennually",
+      "annual": 137,
+      "monthly": 11.40,
+      "renewal": "2026-11-27",
+      "payment": "Vicom CC",
+      "url": "ventraip.com.au",
       "notes": ""
     },
     {
@@ -68,81 +79,65 @@
       "notes": ""
     },
     {
-      "name": "Website Hosting AUS",
-      "category": "Hosting",
-      "cycle": "Biennually",
-      "annual": 137,
-      "monthly": 11.4,
-      "renewal": "2026-11-27",
+      "name": "Canva Pro",
+      "category": "Design",
+      "cycle": "Annual",
+      "annual": 165,
+      "monthly": 13.70,
+      "renewal": "2027-03-02",
       "payment": "Vicom CC",
-      "url": "ventraip.com.au/?",
+      "url": "www.canva.com",
       "notes": ""
     },
     {
-      "name": "Website Hosting NZ",
-      "category": "Hosting",
-      "cycle": "Biennually",
-      "annual": 222,
-      "monthly": 18.5,
-      "renewal": "2027-10-28",
-      "payment": "Vicom CC",
-      "url": "ventraip.com.au/?",
-      "notes": ""
-    },
-    {
-      "name": "Claude AI",
-      "category": "AI Tools",
+      "name": "Clickup Pro",
+      "category": "CMS",
       "cycle": "Monthly",
-      "annual": 408,
-      "monthly": 34.0,
-      "renewal": "2026-05-02",
+      "annual": 320,
+      "monthly": 26.60,
+      "renewal": "2026-04-23",
       "payment": "Thomas Flood",
-      "url": "claude.ai/new",
-      "notes": ""
+      "url": "app.clickup.com",
+      "notes": "update to annual"
     },
     {
-      "name": "Sucuri",
-      "category": "Security",
+      "name": "Stripo",
+      "category": "Email Marketing",
       "cycle": "Annual",
-      "annual": 860,
-      "monthly": 71.66,
-      "renewal": "2027-02-09",
+      "annual": 290,
+      "monthly": 24.10,
+      "renewal": "2027-01-23",
       "payment": "Vicom CC",
-      "url": "sucuri.net/website-security-platform/signup",
+      "url": "my.stripo.email",
       "notes": ""
     },
     {
-      "name": "Zapier PRO",
-      "category": "AI Tools",
-      "cycle": "Annual",
-      "annual": 348,
-      "monthly": 29.0,
-      "renewal": "2027-02-11",
-      "payment": "Thomas Flood",
-      "url": "zapier.com",
-      "notes": ""
-    },
-    {
-      "name": "Buffer",
+      "name": "LinkedIn Premium",
       "category": "Social Media",
       "cycle": "Annual",
-      "annual": 420,
-      "monthly": 35.0,
-      "renewal": "2027-03-10",
-      "payment": "Thomas Flood",
-      "url": "publish.buffer.com",
+      "annual": 704,
+      "monthly": 58.60,
+      "renewal": "2026-10-25",
+      "payment": "Vicom CC",
+      "url": "www.linkedin.com",
+      "notes": ""
+    },
+    {
+      "name": "Google One Drive",
+      "category": "Asset Storage",
+      "cycle": "Annual",
+      "annual": 45,
+      "monthly": 3.71,
+      "renewal": "2026-10-30",
+      "payment": "Vicom CC",
+      "url": "one.google.com",
       "notes": ""
     }
   ],
   "cancelled": [
     {
-      "name": "PastePixel",
-      "category": "Analytics",
-      "payment": "Vicom CC"
-    },
-    {
-      "name": "Trello Pro",
-      "category": "CMS",
+      "name": "Planable",
+      "category": "Social Media",
       "payment": "Vicom CC"
     },
     {
@@ -151,8 +146,13 @@
       "payment": "Vicom CC"
     },
     {
-      "name": "Planable",
-      "category": "Social Media",
+      "name": "Trello Pro",
+      "category": "CMS",
+      "payment": "Vicom CC"
+    },
+    {
+      "name": "PastePixel",
+      "category": "Analytics",
       "payment": "Vicom CC"
     }
   ]
