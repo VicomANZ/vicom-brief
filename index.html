@@ -297,7 +297,7 @@ body {
   transition: transform 0.15s, box-shadow 0.15s;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
-.stat-card:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.stat-card:hover { box-shadow: var(--shadow-md); }
 .stat-label {
   font-size: 11px;
   font-weight: 600;
@@ -588,8 +588,8 @@ body {
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 .animate-in { animation: fadeUp 0.4s ease forwards; opacity: 0; }
 </style>
