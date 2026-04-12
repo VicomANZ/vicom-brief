@@ -8,11 +8,11 @@
 <style>
 :root {
   --bg-base: #0f1117;
-  --bg-glass: rgba(15,18,28,0.55);
-  --bg-glass-hover: rgba(15,18,28,0.65);
-  --bg-glass-solid: rgba(15,18,28,0.75);
+  --bg-glass: rgba(15,18,28,0.7);
+  --bg-glass-hover: rgba(15,18,28,0.78);
+  --bg-glass-solid: rgba(15,18,28,0.85);
   --bg-accent: #1a1a2e;
-  --bg-card: rgba(15,18,28,0.55);
+  --bg-card: rgba(15,18,28,0.7);
   --text-primary: #f0f0f5;
   --text-secondary: #b0b0c0;
   --text-tertiary: #7a7a90;
@@ -62,13 +62,6 @@ body {
   line-height: 1.55;
   display: flex;
   min-height: 100vh;
-}
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: rgba(10,12,18,0.6);
-  z-index: 0;
 }
 
 /* ===== SIDEBAR ===== */
@@ -186,8 +179,6 @@ body::before {
   flex: 1;
   margin-left: var(--sidebar-w);
   padding: 24px 28px;
-  position: relative;
-  z-index: 1;
 }
 .main-header {
   display: flex;
@@ -297,7 +288,7 @@ body::before {
   margin-bottom: 20px;
 }
 .stat-card {
-  background: rgba(15,18,28,0.55);
+  background: rgba(15,18,28,0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255,255,255,0.12);
@@ -349,7 +340,7 @@ body::before {
 
 /* ===== CARDS ===== */
 .glass-card {
-  background: rgba(15,18,28,0.55);
+  background: rgba(15,18,28,0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255,255,255,0.12);
@@ -359,7 +350,7 @@ body::before {
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 .glass-card-dark {
-  background: rgba(15,18,28,0.55);
+  background: rgba(15,18,28,0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255,255,255,0.12);
@@ -543,7 +534,7 @@ body::before {
 .no-data {
   text-align: center;
   padding: 40px 20px;
-  background: rgba(15,18,28,0.55);
+  background: rgba(15,18,28,0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255,255,255,0.12);
