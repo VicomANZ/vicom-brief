@@ -1315,7 +1315,7 @@ async function renderCalendarPage(){
 
   // Upcoming events
   h+=`<div style="margin-top:18px" class="section-head"><div class="section-accent" style="background:#295790"></div><div class="section-title">Upcoming events</div></div>`;
-  const ue=(calendarData.events||[]).filter(e=>e.date>=now.toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date));
+  const ue=(calendarData.events||[]).filter(e=>e.date>=(() => {const n=new Date();return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`})()).sort((a,b)=>a.date.localeCompare(b.date));
   if(ue.length){
     ue.forEach(evt=>{
       const diff=Math.ceil((new Date(evt.date)-now)/864e5);
@@ -1331,7 +1331,7 @@ async function renderCalendarPage(){
 
   // Content pipeline
   h+=`<div style="margin-top:18px" class="section-head"><div class="section-accent" style="background:#1a8c4a"></div><div class="section-title">Content pipeline</div></div>`;
-  const uc=(calendarData.content||[]).filter(e=>e.date>=now.toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date));
+  const uc=(calendarData.content||[]).filter(e=>e.date>=(() => {const n=new Date();return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`})()).sort((a,b)=>a.date.localeCompare(b.date));
   if(uc.length){
     h+=`<div class="glass-card" style="padding:0">`;
     uc.forEach((c,i)=>{
@@ -1373,7 +1373,7 @@ function generateWeeklySnapshot(){
   const week=[];
   for(let i=0;i<5;i++){
     const d=new Date(monday);d.setDate(monday.getDate()+i);
-    const ds=d.toISOString().slice(0,10);
+    const ds=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
     const dayItems=items.filter(e=>e.date===ds);
     week.push({name:DN[i],date:d.getDate()+' '+MN[d.getMonth()].slice(0,3),ds,items:dayItems,isToday:d.toDateString()===now.toDateString()});
   }
@@ -1516,7 +1516,7 @@ function generateWeeklySnapshot(){
   
   // Download
   const link=document.createElement('a');
-  link.download=`vicom-weekly-${monday.toISOString().slice(0,10)}.png`;
+  link.download=`vicom-weekly-${monday.getFullYear()}-${String(monday.getMonth()+1).padStart(2,'0')}-${String(monday.getDate()).padStart(2,'0')}.png`;
   link.href=canvas.toDataURL('image/png');
   link.click();
 }
