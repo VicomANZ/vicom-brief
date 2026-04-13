@@ -4,292 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vicom — Marketing Hub</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-base: #e8eaef;
-  --bg-glass: rgba(255,255,255,0.65);
-  --bg-glass-hover: rgba(255,255,255,0.8);
-  --bg-glass-solid: rgba(255,255,255,0.9);
-  --bg-accent: #1a1a2e;
-  --bg-card: rgba(255,255,255,0.65);
-  --text-primary: #1a1e2e;
-  --text-secondary: #4a4e62;
-  --text-tertiary: #7a7e92;
-  --text-white: #fff;
-  --accent: #e8734a;
-  --accent-light: rgba(232,115,74,0.12);
-  --accent-dark: #c4572e;
-  --green: #1d8a4a;
-  --green-bg: rgba(29,138,74,0.1);
-  --green-border: rgba(29,138,74,0.25);
+  --navy: #1D2327;
+  --dark-blue: #295790;
+  --light-blue: #2D92FF;
+  --orange: #FDBC25;
+  --light-grey: #F4F4F4;
+  --white: #FFFFFF;
+  --bg: #f0f1f3;
+  --card-bg: #fff;
+  --text: #1D2327;
+  --text-sec: #555;
+  --text-dim: #888;
+  --border: #e0e2e6;
+  --green: #1a8c4a;
+  --green-bg: rgba(26,140,74,0.08);
+  --green-border: rgba(26,140,74,0.2);
   --red: #cc3333;
-  --red-bg: rgba(204,51,51,0.08);
-  --red-border: rgba(204,51,51,0.2);
+  --red-bg: rgba(204,51,51,0.06);
+  --red-border: rgba(204,51,51,0.18);
   --amber: #b8860b;
-  --amber-bg: rgba(184,134,11,0.1);
-  --amber-border: rgba(184,134,11,0.2);
-  --blue: #2563b0;
-  --blue-bg: rgba(37,99,176,0.08);
-  --blue-border: rgba(37,99,176,0.2);
-  --navy: #1a1e2e;
-  --border: rgba(0,0,0,0.08);
-  --border-strong: rgba(0,0,0,0.14);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,0.1);
-  --blur: 24px;
-  --radius: 14px;
-  --radius-sm: 8px;
-  --radius-xs: 5px;
+  --amber-bg: rgba(184,134,11,0.08);
+  --amber-border: rgba(184,134,11,0.18);
+  --blue: #295790;
+  --blue-bg: rgba(41,87,144,0.08);
+  --blue-border: rgba(41,87,144,0.18);
+  --accent: #295790;
+  --accent-light: rgba(41,87,144,0.08);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-xs: 4px;
   --sidebar-w: 240px;
-  --font: 'DM Sans', -apple-system, sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --bg-img: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80');
+  --font: 'Inter', -apple-system, sans-serif;
+  --font-display: 'Inter', -apple-system, sans-serif;
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
 body {
   font-family: var(--font);
-  background: #0f1117;
-  background-image: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: var(--text-primary);
+  background: var(--bg);
+  color: var(--text);
   font-size: 14px;
   line-height: 1.55;
   display: flex;
   min-height: 100vh;
 }
 
-/* Frosted glass via real blurred background */
-.frost {
-  position: relative;
-  overflow: hidden;
-}
-.frost::before {
-  content: '';
-  position: absolute;
-  inset: -20px;
-  background: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(20px);
-  z-index: 0;
-}
-.frost::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.72);
-  z-index: 0;
-}
-.frost > * { position: relative; z-index: 1; }
-
 /* ===== SIDEBAR ===== */
 .sidebar {
   width: var(--sidebar-w);
   min-height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 100;
-  overflow: hidden;
-  padding: 24px 16px;
+  background: var(--navy);
+  padding: 20px 14px;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  z-index: 100;
   transition: transform 0.3s;
-  border-right: 1px solid rgba(0,0,0,0.08);
 }
-.sidebar::before {
-  content: '';
-  position: absolute;
-  inset: -20px;
-  background: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(24px);
-  z-index: 0;
-}
-.sidebar::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.8);
-  z-index: 0;
-}
-.sidebar > * { position: relative; z-index: 1; }
-.sidebar-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 4px 8px;
-  margin-bottom: 28px;
-}
+.sidebar-brand { display: flex; align-items: center; gap: 10px; padding: 4px 8px; margin-bottom: 24px; }
 .sidebar-logo {
-  width: 36px;
-  height: 36px;
-  background: var(--accent);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
+  width: 34px; height: 34px; background: var(--dark-blue); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--font); font-size: 16px; font-weight: 800;
 }
-.sidebar-brand-text {
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  color: var(--navy);
-}
-.sidebar-brand-sub {
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: var(--text-tertiary);
-}
-.sidebar-section {
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--text-tertiary);
-  padding: 0 8px;
-  margin: 20px 0 8px;
-}
+.sidebar-brand-text { font-size: 16px; font-weight: 700; color: #fff; }
+.sidebar-brand-sub { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.45); }
+.sidebar-section { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.35); padding: 0 8px; margin: 18px 0 6px; }
 .sidebar-nav { list-style: none; }
-.sidebar-nav li { margin-bottom: 2px; }
+.sidebar-nav li { margin-bottom: 1px; }
 .sidebar-nav a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 12px;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-size: 13.5px;
-  font-weight: 500;
-  transition: all 0.2s;
-  cursor: pointer;
+  display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: var(--radius-sm);
+  text-decoration: none; color: rgba(255,255,255,0.65); font-size: 13px; font-weight: 500; transition: all 0.15s; cursor: pointer;
 }
-.sidebar-nav a:hover {
-  background: rgba(0,0,0,0.05);
-  color: var(--text-primary);
-}
-.sidebar-nav a.active {
-  background: var(--accent);
-  color: #fff;
-  font-weight: 600;
-}
-.sidebar-nav a .icon {
-  width: 18px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  opacity: 0.7;
-}
-.sidebar-nav a.active .icon { opacity: 1; }
-.sidebar-footer {
-  margin-top: auto;
-  padding: 12px 8px;
-  border-top: 1px solid var(--border);
-  font-size: 11px;
-  color: var(--text-tertiary);
-}
-.sidebar-cost {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-}
+.sidebar-nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.sidebar-nav a.active { background: var(--dark-blue); color: #fff; font-weight: 600; }
+.sidebar-nav a .icon { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+.sidebar-footer { margin-top: auto; padding: 10px 8px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 11px; color: rgba(255,255,255,0.4); }
+.sidebar-cost { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; }
 .sidebar-cost-label { font-weight: 500; }
-.sidebar-cost-val { font-weight: 700; color: var(--text-primary); font-size: 13px; }
+.sidebar-cost-val { font-weight: 700; color: #fff; font-size: 13px; }
 
 /* ===== MAIN ===== */
-.main {
-  flex: 1;
-  margin-left: var(--sidebar-w);
-  padding: 24px 28px;
-}
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.main-title {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--navy);
-  letter-spacing: -0.5px;
-}
+.main { flex: 1; margin-left: var(--sidebar-w); padding: 24px 28px; }
+.main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 12px; }
+.main-title { font-size: 24px; font-weight: 800; color: var(--navy); letter-spacing: -0.3px; }
 .date-nav {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--bg-glass);
-  backdrop-filter: blur(var(--blur));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 4px;
+  display: flex; align-items: center; gap: 4px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 3px;
 }
 .date-nav button {
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-sm);
-  border: none;
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
+  width: 32px; height: 32px; border-radius: var(--radius-sm); border: none; background: transparent;
+  color: var(--text-sec); font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s;
 }
-.date-nav button:hover:not(:disabled) { background: rgba(0,0,0,0.06); color: var(--text-primary); }
-.date-nav button:disabled { opacity: 0.25; cursor: default; }
-.date-nav .date-label {
-  font-size: 13.5px;
-  font-weight: 600;
-  min-width: 170px;
-  text-align: center;
-  color: var(--text-primary);
-}
+.date-nav button:hover:not(:disabled) { background: var(--light-grey); color: var(--text); }
+.date-nav button:disabled { opacity: 0.2; cursor: default; }
+.date-nav .date-label { font-size: 13px; font-weight: 600; min-width: 160px; text-align: center; color: var(--text); }
 
 /* Agents row */
-.agents-row {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
+.agents-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
 .agent-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 11px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 600;
-  background: var(--bg-glass);
-  backdrop-filter: blur(24px);
-  border: 1px solid var(--border);
+  display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 20px;
+  font-size: 11px; font-weight: 600; background: var(--card-bg); border: 1px solid var(--border);
 }
 .agent-pill .dot { width: 6px; height: 6px; border-radius: 50%; }
 .agent-pill.ok .dot { background: var(--green); }
@@ -298,214 +118,62 @@ body {
 
 /* View tabs */
 .view-tabs {
-  display: flex;
-  gap: 3px;
-  background: var(--bg-glass);
-  backdrop-filter: blur(var(--blur));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 4px;
-  width: fit-content;
-  margin-bottom: 20px;
+  display: flex; gap: 2px; background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 3px; width: fit-content; margin-bottom: 18px;
 }
 .view-tab {
-  padding: 7px 18px;
-  border: none;
-  border-radius: var(--radius-sm);
-  font-size: 12.5px;
-  font-weight: 600;
-  font-family: var(--font);
-  cursor: pointer;
-  background: transparent;
-  color: var(--text-tertiary);
-  transition: all 0.2s;
+  padding: 6px 16px; border: none; border-radius: var(--radius-sm); font-size: 12.5px; font-weight: 600;
+  font-family: var(--font); cursor: pointer; background: transparent; color: var(--text-dim); transition: all 0.15s;
 }
-.view-tab:hover { color: var(--text-primary); }
+.view-tab:hover { color: var(--text); }
 .view-tab.active { background: var(--navy); color: #fff; }
 
 /* ===== STATS ROW ===== */
-.stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-bottom: 20px;
-}
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 18px; }
 .stat-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  padding: 16px 18px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; box-shadow: var(--shadow-sm);
 }
-.stat-card::before {
-  content: '';
-  position: absolute;
-  inset: -20px;
-  background: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(20px);
-  z-index: 0;
-}
-.stat-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.72);
-  z-index: 0;
-}
-.stat-card > * { position: relative; z-index: 1; }
 .stat-card:hover { box-shadow: var(--shadow-md); }
-.stat-label {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  color: var(--text-tertiary);
-  margin-bottom: 6px;
-}
-.stat-val {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-.stat-sub { font-size: 14px; font-weight: 400; color: var(--text-tertiary); }
+.stat-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); margin-bottom: 4px; }
+.stat-val { font-size: 28px; font-weight: 800; letter-spacing: -1px; color: var(--text); }
+.stat-sub { font-size: 13px; font-weight: 400; color: var(--text-dim); }
 
 /* ===== SECTION TABS ===== */
-.sec-tabs {
-  display: flex;
-  gap: 2px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 18px;
-  overflow-x: auto;
-}
+.sec-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 16px; overflow-x: auto; }
 .sec-tab {
-  padding: 9px 16px;
-  border: none;
-  background: transparent;
-  font-size: 13px;
-  font-weight: 600;
-  font-family: var(--font);
-  color: var(--text-tertiary);
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: all 0.2s;
-  white-space: nowrap;
+  padding: 8px 14px; border: none; background: transparent; font-size: 13px; font-weight: 600;
+  font-family: var(--font); color: var(--text-dim); cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.15s; white-space: nowrap;
 }
-.sec-tab:hover { color: var(--text-primary); }
-.sec-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.sec-tab:hover { color: var(--text); }
+.sec-tab.active { color: var(--dark-blue); border-bottom-color: var(--dark-blue); }
 
 /* ===== CARDS ===== */
 .glass-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 10px; box-shadow: var(--shadow-sm);
 }
-.glass-card::before {
-  content: '';
-  position: absolute;
-  inset: -20px;
-  background: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(20px);
-  z-index: 0;
-}
-.glass-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.72);
-  z-index: 0;
-}
-.glass-card > * { position: relative; z-index: 1; }
 .glass-card-dark {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  margin-bottom: 12px;
-  color: var(--text-primary);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 10px; box-shadow: var(--shadow-sm); color: var(--text);
 }
-.glass-card-dark::before {
-  content: '';
-  position: absolute;
-  inset: -20px;
-  background: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(20px);
-  z-index: 0;
-}
-.glass-card-dark::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.75);
-  z-index: 0;
-}
-.glass-card-dark > * { position: relative; z-index: 1; }
-.card-title {
-  font-size: 11.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  margin-bottom: 12px;
-}
-.section-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-.section-accent {
-  width: 3px;
-  height: 20px;
-  border-radius: 2px;
-}
-.section-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--navy);
-}
+.card-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 10px; }
+.section-head { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.section-accent { width: 3px; height: 18px; border-radius: 2px; }
+.section-title { font-size: 15px; font-weight: 700; color: var(--navy); }
 
 /* ===== CRITICAL ITEMS ===== */
-.crit-item {
-  display: flex;
-  align-items: flex-start;
-  padding: 11px 14px;
-  border-radius: var(--radius-sm);
-  margin-bottom: 6px;
-  gap: 10px;
-  font-size: 13px;
-  line-height: 1.45;
-}
+.crit-item { display: flex; align-items: flex-start; padding: 10px 12px; border-radius: var(--radius-sm); margin-bottom: 5px; gap: 10px; font-size: 13px; line-height: 1.45; }
 .crit-item.critical { background: var(--red-bg); border: 1px solid var(--red-border); }
 .crit-item.high { background: var(--amber-bg); border: 1px solid var(--amber-border); }
 .crit-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
 .crit-dot.c { background: var(--red); }
 .crit-dot.h { background: var(--amber); }
-.crit-text { flex: 1; color: var(--navy); }
+.crit-text { flex: 1; color: var(--text); }
 .badge {
-  display: inline-block;
-  padding: 2px 9px;
-  border-radius: var(--radius-xs);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  white-space: nowrap;
+  display: inline-block; padding: 2px 8px; border-radius: var(--radius-xs);
+  font-size: 10px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; white-space: nowrap;
 }
 .b-red { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
 .b-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
@@ -514,166 +182,81 @@ body {
 .b-navy { background: var(--navy); color: #fff; }
 
 /* ===== KPI ROWS ===== */
-.kpi-row { margin-bottom: 12px; }
-.kpi-header { display: flex; justify-content: space-between; margin-bottom: 5px; }
-.kpi-label { font-size: 13px; color: var(--text-primary); font-weight: 500; }
+.kpi-row { margin-bottom: 10px; }
+.kpi-header { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.kpi-label { font-size: 13px; color: var(--text); font-weight: 500; }
 .kpi-status { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; }
 .progress-wrap { display: flex; align-items: center; gap: 10px; }
-.progress-track { flex: 1; height: 7px; background: rgba(0,0,0,0.08); border-radius: 4px; overflow: hidden; }
-.progress-fill { height: 100%; border-radius: 4px; transition: width 0.8s ease; }
+.progress-track { flex: 1; height: 6px; background: var(--light-grey); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 3px; transition: width 0.8s ease; }
 .progress-val { font-size: 13px; font-weight: 700; min-width: 42px; text-align: right; }
 
 /* ===== GRID ===== */
-.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 
 /* ===== EVENTS ===== */
-.event-card { margin-bottom: 14px; }
-.event-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-.event-name { font-size: 16px; font-weight: 700; color: var(--navy); }
-.event-meta { font-size: 12px; color: var(--text-tertiary); margin-top: 2px; }
+.event-card { margin-bottom: 12px; }
+.event-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.event-name { font-size: 15px; font-weight: 700; color: var(--navy); }
+.event-meta { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
 .event-flag { font-size: 12px; color: var(--amber); padding: 3px 0; display: flex; align-items: flex-start; gap: 6px; }
 
 /* ===== LIST ITEMS ===== */
-.list-item {
-  padding: 9px 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.list-item { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
 .list-item:last-child { border-bottom: none; }
 .list-name { font-size: 13px; font-weight: 600; color: var(--navy); }
-.list-sub { font-size: 12px; color: var(--text-tertiary); }
+.list-sub { font-size: 12px; color: var(--text-dim); }
 
 /* ===== BIG NUMBER ===== */
 .big-num { text-align: center; }
-.big-num .bv { font-size: 28px; font-weight: 800; }
+.big-num .bv { font-size: 26px; font-weight: 800; }
 
 /* ===== ACTIONS ===== */
-.action-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 8px 0;
-  cursor: pointer;
-  border-bottom: 1px solid var(--border);
-  user-select: none;
-}
+.action-item { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; cursor: pointer; border-bottom: 1px solid var(--border); user-select: none; }
 .action-item:last-child { border-bottom: none; }
 .action-check {
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
-  border: 2px solid rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-  transition: all 0.2s;
+  width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; transition: all 0.15s;
 }
 .action-check.ck { border-color: var(--green); background: var(--green-bg); }
 .action-check .tick { color: var(--green); font-size: 12px; font-weight: 700; display: none; }
 .action-check.ck .tick { display: block; }
-.action-label { font-size: 13px; line-height: 1.45; color: var(--navy); }
-.action-label.ck { color: var(--text-tertiary); text-decoration: line-through; }
+.action-label { font-size: 13px; line-height: 1.45; color: var(--text); }
+.action-label.ck { color: var(--text-dim); text-decoration: line-through; }
 
 /* ===== FINANCE ===== */
-.fin-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
+.fin-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
 .fin-row:last-child { border-bottom: none; }
-.fin-name { font-size: 13px; font-weight: 500; color: var(--navy); }
+.fin-name { font-size: 13px; font-weight: 500; color: var(--text); }
 .fin-val { font-size: 14px; font-weight: 700; }
 
 /* ===== MEETING CARD ===== */
-.meeting-entry {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 9px 0;
-}
+.meeting-entry { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; }
 
 /* ===== TAB CONTENT ===== */
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
 /* ===== WEEKLY AGGREGATES ===== */
-.wm {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
+.wm { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
 .wm:last-child { border-bottom: none; }
-.wm .mn { font-size: 13px; font-weight: 500; color: var(--navy); }
+.wm .mn { font-size: 13px; font-weight: 500; color: var(--text); }
 .wm .mv { font-size: 14px; font-weight: 700; }
-.wst { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.wst { font-size: 12px; font-weight: 700; color: var(--dark-blue); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
 
 /* ===== LOADING ===== */
-.loading { text-align: center; padding: 60px 20px; color: var(--text-tertiary); }
-.spinner {
-  width: 28px; height: 28px;
-  border: 3px solid var(--border);
-  border-top-color: var(--accent);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin: 0 auto 14px;
-}
+.loading { text-align: center; padding: 50px 20px; color: var(--text-dim); }
+.spinner { width: 24px; height: 24px; border: 3px solid var(--border); border-top-color: var(--dark-blue); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 12px; }
 @keyframes spin { to { transform: rotate(360deg); } }
-.no-data {
-  text-align: center;
-  padding: 40px 20px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  color: var(--text-tertiary);
-}
-.no-data::before {
-  content: '';
-  position: absolute;
-  inset: -20px;
-  background: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: blur(20px);
-  z-index: 0;
-}
-.no-data::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.72);
-  z-index: 0;
-}
+.no-data { text-align: center; padding: 40px 20px; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-dim); }
 
 /* ===== MOBILE ===== */
 .mobile-toggle {
-  display: none;
-  position: fixed;
-  top: 14px;
-  left: 14px;
-  z-index: 200;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(0,0,0,0.08);
-  font-size: 18px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  display: none; position: fixed; top: 12px; left: 12px; z-index: 200;
+  width: 38px; height: 38px; border-radius: var(--radius-sm);
+  background: var(--navy); border: none; font-size: 18px; cursor: pointer;
+  align-items: center; justify-content: center; color: #fff;
 }
 @media (max-width: 1024px) {
   .stats-row { grid-template-columns: repeat(2, 1fr); }
@@ -682,16 +265,16 @@ body {
 @media (max-width: 768px) {
   .mobile-toggle { display: flex; }
   .sidebar { transform: translateX(-100%); }
-  .sidebar.open { transform: translateX(0); box-shadow: 4px 0 24px rgba(0,0,0,0.5); }
-  .main { margin-left: 0; padding: 60px 16px 24px; }
+  .sidebar.open { transform: translateX(0); box-shadow: 4px 0 20px rgba(0,0,0,0.15); }
+  .main { margin-left: 0; padding: 56px 14px 20px; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .g2, .g3 { grid-template-columns: 1fr; }
-  .main-title { font-size: 22px; }
+  .main-title { font-size: 20px; }
 }
 @media (max-width: 480px) {
   .stats-row { grid-template-columns: 1fr; }
-  .main { padding: 56px 12px 20px; }
-  .stat-val { font-size: 24px; }
+  .main { padding: 52px 10px 16px; }
+  .stat-val { font-size: 22px; }
 }
 @media print {
   .sidebar, .mobile-toggle, .sec-tabs, .view-tabs, .date-nav { display: none; }
@@ -700,11 +283,8 @@ body {
 }
 
 /* ===== ANIMATIONS ===== */
-@keyframes fadeUp {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.animate-in { animation: fadeUp 0.4s ease forwards; opacity: 0; }
+@keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
+.animate-in { animation: fadeUp 0.3s ease forwards; opacity: 0; }
 </style>
 </head>
 <body>
@@ -727,6 +307,7 @@ body {
     <li><a data-page="meetings" onclick="navPage('meetings',this)"><span class="icon">&#128197;</span> Meetings</a></li>
     <li><a data-page="promotions" onclick="navPage('promotions',this)"><span class="icon">&#127942;</span> Promotions</a></li>
     <li><a data-page="events" onclick="navPage('events',this)"><span class="icon">&#127915;</span> Events</a></li>
+    <li><a data-page="calendar" onclick="navPage('calendar',this)"><span class="icon">&#128197;</span> Calendar</a></li>
     <li><a data-page="finance" onclick="navPage('finance',this)"><span class="icon">&#128176;</span> Finance</a></li>
     <li><a data-page="demo" onclick="navPage('demo',this)"><span class="icon">&#9881;</span> Demo Equipment</a></li>
     <li><a data-page="linkedin" onclick="navPage('linkedin',this)"><span class="icon">&#128172;</span> LinkedIn Drafts</a></li>
@@ -803,8 +384,14 @@ body {
 
   <!-- DEMO EQUIPMENT PAGE -->
   <div id="page-demo" style="display:none">
+
+  <!-- CALENDAR PAGE -->
+  <div id="page-calendar" style="display:none">
+    <div class="main-header"><h1 class="main-title">Marketing Calendar</h1></div>
+    <div id="calendar-content"><div class="loading"><div class="spinner"></div>Loading calendar...</div></div>
+  </div>
     <div class="main-header"><h1 class="main-title">Demo Equipment</h1></div>
-    <div class="glass-card" style="text-align:center;padding:60px 20px;color:var(--text-tertiary)">
+    <div class="glass-card" style="text-align:center;padding:60px 20px;color:var(--text-dim)">
       <div style="font-size:36px;margin-bottom:12px">&#9881;</div>
       <div style="font-size:15px;font-weight:600;margin-bottom:6px">Coming Soon</div>
       <div style="font-size:13px">Demo equipment loan dashboard will be integrated here.<br>Currently live at <a href="https://vicomanz.github.io/vicom-hub/" target="_blank" style="color:var(--accent)">vicom-hub</a></div>
@@ -814,7 +401,7 @@ body {
   <!-- LINKEDIN DRAFTS PAGE -->
   <div id="page-linkedin" style="display:none">
     <div class="main-header"><h1 class="main-title">LinkedIn Drafts</h1></div>
-    <div class="glass-card" style="text-align:center;padding:60px 20px;color:var(--text-tertiary)">
+    <div class="glass-card" style="text-align:center;padding:60px 20px;color:var(--text-dim)">
       <div style="font-size:36px;margin-bottom:12px">&#128172;</div>
       <div style="font-size:15px;font-weight:600;margin-bottom:6px">Coming Soon</div>
       <div style="font-size:13px">LinkedIn post drafter with priority and discovery queues.</div>
@@ -852,6 +439,7 @@ function navPage(page, el) {
   if(page==='meetings') renderMeetingsPage();
   if(page==='promotions') renderPromotionsPage();
   if(page==='events') renderEventsPage();
+  if(page==='calendar') renderCalendarPage();
 }
 
 // ===== OVERVIEW PAGE =====
@@ -902,15 +490,15 @@ function renderOverviewPage(){
   // KPI snapshot
   h+=`<div class="glass-card"><div class="card-title" style="color:var(--accent)">KPI snapshot</div>`;
   h+=`<div class="g2" style="gap:8px">`;
-  h+=`<div><div style="font-size:11px;font-weight:600;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Content</div>`;
+  h+=`<div><div style="font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Content</div>`;
   (d.kpis?.content||[]).forEach(k=>{
     const ok=k.current>=k.target;
-    h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:12px"><span style="color:var(--text-secondary)">${k.label}</span><span style="font-weight:700;color:${ok?'var(--green)':'var(--red)'}">${k.current}/${k.target}</span></div>`;
+    h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:12px"><span style="color:var(--text-sec)">${k.label}</span><span style="font-weight:700;color:${ok?'var(--green)':'var(--red)'}">${k.current}/${k.target}</span></div>`;
   });
-  h+=`</div><div><div style="font-size:11px;font-weight:600;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Website & SEO</div>`;
+  h+=`</div><div><div style="font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Website & SEO</div>`;
   (d.kpis?.website||[]).forEach(k=>{
     const ok=k.current>=k.target;
-    h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:12px"><span style="color:var(--text-secondary)">${k.label}</span><span style="font-weight:700;color:${ok?'var(--green)':'var(--red)'}">${k.current}/${k.target}</span></div>`;
+    h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:12px"><span style="color:var(--text-sec)">${k.label}</span><span style="font-weight:700;color:${ok?'var(--green)':'var(--red)'}">${k.current}/${k.target}</span></div>`;
   });
   h+=`</div></div></div>`;
 
@@ -920,7 +508,7 @@ function renderOverviewPage(){
     d.meetings.today.forEach(m=>{
       h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border)"><div><div style="font-size:13px;font-weight:600;color:var(--navy)">${m.name}</div><div class="list-sub">${m.time||''} · ${m.type||''}</div></div>${m.warning?`<span class="badge b-red">${m.warning}</span>`:''}</div>`;
     });
-  } else { h+=`<div style="font-size:13px;color:var(--text-tertiary)">No meetings today.</div>`; }
+  } else { h+=`<div style="font-size:13px;color:var(--text-dim)">No meetings today.</div>`; }
   if(d.meetings?.follow_up?.length){
     h+=`<div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--border)"><div style="font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Needs follow-up</div>`;
     d.meetings.follow_up.slice(0,3).forEach(m=>{
@@ -956,7 +544,7 @@ function renderOverviewPage(){
     if(promos.ending_soon) h+=`<span class="badge b-red">${promos.ending_soon} ending soon</span>`;
     h+=`</div>`;
     if(promos.end_note) h+=`<div style="font-size:12px;color:var(--amber);padding:8px 10px;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm)">${promos.end_note}</div>`;
-  } else { h+=`<div style="font-size:13px;color:var(--text-tertiary)">No active promotions.</div>`; }
+  } else { h+=`<div style="font-size:13px;color:var(--text-dim)">No active promotions.</div>`; }
   h+=`</div>`;
 
   // Finance snapshot
@@ -965,17 +553,17 @@ function renderOverviewPage(){
   if(SUBS.length){
     const totalM=SUBS.reduce((s,x)=>s+x.monthly,0);
     const thomasM=SUBS.filter(s=>s.payment==='Thomas Flood').reduce((s,x)=>s+x.monthly,0);
-    h+=`<div class="g2" style="gap:8px;margin-bottom:8px"><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--navy)">$${Math.round(totalM)}</div><div style="font-size:11px;color:var(--text-tertiary)">/month total</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--amber)">$${Math.round(thomasM)}</div><div style="font-size:11px;color:var(--text-tertiary)">/month Thomas</div></div></div>`;
-    h+=`<div style="font-size:12px;color:var(--text-secondary);text-align:center">${SUBS.length} active subscriptions</div>`;
+    h+=`<div class="g2" style="gap:8px;margin-bottom:8px"><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--navy)">$${Math.round(totalM)}</div><div style="font-size:11px;color:var(--text-dim)">/month total</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--amber)">$${Math.round(thomasM)}</div><div style="font-size:11px;color:var(--text-dim)">/month Thomas</div></div></div>`;
+    h+=`<div style="font-size:12px;color:var(--text-sec);text-align:center">${SUBS.length} active subscriptions</div>`;
     // Nearest renewal
     const now=new Date();
     const nextRenewal=SUBS.filter(s=>{const r=new Date(s.renewal);return(r-now)/(1000*60*60*24)>0}).sort((a,b)=>new Date(a.renewal)-new Date(b.renewal))[0];
     if(nextRenewal){
       const diff=Math.ceil((new Date(nextRenewal.renewal)-now)/(1000*60*60*24));
-      h+=`<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:12px;display:flex;justify-content:space-between"><span style="color:var(--text-secondary)">Next renewal: ${nextRenewal.name}</span><span class="badge ${diff<=7?'b-red':diff<=30?'b-amber':'b-blue'}">${diff}d</span></div>`;
+      h+=`<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:12px;display:flex;justify-content:space-between"><span style="color:var(--text-sec)">Next renewal: ${nextRenewal.name}</span><span class="badge ${diff<=7?'b-red':diff<=30?'b-amber':'b-blue'}">${diff}d</span></div>`;
     }
   } else if(d.finance?.totals){
-    h+=`<div class="g2" style="gap:8px"><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--navy)">$${d.finance.totals.monthly||0}</div><div style="font-size:11px;color:var(--text-tertiary)">/month</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--amber)">$${d.finance.totals.thomas_monthly||0}</div><div style="font-size:11px;color:var(--text-tertiary)">Thomas</div></div></div>`;
+    h+=`<div class="g2" style="gap:8px"><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--navy)">$${d.finance.totals.monthly||0}</div><div style="font-size:11px;color:var(--text-dim)">/month</div></div><div style="text-align:center"><div style="font-size:22px;font-weight:700;color:var(--amber)">$${d.finance.totals.thomas_monthly||0}</div><div style="font-size:11px;color:var(--text-dim)">Thomas</div></div></div>`;
   }
   h+=`</div>`;
 
@@ -983,9 +571,9 @@ function renderOverviewPage(){
   if(d.website?.backlogs){
     h+=`<div class="glass-card"><div class="card-title" style="color:var(--blue)">Website & SEO backlog</div>`;
     h+=`<div class="g3" style="gap:8px;text-align:center">`;
-    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--navy)">${d.website.backlogs.website_pages}</div><div style="font-size:11px;color:var(--text-tertiary)">Website</div></div>`;
-    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--navy)">${d.website.backlogs.product_pages}</div><div style="font-size:11px;color:var(--text-tertiary)">Product</div></div>`;
-    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--accent)">${d.website.backlogs.seo}</div><div style="font-size:11px;color:var(--text-tertiary)">SEO</div></div>`;
+    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--navy)">${d.website.backlogs.website_pages}</div><div style="font-size:11px;color:var(--text-dim)">Website</div></div>`;
+    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--navy)">${d.website.backlogs.product_pages}</div><div style="font-size:11px;color:var(--text-dim)">Product</div></div>`;
+    h+=`<div><div style="font-size:22px;font-weight:700;color:var(--accent)">${d.website.backlogs.seo}</div><div style="font-size:11px;color:var(--text-dim)">SEO</div></div>`;
     h+=`</div></div>`;
   }
 
@@ -1019,7 +607,7 @@ function renderMeetingsPage(){
     d.meetings.today.forEach(m=>{
       h+=`<div class="glass-card"><div style="display:flex;justify-content:space-between;align-items:center"><div><div class="list-name" style="font-size:15px">${m.name}</div><div class="list-sub">${m.time||''} · ${m.type||''}${m.participants?' · '+m.participants:''}</div></div>${m.warning?`<span class="badge b-red">${m.warning}</span>`:''}</div></div>`;
     });
-  } else { h+='<div class="glass-card" style="color:var(--text-tertiary);font-size:13px">No meetings today.</div>'; }
+  } else { h+='<div class="glass-card" style="color:var(--text-dim);font-size:13px">No meetings today.</div>'; }
 
   // Tomorrow
   h+='<div class="section-head animate-in" style="animation-delay:0.1s;margin-top:20px"><div class="section-accent" style="background:var(--blue)"></div><div class="section-title">Tomorrow</div></div>';
@@ -1027,7 +615,7 @@ function renderMeetingsPage(){
     d.meetings.tomorrow.forEach(m=>{
       h+=`<div class="glass-card"><div style="display:flex;justify-content:space-between;align-items:center"><div><div class="list-name" style="font-size:15px">${m.name}</div><div class="list-sub">${m.time||''} · ${m.type||''}${m.participants?' · '+m.participants:''}</div></div>${m.warning?`<span class="badge b-red">${m.warning}</span>`:''}</div></div>`;
     });
-  } else { h+='<div class="glass-card" style="color:var(--text-tertiary);font-size:13px">No meetings tomorrow.</div>'; }
+  } else { h+='<div class="glass-card" style="color:var(--text-dim);font-size:13px">No meetings tomorrow.</div>'; }
 
   // Upcoming
   if(d.meetings?.upcoming?.length){
@@ -1052,7 +640,7 @@ function renderMeetingsPage(){
   // Weekly summary
   if(d.weekly_summary){
     h+='<div class="section-head animate-in" style="animation-delay:0.4s;margin-top:20px"><div class="section-accent" style="background:var(--green)"></div><div class="section-title">This week</div></div>';
-    h+=`<div class="stats-row"><div class="stat-card"><div class="stat-label">Scheduled</div><div class="stat-val" style="color:var(--navy)">${d.weekly_summary.meetings_scheduled||0}</div></div><div class="stat-card"><div class="stat-label">Completed</div><div class="stat-val" style="color:var(--green)">${d.weekly_summary.meetings_completed||0}</div></div><div class="stat-card"><div class="stat-label">Cancelled</div><div class="stat-val" style="color:var(--text-tertiary)">${d.weekly_summary.meetings_cancelled||0}</div></div><div class="stat-card"><div class="stat-label">Outstanding follow-ups</div><div class="stat-val" style="color:${(d.weekly_summary.outstanding_followups||0)>0?'var(--red)':'var(--green)'}">${d.weekly_summary.outstanding_followups||0}</div></div></div>`;
+    h+=`<div class="stats-row"><div class="stat-card"><div class="stat-label">Scheduled</div><div class="stat-val" style="color:var(--navy)">${d.weekly_summary.meetings_scheduled||0}</div></div><div class="stat-card"><div class="stat-label">Completed</div><div class="stat-val" style="color:var(--green)">${d.weekly_summary.meetings_completed||0}</div></div><div class="stat-card"><div class="stat-label">Cancelled</div><div class="stat-val" style="color:var(--text-dim)">${d.weekly_summary.meetings_cancelled||0}</div></div><div class="stat-card"><div class="stat-label">Outstanding follow-ups</div><div class="stat-val" style="color:${(d.weekly_summary.outstanding_followups||0)>0?'var(--red)':'var(--green)'}">${d.weekly_summary.outstanding_followups||0}</div></div></div>`;
   }
 
   $('meetings-content').innerHTML=h;
@@ -1073,7 +661,7 @@ function renderPromotionsPage(){
 
   // End note warning
   if(promos?.end_note){
-    h+=`<div class="glass-card animate-in" style="animation-delay:0.1s;border-left:3px solid var(--red)"><div style="display:flex;gap:10px;align-items:flex-start"><span style="font-size:18px">&#9888;</span><div><div style="font-weight:700;color:var(--navy);margin-bottom:4px">Attention required</div><div style="font-size:13px;color:var(--text-secondary)">${promos.end_note}</div></div></div></div>`;
+    h+=`<div class="glass-card animate-in" style="animation-delay:0.1s;border-left:3px solid var(--red)"><div style="display:flex;gap:10px;align-items:flex-start"><span style="font-size:18px">&#9888;</span><div><div style="font-weight:700;color:var(--navy);margin-bottom:4px">Attention required</div><div style="font-size:13px;color:var(--text-sec)">${promos.end_note}</div></div></div></div>`;
   }
 
   // All promotions
@@ -1085,7 +673,7 @@ function renderPromotionsPage(){
     });
     h+='</div>';
   } else {
-    h+='<div class="glass-card" style="color:var(--text-tertiary);font-size:13px;text-align:center;padding:40px">No active promotions.</div>';
+    h+='<div class="glass-card" style="color:var(--text-dim);font-size:13px;text-align:center;padding:40px">No active promotions.</div>';
   }
 
   // Content due (related to promos)
@@ -1140,7 +728,7 @@ function renderEventsPage(){
     h+=`<div class="event-header"><div><div class="event-name">${evt.name}</div><div class="event-meta">${evt.date} · ${evt.location}</div></div><span class="badge ${urgencyBadge}">${evt.days_out} days</span></div>`;
 
     // Progress bar
-    h+=`<div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:12px;color:var(--text-tertiary)">Task completion</span><span style="font-size:12px;font-weight:700;color:var(--accent)">${evt.tasks_complete}/${evt.tasks_total} (${pct}%)</span></div><div class="progress-wrap"><div class="progress-track"><div class="progress-fill" style="width:${pct}%;background:${pct>=75?'var(--green)':pct>=25?'var(--accent)':'var(--red)'}"></div></div></div></div>`;
+    h+=`<div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:12px;color:var(--text-dim)">Task completion</span><span style="font-size:12px;font-weight:700;color:var(--accent)">${evt.tasks_complete}/${evt.tasks_total} (${pct}%)</span></div><div class="progress-wrap"><div class="progress-track"><div class="progress-fill" style="width:${pct}%;background:${pct>=75?'var(--green)':pct>=25?'var(--accent)':'var(--red)'}"></div></div></div></div>`;
 
     // Flags
     if(evt.flags?.length){
@@ -1155,7 +743,7 @@ function renderEventsPage(){
   });
 
   if(!evts.length){
-    h+='<div class="glass-card" style="color:var(--text-tertiary);font-size:13px;text-align:center;padding:40px">No events found in data.</div>';
+    h+='<div class="glass-card" style="color:var(--text-dim);font-size:13px;text-align:center;padding:40px">No events found in data.</div>';
   }
 
   $('events-content').innerHTML=h;
@@ -1247,7 +835,7 @@ async function renderFinancePage(){
   catSorted.forEach(([cat,data])=>{
     const pct = (data.total/totalMonthly)*100;
     const col = catColors[cat]||'var(--accent)';
-    h+=`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:13px;font-weight:500">${cat}</span><span style="font-size:13px;font-weight:700">$${data.total.toFixed(0)}/mo</span></div><div class="progress-wrap"><div class="progress-track"><div class="progress-fill" style="width:${pct}%;background:${col}"></div></div><span style="font-size:11px;color:var(--text-tertiary);min-width:35px;text-align:right">${Math.round(pct)}%</span></div></div>`;
+    h+=`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:13px;font-weight:500">${cat}</span><span style="font-size:13px;font-weight:700">$${data.total.toFixed(0)}/mo</span></div><div class="progress-wrap"><div class="progress-track"><div class="progress-fill" style="width:${pct}%;background:${col}"></div></div><span style="font-size:11px;color:var(--text-dim);min-width:35px;text-align:right">${Math.round(pct)}%</span></div></div>`;
   });
   h+=`</div>`;
 
@@ -1262,7 +850,7 @@ async function renderFinancePage(){
       h+=`<div class="list-item"><div><div class="list-name">${s.name}</div><div class="list-sub">${r.getDate()} ${mo[r.getMonth()]} ${r.getFullYear()} · ${s.payment}</div></div><div style="text-align:right"><span class="badge ${urgency}">${diff} days</span><div style="font-weight:700;font-size:13px;margin-top:3px">${s.cycle==='Monthly'?'$'+s.monthly.toFixed(0)+'/mo':'$'+s.annual.toFixed(0)}</div></div></div>`;
     });
   } else {
-    h+=`<span style="color:var(--text-tertiary);font-size:13px">No renewals in the next 90 days.</span>`;
+    h+=`<span style="color:var(--text-dim);font-size:13px">No renewals in the next 90 days.</span>`;
   }
   h+=`</div></div>`;
 
@@ -1270,13 +858,13 @@ async function renderFinancePage(){
   h+=`<div class="glass-card animate-in" style="animation-delay:0.3s"><div class="card-title" style="color:var(--navy)">All active subscriptions</div>
   <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:13px">
   <thead><tr style="border-bottom:1px solid var(--border)">
-    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-tertiary);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Name</th>
-    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-tertiary);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Category</th>
-    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-tertiary);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Cycle</th>
-    <th style="text-align:right;padding:8px 6px;font-weight:600;color:var(--text-tertiary);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Monthly</th>
-    <th style="text-align:right;padding:8px 6px;font-weight:600;color:var(--text-tertiary);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Annual</th>
-    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-tertiary);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Payment</th>
-    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-tertiary);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Renewal</th>
+    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Name</th>
+    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Category</th>
+    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Cycle</th>
+    <th style="text-align:right;padding:8px 6px;font-weight:600;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Monthly</th>
+    <th style="text-align:right;padding:8px 6px;font-weight:600;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Annual</th>
+    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Payment</th>
+    <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--text-dim);font-size:11px;text-transform:uppercase;letter-spacing:0.5px">Renewal</th>
   </tr></thead><tbody>`;
   SUBS.forEach(s=>{
     const payBadge = s.payment==='Thomas Flood'?'b-amber':'b-green';
@@ -1287,7 +875,7 @@ async function renderFinancePage(){
       <td style="padding:9px 6px;text-align:right;font-weight:600">$${s.monthly.toFixed(2)}</td>
       <td style="padding:9px 6px;text-align:right;font-weight:600">$${s.annual.toFixed(0)}</td>
       <td style="padding:9px 6px"><span class="badge ${payBadge}">${s.payment}</span></td>
-      <td style="padding:9px 6px;color:var(--text-secondary)">${s.renewal}</td>
+      <td style="padding:9px 6px;color:var(--text-sec)">${s.renewal}</td>
     </tr>`;
   });
   h+=`<tr style="font-weight:700;border-top:2px solid var(--border-strong)">
@@ -1300,9 +888,9 @@ async function renderFinancePage(){
 
   // Cancelled
   if(CANCELLED.length){
-    h+=`<div class="glass-card animate-in" style="animation-delay:0.4s;opacity:0.7"><div class="card-title" style="color:var(--text-tertiary)">Cancelled subscriptions</div>`;
+    h+=`<div class="glass-card animate-in" style="animation-delay:0.4s;opacity:0.7"><div class="card-title" style="color:var(--text-dim)">Cancelled subscriptions</div>`;
     CANCELLED.forEach(s=>{
-      h+=`<div class="list-item"><span class="list-name" style="color:var(--text-tertiary);text-decoration:line-through">${s.name}</span><span class="badge" style="background:rgba(0,0,0,0.04);color:var(--text-tertiary);border:1px solid var(--border)">${s.category}</span></div>`;
+      h+=`<div class="list-item"><span class="list-name" style="color:var(--text-dim);text-decoration:line-through">${s.name}</span><span class="badge" style="background:rgba(0,0,0,0.04);color:var(--text-dim);border:1px solid var(--border)">${s.category}</span></div>`;
     });
     h+=`</div>`;
   }
@@ -1399,7 +987,7 @@ function renderDaily(d){
   // ACTIONS
   h+='<div id="sec-actions" class="tab-content">';
   h+='<div class="section-head"><div class="section-accent" style="background:var(--green)"></div><div class="section-title">Recommended actions</div></div>';
-  h+=`<div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:12px;color:var(--text-tertiary)">Progress</span><span id="actr" style="font-size:12px;font-weight:700;color:var(--accent)">0/${totalAct}</span></div><div class="progress-wrap"><div class="progress-track"><div id="actprog" class="progress-fill" style="width:0%;background:var(--green);transition:width .3s"></div></div></div></div>`;
+  h+=`<div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:12px;color:var(--text-dim)">Progress</span><span id="actr" style="font-size:12px;font-weight:700;color:var(--accent)">0/${totalAct}</span></div><div class="progress-wrap"><div class="progress-track"><div id="actprog" class="progress-fill" style="width:0%;background:var(--green);transition:width .3s"></div></div></div></div>`;
   h+='<div id="actbox"></div></div>';
 
   $('content').innerHTML=h;
@@ -1416,7 +1004,7 @@ function kpiRow(k){
 
 function meetingCard(title,items){
   let h=`<div class="glass-card"><div class="card-title" style="color:var(--blue)">${title}</div>`;
-  if(!items?.length)h+='<span style="color:var(--text-tertiary);font-size:13px">None scheduled.</span>';
+  if(!items?.length)h+='<span style="color:var(--text-dim);font-size:13px">None scheduled.</span>';
   else items.forEach(m=>h+=`<div class="meeting-entry"><div><div class="list-name">${m.name}</div><div class="list-sub">${m.time||''} · ${m.type||''}${m.participants?' · '+m.participants:''}</div></div>${m.warning?`<span class="badge b-red">${m.warning}</span>`:''}</div>`);
   return h+'</div>';
 }
@@ -1512,6 +1100,114 @@ function renderWeeklySummary(ds){const wk=getWeek(ds);const datesInRange=allDate
 function renderMonthlySummary(ds){const mo=getMonth(ds);const datesInRange=allDates.filter(d=>getMonth(d)===mo);Promise.all(datesInRange.map(d=>loadDate(d))).then(()=>{renderAggregateView(monthLabel(ds),'Monthly performance',datesInRange,'monthly')})}
 function renderQuarterlySummary(ds){const q=getQuarter(ds);const m=parseInt(ds.slice(5,7));const qStart=Math.floor((m-1)/3)*3+1;const qEnd=qStart+2;const y=ds.slice(0,4);const datesInRange=allDates.filter(d=>{const dm=parseInt(d.slice(5,7));return d.slice(0,4)===y&&dm>=qStart&&dm<=qEnd});Promise.all(datesInRange.map(d=>loadDate(d))).then(()=>{renderAggregateView(qLabel(q),'Quarterly performance',datesInRange,'quarterly')})}
 function renderAnnualSummary(ds){const y=getYear(ds);const datesInRange=allDates.filter(d=>getYear(d)===y);Promise.all(datesInRange.map(d=>loadDate(d))).then(()=>{renderAggregateView(y+' Annual Summary','Year-to-date performance',datesInRange,'annual')})}
+
+// ===== CALENDAR PAGE =====
+function renderCalendarPage(){
+  const d = getLatestData();
+  let h = '';
+  
+  // Get current month info
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const dayNames = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  
+  // Collect all events with dates
+  const events = [];
+  if(d && d.events){
+    d.events.forEach(evt => {
+      if(evt.date){
+        events.push({name:evt.name, date:evt.date, days_out:evt.days_out, location:evt.location||'', type:'event', color:'var(--dark-blue)'});
+      }
+    });
+  }
+  // Add meetings from today/tomorrow
+  if(d && d.calendar){
+    (d.calendar.today||[]).forEach(m => events.push({name:m.name, date:d.date, time:m.time, type:'meeting', color:'var(--green)'}));
+    (d.calendar.tomorrow||[]).forEach(m => {
+      const tom = new Date(d.date);tom.setDate(tom.getDate()+1);
+      events.push({name:m.name, date:tom.toISOString().slice(0,10), time:m.time, type:'meeting', color:'var(--green)'});
+    });
+  }
+  // Add promotion deadlines
+  if(d && d.content?.promotions?.items){
+    d.content.promotions.items.forEach(p => {
+      if(p.end_date) events.push({name:p.name+' ends', date:p.end_date, type:'promo', color:'var(--amber)'});
+    });
+  }
+
+  // Header
+  h += `<div class="glass-card" style="margin-bottom:16px">`;
+  h += `<div style="display:flex;justify-content:space-between;align-items:center">`;
+  h += `<div style="font-size:20px;font-weight:800;color:var(--navy)">${monthNames[month]} ${year}</div>`;
+  h += `<div style="display:flex;gap:6px">`;
+  h += `<span class="badge b-blue">${events.filter(e=>e.type==='event').length} events</span>`;
+  h += `<span class="badge b-green">${events.filter(e=>e.type==='meeting').length} meetings</span>`;
+  h += `<span class="badge b-amber">${events.filter(e=>e.type==='promo').length} deadlines</span>`;
+  h += `</div></div></div>`;
+
+  // Calendar grid
+  const firstDay = new Date(year, month, 1);
+  let startDay = firstDay.getDay() - 1; if(startDay < 0) startDay = 6; // Monday start
+  const daysInMonth = new Date(year, month+1, 0).getDate();
+  const today = now.getDate();
+
+  h += `<div class="glass-card" style="padding:12px">`;
+  h += `<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:1px">`;
+  // Day headers
+  dayNames.forEach(d => h += `<div style="text-align:center;padding:8px 4px;font-size:11px;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px">${d}</div>`);
+  // Empty cells before month starts
+  for(let i=0;i<startDay;i++) h += `<div style="padding:6px;min-height:80px;background:var(--light-grey);border-radius:4px;opacity:0.4"></div>`;
+  // Day cells
+  for(let day=1;day<=daysInMonth;day++){
+    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+    const dayEvents = events.filter(e => e.date === dateStr);
+    const isToday = day === today;
+    const bg = isToday ? 'background:var(--dark-blue);color:#fff;' : 'background:var(--light-grey);';
+    h += `<div style="${bg}padding:6px 8px;min-height:80px;border-radius:4px;font-size:12px">`;
+    h += `<div style="font-weight:700;margin-bottom:4px;${isToday?'color:#fff;':'color:var(--text);'}">${day}</div>`;
+    dayEvents.forEach(e => {
+      h += `<div style="font-size:10px;padding:2px 4px;margin-bottom:2px;border-radius:3px;background:${e.color};color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${e.name}${e.time?' · '+e.time:''}">${e.name}</div>`;
+    });
+    h += `</div>`;
+  }
+  h += `</div></div>`;
+
+  // Upcoming events list
+  h += `<div style="margin-top:16px" class="section-head"><div class="section-accent" style="background:var(--dark-blue)"></div><div class="section-title">Upcoming events & deadlines</div></div>`;
+  const upcoming = events.filter(e=>e.type==='event').sort((a,b)=>(a.days_out||999)-(b.days_out||999));
+  if(upcoming.length){
+    upcoming.forEach(evt => {
+      const urgency = evt.days_out<=7?'var(--red)':evt.days_out<=30?'var(--amber)':'var(--green)';
+      h += `<div class="glass-card" style="border-left:3px solid ${urgency}">`;
+      h += `<div style="display:flex;justify-content:space-between;align-items:center">`;
+      h += `<div><div style="font-weight:700;color:var(--navy)">${evt.name}</div>`;
+      h += `<div style="font-size:12px;color:var(--text-dim)">${evt.date}${evt.location?' · '+evt.location:''}</div></div>`;
+      h += `<span class="badge" style="background:${urgency};color:#fff;border:none">${evt.days_out} days</span>`;
+      h += `</div></div>`;
+    });
+  } else {
+    h += `<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:30px">No upcoming events found in latest brief data.</div>`;
+  }
+
+  // Meetings this week
+  h += `<div style="margin-top:16px" class="section-head"><div class="section-accent" style="background:var(--green)"></div><div class="section-title">Meetings this week</div></div>`;
+  const meetings = events.filter(e=>e.type==='meeting');
+  if(meetings.length){
+    h += `<div class="glass-card">`;
+    meetings.forEach(m => {
+      h += `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">`;
+      h += `<div><div style="font-weight:600;color:var(--navy)">${m.name}</div><div style="font-size:12px;color:var(--text-dim)">${m.date}${m.time?' · '+m.time:''}</div></div>`;
+      h += `<span class="badge b-green">meeting</span></div>`;
+    });
+    h += `</div>`;
+  } else {
+    h += `<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:30px">No meetings scheduled this week.</div>`;
+  }
+
+  document.getElementById('calendar-content').innerHTML = h;
+}
 
 init();
 </script>
