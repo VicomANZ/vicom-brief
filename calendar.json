@@ -1,24 +1,21 @@
 {
-  "updated": "2026-04-13T18:00:00+10:00",
+  "updated": "2026-04-13T20:00:00+10:00",
   "content": [
     {
       "id": "86d2me4gw",
       "name": "800G Pluggable Optics Poster",
-      "date": "2026-04-13",
+      "date": "2026-04-14",
       "status": "scheduled",
       "type": "content",
       "content_type": ["LinkedIn", "GMB"],
       "partner": "VIAVI",
       "partner_color": "#ab4aba",
-      "url": "https://app.clickup.com/t/86d2me4gw",
-      "linkedin_copy": "",
-      "edm_subject": "",
-      "blog_title": ""
+      "url": "https://app.clickup.com/t/86d2me4gw"
     },
     {
       "id": "86d2mcpnn",
       "name": "Beyond AI-Copy-Paste Engineering Webinar",
-      "date": "2026-04-14",
+      "date": "2026-04-15",
       "status": "scheduled",
       "type": "content",
       "content_type": ["LinkedIn", "GMB"],
@@ -26,79 +23,62 @@
       "partner_color": "#3e63dd",
       "url": "https://app.clickup.com/t/86d2mcpnn",
       "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface. AI-assisted instrumentation is no longer speculative — it's emerging rapidly and already usable today.\n\nThis 45-minute on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.",
-      "edm_subject": "",
-      "blog_title": "",
       "gmb_url": "https://app.webinar.net/Gp5d8bMWAxR"
     },
     {
       "id": "86d2mcpe2",
       "name": "Your Tektronix Oscilloscope Just Got Better",
-      "date": "2026-04-15",
+      "date": "2026-04-16",
       "status": "ready to schedule",
       "type": "content",
       "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "url": "https://app.clickup.com/t/86d2mcpe2",
-      "linkedin_copy": "",
-      "edm_subject": "",
-      "blog_title": ""
+      "url": "https://app.clickup.com/t/86d2mcpe2"
     },
     {
       "id": "86d2mcpr1",
       "name": "Demo Video: Next-Gen Current Measurement [TICP]",
-      "date": "2026-04-20",
+      "date": "2026-04-21",
       "status": "ready to schedule",
       "type": "content",
       "content_type": ["LinkedIn", "GMB"],
       "partner": "Keithley",
       "partner_color": "#ff070f",
-      "url": "https://app.clickup.com/t/86d2mcpr1",
-      "linkedin_copy": "",
-      "edm_subject": "",
-      "blog_title": ""
+      "url": "https://app.clickup.com/t/86d2mcpr1"
     },
     {
       "id": "86d2mcpta",
       "name": "Effortless Script Generation with TSP Toolkit [MP5000]",
-      "date": "2026-04-22",
+      "date": "2026-04-23",
       "status": "ready to schedule",
       "type": "content",
       "content_type": ["LinkedIn", "GMB"],
       "partner": "Keithley",
       "partner_color": "#ff070f",
-      "url": "https://app.clickup.com/t/86d2mcpta",
-      "linkedin_copy": "",
-      "edm_subject": "",
-      "blog_title": ""
+      "url": "https://app.clickup.com/t/86d2mcpta"
     },
     {
       "id": "86d2mcpu1",
       "name": "Customer Story: TUfast Eco Lane [4 Series MSO + EA]",
-      "date": "2026-04-24",
+      "date": "2026-04-28",
       "status": "ready to schedule",
       "type": "content",
       "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "url": "https://app.clickup.com/t/86d2mcpu1",
-      "linkedin_copy": "",
-      "edm_subject": "",
-      "blog_title": ""
+      "url": "https://app.clickup.com/t/86d2mcpu1"
     },
     {
       "id": "86d2mcpun",
       "name": "Signal Integrity Modeling featuring 7 Series DPO",
-      "date": "2026-04-26",
+      "date": "2026-04-30",
       "status": "ready to schedule",
       "type": "content",
       "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "url": "https://app.clickup.com/t/86d2mcpun",
-      "linkedin_copy": "",
-      "edm_subject": "",
-      "blog_title": ""
+      "url": "https://app.clickup.com/t/86d2mcpun"
     }
   ],
   "events": [
@@ -116,7 +96,7 @@
     {
       "id": "86d1x972m",
       "name": "Quantum Australia Conference",
-      "date": "2026-04-29",
+      "date": "2026-04-30",
       "status": "event preperation",
       "type": "event",
       "location": "Adelaide SA",
@@ -147,7 +127,7 @@
     {
       "id": "86d1va32b",
       "name": "Comms Connect Melbourne",
-      "date": "2026-08-13",
+      "date": "2026-10-15",
       "status": "planned events",
       "type": "event",
       "location": "Melbourne VIC",
