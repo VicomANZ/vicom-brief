@@ -515,10 +515,13 @@ const qLabel=q=>{const[y,qn]=q.split('-');return qn.toUpperCase()+' '+y};
 
 function navPage(page, el) {
   document.querySelectorAll('.sidebar-nav a').forEach(a=>a.classList.remove('active'));
-  el.classList.add('active');
+  if(el) el.classList.add('active');
+  else { const a=document.querySelector(`[data-page="${page}"]`); if(a) a.classList.add('active'); }
   document.querySelectorAll('[id^="page-"]').forEach(p=>p.style.display='none');
-  document.getElementById('page-'+page).style.display='block';
+  const pg=document.getElementById('page-'+page);
+  if(pg) pg.style.display='block';
   document.querySelector('.sidebar').classList.remove('open');
+  window.location.hash=page;
   if(page==='overview') renderOverviewPage();
   if(page==='finance') renderFinancePage();
   if(page==='meetings') renderMeetingsPage();
@@ -988,7 +991,14 @@ async function init(){
   try{const r=await fetch(INDEX_URL);if(r.ok){const idx=await r.json();allDates=idx.dates||idx}}catch(e){}
   if(!allDates.length){const probe=[];const today=new Date();for(let i=90;i>=0;i--){const d=new Date(today);d.setDate(d.getDate()-i);probe.push(d.toISOString().split('T')[0])}const results=await Promise.allSettled(probe.map(async ds=>{const r=await fetch(`${DATA_URL}${ds}.json`);if(!r.ok)throw new Error();return{date:ds,data:await r.json()}}));results.forEach(r=>{if(r.status==='fulfilled'){allDates.push(r.value.date);allData[r.value.date]=r.value.data}})}
   if(!allDates.length){$('content').innerHTML='<div class="no-data">No brief data found yet.</div>';$('dateDisplay').textContent='No data';return}
-  allDates.sort();currentIdx=allDates.length-1;await loadAndRender();renderOverviewPage();
+  allDates.sort();currentIdx=allDates.length-1;await loadAndRender();
+  // Check URL hash for direct page link
+  const hash=window.location.hash.replace('#','');
+  if(hash && document.getElementById('page-'+hash)){
+    navPage(hash);
+  } else {
+    renderOverviewPage();
+  }
 }
 
 async function loadDate(ds){if(allData[ds])return allData[ds];try{const r=await fetch(`${DATA_URL}${ds}.json`);if(!r.ok)return null;const data=await r.json();allData[ds]=data;return data}catch(e){return null}}
