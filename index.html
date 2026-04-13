@@ -1260,11 +1260,19 @@ async function renderCalendarPage(){
   let h='';
 
   // Nav + legend
+  const updatedRaw = calendarData.updated || '';
+  let updatedLabel = '';
+  if(updatedRaw){
+    const ud = new Date(updatedRaw);
+    if(!isNaN(ud)) updatedLabel = ud.toLocaleString('en-AU',{timeZone:'Australia/Brisbane',day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:true});
+  }
   h+=`<div class="glass-card" style="margin-bottom:12px;padding:14px 18px">`;
   h+=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">`;
   h+=`<div style="display:flex;align-items:center;gap:6px">`;
   h+=`<button onclick="calNav(-1)" style="border:none;background:var(--light-grey);border-radius:6px;width:34px;height:34px;cursor:pointer;font-size:18px;color:var(--text);font-weight:700">&#8249;</button>`;
-  h+=`<div style="font-size:20px;font-weight:800;color:var(--navy);min-width:200px;text-align:center">${MN[calMonth]} ${calYear}</div>`;
+  h+=`<div style="text-align:center"><div style="font-size:20px;font-weight:800;color:var(--navy)">${MN[calMonth]} ${calYear}</div>`;
+  if(updatedLabel) h+=`<div style="font-size:10px;color:var(--text-dim);margin-top:2px">Last updated: ${updatedLabel} AEST</div>`;
+  h+=`</div>`;
   h+=`<button onclick="calNav(1)" style="border:none;background:var(--light-grey);border-radius:6px;width:34px;height:34px;cursor:pointer;font-size:18px;color:var(--text);font-weight:700">&#8250;</button></div>`;
   h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;font-size:11px;font-weight:600;color:var(--text-sec)">`;
   h+=`<span>🔵 Event</span><span>🟢 Content</span><span>🟡 Promo</span>`;
