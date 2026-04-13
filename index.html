@@ -1274,8 +1274,9 @@ async function renderCalendarPage(){
   if(updatedLabel) h+=`<div style="font-size:10px;color:var(--text-dim);margin-top:2px">Last updated: ${updatedLabel} AEST</div>`;
   h+=`</div>`;
   h+=`<button onclick="calNav(1)" style="border:none;background:var(--light-grey);border-radius:6px;width:34px;height:34px;cursor:pointer;font-size:18px;color:var(--text);font-weight:700">&#8250;</button></div>`;
-  h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;font-size:11px;font-weight:600;color:var(--text-sec)">`;
+  h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;font-size:11px;font-weight:600;color:var(--text-sec);align-items:center">`;
   h+=`<span>🔵 Event</span><span>🟢 Content</span><span>🟡 Promo</span>`;
+  h+=`<button onclick="generateWeeklySnapshot()" style="border:none;background:var(--dark-blue);color:#fff;padding:6px 14px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);margin-left:8px">📸 Weekly Snapshot</button>`;
   h+=`</div></div></div>`;
 
   // Grid
@@ -1353,6 +1354,172 @@ async function renderCalendarPage(){
   el.innerHTML=h;
 }
 function calNav(dir){calMonth+=dir;if(calMonth>11){calMonth=0;calYear++}if(calMonth<0){calMonth=11;calYear--}renderCalendarPage();}
+
+function generateWeeklySnapshot(){
+  if(!calendarData){alert('Calendar data not loaded yet');return;}
+  const S=3; // 3x resolution for crisp image
+  const W=1200*S, COL_W=W/5;
+  const HEADER_H=75*S, DAY_HDR=48*S, FOOTER_H=35*S;
+  const CARD_MX=6*S, CARD_PX=10*S;
+  
+  const now=new Date();
+  const monday=new Date(now);monday.setDate(now.getDate()-((now.getDay()+6)%7));
+  
+  const MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const DN=['Monday','Tuesday','Wednesday','Thursday','Friday'];
+  const items=[...(calendarData.content||[]),...(calendarData.events||[]),...(calendarData.promotions||[])];
+  
+  // Build week data
+  const week=[];
+  for(let i=0;i<5;i++){
+    const d=new Date(monday);d.setDate(monday.getDate()+i);
+    const ds=d.toISOString().slice(0,10);
+    const dayItems=items.filter(e=>e.date===ds);
+    week.push({name:DN[i],date:d.getDate()+' '+MN[d.getMonth()].slice(0,3),ds,items:dayItems,isToday:d.toDateString()===now.toDateString()});
+  }
+  
+  // Measure card heights with wrapping
+  const canvas=document.createElement('canvas');
+  const ctx=canvas.getContext('2d');
+  
+  function wrapText(text,maxW,font){
+    ctx.font=font;
+    const words=text.split(' ');
+    const lines=[];let line='';
+    for(const w of words){
+      const test=line?line+' '+w:w;
+      if(ctx.measureText(test).width>maxW&&line){lines.push(line);line=w;}
+      else line=test;
+    }
+    if(line)lines.push(line);
+    return lines;
+  }
+  
+  const fontB=`bold ${11*S}px Inter,sans-serif`;
+  const fontM=`${10*S}px Inter,sans-serif`;
+  const fontType=`bold ${10*S}px Inter,sans-serif`;
+  const textW=COL_W-2*CARD_MX-2*CARD_PX-8*S;
+  
+  function cardH(item){
+    let h=8*S+14*S; // top pad + type label
+    h+=wrapText(item.name,textW,fontB).length*15*S+4*S;
+    const meta=[];
+    if(item.content_type)meta.push(item.content_type.join(' · '));
+    if(item.location)meta.push(item.location);
+    if(item.partner)meta.push(item.partner);
+    if(meta.length)h+=wrapText(meta.join(' · '),textW,fontM).length*13*S+2*S;
+    h+=14*S+8*S; // status + bottom pad
+    return h;
+  }
+  
+  const colHeights=week.map(d=>{let h=10*S;d.items.forEach(it=>h+=cardH(it)+8*S);return Math.max(h+10*S,80*S)});
+  const BODY_H=Math.max(...colHeights);
+  const H=HEADER_H+DAY_HDR+BODY_H+FOOTER_H;
+  
+  canvas.width=W;canvas.height=H;
+  ctx.fillStyle='#f0f1f3';ctx.fillRect(0,0,W,H);
+  
+  // Header
+  ctx.fillStyle='#1D2327';ctx.fillRect(0,0,W,HEADER_H);
+  ctx.fillStyle='#fff';ctx.font=`bold ${22*S}px Inter,sans-serif`;
+  ctx.fillText(`Vicom Marketing — Week of ${monday.getDate()} ${MN[monday.getMonth()]} ${monday.getFullYear()}`,24*S,38*S);
+  ctx.fillStyle='#7a7e92';ctx.font=`${13*S}px Inter,sans-serif`;
+  ctx.fillText('vicomanz.github.io/vicom-brief/#calendar',24*S,58*S);
+  
+  const yTop=HEADER_H;
+  const COLORS={event:['#295790','EVENT'],content:['#1a8c4a','CONTENT'],promotion:['#b8860b','PROMO']};
+  
+  // Columns
+  week.forEach((day,i)=>{
+    const x=i*COL_W;
+    // Day header
+    ctx.fillStyle=day.isToday?'#295790':'#e0e2e6';
+    ctx.fillRect(x,yTop,COL_W,DAY_HDR);
+    ctx.fillStyle=day.isToday?'#fff':'#1D2327';
+    ctx.font=`bold ${15*S}px Inter,sans-serif`;
+    ctx.fillText(day.name,x+12*S,yTop+22*S);
+    ctx.fillStyle=day.isToday?'#ccd6e8':'#7a7e92';
+    ctx.font=`${12*S}px Inter,sans-serif`;
+    ctx.fillText(day.date,x+12*S,yTop+40*S);
+    
+    // Column bg
+    ctx.fillStyle=i%2===0?'#f7f7f9':'#ffffff';
+    ctx.fillRect(x,yTop+DAY_HDR,COL_W,BODY_H);
+    if(i>0){ctx.strokeStyle='#e0e2e6';ctx.lineWidth=S;ctx.beginPath();ctx.moveTo(x,yTop+DAY_HDR);ctx.lineTo(x,yTop+DAY_HDR+BODY_H);ctx.stroke();}
+    
+    // Cards
+    let cy=yTop+DAY_HDR+10*S;
+    day.items.forEach(item=>{
+      const typ=item.type||'content';
+      const [accent,typeLabel]=COLORS[typ]||COLORS.content;
+      const ch=cardH(item);
+      
+      // Card bg
+      ctx.fillStyle='#fff';
+      ctx.beginPath();
+      const r=6*S,cx1=x+CARD_MX,cy1=cy,cx2=x+COL_W-CARD_MX,cy2=cy+ch;
+      ctx.moveTo(cx1+r,cy1);ctx.lineTo(cx2-r,cy1);ctx.quadraticCurveTo(cx2,cy1,cx2,cy1+r);
+      ctx.lineTo(cx2,cy2-r);ctx.quadraticCurveTo(cx2,cy2,cx2-r,cy2);
+      ctx.lineTo(cx1+r,cy2);ctx.quadraticCurveTo(cx1,cy2,cx1,cy2-r);
+      ctx.lineTo(cx1,cy1+r);ctx.quadraticCurveTo(cx1,cy1,cx1+r,cy1);
+      ctx.closePath();ctx.fill();
+      ctx.strokeStyle='#e0e2e6';ctx.lineWidth=S;ctx.stroke();
+      
+      // Accent bar
+      ctx.fillStyle=accent;
+      ctx.fillRect(x+CARD_MX,cy+4*S,4*S,ch-8*S);
+      
+      let tx=x+CARD_MX+CARD_PX+4*S, ty=cy+8*S;
+      
+      // Type
+      ctx.fillStyle=accent;ctx.font=fontType;
+      ctx.fillText(typeLabel,tx,ty+10*S);ty+=14*S;
+      
+      // Name wrapped
+      ctx.fillStyle='#1D2327';ctx.font=fontB;
+      wrapText(item.name,textW,fontB).forEach(line=>{ctx.fillText(line,tx,ty+11*S);ty+=15*S});
+      ty+=4*S;
+      
+      // Meta
+      const meta=[];
+      if(item.content_type)meta.push(item.content_type.join(' · '));
+      if(item.location)meta.push(item.location);
+      if(item.partner)meta.push(item.partner);
+      if(meta.length){
+        ctx.fillStyle='#7a7e92';ctx.font=fontM;
+        wrapText(meta.join(' · '),textW,fontM).forEach(line=>{ctx.fillText(line,tx,ty+10*S);ty+=13*S});
+        ty+=2*S;
+      }
+      
+      // Status
+      const status=item.status||'';
+      let displayStatus=status.toUpperCase();
+      if(status.toLowerCase().includes('prep')||status.toLowerCase().includes('plan'))displayStatus='CONFIRMED';
+      const sCol=status==='scheduled'?'#1a8c4a':status==='published'?'#295790':(status.includes('prep')||status.includes('plan'))?'#295790':'#b8860b';
+      ctx.fillStyle=sCol;ctx.font=fontType;
+      ctx.fillText(displayStatus,tx,ty+10*S);
+      
+      cy+=ch+8*S;
+    });
+    
+    if(!day.items.length){
+      ctx.fillStyle='#bbb';ctx.font=fontM;
+      ctx.fillText('No items',x+COL_W/2-25*S,yTop+DAY_HDR+40*S);
+    }
+  });
+  
+  // Footer
+  ctx.fillStyle='#1D2327';ctx.fillRect(0,H-FOOTER_H,W,FOOTER_H);
+  ctx.fillStyle='#7a7e92';ctx.font=`${10*S}px Inter,sans-serif`;
+  const genTime=now.toLocaleString('en-AU',{timeZone:'Australia/Brisbane',day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:true});
+  ctx.fillText(`Generated ${genTime} AEST  ·  Vicom Marketing Hub`,24*S,H-FOOTER_H+20*S);
+  
+  // Download
+  const link=document.createElement('a');
+  link.download=`vicom-weekly-${monday.toISOString().slice(0,10)}.png`;
+  link.href=canvas.toDataURL('image/png');
+  link.click();
+}
 
 init();
 </script>
