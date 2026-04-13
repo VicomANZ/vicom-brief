@@ -1,0 +1,109 @@
+{
+  "updated": "2026-04-13T16:00:00+10:00",
+  "content": [
+    {
+      "id": "86d2me4gw",
+      "name": "800G Pluggable Optics Poster",
+      "date": "2026-04-13",
+      "status": "scheduled",
+      "type": "content",
+      "url": "https://app.clickup.com/t/86d2me4gw"
+    },
+    {
+      "id": "86d2mcpnn",
+      "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering",
+      "date": "2026-04-14",
+      "status": "scheduled",
+      "type": "content",
+      "url": "https://app.clickup.com/t/86d2mcpnn"
+    },
+    {
+      "id": "86d2mcpe2",
+      "name": "Your Tektronix Oscilloscope Just Got Better",
+      "date": "2026-04-15",
+      "status": "ready to schedule",
+      "type": "content",
+      "url": "https://app.clickup.com/t/86d2mcpe2"
+    },
+    {
+      "id": "86d2mcpr1",
+      "name": "Demo Video: Next-Generation Current Measurement [TICP]",
+      "date": "2026-04-20",
+      "status": "ready to schedule",
+      "type": "content",
+      "url": "https://app.clickup.com/t/86d2mcpr1"
+    },
+    {
+      "id": "86d2mcpta",
+      "name": "Accelerate Automation: Effortless Script Generation [MP5000]",
+      "date": "2026-04-22",
+      "status": "ready to schedule",
+      "type": "content",
+      "url": "https://app.clickup.com/t/86d2mcpta"
+    },
+    {
+      "id": "86d2mcpu1",
+      "name": "Customer Story: Life in the TUfast Eco Lane [4 Series MSO + EA]",
+      "date": "2026-04-24",
+      "status": "ready to schedule",
+      "type": "content",
+      "url": "https://app.clickup.com/t/86d2mcpu1"
+    },
+    {
+      "id": "86d2mcpun",
+      "name": "Primer: Signal Integrity Modeling featuring 7 Series DPO",
+      "date": "2026-04-26",
+      "status": "ready to schedule",
+      "type": "content",
+      "url": "https://app.clickup.com/t/86d2mcpun"
+    }
+  ],
+  "events": [
+    {
+      "id": "86d1vyt95",
+      "name": "Southern Lights Disrupt",
+      "date": "2026-04-16",
+      "status": "event preperation",
+      "type": "event",
+      "location": "Sydney NSW",
+      "url": "https://app.clickup.com/t/86d1vyt95"
+    },
+    {
+      "id": "86d1x972m",
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "2026-04-29",
+      "status": "event preperation",
+      "type": "event",
+      "location": "Adelaide SA",
+      "url": "https://app.clickup.com/t/86d1x972m"
+    },
+    {
+      "id": "86d1x97df",
+      "name": "Comms Connect New Zealand",
+      "date": "2026-05-28",
+      "status": "event preperation",
+      "type": "event",
+      "location": "New Zealand",
+      "url": "https://app.clickup.com/t/86d1x97df"
+    },
+    {
+      "id": "86d1x9541",
+      "name": "Electronex",
+      "date": "2026-06-04",
+      "status": "event preperation",
+      "type": "event",
+      "location": "TBC",
+      "url": "https://app.clickup.com/t/86d1x9541"
+    },
+    {
+      "id": "86d1va32b",
+      "name": "Comms Connect Melbourne",
+      "date": "2026-08-13",
+      "status": "planned events",
+      "type": "event",
+      "location": "Melbourne VIC",
+      "url": "https://app.clickup.com/t/86d1va32b"
+    }
+  ],
+  "promotions": []
+}

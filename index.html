@@ -1102,112 +1102,98 @@ function renderQuarterlySummary(ds){const q=getQuarter(ds);const m=parseInt(ds.s
 function renderAnnualSummary(ds){const y=getYear(ds);const datesInRange=allDates.filter(d=>getYear(d)===y);Promise.all(datesInRange.map(d=>loadDate(d))).then(()=>{renderAggregateView(y+' Annual Summary','Year-to-date performance',datesInRange,'annual')})}
 
 // ===== CALENDAR PAGE =====
-function renderCalendarPage(){
-  const d = getLatestData();
-  let h = '';
-  
-  // Get current month info
+let calendarData = null;
+let calMonth, calYear;
+
+async function renderCalendarPage(){
+  const el = document.getElementById('calendar-content');
+  if(!calendarData){
+    el.innerHTML = '<div class="loading"><div class="spinner"></div>Loading calendar...</div>';
+    try {
+      const r = await fetch('./calendar.json?_='+Date.now());
+      calendarData = await r.json();
+    } catch(e) {
+      el.innerHTML = '<div class="no-data">Could not load calendar.json</div>';
+      return;
+    }
+  }
   const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth();
-  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  const dayNames = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  if(calMonth===undefined){ calMonth=now.getMonth(); calYear=now.getFullYear(); }
+
+  const monthNames=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const dayNames=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const items = [...(calendarData.content||[]),...(calendarData.events||[]),...(calendarData.promotions||[])];
+  let h='';
+
+  // Nav
+  h+=`<div class="glass-card" style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;align-items:center">`;
+  h+=`<button onclick="calNav(-1)" style="border:none;background:var(--light-grey);border-radius:6px;width:32px;height:32px;cursor:pointer;font-size:16px;color:var(--text)">&#8249;</button>`;
+  h+=`<div style="font-size:20px;font-weight:800;color:var(--navy)">${monthNames[calMonth]} ${calYear}</div>`;
+  h+=`<button onclick="calNav(1)" style="border:none;background:var(--light-grey);border-radius:6px;width:32px;height:32px;cursor:pointer;font-size:16px;color:var(--text)">&#8250;</button>`;
+  h+=`</div><div style="display:flex;gap:6px;margin-top:10px;justify-content:center">`;
+  h+=`<span class="badge b-blue">${items.filter(e=>e.type==='event').length} events</span>`;
+  h+=`<span class="badge b-green">${items.filter(e=>e.type==='content').length} content</span>`;
+  h+=`<span class="badge b-amber">${items.filter(e=>e.type==='promotion').length} promos</span>`;
+  h+=`</div></div>`;
+
+  // Grid
+  const firstDay=new Date(calYear,calMonth,1);
+  let startDay=firstDay.getDay()-1; if(startDay<0) startDay=6;
+  const daysInMonth=new Date(calYear,calMonth+1,0).getDate();
+  const today=now.getDate(), todayMonth=now.getMonth(), todayYear=now.getFullYear();
+
+  h+=`<div class="glass-card" style="padding:10px"><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px">`;
+  dayNames.forEach(d=>h+=`<div style="text-align:center;padding:6px;font-size:11px;font-weight:700;color:var(--text-dim);text-transform:uppercase">${d}</div>`);
+  for(let i=0;i<startDay;i++) h+=`<div style="min-height:90px;background:#f7f7f9;border-radius:4px"></div>`;
   
-  // Collect all events with dates
-  const events = [];
-  if(d && d.events){
-    d.events.forEach(evt => {
-      if(evt.date){
-        events.push({name:evt.name, date:evt.date, days_out:evt.days_out, location:evt.location||'', type:'event', color:'var(--dark-blue)'});
-      }
-    });
-  }
-  // Add meetings from today/tomorrow
-  if(d && d.calendar){
-    (d.calendar.today||[]).forEach(m => events.push({name:m.name, date:d.date, time:m.time, type:'meeting', color:'var(--green)'}));
-    (d.calendar.tomorrow||[]).forEach(m => {
-      const tom = new Date(d.date);tom.setDate(tom.getDate()+1);
-      events.push({name:m.name, date:tom.toISOString().slice(0,10), time:m.time, type:'meeting', color:'var(--green)'});
-    });
-  }
-  // Add promotion deadlines
-  if(d && d.content?.promotions?.items){
-    d.content.promotions.items.forEach(p => {
-      if(p.end_date) events.push({name:p.name+' ends', date:p.end_date, type:'promo', color:'var(--amber)'});
-    });
-  }
-
-  // Header
-  h += `<div class="glass-card" style="margin-bottom:16px">`;
-  h += `<div style="display:flex;justify-content:space-between;align-items:center">`;
-  h += `<div style="font-size:20px;font-weight:800;color:var(--navy)">${monthNames[month]} ${year}</div>`;
-  h += `<div style="display:flex;gap:6px">`;
-  h += `<span class="badge b-blue">${events.filter(e=>e.type==='event').length} events</span>`;
-  h += `<span class="badge b-green">${events.filter(e=>e.type==='meeting').length} meetings</span>`;
-  h += `<span class="badge b-amber">${events.filter(e=>e.type==='promo').length} deadlines</span>`;
-  h += `</div></div></div>`;
-
-  // Calendar grid
-  const firstDay = new Date(year, month, 1);
-  let startDay = firstDay.getDay() - 1; if(startDay < 0) startDay = 6; // Monday start
-  const daysInMonth = new Date(year, month+1, 0).getDate();
-  const today = now.getDate();
-
-  h += `<div class="glass-card" style="padding:12px">`;
-  h += `<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:1px">`;
-  // Day headers
-  dayNames.forEach(d => h += `<div style="text-align:center;padding:8px 4px;font-size:11px;font-weight:700;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px">${d}</div>`);
-  // Empty cells before month starts
-  for(let i=0;i<startDay;i++) h += `<div style="padding:6px;min-height:80px;background:var(--light-grey);border-radius:4px;opacity:0.4"></div>`;
-  // Day cells
+  const typeColors = {event:'#295790',content:'#1a8c4a',promotion:'#b8860b'};
   for(let day=1;day<=daysInMonth;day++){
-    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-    const dayEvents = events.filter(e => e.date === dateStr);
-    const isToday = day === today;
-    const bg = isToday ? 'background:var(--dark-blue);color:#fff;' : 'background:var(--light-grey);';
-    h += `<div style="${bg}padding:6px 8px;min-height:80px;border-radius:4px;font-size:12px">`;
-    h += `<div style="font-weight:700;margin-bottom:4px;${isToday?'color:#fff;':'color:var(--text);'}">${day}</div>`;
-    dayEvents.forEach(e => {
-      h += `<div style="font-size:10px;padding:2px 4px;margin-bottom:2px;border-radius:3px;background:${e.color};color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="${e.name}${e.time?' · '+e.time:''}">${e.name}</div>`;
+    const ds=`${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+    const dayItems=items.filter(e=>e.date===ds);
+    const isToday=day===today&&calMonth===todayMonth&&calYear===todayYear;
+    h+=`<div style="min-height:90px;padding:5px 6px;border-radius:4px;font-size:12px;${isToday?'background:#295790;':'background:#f7f7f9;'}">`;
+    h+=`<div style="font-weight:700;margin-bottom:3px;font-size:12px;${isToday?'color:#fff;':'color:var(--text);'}">${day}</div>`;
+    dayItems.forEach(e=>{
+      const col=typeColors[e.type]||'#295790';
+      h+=`<a href="${e.url||'#'}" target="_blank" style="display:block;font-size:10px;padding:2px 4px;margin-bottom:2px;border-radius:3px;background:${col};color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none;cursor:pointer" title="${e.name}${e.status?' ('+e.status+')':''}">${e.name}</a>`;
     });
-    h += `</div>`;
+    h+=`</div>`;
   }
-  h += `</div></div>`;
+  h+=`</div></div>`;
 
-  // Upcoming events list
-  h += `<div style="margin-top:16px" class="section-head"><div class="section-accent" style="background:var(--dark-blue)"></div><div class="section-title">Upcoming events & deadlines</div></div>`;
-  const upcoming = events.filter(e=>e.type==='event').sort((a,b)=>(a.days_out||999)-(b.days_out||999));
-  if(upcoming.length){
-    upcoming.forEach(evt => {
-      const urgency = evt.days_out<=7?'var(--red)':evt.days_out<=30?'var(--amber)':'var(--green)';
-      h += `<div class="glass-card" style="border-left:3px solid ${urgency}">`;
-      h += `<div style="display:flex;justify-content:space-between;align-items:center">`;
-      h += `<div><div style="font-weight:700;color:var(--navy)">${evt.name}</div>`;
-      h += `<div style="font-size:12px;color:var(--text-dim)">${evt.date}${evt.location?' · '+evt.location:''}</div></div>`;
-      h += `<span class="badge" style="background:${urgency};color:#fff;border:none">${evt.days_out} days</span>`;
-      h += `</div></div>`;
+  // Upcoming events
+  h+=`<div style="margin-top:16px" class="section-head"><div class="section-accent" style="background:var(--dark-blue)"></div><div class="section-title">Upcoming events</div></div>`;
+  const upEvents=(calendarData.events||[]).filter(e=>e.date>=new Date().toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date));
+  if(upEvents.length){
+    upEvents.forEach(evt=>{
+      const d=new Date(evt.date); const diff=Math.ceil((d-new Date())/(86400000));
+      const urg=diff<=7?'var(--red)':diff<=30?'var(--amber)':'var(--green)';
+      h+=`<div class="glass-card" style="border-left:3px solid ${urg}"><div style="display:flex;justify-content:space-between;align-items:center">`;
+      h+=`<div><a href="${evt.url||'#'}" target="_blank" style="font-weight:700;color:var(--navy);text-decoration:none">${evt.name}</a>`;
+      h+=`<div style="font-size:12px;color:var(--text-dim)">${evt.date}${evt.location?' · '+evt.location:''}</div></div>`;
+      h+=`<span class="badge" style="background:${urg};color:#fff;border:none">${diff}d</span></div></div>`;
     });
-  } else {
-    h += `<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:30px">No upcoming events found in latest brief data.</div>`;
-  }
+  } else h+=`<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:24px">No upcoming events.</div>`;
 
-  // Meetings this week
-  h += `<div style="margin-top:16px" class="section-head"><div class="section-accent" style="background:var(--green)"></div><div class="section-title">Meetings this week</div></div>`;
-  const meetings = events.filter(e=>e.type==='meeting');
-  if(meetings.length){
-    h += `<div class="glass-card">`;
-    meetings.forEach(m => {
-      h += `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">`;
-      h += `<div><div style="font-weight:600;color:var(--navy)">${m.name}</div><div style="font-size:12px;color:var(--text-dim)">${m.date}${m.time?' · '+m.time:''}</div></div>`;
-      h += `<span class="badge b-green">meeting</span></div>`;
+  // Content pipeline
+  h+=`<div style="margin-top:16px" class="section-head"><div class="section-accent" style="background:var(--green)"></div><div class="section-title">Content pipeline</div></div>`;
+  const upContent=(calendarData.content||[]).filter(e=>e.date>=new Date().toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date));
+  if(upContent.length){
+    h+=`<div class="glass-card">`;
+    upContent.forEach(c=>{
+      const statusCol=c.status==='scheduled'?'var(--green)':'var(--amber)';
+      h+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">`;
+      h+=`<div><a href="${c.url||'#'}" target="_blank" style="font-weight:600;color:var(--navy);text-decoration:none;font-size:13px">${c.name}</a>`;
+      h+=`<div style="font-size:12px;color:var(--text-dim)">${c.date}</div></div>`;
+      h+=`<span class="badge" style="background:${statusCol};color:#fff;border:none">${c.status}</span></div>`;
     });
-    h += `</div>`;
-  } else {
-    h += `<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:30px">No meetings scheduled this week.</div>`;
-  }
+    h+=`</div>`;
+  } else h+=`<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:24px">No upcoming content.</div>`;
 
-  document.getElementById('calendar-content').innerHTML = h;
+  el.innerHTML = h;
 }
+
+function calNav(dir){ calMonth+=dir; if(calMonth>11){calMonth=0;calYear++} if(calMonth<0){calMonth=11;calYear--} renderCalendarPage(); }
 
 init();
 </script>
