@@ -1,6 +1,17 @@
 {
-  "updated_at": "2026-04-12T00:00:00.000Z",
+  "updated_at": "2026-04-13T18:12:06Z",
   "active": [
+    {
+      "name": "WP Rocket",
+      "category": "Website Speed",
+      "cycle": "Annual",
+      "annual": 85,
+      "monthly": 7.00,
+      "renewal": "2026-12-16",
+      "payment": "Vicom CC",
+      "url": "wp-rocket.me",
+      "notes": ""
+    },
     {
       "name": "Buffer",
       "category": "Social Media",
