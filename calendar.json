@@ -1,6 +1,60 @@
 {
-  "updated": "2026-04-14T09:36:25+10:00",
+  "updated": "2026-04-14T09:47:27+10:00",
   "content": [
+    {
+      "id": "86d2b3prc",
+      "name": "Engineering Fundamentals 101 | On-Demand Webinar",
+      "date": "2026-03-18",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "Discover the importance of the I-V characteristic curve, a graphical representation of current (I) and power as a function of voltage (V), widely used for characterizing electronic devices.\n\nJoin Keithley Application Engineer Liz Makley as she demystifies the I-V curve and its significance in understanding device behavior, performance, and reliability.\n\nWatch this on-demand webinar to gain a solid foundation in basic characteristics and be equipped to tackle more complex tests in the future.",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://tek.brandlive.com/Measurements-101/en/session/b6e9d2ca-71b3-11f0-b254-a7b3a99bc2cb",
+      "url": "https://app.clickup.com/t/86d2b3prc"
+    },
+    {
+      "id": "86d2jua8p",
+      "name": "Multichannel, Mixed Domain Analysis",
+      "date": "2026-04-08",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "If you are an engineer developing today's systems with multiple RF interfaces or complex embedded synthesizer or other RF functions, you will want to see how you can benefit from multi-channel, mixed domain signal acquisition and analysis to measure, and interpret signals across multiple channels, frequencies, and time intervals.\n\nDiscover how you can unlock exciting capabilities using hardware digital downconverters (DDCs) in parallel with time domain signal processing.\n\nWatch our on-demand webinar, where Alan Wolke will showcase real-world demonstrations of the benefits of these measurements across different RF signals with their own distinct settings.",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://tek.brandlive.com/Challenges-and-Solutions-for-Multi-Channel-and-Multi-Domain-Analysis/en/session/c279ae7e-3065-11f0-820a-fde58568f2eb",
+      "url": "https://app.clickup.com/t/86d2jua8p"
+    },
+    {
+      "id": "86d2me4gw",
+      "name": "800G Pluggable Optics Poster",
+      "date": "2026-04-14",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
+      "url": "https://app.clickup.com/t/86d2me4gw"
+    },
     {
       "id": "86d2mcpnn",
       "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering: Advanced AI-Integration Success in T&M Workflows",
@@ -13,7 +67,7 @@
       ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface of leading techniques for agentic code development. AI-assisted instrumentation is no longer speculative or distant — it’s emerging rapidly and already usable today.\nHosted by Tech Briefs, this 45-minute technical on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.\n You'll learn how AI can:\nWrite automation code\nConfigure oscilloscopes and signal source\nExecute measurements and perform math and plotting\nAutomatically export structured data\n Watch now to explore emerging AI‑assisted instrumentation.   https://app.webinar.net/Gp5d8bMWAxR\n\n",
+      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface of leading techniques for agentic code development. AI-assisted instrumentation is no longer speculative or distant \u2014 it\u2019s emerging rapidly and already usable today.\nHosted by Tech Briefs, this 45-minute technical on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.\n You'll learn how AI can:\nWrite automation code\nConfigure oscilloscopes and signal source\nExecute measurements and perform math and plotting\nAutomatically export structured data\n Watch now to explore emerging AI\u2011assisted instrumentation.   https://app.webinar.net/Gp5d8bMWAxR\n\n",
       "edm_subject": "",
       "blog_title": "",
       "gmb_url": "https://app.webinar.net/Gp5d8bMWAxR",
@@ -170,7 +224,7 @@
   "promotions": [
     {
       "id": "86d1wtc0v",
-      "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
+      "name": "Trade-In \u2014 Save Up to 30% on 4/5/6 Series B MSO",
       "date": "2026-12-31",
       "status": "active",
       "type": "promotion",
