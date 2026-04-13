@@ -1,29 +1,41 @@
 {
-  "updated": "2026-04-13T20:00:00+10:00",
+  "updated": "2026-04-14T09:20:07+10:00",
   "content": [
     {
       "id": "86d2me4gw",
-      "name": "800G Pluggable Optics Poster",
+      "name": "800G Pluggable Optics Poster The fundamentals of cutting-edge technology. A module schematic with key 800G applications and tests for 800G.",
       "date": "2026-04-14",
       "status": "scheduled",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "VIAVI",
       "partner_color": "#ab4aba",
+      "linkedin_copy": "Confused by 800G deployment options? https://vicom.com.au/resources/800g-pluggable-optics-poster/ This Poster simplifies the landscape—covering standards, form factors, and testing requirements for next-gen optics. Whether you're deploying QSFP-DD or OSFP, coherent or direct detect, this visual guide helps you plan smarter and test faster   \n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://vicom.com.au/resources/800g-pluggable-optics-poster/",
       "url": "https://app.clickup.com/t/86d2me4gw"
     },
     {
       "id": "86d2mcpnn",
-      "name": "Beyond AI-Copy-Paste Engineering Webinar",
+      "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering: Advanced AI-Integration Success in T&M Workflows",
       "date": "2026-04-15",
       "status": "scheduled",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "url": "https://app.clickup.com/t/86d2mcpnn",
-      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface. AI-assisted instrumentation is no longer speculative — it's emerging rapidly and already usable today.\n\nThis 45-minute on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.",
-      "gmb_url": "https://app.webinar.net/Gp5d8bMWAxR"
+      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface of leading techniques for agentic code development. AI-assisted instrumentation is no longer speculative or distant — it’s emerging rapidly and already usable today.\nHosted by Tech Briefs, this 45-minute technical on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.\n You'll learn how AI can:\nWrite automation code\nConfigure oscilloscopes and signal source\nExecute measurements and perform math and plotting\nAutomatically export structured data\n Watch now to explore emerging AI‑assisted instrumentation.   https://app.webinar.net/Gp5d8bMWAxR\n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://app.webinar.net/Gp5d8bMWAxR",
+      "url": "https://app.clickup.com/t/86d2mcpnn"
     },
     {
       "id": "86d2mcpe2",
@@ -31,53 +43,88 @@
       "date": "2026-04-16",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
       "url": "https://app.clickup.com/t/86d2mcpe2"
     },
     {
       "id": "86d2mcpr1",
-      "name": "Demo Video: Next-Gen Current Measurement [TICP]",
+      "name": "Demo Video: Experience Next-Generation Current Measurement [TICP]",
       "date": "2026-04-21",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
-      "partner": "Keithley",
-      "partner_color": "#ff070f",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
       "url": "https://app.clickup.com/t/86d2mcpr1"
     },
     {
       "id": "86d2mcpta",
-      "name": "Effortless Script Generation with TSP Toolkit [MP5000]",
+      "name": "Accelerate Automation: Effortless Script Generation with TSP Toolkit [MP5000 Series]",
       "date": "2026-04-23",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
-      "partner": "Keithley",
-      "partner_color": "#ff070f",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
       "url": "https://app.clickup.com/t/86d2mcpta"
     },
     {
       "id": "86d2mcpu1",
-      "name": "Customer Story: TUfast Eco Lane [4 Series MSO + EA]",
+      "name": "Customer Story: Life in the TUfast Eco Lane [4 Series MSO + EA]",
       "date": "2026-04-28",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
       "url": "https://app.clickup.com/t/86d2mcpu1"
     },
     {
       "id": "86d2mcpun",
-      "name": "Signal Integrity Modeling featuring 7 Series DPO",
+      "name": "Primer: Signal integrity Modeling (SIM)  featuring 7 Series DPO",
       "date": "2026-04-30",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
       "url": "https://app.clickup.com/t/86d2mcpun"
     }
   ],
@@ -88,20 +135,20 @@
       "date": "2026-04-16",
       "status": "event preperation",
       "type": "event",
-      "location": "Sydney NSW",
-      "partner": "EA Elektro-Automatik",
-      "partner_color": "#96c7f2",
+      "location": "",
+      "partner": "",
+      "partner_color": "",
       "url": "https://app.clickup.com/t/86d1vyt95"
     },
     {
       "id": "86d1x972m",
-      "name": "Quantum Australia Conference",
+      "name": "Quantum Australia Conference Adelaide",
       "date": "2026-04-30",
       "status": "event preperation",
       "type": "event",
-      "location": "Adelaide SA",
-      "partner": "Tektronix / Keithley / EA",
-      "partner_color": "#3e63dd",
+      "location": "",
+      "partner": "",
+      "partner_color": "",
       "url": "https://app.clickup.com/t/86d1x972m"
     },
     {
@@ -110,9 +157,9 @@
       "date": "2026-05-28",
       "status": "event preperation",
       "type": "event",
-      "location": "New Zealand",
-      "partner": "VIAVI / Bird",
-      "partner_color": "#ab4aba",
+      "location": "",
+      "partner": "",
+      "partner_color": "",
       "url": "https://app.clickup.com/t/86d1x97df"
     },
     {
@@ -121,7 +168,9 @@
       "date": "2026-06-04",
       "status": "event preperation",
       "type": "event",
-      "location": "TBC",
+      "location": "",
+      "partner": "",
+      "partner_color": "",
       "url": "https://app.clickup.com/t/86d1x9541"
     },
     {
@@ -130,9 +179,20 @@
       "date": "2026-10-15",
       "status": "planned events",
       "type": "event",
-      "location": "Melbourne VIC",
+      "location": "",
+      "partner": "",
+      "partner_color": "",
       "url": "https://app.clickup.com/t/86d1va32b"
     }
   ],
-  "promotions": []
+  "promotions": [
+    {
+      "id": "86d1wtc0v",
+      "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
+      "date": "2026-12-31",
+      "status": "active",
+      "type": "promotion",
+      "url": "https://app.clickup.com/t/86d1wtc0v"
+    }
+  ]
 }
