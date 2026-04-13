@@ -293,46 +293,92 @@ body {
   color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;
 }
 .cal-cell {
-  min-height: 120px; padding: 6px; border-radius: 4px; background: #f7f7f9;
+  min-height: 120px; padding: 5px; border-radius: 4px; background: #f7f7f9;
   font-size: 12px; overflow: hidden;
 }
 .cal-cell.cal-empty { opacity: 0.3; }
-.cal-cell.cal-today { background: #295790; }
-.cal-cell.cal-today .cal-day { color: #fff; }
+.cal-cell.cal-today { background: #e8eef8; border: 2px solid #295790; }
 .cal-day { font-weight: 700; font-size: 12px; margin-bottom: 4px; color: var(--text); }
+.cal-cell.cal-today .cal-day { color: #295790; }
 .cal-item {
-  display: block; margin-bottom: 3px; padding: 3px 5px; border-radius: 4px;
+  display: block; margin-bottom: 3px; padding: 4px 6px; border-radius: 4px;
   text-decoration: none; cursor: pointer; font-size: 10px; line-height: 1.3;
-  overflow: hidden;
+  overflow: hidden; background: #fff; border: 1px solid #e0e2e6;
+  transition: box-shadow 0.15s;
 }
+.cal-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 .cal-item-name {
   display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  font-weight: 600; color: #fff;
+  font-weight: 600; color: var(--navy); font-size: 10px;
 }
-.cal-event { background: #295790; }
-.cal-content { background: #1a8c4a; }
-.cal-promo { background: #b8860b; }
+.cal-item-type {
+  font-size: 8px; font-weight: 700; color: var(--dark-blue); margin-top: 1px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cal-item-left {
+  width: 3px; min-height: 100%; border-radius: 2px; flex-shrink: 0;
+}
 .cal-tags { display: flex; gap: 2px; margin-top: 2px; flex-wrap: wrap; }
 .cal-tag {
   font-size: 8px; font-weight: 700; padding: 0px 4px; border-radius: 2px;
-  color: #fff; letter-spacing: 0.3px; line-height: 14px;
+  color: #fff; letter-spacing: 0.2px; line-height: 14px;
 }
-.cal-partner {
-  display: block; font-size: 8px; font-weight: 700; padding: 0px 4px;
-  border-radius: 2px; color: #fff; margin-top: 2px; white-space: nowrap;
-  overflow: hidden; text-overflow: ellipsis;
+.cal-partner-sm {
+  font-size: 8px; font-weight: 600; color: var(--text-dim); margin-top: 1px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* Calendar popup overlay */
+.cal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 999;
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+}
+.cal-popup {
+  background: #fff; border-radius: 12px; max-width: 560px; width: 100%;
+  max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  padding: 0;
+}
+.cal-popup-header {
+  padding: 20px 24px 16px; border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+}
+.cal-popup-title { font-size: 17px; font-weight: 700; color: var(--navy); flex: 1; }
+.cal-popup-close {
+  width: 32px; height: 32px; border-radius: 6px; border: none; background: #f0f1f3;
+  font-size: 18px; cursor: pointer; color: var(--text-dim); display: flex;
+  align-items: center; justify-content: center; flex-shrink: 0;
+}
+.cal-popup-close:hover { background: #e0e2e6; }
+.cal-popup-body { padding: 16px 24px 24px; }
+.cal-popup-row {
+  display: flex; gap: 8px; margin-bottom: 12px; align-items: flex-start;
+}
+.cal-popup-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;
+  color: var(--text-dim); min-width: 80px; padding-top: 2px;
+}
+.cal-popup-val { font-size: 13px; color: var(--text); flex: 1; line-height: 1.5; }
+.cal-popup-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+.cal-popup-tag {
+  font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  color: #fff; letter-spacing: 0.3px;
+}
+.cal-popup-content {
+  background: #f7f7f9; border-radius: 8px; padding: 14px; margin-top: 4px;
+  font-size: 13px; line-height: 1.6; color: var(--text); white-space: pre-wrap;
+  max-height: 200px; overflow-y: auto;
 }
 
 /* Calendar mobile */
 @media (max-width: 768px) {
-  .cal-grid { grid-template-columns: repeat(7, 1fr); gap: 1px; }
+  .cal-grid { gap: 1px; }
   .cal-cell { min-height: 60px; padding: 3px; }
   .cal-hdr { padding: 4px 2px; font-size: 9px; }
   .cal-day { font-size: 11px; margin-bottom: 2px; }
   .cal-item { padding: 2px 3px; margin-bottom: 2px; }
   .cal-item-name { font-size: 8px; }
-  .cal-tags { display: none; }
-  .cal-partner { display: none; }
+  .cal-item-type, .cal-tags, .cal-partner-sm { display: none; }
+  .cal-popup { max-width: 100%; margin: 10px; border-radius: 10px; }
 }
 @media (max-width: 480px) {
   .cal-cell { min-height: 44px; padding: 2px; }
@@ -1160,89 +1206,108 @@ function renderQuarterlySummary(ds){const q=getQuarter(ds);const m=parseInt(ds.s
 function renderAnnualSummary(ds){const y=getYear(ds);const datesInRange=allDates.filter(d=>getYear(d)===y);Promise.all(datesInRange.map(d=>loadDate(d))).then(()=>{renderAggregateView(y+' Annual Summary','Year-to-date performance',datesInRange,'annual')})}
 
 // ===== CALENDAR PAGE =====
-let calendarData = null;
-let calMonth, calYear;
-const CT_COLORS = {
-  'LinkedIn Post':'#0A66C2','EDM Post':'#0231E8','Blog Post':'#d4a017',
-  'GMB Post':'#EA80FC','Google My Business Post':'#EA80FC','LinkedIn Event':'#800000'
-};
-const CT_SHORT = {
-  'LinkedIn Post':'LI','EDM Post':'EDM','Blog Post':'Blog',
-  'GMB Post':'GMB','Google My Business Post':'GMB','LinkedIn Event':'LI Event'
-};
+let calendarData=null, calMonth, calYear;
+const CT_COLORS={LinkedIn:'#0A66C2',EDM:'#0231E8',Blog:'#d4a017',GMB:'#EA80FC'};
+
+function showCalPopup(item){
+  const o=document.createElement('div');o.className='cal-overlay';o.onclick=e=>{if(e.target===o)o.remove()};
+  let p='<div class="cal-popup"><div class="cal-popup-header">';
+  p+=`<div class="cal-popup-title">${item.name}</div>`;
+  p+=`<button class="cal-popup-close" onclick="this.closest('.cal-overlay').remove()">&#10005;</button></div>`;
+  p+=`<div class="cal-popup-body">`;
+  // Type badge
+  const typeLabel=item.type==='event'?'Event':item.type==='content'?'Content':'Promotion';
+  const typeBg=item.type==='event'?'#295790':item.type==='content'?'#1a8c4a':'#b8860b';
+  p+=`<div class="cal-popup-row"><div class="cal-popup-label">Type</div><div class="cal-popup-val"><span class="cal-popup-tag" style="background:${typeBg}">${typeLabel}</span></div></div>`;
+  // Date
+  p+=`<div class="cal-popup-row"><div class="cal-popup-label">Date</div><div class="cal-popup-val">${item.date}</div></div>`;
+  // Status
+  if(item.status){
+    const sc=item.status==='scheduled'?'#1a8c4a':item.status.includes('prep')?'#b8860b':'#555';
+    p+=`<div class="cal-popup-row"><div class="cal-popup-label">Status</div><div class="cal-popup-val"><span class="cal-popup-tag" style="background:${sc}">${item.status}</span></div></div>`;
+  }
+  // Location (events)
+  if(item.location) p+=`<div class="cal-popup-row"><div class="cal-popup-label">Location</div><div class="cal-popup-val">${item.location}</div></div>`;
+  // Partner
+  if(item.partner) p+=`<div class="cal-popup-row"><div class="cal-popup-label">Partner</div><div class="cal-popup-val"><span class="cal-popup-tag" style="background:${item.partner_color||'#295790'}">${item.partner}</span></div></div>`;
+  // Content types
+  if(item.content_type&&item.content_type.length){
+    p+=`<div class="cal-popup-row"><div class="cal-popup-label">Channels</div><div class="cal-popup-val"><div class="cal-popup-tags">`;
+    item.content_type.forEach(ct=>p+=`<span class="cal-popup-tag" style="background:${CT_COLORS[ct]||'#888'}">${ct}</span>`);
+    p+=`</div></div></div>`;
+  }
+  // LinkedIn copy
+  if(item.linkedin_copy) p+=`<div class="cal-popup-row"><div class="cal-popup-label">LinkedIn</div><div class="cal-popup-val"><div class="cal-popup-content">${item.linkedin_copy}</div></div></div>`;
+  // EDM subject
+  if(item.edm_subject) p+=`<div class="cal-popup-row"><div class="cal-popup-label">EDM</div><div class="cal-popup-val">${item.edm_subject}</div></div>`;
+  // Blog title
+  if(item.blog_title) p+=`<div class="cal-popup-row"><div class="cal-popup-label">Blog</div><div class="cal-popup-val">${item.blog_title}</div></div>`;
+  // GMB URL
+  if(item.gmb_url) p+=`<div class="cal-popup-row"><div class="cal-popup-label">GMB Link</div><div class="cal-popup-val"><a href="${item.gmb_url}" target="_blank" style="color:var(--dark-blue);word-break:break-all">${item.gmb_url}</a></div></div>`;
+  // ClickUp link
+  if(item.url) p+=`<div class="cal-popup-row"><div class="cal-popup-label">ClickUp</div><div class="cal-popup-val"><a href="${item.url}" target="_blank" style="color:var(--dark-blue)">Open in ClickUp →</a></div></div>`;
+  p+=`</div></div>`;
+  o.innerHTML=p;
+  document.body.appendChild(o);
+}
+
+// Store items globally for popup access
+let calAllItems=[];
 
 async function renderCalendarPage(){
-  const el = document.getElementById('calendar-content');
+  const el=document.getElementById('calendar-content');
   if(!calendarData){
     el.innerHTML='<div class="loading"><div class="spinner"></div>Loading calendar...</div>';
-    try{ const r=await fetch('./calendar.json?_='+Date.now()); calendarData=await r.json(); }
-    catch(e){ el.innerHTML='<div class="no-data">Could not load calendar.json</div>'; return; }
+    try{const r=await fetch('./calendar.json?_='+Date.now());calendarData=await r.json();}
+    catch(e){el.innerHTML='<div class="no-data">Could not load calendar.json</div>';return;}
   }
   const now=new Date();
   if(calMonth===undefined){calMonth=now.getMonth();calYear=now.getFullYear();}
   const MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
   const DN=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-  const items=[...(calendarData.content||[]),...(calendarData.events||[]),...(calendarData.promotions||[])];
+  calAllItems=[...(calendarData.content||[]),...(calendarData.events||[]),...(calendarData.promotions||[])];
   let h='';
 
-  // Legend + Nav
+  // Nav + legend
   h+=`<div class="glass-card" style="margin-bottom:12px;padding:14px 18px">`;
   h+=`<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">`;
   h+=`<div style="display:flex;align-items:center;gap:6px">`;
   h+=`<button onclick="calNav(-1)" style="border:none;background:var(--light-grey);border-radius:6px;width:34px;height:34px;cursor:pointer;font-size:18px;color:var(--text);font-weight:700">&#8249;</button>`;
   h+=`<div style="font-size:20px;font-weight:800;color:var(--navy);min-width:200px;text-align:center">${MN[calMonth]} ${calYear}</div>`;
-  h+=`<button onclick="calNav(1)" style="border:none;background:var(--light-grey);border-radius:6px;width:34px;height:34px;cursor:pointer;font-size:18px;color:var(--text);font-weight:700">&#8250;</button>`;
-  h+=`</div>`;
-  h+=`<div style="display:flex;gap:6px;flex-wrap:wrap">`;
-  h+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--text-sec)"><span style="width:10px;height:10px;border-radius:2px;background:#295790;display:inline-block"></span>Event</span>`;
-  h+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--text-sec)"><span style="width:10px;height:10px;border-radius:2px;background:#0A66C2;display:inline-block"></span>LinkedIn</span>`;
-  h+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--text-sec)"><span style="width:10px;height:10px;border-radius:2px;background:#0231E8;display:inline-block"></span>EDM</span>`;
-  h+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--text-sec)"><span style="width:10px;height:10px;border-radius:2px;background:#d4a017;display:inline-block"></span>Blog</span>`;
-  h+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--text-sec)"><span style="width:10px;height:10px;border-radius:2px;background:#EA80FC;display:inline-block"></span>GMB</span>`;
-  h+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:var(--text-sec)"><span style="width:10px;height:10px;border-radius:2px;background:#b8860b;display:inline-block"></span>Promo</span>`;
+  h+=`<button onclick="calNav(1)" style="border:none;background:var(--light-grey);border-radius:6px;width:34px;height:34px;cursor:pointer;font-size:18px;color:var(--text);font-weight:700">&#8250;</button></div>`;
+  h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;font-size:11px;font-weight:600;color:var(--text-sec)">`;
+  h+=`<span>🔵 Event</span><span>🟢 Content</span><span>🟡 Promo</span>`;
   h+=`</div></div></div>`;
 
-  // Calendar grid
+  // Grid
   const firstDay=new Date(calYear,calMonth,1);
   let startDay=firstDay.getDay()-1;if(startDay<0)startDay=6;
   const dim=new Date(calYear,calMonth+1,0).getDate();
   const td=now.getDate(),tm=now.getMonth(),ty=now.getFullYear();
 
-  h+=`<div id="cal-grid-wrap" class="glass-card" style="padding:8px">`;
-  h+=`<div class="cal-grid">`;
-  // Day headers
+  h+=`<div class="glass-card" style="padding:8px"><div class="cal-grid">`;
   DN.forEach(d=>h+=`<div class="cal-hdr">${d}</div>`);
-  // Empty
   for(let i=0;i<startDay;i++) h+=`<div class="cal-cell cal-empty"></div>`;
-  // Days
+
   for(let day=1;day<=dim;day++){
     const ds=`${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-    const di=items.filter(e=>e.date===ds);
+    const di=calAllItems.filter(e=>e.date===ds);
     const isT=day===td&&calMonth===tm&&calYear===ty;
-    h+=`<div class="cal-cell${isT?' cal-today':''}">`;
-    h+=`<div class="cal-day">${day}</div>`;
-    di.forEach(e=>{
-      if(e.type==='event'){
-        h+=`<a href="${e.url||'#'}" target="_blank" class="cal-item cal-event" title="${e.name}${e.location?' — '+e.location:''}">`;
-        h+=`<span class="cal-item-name">${e.name}</span>`;
-        if(e.partner) h+=`<span class="cal-partner" style="background:${e.partner_color||'#295790'}">${e.partner}</span>`;
-        h+=`</a>`;
-      } else if(e.type==='content'){
-        h+=`<a href="${e.url||'#'}" target="_blank" class="cal-item cal-content" title="${e.name}">`;
-        h+=`<span class="cal-item-name">${e.name}</span>`;
-        h+=`<span class="cal-tags">`;
-        (e.content_type||[]).forEach(ct=>{
-          const short=CT_SHORT[ct]||ct;
-          const col=CT_COLORS[ct]||'#888';
-          h+=`<span class="cal-tag" style="background:${col}">${short}</span>`;
-        });
-        h+=`</span>`;
-        if(e.partner) h+=`<span class="cal-partner" style="background:${e.partner_color||'#888'}">${e.partner}</span>`;
-        h+=`</a>`;
-      } else {
-        h+=`<a href="${e.url||'#'}" target="_blank" class="cal-item cal-promo" title="${e.name}">`;
-        h+=`<span class="cal-item-name">${e.name}</span></a>`;
+    h+=`<div class="cal-cell${isT?' cal-today':''}"><div class="cal-day">${day}</div>`;
+    di.forEach((e,idx)=>{
+      const gi=calAllItems.indexOf(e);
+      const leftCol=e.type==='event'?'#295790':e.type==='content'?'#1a8c4a':'#b8860b';
+      h+=`<div class="cal-item" onclick="showCalPopup(calAllItems[${gi}])" style="display:flex;gap:4px;align-items:stretch">`;
+      h+=`<div class="cal-item-left" style="background:${leftCol}"></div><div style="flex:1;overflow:hidden">`;
+      h+=`<div class="cal-item-name">${e.name}</div>`;
+      if(e.content_type&&e.content_type.length){
+        h+=`<div class="cal-item-type">${e.content_type.join(' · ')}</div>`;
       }
+      if(e.type==='event'&&e.location){
+        h+=`<div class="cal-item-type">${e.location}</div>`;
+      }
+      if(e.partner) h+=`<div class="cal-partner-sm">${e.partner}</div>`;
+      h+=`</div></div>`;
     });
     h+=`</div>`;
   }
@@ -1253,15 +1318,14 @@ async function renderCalendarPage(){
   const ue=(calendarData.events||[]).filter(e=>e.date>=now.toISOString().slice(0,10)).sort((a,b)=>a.date.localeCompare(b.date));
   if(ue.length){
     ue.forEach(evt=>{
-      const d2=new Date(evt.date);const diff=Math.ceil((d2-now)/864e5);
+      const diff=Math.ceil((new Date(evt.date)-now)/864e5);
       const urg=diff<=7?'var(--red)':diff<=30?'var(--amber)':'var(--green)';
-      h+=`<div class="glass-card" style="border-left:3px solid ${urg}"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">`;
-      h+=`<div><a href="${evt.url||'#'}" target="_blank" style="font-weight:700;color:var(--navy);text-decoration:none;font-size:14px">${evt.name}</a>`;
-      h+=`<div style="font-size:12px;color:var(--text-dim);margin-top:2px">${evt.date}${evt.location?' · '+evt.location:''}</div></div>`;
-      h+=`<div style="display:flex;gap:6px;align-items:center">`;
-      if(evt.partner) h+=`<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:${evt.partner_color||'#295790'};color:#fff">${evt.partner}</span>`;
+      const gi=calAllItems.indexOf(evt);
+      h+=`<div class="glass-card" style="border-left:3px solid ${urg};cursor:pointer" onclick="showCalPopup(calAllItems[${gi}])"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">`;
+      h+=`<div><div style="font-weight:700;color:var(--navy);font-size:14px">${evt.name}</div>`;
+      h+=`<div style="font-size:12px;color:var(--text-dim);margin-top:2px">${evt.date}${evt.location?' · '+evt.location:''}${evt.partner?' · '+evt.partner:''}</div></div>`;
       h+=`<span class="badge" style="background:${urg};color:#fff;border:none">${diff}d</span>`;
-      h+=`</div></div></div>`;
+      h+=`</div></div>`;
     });
   } else h+=`<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:24px">No upcoming events.</div>`;
 
@@ -1272,30 +1336,26 @@ async function renderCalendarPage(){
     h+=`<div class="glass-card" style="padding:0">`;
     uc.forEach((c,i)=>{
       const sc=c.status==='scheduled'?'var(--green)':'var(--amber)';
-      h+=`<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:12px 16px;${i<uc.length-1?'border-bottom:1px solid var(--border);':''}flex-wrap:wrap;gap:8px">`;
-      h+=`<div style="flex:1;min-width:200px"><a href="${c.url||'#'}" target="_blank" style="font-weight:600;color:var(--navy);text-decoration:none;font-size:13px">${c.name}</a>`;
-      h+=`<div style="font-size:12px;color:var(--text-dim);margin-top:3px">${c.date}</div>`;
-      // Content type tags
-      h+=`<div style="display:flex;gap:3px;margin-top:5px;flex-wrap:wrap">`;
+      const gi=calAllItems.indexOf(c);
+      h+=`<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:12px 16px;${i<uc.length-1?'border-bottom:1px solid var(--border);':''}flex-wrap:wrap;gap:8px;cursor:pointer" onclick="showCalPopup(calAllItems[${gi}])">`;
+      h+=`<div style="flex:1;min-width:200px"><div style="font-weight:600;color:var(--navy);font-size:13px">${c.name}</div>`;
+      h+=`<div style="font-size:12px;color:var(--text-dim);margin-top:2px">${c.date}${c.partner?' · '+c.partner:''}</div>`;
+      h+=`<div style="display:flex;gap:3px;margin-top:4px;flex-wrap:wrap">`;
       (c.content_type||[]).forEach(ct=>{
-        const short=CT_SHORT[ct]||ct;
-        const col=CT_COLORS[ct]||'#888';
-        h+=`<span style="font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;background:${col};color:#fff;letter-spacing:0.3px">${short}</span>`;
+        h+=`<span style="font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;background:${CT_COLORS[ct]||'#888'};color:#fff">${ct}</span>`;
       });
       h+=`</div></div>`;
-      h+=`<div style="display:flex;gap:5px;align-items:center;flex-shrink:0">`;
-      if(c.partner) h+=`<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:${c.partner_color||'#888'};color:#fff">${c.partner}</span>`;
       h+=`<span class="badge" style="background:${sc};color:#fff;border:none">${c.status}</span>`;
-      h+=`</div></div>`;
+      h+=`</div>`;
     });
     h+=`</div>`;
   } else h+=`<div class="glass-card" style="text-align:center;color:var(--text-dim);padding:24px">No upcoming content.</div>`;
 
   el.innerHTML=h;
 }
-
 function calNav(dir){calMonth+=dir;if(calMonth>11){calMonth=0;calYear++}if(calMonth<0){calMonth=11;calYear--}renderCalendarPage();}
 
+init();
 </script>
 </body>
 </html>
