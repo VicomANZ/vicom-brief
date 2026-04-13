@@ -1,24 +1,6 @@
 {
-  "updated": "2026-04-14T09:20:07+10:00",
+  "updated": "2026-04-14T09:36:25+10:00",
   "content": [
-    {
-      "id": "86d2me4gw",
-      "name": "800G Pluggable Optics Poster The fundamentals of cutting-edge technology. A module schematic with key 800G applications and tests for 800G.",
-      "date": "2026-04-14",
-      "status": "scheduled",
-      "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
-      "partner": "VIAVI",
-      "partner_color": "#ab4aba",
-      "linkedin_copy": "Confused by 800G deployment options? https://vicom.com.au/resources/800g-pluggable-optics-poster/ This Poster simplifies the landscape—covering standards, form factors, and testing requirements for next-gen optics. Whether you're deploying QSFP-DD or OSFP, coherent or direct detect, this visual guide helps you plan smarter and test faster   \n\n",
-      "edm_subject": "",
-      "blog_title": "",
-      "gmb_url": "https://vicom.com.au/resources/800g-pluggable-optics-poster/",
-      "url": "https://app.clickup.com/t/86d2me4gw"
-    },
     {
       "id": "86d2mcpnn",
       "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering: Advanced AI-Integration Success in T&M Workflows",
