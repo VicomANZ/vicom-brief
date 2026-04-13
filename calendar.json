@@ -7,14 +7,20 @@
       "date": "2026-04-13",
       "status": "scheduled",
       "type": "content",
+      "content_type": ["LinkedIn Post", "GMB Post"],
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
       "url": "https://app.clickup.com/t/86d2me4gw"
     },
     {
       "id": "86d2mcpnn",
-      "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering",
+      "name": "Beyond AI-Copy-Paste Engineering Webinar",
       "date": "2026-04-14",
       "status": "scheduled",
       "type": "content",
+      "content_type": ["LinkedIn Post", "GMB Post"],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
       "url": "https://app.clickup.com/t/86d2mcpnn"
     },
     {
@@ -23,38 +29,53 @@
       "date": "2026-04-15",
       "status": "ready to schedule",
       "type": "content",
+      "content_type": ["LinkedIn Post", "EDM Post", "Blog Post", "GMB Post"],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
       "url": "https://app.clickup.com/t/86d2mcpe2"
     },
     {
       "id": "86d2mcpr1",
-      "name": "Demo Video: Next-Generation Current Measurement [TICP]",
+      "name": "Demo Video: Next-Gen Current Measurement [TICP]",
       "date": "2026-04-20",
       "status": "ready to schedule",
       "type": "content",
+      "content_type": ["LinkedIn Post", "GMB Post"],
+      "partner": "Keithley",
+      "partner_color": "#ff070f",
       "url": "https://app.clickup.com/t/86d2mcpr1"
     },
     {
       "id": "86d2mcpta",
-      "name": "Accelerate Automation: Effortless Script Generation [MP5000]",
+      "name": "Effortless Script Generation with TSP Toolkit [MP5000]",
       "date": "2026-04-22",
       "status": "ready to schedule",
       "type": "content",
+      "content_type": ["LinkedIn Post", "GMB Post"],
+      "partner": "Keithley",
+      "partner_color": "#ff070f",
       "url": "https://app.clickup.com/t/86d2mcpta"
     },
     {
       "id": "86d2mcpu1",
-      "name": "Customer Story: Life in the TUfast Eco Lane [4 Series MSO + EA]",
+      "name": "Customer Story: TUfast Eco Lane [4 Series MSO + EA]",
       "date": "2026-04-24",
       "status": "ready to schedule",
       "type": "content",
+      "content_type": ["LinkedIn Post", "GMB Post"],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
       "url": "https://app.clickup.com/t/86d2mcpu1"
     },
     {
       "id": "86d2mcpun",
-      "name": "Primer: Signal Integrity Modeling featuring 7 Series DPO",
+      "name": "Signal Integrity Modeling featuring 7 Series DPO",
       "date": "2026-04-26",
       "status": "ready to schedule",
       "type": "content",
+      "content_type": ["LinkedIn Post", "GMB Post"],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
       "url": "https://app.clickup.com/t/86d2mcpun"
     }
   ],
@@ -66,15 +87,19 @@
       "status": "event preperation",
       "type": "event",
       "location": "Sydney NSW",
+      "partner": "EA Elektro-Automatik",
+      "partner_color": "#96c7f2",
       "url": "https://app.clickup.com/t/86d1vyt95"
     },
     {
       "id": "86d1x972m",
-      "name": "Quantum Australia Conference Adelaide",
+      "name": "Quantum Australia Conference",
       "date": "2026-04-29",
       "status": "event preperation",
       "type": "event",
       "location": "Adelaide SA",
+      "partner": "Tektronix / Keithley / EA",
+      "partner_color": "#3e63dd",
       "url": "https://app.clickup.com/t/86d1x972m"
     },
     {
@@ -84,6 +109,8 @@
       "status": "event preperation",
       "type": "event",
       "location": "New Zealand",
+      "partner": "VIAVI / Bird",
+      "partner_color": "#ab4aba",
       "url": "https://app.clickup.com/t/86d1x97df"
     },
     {
