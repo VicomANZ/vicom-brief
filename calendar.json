@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-14T11:07:46+10:00",
+  "updated": "2026-04-14T11:20:00+10:00",
   "content": [
     {
       "id": "86d2b3prc",
@@ -7,10 +7,7 @@
       "date": "2026-03-18",
       "status": "published",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "Discover the importance of the I-V characteristic curve, a graphical representation of current (I) and power as a function of voltage (V), widely used for characterizing electronic devices.\n\nJoin Keithley Application Engineer Liz Makley as she demystifies the I-V curve and its significance in understanding device behavior, performance, and reliability.\n\nWatch this on-demand webinar to gain a solid foundation in basic characteristics and be equipped to tackle more complex tests in the future.",
@@ -25,10 +22,7 @@
       "date": "2026-04-08",
       "status": "published",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "If you are an engineer developing today's systems with multiple RF interfaces or complex embedded synthesizer or other RF functions, you will want to see how you can benefit from multi-channel, mixed domain signal acquisition and analysis to measure, and interpret signals across multiple channels, frequencies, and time intervals.\n\nDiscover how you can unlock exciting capabilities using hardware digital downconverters (DDCs) in parallel with time domain signal processing.\n\nWatch our on-demand webinar, where Alan Wolke will showcase real-world demonstrations of the benefits of these measurements across different RF signals with their own distinct settings.",
@@ -43,10 +37,7 @@
       "date": "2026-04-14",
       "status": "published",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "VIAVI",
       "partner_color": "#ab4aba",
       "linkedin_copy": "",
@@ -61,13 +52,10 @@
       "date": "2026-04-15",
       "status": "scheduled",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface of leading techniques for agentic code development. AI-assisted instrumentation is no longer speculative or distant \u2014 it\u2019s emerging rapidly and already usable today.\nHosted by Tech Briefs, this 45-minute technical on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.\n You'll learn how AI can:\nWrite automation code\nConfigure oscilloscopes and signal source\nExecute measurements and perform math and plotting\nAutomatically export structured data\n Watch now to explore emerging AI\u2011assisted instrumentation.   https://app.webinar.net/Gp5d8bMWAxR\n\n",
+      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface of leading techniques for agentic code development. AI-assisted instrumentation is no longer speculative or distant — it's emerging rapidly and already usable today.\nHosted by Tech Briefs, this 45-minute technical on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.\n You'll learn how AI can:\nWrite automation code\nConfigure oscilloscopes and signal source\nExecute measurements and perform math and plotting\nAutomatically export structured data\n Watch now to explore emerging AI‑assisted instrumentation.   https://app.webinar.net/Gp5d8bMWAxR\n\n",
       "edm_subject": "",
       "blog_title": "",
       "gmb_url": "https://app.webinar.net/Gp5d8bMWAxR",
@@ -79,10 +67,7 @@
       "date": "2026-04-16",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -92,15 +77,27 @@
       "url": "https://app.clickup.com/t/86d2mcpe2"
     },
     {
+      "id": "86d2muhay",
+      "name": "Quantum Australia Conference 1 week to go",
+      "date": "2026-04-20",
+      "status": "ready to schedule",
+      "type": "content",
+      "content_type": ["LinkedIn", "EDM", "GMB"],
+      "partner": "Tektronix / Keithley / EA Elektro-Automatik",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
+      "url": "https://app.clickup.com/t/86d2muhay"
+    },
+    {
       "id": "86d2mcpr1",
       "name": "Demo Video: Experience Next-Generation Current Measurement [TICP]",
       "date": "2026-04-21",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -115,10 +112,7 @@
       "date": "2026-04-23",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -133,10 +127,7 @@
       "date": "2026-04-28",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -151,10 +142,7 @@
       "date": "2026-04-30",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": [
-        "LinkedIn",
-        "GMB"
-      ],
+      "content_type": ["LinkedIn", "GMB"],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -168,68 +156,68 @@
     {
       "id": "86d1vyt95",
       "name": "Southern Lights Disrupt",
+      "start_date": "2026-04-15",
       "date": "2026-04-16",
       "status": "event preperation",
       "type": "event",
       "location": "Canberra ACT",
-      "partner": "VIAVI",
+      "partner": "VIAVI / CRFS / Safran",
       "partner_color": "#ab4aba",
-      "url": "https://app.clickup.com/t/86d1vyt95",
-      "start_date": "2026-04-15"
+      "url": "https://app.clickup.com/t/86d1vyt95"
     },
     {
       "id": "86d1x972m",
       "name": "Quantum Australia Conference Adelaide",
+      "start_date": "2026-04-28",
       "date": "2026-04-30",
       "status": "event preperation",
       "type": "event",
       "location": "Adelaide SA",
-      "partner": "Tektronix / Keithley / EA",
+      "partner": "Tektronix / Keithley / EA Elektro-Automatik",
       "partner_color": "#3e63dd",
-      "url": "https://app.clickup.com/t/86d1x972m",
-      "start_date": "2026-04-28"
+      "url": "https://app.clickup.com/t/86d1x972m"
     },
     {
       "id": "86d1x97df",
       "name": "Comms Connect New Zealand",
+      "start_date": "2026-05-27",
       "date": "2026-05-28",
       "status": "event preperation",
       "type": "event",
-      "location": "New Zealand",
-      "partner": "VIAVI / Bird",
+      "location": "Auckland, New Zealand",
+      "partner": "VIAVI",
       "partner_color": "#ab4aba",
-      "url": "https://app.clickup.com/t/86d1x97df",
-      "start_date": "2026-05-27"
+      "url": "https://app.clickup.com/t/86d1x97df"
     },
     {
       "id": "86d1x9541",
       "name": "Electronex",
+      "start_date": "2026-06-03",
       "date": "2026-06-04",
       "status": "event preperation",
       "type": "event",
-      "location": "TBC",
-      "partner": "",
-      "partner_color": "",
-      "url": "https://app.clickup.com/t/86d1x9541",
-      "start_date": "2026-06-03"
+      "location": "Sydney NSW",
+      "partner": "Tektronix / Keithley / EA Elektro-Automatik",
+      "partner_color": "#3e63dd",
+      "url": "https://app.clickup.com/t/86d1x9541"
     },
     {
       "id": "86d1va32b",
       "name": "Comms Connect Melbourne",
+      "start_date": "2026-10-14",
       "date": "2026-10-15",
       "status": "planned events",
       "type": "event",
       "location": "Melbourne VIC",
-      "partner": "",
-      "partner_color": "",
-      "url": "https://app.clickup.com/t/86d1va32b",
-      "start_date": "2026-10-14"
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "url": "https://app.clickup.com/t/86d1va32b"
     }
   ],
   "promotions": [
     {
       "id": "86d1wtc0v",
-      "name": "Trade-In \u2014 Save Up to 30% on 4/5/6 Series B MSO",
+      "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
       "date": "2026-12-31",
       "status": "active",
       "type": "promotion",
