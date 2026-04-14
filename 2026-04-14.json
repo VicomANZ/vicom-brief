@@ -11,23 +11,23 @@
   },
   "critical": [
     {
-      "text": "Southern Lights Disrupt \u2014 2 days away",
-      "source": "General",
+      "text": "Southern Lights Disrupt is in 2 days (16 Apr) \u2014 3 prep tasks still incomplete: Floor Screen Video, Transport Van, and get final product list from Mark.",
+      "source": "Events",
+      "severity": "critical"
+    },
+    {
+      "text": "QAC Adelaide is in 16 days (30 Apr) \u2014 0 of 9 prep tasks complete. LinkedIn Event, Website Banner, Email Banner all overdue. No event EDM found in Content Calendar.",
+      "source": "Events",
+      "severity": "critical"
+    },
+    {
+      "text": "No EDMs scheduled this week \u2014 0/1 weekly target. Create and schedule at least one EDM.",
+      "source": "Content",
       "severity": "high"
     },
     {
-      "text": "Clickup Pro renewal in 9 days",
-      "source": "General",
-      "severity": "high"
-    },
-    {
-      "text": "Quantum Australia Conference Adelaide \u2014 16 days away",
-      "source": "General",
-      "severity": "high"
-    },
-    {
-      "text": "No event EDM created for Southern Lights Disrupt",
-      "source": "General",
+      "text": "ClickUp Pro renewal in 9 days ($26.60/mo on Thomas's card). Note: update to annual plan to save.",
+      "source": "Finance",
       "severity": "high"
     }
   ],
@@ -35,7 +35,7 @@
     "content": [
       {
         "label": "LinkedIn Posts",
-        "current": 1,
+        "current": 3,
         "target": 3
       },
       {
@@ -115,56 +115,77 @@
       }
     ],
     "promotions": {
-      "count": 0,
-      "items": [],
-      "ending_soon": 0,
-      "end_note": ""
+      "count": 7,
+      "items": [
+        "Keithley 4200A-SCS \u2014 Competitive Trade-In Discount",
+        "Unlock Your Scope's Potential \u2014 50% Off 4/5/6 Series Upgrades",
+        "Ride the AI Wave \u2014 Performance Oscilloscope Upgrade Offer",
+        "Trade-In \u2014 Save Up to 30% on 4/5/6 Series B MSO",
+        "4/5 Series B MSO \u2014 Power Play Bundle Discounts",
+        "2 Series MSO \u2014 Choose Your Free Upgrade",
+        "3 Series MDO \u2014 Free Bandwidth Upgrade"
+      ],
+      "ending_soon": 1,
+      "end_note": "Trade-In 4/5/6 Series B MSO promo expires 31 Dec 2026"
     }
   },
   "events": [
     {
       "name": "Southern Lights Disrupt",
-      "date": "2026-04-16",
-      "location": "",
-      "days_out": 0,
-      "tasks_complete": 0,
-      "tasks_total": 0,
-      "flags": []
+      "date": "16 Apr 2026",
+      "location": "Canberra ACT",
+      "days_out": 2,
+      "tasks_complete": 13,
+      "tasks_total": 16,
+      "flags": [
+        "Floor Screen Video not started",
+        "Transport Van status unclear",
+        "get final products list from Mark outstanding"
+      ]
     },
     {
       "name": "Quantum Australia Conference Adelaide",
-      "date": "2026-04-30",
-      "location": "",
-      "days_out": 0,
+      "date": "30 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 16,
       "tasks_complete": 0,
-      "tasks_total": 0,
-      "flags": []
+      "tasks_total": 9,
+      "flags": [
+        "0/9 prep tasks complete \u2014 all still in template status",
+        "LinkedIn Event overdue",
+        "Website Banner overdue",
+        "Email Banner overdue"
+      ]
     },
     {
       "name": "Comms Connect New Zealand",
-      "date": "2026-05-28",
-      "location": "",
-      "days_out": 0,
+      "date": "28 May 2026",
+      "location": "New Zealand",
+      "days_out": 44,
       "tasks_complete": 0,
-      "tasks_total": 0,
-      "flags": []
+      "tasks_total": 14,
+      "flags": [
+        "0/14 prep tasks complete"
+      ]
     },
     {
       "name": "Electronex",
-      "date": "2026-06-04",
-      "location": "",
-      "days_out": 0,
+      "date": "04 Jun 2026",
+      "location": "TBC",
+      "days_out": 51,
       "tasks_complete": 0,
-      "tasks_total": 0,
-      "flags": []
+      "tasks_total": 14,
+      "flags": [
+        "0/14 prep tasks complete"
+      ]
     },
     {
       "name": "Comms Connect Melbourne",
-      "date": "2026-10-15",
-      "location": "",
-      "days_out": 0,
+      "date": "15 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 184,
       "tasks_complete": 0,
-      "tasks_total": 0,
+      "tasks_total": 14,
       "flags": []
     }
   ],
@@ -228,16 +249,10 @@
     }
   ],
   "weekly_summary": {
-    "wins": [
-      "800G Pluggable Optics Poster published on LinkedIn + GMB (VIAVI)",
-      "Southern Lights Disrupt fully prepared (13/13 subtasks complete)"
-    ],
-    "risks": [
-      "Content KPIs behind for week (1/3 LinkedIn, 0/1 EDM, 0/1 blog)",
-      "Quantum Australia 16 days out with zero actionable prep",
-      "Three Tektronix posts due in next 9 days with no copy drafted"
-    ],
-    "focus": "Content copywriting blitz + Quantum Australia ramp-up."
+    "meetings_scheduled": 1,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
   },
   "date_label": "Tue 14 Apr 2026",
   "week_label": "Week of 13 Apr \u2014 17 Apr 2026"
