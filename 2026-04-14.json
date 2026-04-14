@@ -11,27 +11,24 @@
   },
   "critical": [
     {
-      "priority": "high",
-      "title": "Southern Lights Disrupt \u2014 2 days away",
-      "detail": "Event on 2026-04-16. Subtasks 13/13 complete. Final pre-event checks recommended (collateral, badges, demo kit).",
-      "url": "https://app.clickup.com/t/86d1vyt95"
+      "text": "Southern Lights Disrupt \u2014 2 days away",
+      "source": "General",
+      "severity": "high"
     },
     {
-      "priority": "high",
-      "title": "Clickup Pro renewal in 9 days",
-      "detail": "Renews 2026-04-23 ($26.60/mo on Thomas Flood card). Note flagged: 'update to annual' to capture saving.",
-      "url": "https://app.clickup.com/t/86d2mcpta"
+      "text": "Clickup Pro renewal in 9 days",
+      "source": "General",
+      "severity": "high"
     },
     {
-      "priority": "medium",
-      "title": "Quantum Australia Conference Adelaide \u2014 16 days away",
-      "detail": "Within 30-day window. All 9 subtasks remain in 'event templates' status \u2014 no actionable preparation has begun. Needs immediate scoping.",
-      "url": "https://app.clickup.com/t/86d1x972m"
+      "text": "Quantum Australia Conference Adelaide \u2014 16 days away",
+      "source": "General",
+      "severity": "high"
     },
     {
-      "priority": "medium",
-      "title": "No event EDM created for Southern Lights Disrupt",
-      "detail": "Cross-reference flag: event within 30 days has no associated EDM in Content Calendar."
+      "text": "No event EDM created for Southern Lights Disrupt",
+      "source": "General",
+      "severity": "high"
     }
   ],
   "kpis": {
@@ -209,34 +206,25 @@
   },
   "actions": [
     {
-      "priority": 1,
-      "action": "Draft LinkedIn copy for 'Your Tektronix Oscilloscope Just Got Better' (due Thu 16 Apr)",
-      "owner": "Content"
+      "category": "Content",
+      "items": [
+        "Draft LinkedIn copy for 'Your Tektronix Oscilloscope Just Got Better' (due Thu 16 Apr)",
+        "Create event EDM for Southern Lights Disrupt and Quantum Australia",
+        "Draft copy backlog: TICP demo (21 Apr), TSP Toolkit (23 Apr)"
+      ]
     },
     {
-      "priority": 2,
-      "action": "Final pre-event briefing for Southern Lights Disrupt (Thu 16 Apr) \u2014 confirm collateral, demo kit, attendee list",
-      "owner": "Events"
+      "category": "Events",
+      "items": [
+        "Final pre-event briefing for Southern Lights Disrupt (Thu 16 Apr) \u2014 confirm collateral, demo kit, attendee list",
+        "Open Quantum Australia (30 Apr) actionable subtasks \u2014 currently all templates only"
+      ]
     },
     {
-      "priority": 3,
-      "action": "Convert Clickup Pro to annual plan before 23 Apr renewal",
-      "owner": "Thomas"
-    },
-    {
-      "priority": 4,
-      "action": "Open Quantum Australia (30 Apr) actionable subtasks \u2014 currently all templates only",
-      "owner": "Events"
-    },
-    {
-      "priority": 5,
-      "action": "Create event EDM for Southern Lights Disrupt and Quantum Australia",
-      "owner": "Content"
-    },
-    {
-      "priority": 6,
-      "action": "Draft copy backlog: TICP demo (21 Apr), TSP Toolkit (23 Apr)",
-      "owner": "Content"
+      "category": "Thomas",
+      "items": [
+        "Convert Clickup Pro to annual plan before 23 Apr renewal"
+      ]
     }
   ],
   "weekly_summary": {
