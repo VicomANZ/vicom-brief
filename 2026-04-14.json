@@ -35,26 +35,50 @@
     }
   ],
   "kpis": {
-    "week_of": "2026-04-13",
-    "linkedin_posts": {
-      "completed": 1,
-      "target": 3,
-      "status": "behind"
-    },
-    "edms": {
-      "completed": 0,
-      "target": 1,
-      "status": "behind"
-    },
-    "blog_posts": {
-      "completed": 0,
-      "target": 1,
-      "status": "behind"
-    },
-    "events_month": {
-      "completed": 0,
-      "scheduled": 2
-    }
+    "content": [
+      {
+        "label": "LinkedIn Posts",
+        "current": 1,
+        "target": 3
+      },
+      {
+        "label": "EDMs Sent",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "VIAVI EDM (month)",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "Tektronix EDM (month)",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "LinkedIn Connections",
+        "current": 0,
+        "target": 1
+      }
+    ],
+    "website": [
+      {
+        "label": "Website Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "Product Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "SEO Pages Optimised",
+        "current": 0,
+        "target": 1
+      }
+    ]
   },
   "meetings": {
     "today": [
@@ -149,9 +173,9 @@
   ],
   "website": {
     "backlogs": {
-      "seo_optimise": 94,
-      "pages_building": 42,
-      "product_pages": 2
+      "website_pages": 42,
+      "product_pages": 2,
+      "seo": 94
     },
     "suggested_priority_pages": [
       {
@@ -172,33 +196,16 @@
     ]
   },
   "finance": {
-    "active_subscriptions": 13,
-    "monthly_total_aud": 360.12,
-    "annual_total_aud": 4321.44,
-    "thomas_card_monthly_aud": 124.6,
-    "vicom_card_monthly_aud": 235.52,
-    "next_renewals": [
-      {
-        "name": "Clickup Pro",
-        "date": "2026-04-23",
-        "days": 9,
-        "amount": 26.6,
-        "note": "update to annual"
-      },
-      {
-        "name": "Claude AI",
-        "date": "2026-05-02",
-        "days": 18,
-        "amount": 34.0
-      },
-      {
-        "name": "LinkedIn Premium",
-        "date": "2026-10-25",
-        "days": 194,
-        "amount": 704.0
-      }
-    ],
-    "promotions_active": 1
+    "totals": {
+      "monthly": 360,
+      "annual": 4321,
+      "thomas_monthly": 125,
+      "active_subs": 13
+    },
+    "overdue": [],
+    "renewals_this_week": [],
+    "thomas_card": [],
+    "pec_note": ""
   },
   "actions": [
     {
