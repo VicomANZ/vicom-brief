@@ -1,15 +1,18 @@
 {
   "date": "2026-04-14",
-  "generated_at": "2026-04-14T09:50:00+10:00",
-  "day_of_week": "Tuesday",
   "agents": {
-    "data_sources": ["ClickUp", "Google Calendar", "finance.json", "calendar.json"],
+    "data_sources": [
+      "ClickUp",
+      "Google Calendar",
+      "finance.json",
+      "calendar.json"
+    ],
     "workspace_id": "90161465641"
   },
   "critical": [
     {
       "priority": "high",
-      "title": "Southern Lights Disrupt — 2 days away",
+      "title": "Southern Lights Disrupt \u2014 2 days away",
       "detail": "Event on 2026-04-16. Subtasks 13/13 complete. Final pre-event checks recommended (collateral, badges, demo kit).",
       "url": "https://app.clickup.com/t/86d1vyt95"
     },
@@ -21,8 +24,8 @@
     },
     {
       "priority": "medium",
-      "title": "Quantum Australia Conference Adelaide — 16 days away",
-      "detail": "Within 30-day window. All 9 subtasks remain in 'event templates' status — no actionable preparation has begun. Needs immediate scoping.",
+      "title": "Quantum Australia Conference Adelaide \u2014 16 days away",
+      "detail": "Within 30-day window. All 9 subtasks remain in 'event templates' status \u2014 no actionable preparation has begun. Needs immediate scoping.",
       "url": "https://app.clickup.com/t/86d1x972m"
     },
     {
@@ -33,94 +36,117 @@
   ],
   "kpis": {
     "week_of": "2026-04-13",
-    "linkedin_posts": {"completed": 1, "target": 3, "status": "behind"},
-    "edms": {"completed": 0, "target": 1, "status": "behind"},
-    "blog_posts": {"completed": 0, "target": 1, "status": "behind"},
-    "events_month": {"completed": 0, "scheduled": 2}
-  },
-  "meetings": [
-    {
-      "time": "09:00",
-      "title": "Vicom Pay Day",
-      "type": "recurring",
-      "all_day": false
+    "linkedin_posts": {
+      "completed": 1,
+      "target": 3,
+      "status": "behind"
+    },
+    "edms": {
+      "completed": 0,
+      "target": 1,
+      "status": "behind"
+    },
+    "blog_posts": {
+      "completed": 0,
+      "target": 1,
+      "status": "behind"
+    },
+    "events_month": {
+      "completed": 0,
+      "scheduled": 2
     }
-  ],
-  "content": {
+  },
+  "meetings": {
     "today": [
       {
-        "id": "86d2me4gw",
+        "name": "Vicom Pay Day",
+        "time": "09:00",
+        "type": "recurring",
+        "participants": "",
+        "warning": ""
+      }
+    ],
+    "tomorrow": [],
+    "upcoming": [],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [
+      {
         "name": "800G Pluggable Optics Poster",
         "partner": "VIAVI",
-        "channels": ["LinkedIn", "GMB"],
-        "status": "published",
-        "url": "https://app.clickup.com/t/86d2me4gw"
+        "type": "",
+        "status": "published"
       }
     ],
-    "tomorrow": [
+    "due_this_week": [
       {
-        "id": "86d2mcpnn",
+        "name": "Your Tektronix Oscilloscope Just Got Better",
+        "partner": "Tektronix",
+        "date": "2026-04-16",
+        "status": "ready to schedule"
+      },
+      {
         "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering",
         "partner": "Tektronix",
-        "channels": ["LinkedIn", "GMB"],
-        "status": "scheduled",
-        "url": "https://app.clickup.com/t/86d2mcpnn"
+        "date": "",
+        "status": "scheduled"
       }
     ],
-    "this_week": [
-      {
-        "date": "2026-04-16",
-        "name": "Your Tektronix Oscilloscope Just Got Better",
-        "partner": "Tektronix",
-        "status": "ready to schedule",
-        "id": "86d2mcpe2"
-      }
-    ],
-    "needs_attention": [
-      {
-        "id": "86d2mcpe2",
-        "name": "Your Tektronix Oscilloscope Just Got Better",
-        "issue": "No LinkedIn copy drafted; due 2026-04-16"
-      },
-      {
-        "id": "86d2mcpr1",
-        "name": "Demo Video: Experience Next-Generation Current Measurement",
-        "issue": "No copy drafted; due 2026-04-21"
-      },
-      {
-        "id": "86d2mcpta",
-        "name": "Accelerate Automation: Effortless Script Generation with TSP Toolkit",
-        "issue": "No copy drafted; due 2026-04-23"
-      }
-    ]
+    "promotions": {
+      "count": 0,
+      "items": [],
+      "ending_soon": 0,
+      "end_note": ""
+    }
   },
-  "events": {
-    "next_30_days": [
-      {
-        "id": "86d1vyt95",
-        "name": "Southern Lights Disrupt",
-        "date": "2026-04-16",
-        "days_away": 2,
-        "status": "event preperation",
-        "subtasks": "13/13 complete",
-        "edm_created": false
-      },
-      {
-        "id": "86d1x972m",
-        "name": "Quantum Australia Conference Adelaide",
-        "date": "2026-04-30",
-        "days_away": 16,
-        "status": "event preperation",
-        "subtasks": "0/0 actionable (all templates)",
-        "edm_created": false
-      }
-    ],
-    "upcoming": [
-      {"name": "Comms Connect New Zealand", "date": "2026-05-28", "days_away": 44},
-      {"name": "Electronex", "date": "2026-06-04", "days_away": 51},
-      {"name": "Comms Connect Melbourne", "date": "2026-10-15", "days_away": 184}
-    ]
-  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "2026-04-16",
+      "location": "",
+      "days_out": 0,
+      "tasks_complete": 0,
+      "tasks_total": 0,
+      "flags": []
+    },
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "2026-04-30",
+      "location": "",
+      "days_out": 0,
+      "tasks_complete": 0,
+      "tasks_total": 0,
+      "flags": []
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "2026-05-28",
+      "location": "",
+      "days_out": 0,
+      "tasks_complete": 0,
+      "tasks_total": 0,
+      "flags": []
+    },
+    {
+      "name": "Electronex",
+      "date": "2026-06-04",
+      "location": "",
+      "days_out": 0,
+      "tasks_complete": 0,
+      "tasks_total": 0,
+      "flags": []
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "2026-10-15",
+      "location": "",
+      "days_out": 0,
+      "tasks_complete": 0,
+      "tasks_total": 0,
+      "flags": []
+    }
+  ],
   "website": {
     "backlogs": {
       "seo_optimise": 94,
@@ -128,32 +154,52 @@
       "product_pages": 2
     },
     "suggested_priority_pages": [
-      {"name": "Signal Workshop", "queue": "Product Pages", "priority": "high"},
-      {"name": "Electromagnetic Warfare — Military", "queue": "Pages Building", "priority": "high"},
-      {"name": "Probing Solutions", "queue": "SEO Optimise", "priority": "medium"}
+      {
+        "name": "Signal Workshop",
+        "queue": "Product Pages",
+        "priority": "high"
+      },
+      {
+        "name": "Electromagnetic Warfare \u2014 Military",
+        "queue": "Pages Building",
+        "priority": "high"
+      },
+      {
+        "name": "Probing Solutions",
+        "queue": "SEO Optimise",
+        "priority": "medium"
+      }
     ]
   },
   "finance": {
     "active_subscriptions": 13,
     "monthly_total_aud": 360.12,
     "annual_total_aud": 4321.44,
-    "thomas_card_monthly_aud": 124.60,
+    "thomas_card_monthly_aud": 124.6,
     "vicom_card_monthly_aud": 235.52,
     "next_renewals": [
-      {"name": "Clickup Pro", "date": "2026-04-23", "days": 9, "amount": 26.60, "note": "update to annual"},
-      {"name": "Claude AI", "date": "2026-05-02", "days": 18, "amount": 34.00},
-      {"name": "LinkedIn Premium", "date": "2026-10-25", "days": 194, "amount": 704.00}
+      {
+        "name": "Clickup Pro",
+        "date": "2026-04-23",
+        "days": 9,
+        "amount": 26.6,
+        "note": "update to annual"
+      },
+      {
+        "name": "Claude AI",
+        "date": "2026-05-02",
+        "days": 18,
+        "amount": 34.0
+      },
+      {
+        "name": "LinkedIn Premium",
+        "date": "2026-10-25",
+        "days": 194,
+        "amount": 704.0
+      }
     ],
     "promotions_active": 1
   },
-  "promotions": [
-    {
-      "id": "86d1wtc0v",
-      "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
-      "ends": "2026-12-31",
-      "status": "active"
-    }
-  ],
   "actions": [
     {
       "priority": 1,
@@ -162,7 +208,7 @@
     },
     {
       "priority": 2,
-      "action": "Final pre-event briefing for Southern Lights Disrupt (Thu 16 Apr) — confirm collateral, demo kit, attendee list",
+      "action": "Final pre-event briefing for Southern Lights Disrupt (Thu 16 Apr) \u2014 confirm collateral, demo kit, attendee list",
       "owner": "Events"
     },
     {
@@ -172,7 +218,7 @@
     },
     {
       "priority": 4,
-      "action": "Open Quantum Australia (30 Apr) actionable subtasks — currently all templates only",
+      "action": "Open Quantum Australia (30 Apr) actionable subtasks \u2014 currently all templates only",
       "owner": "Events"
     },
     {
@@ -197,5 +243,7 @@
       "Three Tektronix posts due in next 9 days with no copy drafted"
     ],
     "focus": "Content copywriting blitz + Quantum Australia ramp-up."
-  }
+  },
+  "date_label": "Tue 14 Apr 2026",
+  "week_label": "Week of 13 Apr \u2014 17 Apr 2026"
 }
