@@ -291,6 +291,10 @@ body {
 }
 .cal-grid.cal-weekly {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: auto 1fr;
+}
+.cal-grid.cal-weekly .cal-cell {
+  min-height: 400px;
 }
 .cal-grid > * {
   min-width: 0;
@@ -305,7 +309,6 @@ body {
   font-size: 12px; display: flex; flex-direction: column;
 }
 .cal-cell.cal-weekly-cell {
-  min-height: 200px;
 }
 .cal-cell.cal-empty { opacity: 0.3; }
 .cal-cell.cal-today { background: #e8eef8; border: 2px solid #295790; }
