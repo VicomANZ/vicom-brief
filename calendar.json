@@ -1,16 +1,256 @@
 {
-  "updated": "2026-04-15T05:00:00+10:00",
+  "updated": "2026-04-15T05:12:52+10:00",
   "content": [
+    {
+      "id": "86d1vz6b4",
+      "name": "On-Demand Webinar: Sensor Measurements 101",
+      "date": "2026-02-12",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix / Keithley",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "Wherever you are right now, chances are you’re within a few feet of a sensor. From your smoke alarms and thermostats to your smartphones and automobiles, sensors are everywhere—playing a vital role in measurement, control, and automation.\n\nIn this Engineering Fundamentals on-demand webinar series, we’ll explore how sensors measure changes in physical or chemical quantities and convert them into electrical or digital signals for analysis and processing. You’ll gain practical insights into how these measurements drive advancements across industries—from healthcare and automotive to industrial automation, robotics, and beyond.\nAccess this on-demand webinar today! https://tek.brandlive.com/Measurements-101/en/registration\n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://tek.brandlive.com/Measurements-101/en/registration",
+      "url": "https://app.clickup.com/t/86d1vz6b4"
+    },
+    {
+      "id": "86d1y4aft",
+      "name": "The Era of High Voltage and High Power Has Arrived",
+      "date": "2026-02-16",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Associated Research",
+      "partner_color": "#6B8E23",
+      "linkedin_copy": "As electric vehicles, energy storage systems, and high-power equipment continue to grow rapidly, high-voltage applications are placing new demands on wire harness design. Operating voltages have expanded from 600V and 800V to over 1000V, making compliance with safety testing standards a critical factor in production.  📖 This article breaks down, in a clear and practical way, the key technical considerations wire harness manufacturers must address in the high-voltage era:  ✔️ Regulatory overview: A clear guide to safety testing standards applicable to different wire harness applications  ✔️ Functional safety fundamentals: Why wire harnesses are no longer just individual components, but a critical part of the overall safety system  👉 Read the full article for an in-depth analysis:  https://www.ikonixasia.com/2026/02/high-voltage-wire-harness-safety-testing-standard/?utm_source=Linkedin&utm_medium=social+media  #WireHarnessManufacturing #ElectricalSafetyTesting #HighVoltage\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://www.ikonixasia.com/2026/02/high-voltage-wire-harness-safety-testing-standard/?utm_source=Linkedin&utm_medium=social+media",
+      "url": "https://app.clickup.com/t/86d1y4aft"
+    },
+    {
+      "id": "86d20c3ft",
+      "name": "How Will Test and Measurement Evolve in the New Year?",
+      "date": "2026-02-19",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "linkedin_copy": "Test and measurement for critical infrastructure is entering a new phase. In 2026, changes that have been emerging in the background are set to shift to become front of mind.\n\nThese changes relate to security, AI, photonics and sensing. While all could be said to be related but evolving independently, they are now converging to directly affect one another. This convergence categorically changes how we need to develop, roll out and test the networks, data centers and critical infrastructure they run on.\n\nIn this blog, VIAVI CTO Sameh Yamany outlines his big five predictions for the year ahead: https://blog.viavisolutions.com/2026/01/13/how-will-test-and-measurement-evolve-in-the-new-year/\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://blog.viavisolutions.com/2026/01/13/how-will-test-and-measurement-evolve-in-the-new-year/",
+      "url": "https://app.clickup.com/t/86d20c3ft"
+    },
+    {
+      "id": "86d1vz6b2",
+      "name": "On-Demand Webinar: Clocks and Serial Data Signal Integrity for System Development",
+      "date": "2026-02-24",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "Designing high-speed links? As clock and data rates climb, signal integrity is critical for reliable performance.\nIn this on-demand webinar, Dallas Mohler, Senior Applications Engineer at Tektronix, shares a repeatable workflow to quickly observe and debug real-world SerDes issues—closed eye diagrams, excessive jitter, unexpected noise, and confusing results.\nYou’ll learn:\nWhere and how to probe signals for meaningful insight.\nHow to set up clock recovery and when to apply equalization (CTLE/DFE)\nMethodologies to address closed eyes, random vs deterministic jitter, channel & signal path effects, and power rail induced noise\nSpot and solve SerDes signal integrity issues fast with fewer re-spins and faster bring-up. \nhttps://www.tek.com/en/lp/video/as-x-tek-mastering-clocks-and-serial-data-signal-intergrity-lp?utm_source=msdm&utm_medium=email&utm_campaign=7series2025-en#_msdynmkt_donottrack=0,_msdynmkt_linkid=54d8ee54-83cb-4e7d-ad01-6e261a867f56\n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://www.tek.com/en/lp/video/as-x-tek-mastering-clocks-and-serial-data-signal-intergrity-lp?utm_source=msdm&utm_medium=email&utm_campaign=7series2025-en#_msdynmkt_donottrack=0,_msdynmkt_linkid=54d8ee54-83cb-4e7d-ad01-6e261a867f56",
+      "url": "https://app.clickup.com/t/86d1vz6b2"
+    },
+    {
+      "id": "86d221hw8",
+      "name": "XEdge for Cybersecurity and the Military",
+      "date": "2026-02-25",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "linkedin_copy": "Check out our latest brochure and discover how XEdge provides ground-truth network intelligence under cyber stress, detecting spoofing, jamming and service degradation in tactical and lab environments. With multi-SIM support, remote operation and ruggedized design, it validates resilience across operators and bands while feeding real-time KPIs into defense and cybersecurity platforms. Designed for secure private 5G deployments, red-team exercises and forward base operations, it provides a reliable way to assure mission-critical communications and support cyber defenses at the tactical edge.  https://www.viavisolutions.com/en-us/literature/xedge-cybersecurity-and-military-brochures-en.pdf\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://www.viavisolutions.com/en-us/literature/xedge-cybersecurity-and-military-brochures-en.pdf",
+      "url": "https://app.clickup.com/t/86d221hw8"
+    },
+    {
+      "id": "86d1vz6b7",
+      "name": "Blog: New De-embedding, Embedding, and Equalization Software for High-Speed Systems Verification and Compliance Test",
+      "date": "2026-02-26",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "From multi-gigabit serial designs like PCIe, DDR5, USB4, and multi-lane Ethernet to cutting-edge RF and power electronics, Tektronix Signal Integrity Modeling (SIM) helps ensure your design meets both compliance and real-world performance requirements.\nBy removing and simulating reflections, loss, and delay from cables, components, and fixtures, SIM eliminates two common traps in validation—false failures and false confidence—so results reflect your device, not your setup.\nIn this post, see how SIM—available for the 5 and 6 Series B MSOs and the new 7 Series DPO—lets you de-embed, embed, apply equalization, visualize signals anywhere, and compare “what‑if” scenarios directly on your oscilloscope to validate standards compliance and real-world performance faster.\n\nhttps://www.tek.com/en/lp/document/as-x-tek-sim-for-high-speed-systems-verification-and-compliance-test-lp?utm_source=msdm&utm_medium=email&utm_campaign=performance|en&utm_content=app-note##_msdynmkt_donottrack=0,_msdynmkt_linkid=7bac50d0-73ae-49d5-b89c-58341889f678\n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://www.tek.com/en/lp/document/as-x-tek-sim-for-high-speed-systems-verification-and-compliance-test-lp?utm_source=msdm&utm_medium=email&utm_campaign=performance|en&utm_content=app-note##_msdynmkt_donottrack=0,_msdynmkt_linkid=7bac50d0-73ae-49d5-b89c-58341889f678",
+      "url": "https://app.clickup.com/t/86d1vz6b7"
+    },
+    {
+      "id": "86d1vz6b6",
+      "name": "Electrification of Aviation [EA Bidirectional Power Supplies]",
+      "date": "2026-03-02",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "Air traffic contributes up to 3.1% of global CO₂ emissions, a figure expected to triple by 2050 without effective countermeasures. To address this, the German Research Foundation (DFG) funded the SE²A Cluster of Excellence to develop a climate-neutral air transport system. The future of flight is electric, but transitioning to electric propulsion comes with significant technical hurdles, such as managing highly dynamic voltage transients and integrating advanced power-electronic topologies.\nTogether with equipment from EA Elektro-Automatik, Tektronix supports the E²AGLE research project, which is developing next-generation electric propulsion systems for aircraft. Precise measurement and test solutions ensure reliable results even at high voltages and during dynamic transients.\nRead the story to discover how Tektronix is accelerating climate-neutral aircraft propulsion—and how it can inspire and advance your projects.\nhttps://www.tek.com/en/stories/tektronix-supports-the-electrification-of-aviation?utm_source=msdm&utm_medium=email&utm_campaign=ea-psb-story|en#_msdynmkt_donottrack=0,_msdynmkt_linkid=21b017ab-e108-43e8-ae87-4f623af50671\n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://www.tek.com/en/stories/tektronix-supports-the-electrification-of-aviation?utm_source=msdm&utm_medium=email&utm_campaign=ea-psb-story|en#_msdynmkt_donottrack=0,_msdynmkt_linkid=21b017ab-e108-43e8-ae87-4f623af50671",
+      "url": "https://app.clickup.com/t/86d1vz6b6"
+    },
+    {
+      "id": "86d221mm5",
+      "name": "X EDGE mining",
+      "date": "2026-03-03",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "linkedin_copy": "XEdge brings continuous, ruggedized network monitoring to mining operations, ensuring reliable connectivity for autonomous vehicles, worker safety systems and IoT devices across pits, tunnels and remote sites. It automates SLA monitoring, application testing and stress validation to avoid costly downtime and improve worker protection. With support for private 5G, WiFi and multi-operator service assurance, it future-proofs communications as mines modernize. XEdge offers flexible, scalable sensors for harsh, distributed environments. https://www.viavisolutions.com/en-us/literature/xedge-mining-industry-brochures-en.pdf\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://www.viavisolutions.com/en-us/literature/xedge-mining-industry-brochures-en.pdf",
+      "url": "https://app.clickup.com/t/86d221mm5"
+    },
+    {
+      "id": "86d25ff5m",
+      "name": "Tektronix Promotions ENDING",
+      "date": "2026-03-04",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "EDM",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://vicom.com.au/promotions/",
+      "url": "https://app.clickup.com/t/86d25ff5m"
+    },
+    {
+      "id": "86d25ffkb",
+      "name": "Bird 4046E RX Antenna Monitor",
+      "date": "2026-03-04",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "EDM",
+        "GMB"
+      ],
+      "partner": "Bird Technologies",
+      "partner_color": "#A52A2A",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
+      "url": "https://app.clickup.com/t/86d25ffkb"
+    },
+    {
+      "id": "86d25yzrc",
+      "name": "Bird 4046E Product Announcement",
+      "date": "2026-03-04",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "EDM",
+        "GMB"
+      ],
+      "partner": "",
+      "partner_color": "",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
+      "url": "https://app.clickup.com/t/86d25yzrc"
+    },
+    {
+      "id": "86d27w06f",
+      "name": "Best Practices for a Safe and Repeatable Power Rail Sequencing",
+      "date": "2026-03-10",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "Power supply output sequencing controls the order and timing of multiple supply channels to safely power a device under test (DUT). Without it, you risk:\nUnpredictable device states from incorrect rail orderDamage from high inrush current\nModern ASICs, FPGAs, and microprocessors demand precise sequencing and voltage accuracy during power up and power down. \nGet our latest technical brief to master safe, repeatable power‑rail bring‑up and bring‑down with the MP5000 Series—without damaging your DUT. https://map-assets.tek.com/map-assets/asean/PDF/Output-Sequencing-Tech%20Brief-1KW-74191-0.pdf?_gl=1*1w08tb7*_gcl_au*MTQ3MTgwODc2MS4xNzcxODA5MjUx*_ga*NjUyOTU1MDc0LjE3NzE4MDkyNTA.*_ga_1HMYS1JH9M*czE3NzMwMzg0MTckbzgkZzEkdDE3NzMwMzg0MzYkajQxJGwwJGgw\n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://map-assets.tek.com/map-assets/asean/PDF/Output-Sequencing-Tech%20Brief-1KW-74191-0.pdf?_gl=1*1w08tb7*_gcl_au*MTQ3MTgwODc2MS4xNzcxODA5MjUx*_ga*NjUyOTU1MDc0LjE3NzE4MDkyNTA.*_ga_1HMYS1JH9M*czE3NzMwMzg0MTckbzgkZzEkdDE3NzMwMzg0MzYkajQxJGwwJGgw",
+      "url": "https://app.clickup.com/t/86d27w06f"
+    },
+    {
+      "id": "86d28ut5k",
+      "name": "Hyperloop Story",
+      "date": "2026-03-12",
+      "status": "published",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "Tektronix",
+      "partner_color": "#3e63dd",
+      "linkedin_copy": "For years now, the transportation industry has consisted of four modes of transportation—cars, trains, boats, and airplanes. In 2013, the Hyperloop—a conceptual high-speed transportation system in which pressurized vehicles travel through near-vacuum tubes—was introduced. \nDelft Hyperloop’s latest pod, DH09 “THEIA,” is on a mission to develop a climate-neutral, scalable hyperloop system and to become the fifth mode of transportation. \nRead the full story to see how the 2 Series MSO helped the team accelerate testing of THEIA’s propulsion and levitation. https://www.tek.com/en/stories/delft-hyperloop-customer-story\n\n",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "https://www.tek.com/en/stories/delft-hyperloop-customer-story",
+      "url": "https://app.clickup.com/t/86d28ut5k"
+    },
     {
       "id": "86d2b3prc",
       "name": "Engineering Fundamentals 101 | On-Demand Webinar",
       "date": "2026-03-18",
       "status": "published",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "linkedin_copy": "Discover the importance of the I-V characteristic curve, a graphical representation of current (I) and power as a function of voltage (V), widely used for characterizing electronic devices.\n\nJoin Keithley Application Engineer Liz Makley as she demystifies the I-V curve and its significance in understanding device behavior, performance, and reliability.\n\nWatch this on-demand webinar to gain a solid foundation in basic characteristics and be equipped to tackle more complex tests in the future.",
+      "linkedin_copy": "Discover the importance of the I-V characteristic curve, a graphical representation of current (I) and power as a function of voltage (V), widely used for characterizing electronic devices.\nJoin Keithley Application Engineer Liz Makley as she demystifies the I-V curve and its significance in understanding device behavior, performance, and reliability. Through real-world test setups, Liz will demonstrate how to generate an I-V curve, interpret its shape, characteristics, and provide valuable insights into the electrical properties of devices like semiconductor MOSFETs and diodes. She'll also share pro tips for I-V characterization.\nWatch this on-demand webinar to gain a solid foundation in basic characteristics and be equipped to tackle more complex tests in the future.\nhttps://tek.brandlive.com/Measurements-101/en/session/b6e9d2ca-71b3-11f0-b254-a7b3a99bc2cb\n\n",
       "edm_subject": "",
       "blog_title": "",
       "gmb_url": "https://tek.brandlive.com/Measurements-101/en/session/b6e9d2ca-71b3-11f0-b254-a7b3a99bc2cb",
@@ -22,10 +262,13 @@
       "date": "2026-04-08",
       "status": "published",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "linkedin_copy": "If you are an engineer developing today's systems with multiple RF interfaces or complex embedded synthesizer or other RF functions, you will want to see how you can benefit from multi-channel, mixed domain signal acquisition and analysis to measure, and interpret signals across multiple channels, frequencies, and time intervals.\n\nDiscover how you can unlock exciting capabilities using hardware digital downconverters (DDCs) in parallel with time domain signal processing.\n\nWatch our on-demand webinar, where Alan Wolke will showcase real-world demonstrations of the benefits of these measurements across different RF signals with their own distinct settings.",
+      "linkedin_copy": "  \nIf you are an engineer developing today’s systems with multiple RF interfaces or complex embedded synthesizer or other RF functions, you will want to see how you can benefit from multi-channel, mixed domain signal acquisition and analysis to measure, and interpret signals across multiple channels, frequencies, and time intervals.\n\nDiscover how you can unlock exciting capabilities using hardware digital downconverters (DDCs) in parallel with time domain signal processing.\n \nView any analog channel as a waveform, spectrum, or both\nPlot and trigger on changes in RF frequency or magnitude\nSynchronize spectrums and time domain waveforms to correlate RF and time domain events\n\n Watch our on-demand webinar, where Alan Wolke will showcase real-world demonstrations of the benefits of these measurements across different RF signals with their own distinct settings.   \n\nhttps://tek.brandlive.com/Challenges-and-Solutions-for-Multi-Channel-and-Multi-Domain-Analysis/en/session/c279ae7e-3065-11f0-820a-fde58568f2eb\n",
       "edm_subject": "",
       "blog_title": "",
       "gmb_url": "https://tek.brandlive.com/Challenges-and-Solutions-for-Multi-Channel-and-Multi-Domain-Analysis/en/session/c279ae7e-3065-11f0-820a-fde58568f2eb",
@@ -33,17 +276,20 @@
     },
     {
       "id": "86d2me4gw",
-      "name": "800G Pluggable Optics Poster",
+      "name": "800G Pluggable Optics Poster The fundamentals of cutting-edge technology. A module schematic with key 800G applications and tests for 800G.",
       "date": "2026-04-14",
       "status": "published",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "VIAVI",
       "partner_color": "#ab4aba",
-      "linkedin_copy": "",
+      "linkedin_copy": "Confused by 800G deployment options? https://vicom.com.au/resources/800g-pluggable-optics-poster/ This Poster simplifies the landscape—covering standards, form factors, and testing requirements for next-gen optics. Whether you're deploying QSFP-DD or OSFP, coherent or direct detect, this visual guide helps you plan smarter and test faster   \n\n",
       "edm_subject": "",
       "blog_title": "",
-      "gmb_url": "",
+      "gmb_url": "https://vicom.com.au/resources/800g-pluggable-optics-poster/",
       "url": "https://app.clickup.com/t/86d2me4gw"
     },
     {
@@ -52,10 +298,13 @@
       "date": "2026-04-15",
       "status": "scheduled",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface of leading techniques for agentic code development. AI-assisted instrumentation is no longer speculative or distant — it's emerging rapidly and already usable today.\nHosted by Tech Briefs, this 45-minute technical on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.\n You'll learn how AI can:\nWrite automation code\nConfigure oscilloscopes and signal source\nExecute measurements and perform math and plotting\nAutomatically export structured data\n Watch now to explore emerging AI‑assisted instrumentation.   https://app.webinar.net/Gp5d8bMWAxR\n\n",
+      "linkedin_copy": "Most engineers have experimented with AI by asking for code snippets and pasting them into their workflow. While this approach is useful, it barely scratches the surface of leading techniques for agentic code development. AI-assisted instrumentation is no longer speculative or distant — it’s emerging rapidly and already usable today.\nHosted by Tech Briefs, this 45-minute technical on-demand webinar explores how engineers can move beyond copy-paste prompting toward context-driven, plan-first AI workflows that actively control instruments, analyze data, and generate results in real time.\n You'll learn how AI can:\nWrite automation code\nConfigure oscilloscopes and signal source\nExecute measurements and perform math and plotting\nAutomatically export structured data\n Watch now to explore emerging AI‑assisted instrumentation.   https://app.webinar.net/Gp5d8bMWAxR\n\n",
       "edm_subject": "",
       "blog_title": "",
       "gmb_url": "https://app.webinar.net/Gp5d8bMWAxR",
@@ -67,7 +316,10 @@
       "date": "2026-04-16",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -82,9 +334,13 @@
       "date": "2026-04-20",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "EDM", "GMB"],
-      "partner": "Tektronix / Keithley / EA Elektro-Automatik",
-      "partner_color": "#3e63dd",
+      "content_type": [
+        "LinkedIn",
+        "EDM",
+        "GMB"
+      ],
+      "partner": "EA Elektro-Automatik / Tektronix / Keithley",
+      "partner_color": "#96c7f2",
       "linkedin_copy": "",
       "edm_subject": "",
       "blog_title": "",
@@ -97,7 +353,10 @@
       "date": "2026-04-21",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -112,7 +371,10 @@
       "date": "2026-04-23",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -127,7 +389,10 @@
       "date": "2026-04-28",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
@@ -142,7 +407,10 @@
       "date": "2026-04-30",
       "status": "ready to schedule",
       "type": "content",
-      "content_type": ["LinkedIn", "GMB"],
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
       "linkedin_copy": "",
