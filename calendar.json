@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-14T09:50:00+10:00",
+  "updated": "2026-04-14T11:07:46+10:00",
   "content": [
     {
       "id": "86d2b3prc",
@@ -171,10 +171,11 @@
       "date": "2026-04-16",
       "status": "event preperation",
       "type": "event",
-      "location": "",
-      "partner": "",
-      "partner_color": "",
-      "url": "https://app.clickup.com/t/86d1vyt95"
+      "location": "Canberra ACT",
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "url": "https://app.clickup.com/t/86d1vyt95",
+      "start_date": "2026-04-15"
     },
     {
       "id": "86d1x972m",
@@ -182,10 +183,11 @@
       "date": "2026-04-30",
       "status": "event preperation",
       "type": "event",
-      "location": "",
-      "partner": "",
-      "partner_color": "",
-      "url": "https://app.clickup.com/t/86d1x972m"
+      "location": "Adelaide SA",
+      "partner": "Tektronix / Keithley / EA",
+      "partner_color": "#3e63dd",
+      "url": "https://app.clickup.com/t/86d1x972m",
+      "start_date": "2026-04-28"
     },
     {
       "id": "86d1x97df",
@@ -193,10 +195,11 @@
       "date": "2026-05-28",
       "status": "event preperation",
       "type": "event",
-      "location": "",
-      "partner": "",
-      "partner_color": "",
-      "url": "https://app.clickup.com/t/86d1x97df"
+      "location": "New Zealand",
+      "partner": "VIAVI / Bird",
+      "partner_color": "#ab4aba",
+      "url": "https://app.clickup.com/t/86d1x97df",
+      "start_date": "2026-05-27"
     },
     {
       "id": "86d1x9541",
@@ -204,10 +207,11 @@
       "date": "2026-06-04",
       "status": "event preperation",
       "type": "event",
-      "location": "",
+      "location": "TBC",
       "partner": "",
       "partner_color": "",
-      "url": "https://app.clickup.com/t/86d1x9541"
+      "url": "https://app.clickup.com/t/86d1x9541",
+      "start_date": "2026-06-03"
     },
     {
       "id": "86d1va32b",
@@ -215,10 +219,11 @@
       "date": "2026-10-15",
       "status": "planned events",
       "type": "event",
-      "location": "",
+      "location": "Melbourne VIC",
       "partner": "",
       "partner_color": "",
-      "url": "https://app.clickup.com/t/86d1va32b"
+      "url": "https://app.clickup.com/t/86d1va32b",
+      "start_date": "2026-10-14"
     }
   ],
   "promotions": [

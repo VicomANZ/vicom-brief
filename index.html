@@ -293,8 +293,8 @@ body {
   color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;
 }
 .cal-cell {
-  min-height: 120px; padding: 5px; border-radius: 4px; background: #f7f7f9;
-  font-size: 12px; overflow: hidden;
+  min-height: 140px; padding: 5px; border-radius: 4px; background: #f7f7f9;
+  font-size: 12px;
 }
 .cal-cell.cal-empty { opacity: 0.3; }
 .cal-cell.cal-today { background: #e8eef8; border: 2px solid #295790; }
@@ -312,8 +312,7 @@ body {
   font-weight: 600; color: var(--navy); font-size: 10px;
 }
 .cal-item-type {
-  font-size: 8px; font-weight: 700; color: var(--dark-blue); margin-top: 1px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 9px; font-weight: 700; color: var(--dark-blue); margin-top: 2px;
 }
 .cal-item-left {
   width: 3px; min-height: 100%; border-radius: 2px; flex-shrink: 0;
@@ -1257,6 +1256,24 @@ async function renderCalendarPage(){
   const MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
   const DN=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
   calAllItems=[...(calendarData.content||[]),...(calendarData.events||[]),...(calendarData.promotions||[])];
+  
+  // Expand multi-day events into per-day entries for the grid
+  const gridItems=[];
+  calAllItems.forEach(e=>{
+    if(e.type==='event'&&e.start_date&&e.date&&e.start_date!==e.date){
+      const s=new Date(e.start_date+'T00:00:00');
+      const end=new Date(e.date+'T00:00:00');
+      let dayNum=1;
+      const totalDays=Math.round((end-s)/864e5)+1;
+      for(let d=new Date(s);d<=end;d.setDate(d.getDate()+1)){
+        const ds=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        gridItems.push({...e,date:ds,_dayLabel:`Day ${dayNum} of ${totalDays}`,_origItem:e});
+        dayNum++;
+      }
+    } else {
+      gridItems.push(e);
+    }
+  });
   let h='';
 
   // Nav + legend
@@ -1291,21 +1308,18 @@ async function renderCalendarPage(){
 
   for(let day=1;day<=dim;day++){
     const ds=`${calYear}-${String(calMonth+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-    const di=calAllItems.filter(e=>e.date===ds);
+    const di=gridItems.filter(e=>e.date===ds);
     const isT=day===td&&calMonth===tm&&calYear===ty;
     h+=`<div class="cal-cell${isT?' cal-today':''}"><div class="cal-day">${day}</div>`;
     di.forEach((e,idx)=>{
-      const gi=calAllItems.indexOf(e);
+      const origItem=e._origItem||e;
+      const gi=calAllItems.indexOf(origItem);
       const leftCol=e.type==='event'?'#295790':e.type==='content'?'#1a8c4a':'#b8860b';
-      h+=`<div class="cal-item" onclick="showCalPopup(calAllItems[${gi}])" style="display:flex;gap:4px;align-items:stretch">`;
+      h+=`<div class="cal-item" onclick="showCalPopup(calAllItems[${gi>=0?gi:0}])" style="display:flex;gap:4px;align-items:stretch">`;
       h+=`<div class="cal-item-left" style="background:${leftCol}"></div><div style="flex:1;overflow:hidden">`;
       h+=`<div class="cal-item-name">${e.name}</div>`;
-      if(e.content_type&&e.content_type.length){
-        h+=`<div class="cal-item-type">${e.content_type.join(' · ')}</div>`;
-      }
-      if(e.type==='event'&&e.location){
-        h+=`<div class="cal-item-type">${e.location}</div>`;
-      }
+      if(e._dayLabel) h+=`<div class="cal-item-type">${e._dayLabel}</div>`;
+      if(e.content_type&&e.content_type.length) h+=`<div class="cal-item-type">${e.content_type.join(' · ')}</div>`;
       if(e.partner) h+=`<div class="cal-partner-sm">${e.partner}</div>`;
       h+=`</div></div>`;
     });
