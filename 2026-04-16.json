@@ -1,0 +1,226 @@
+{
+  "date": "2026-04-16",
+  "date_label": "Thu 16 Apr 2026",
+  "week_label": "Week of 13 Apr — 19 Apr 2026",
+  "agents": {
+    "reporting": [
+      "ClickUp Content Calendar",
+      "ClickUp Promotion Tracking",
+      "ClickUp LinkedIn Connection Requests",
+      "ClickUp Pages to Optimise",
+      "ClickUp Product Page Building",
+      "ClickUp Events Calendar & Tasks",
+      "ClickUp Cost Tracking",
+      "ClickUp PEC Tracking",
+      "ClickUp Marketing Meetings"
+    ],
+    "partial": [
+      "ClickUp Pages to Optimise (paginated at 100 — SEO backlog may be larger)"
+    ],
+    "missing": [
+      "ClickUp Pages Building (Website) — no tasks returned",
+      "Google Calendar — not fetched this run"
+    ]
+  },
+  "critical": [
+    {
+      "text": "Southern Lights Disrupt is LIVE today — Day 2 of 2 at Canberra ACT (VIAVI / CRFS / Safran). Final day — ensure booth wrap-up and transport van return.",
+      "source": "Events",
+      "severity": "critical"
+    },
+    {
+      "text": "Quantum Australia Adelaide in 12 days — 3 prep tasks still outstanding (Ship to Adelaide depot, Floor Screen Video, Product Plarks). Chase Mark for final product list TODAY so the animated screen video can be built.",
+      "source": "Events",
+      "severity": "critical"
+    },
+    {
+      "text": "Zero EDMs sent or scheduled in April — both VIAVI and Tektronix monthly EDM targets at 0/1. Only the Quantum 1-week-to-go EDM is queued (20 Apr, still ready to schedule).",
+      "source": "Content",
+      "severity": "high"
+    }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 3, "target": 3 },
+      { "label": "EDMs Sent", "current": 0, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 0, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 0, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [
+      {
+        "name": "Tektronix QBR Meeting",
+        "date": "",
+        "time": "",
+        "type": "external",
+        "warning": "No date scheduled — confirm with Tektronix"
+      }
+    ],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [
+      {
+        "name": "Your Tektronix Oscilloscope Just Got Better",
+        "partner": "Tektronix",
+        "type": "LinkedIn",
+        "status": "scheduled"
+      }
+    ],
+    "due_this_week": [
+      {
+        "name": "800G Pluggable Optics Poster",
+        "partner": "VIAVI",
+        "date": "2026-04-14",
+        "status": "published"
+      },
+      {
+        "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering",
+        "partner": "Tektronix",
+        "date": "2026-04-15",
+        "status": "published"
+      },
+      {
+        "name": "Your Tektronix Oscilloscope Just Got Better",
+        "partner": "Tektronix",
+        "date": "2026-04-16",
+        "status": "scheduled"
+      }
+    ],
+    "promotions": {
+      "count": 1,
+      "items": ["Trade-In — Save Up to 30% on 4/5/6 Series B MSO"],
+      "ending_soon": 0,
+      "end_note": "Trade-In promo expires 31 Dec 2026"
+    }
+  },
+  "events": [
+    {
+      "name": "Southern Lights Disrupt",
+      "date": "15 Apr 2026",
+      "location": "Canberra ACT",
+      "days_out": 0,
+      "tasks_complete": 13,
+      "tasks_total": 16,
+      "flags": [
+        "Transport Van return still marked 'event completed' status — confirm van booked back",
+        "Floor Screen Video still flagged — verify final build was delivered",
+        "Final product list from Mark still flagged — confirm received"
+      ]
+    },
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "28 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 12,
+      "tasks_complete": 7,
+      "tasks_total": 10,
+      "flags": [
+        "Ship to Adelaide depot from Sydney for van collection — not started",
+        "Floor Screen Video — not started",
+        "Product Plarks — not started"
+      ]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "Auckland, New Zealand",
+      "days_out": 41,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "All 14 prep tasks still in template status — kick off build TODAY (6-8 week lead items due now)"
+      ]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Sydney NSW",
+      "days_out": 48,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "All 14 prep tasks still in template status — 8-week lead items (merch, website, EDMs) due now"
+      ]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 181,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": { "website_pages": 0, "product_pages": 2, "seo": 94 },
+    "suggested": [
+      { "name": "Signal Workshop", "type": "Product" },
+      { "name": "Probing Solutions | High Speed Probes", "type": "SEO" },
+      { "name": "Pages Building list empty — populate with next campaign landing page", "type": "Website" }
+    ],
+    "seo_warning": "Pages to Optimise pagination hit 100-task cap — true backlog may be larger than 94"
+  },
+  "finance": {
+    "totals": { "monthly": 360, "annual": 4326, "thomas_monthly": 125, "active_subs": 13 },
+    "overdue": [],
+    "renewals_this_week": [],
+    "thomas_card": [
+      { "name": "Buffer", "cost": "$35/mo", "pec": "none" },
+      { "name": "Zapier PRO", "cost": "$29/mo", "pec": "none" },
+      { "name": "Claude AI", "cost": "$34/mo", "pec": "none" },
+      { "name": "Clickup Pro", "cost": "$26.60/mo", "pec": "none" }
+    ],
+    "pec_note": "Last PEC claim (12 Feb 2026) approved. No outstanding submissions. Clickup Pro renews 23 Apr on Thomas card — note says 'update to annual'."
+  },
+  "actions": [
+    {
+      "category": "Events",
+      "items": [
+        "Southern Lights Disrupt: close out booth today, confirm van return and that the 3 'event completed'-status items are actually done",
+        "Quantum Adelaide: chase Mark for final product list TODAY so Floor Screen Video can be built this week",
+        "Quantum Adelaide: book depot shipment from Sydney to Adelaide now (12 days out)",
+        "Comms Connect NZ + Electronex: kick off 8-week prep items today — merch, website event page, EDMs, LinkedIn event, website banner"
+      ]
+    },
+    {
+      "category": "Content",
+      "items": [
+        "Move Quantum 1-week-to-go EDM from 'ready to schedule' to 'scheduled' today — target send 20 Apr",
+        "Plan and draft a VIAVI EDM for April before month-end (currently 0/1)",
+        "Plan and draft a pure-Tektronix EDM for April before month-end (currently 0/1)",
+        "Complete this week's LinkedIn connection request batch — target 1/week"
+      ]
+    },
+    {
+      "category": "Website",
+      "items": [
+        "Build Signal Workshop product page (only 2 items in Product backlog)",
+        "Move one Probing Solutions SEO page to in progress this week",
+        "Investigate empty Pages Building list — confirm list ID or populate with next campaign page"
+      ]
+    },
+    {
+      "category": "Finance",
+      "items": [
+        "Clickup Pro renews 23 Apr on Thomas's card ($26.60/mo) — action the 'update to annual' note before renewal"
+      ]
+    }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 1,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
