@@ -1,7 +1,7 @@
 {
   "date": "2026-04-16",
   "date_label": "Thu 16 Apr 2026",
-  "week_label": "Week of 13 Apr — 19 Apr 2026",
+  "week_label": "Week of 13 Apr \u2014 19 Apr 2026",
   "agents": {
     "reporting": [
       "ClickUp Content Calendar",
@@ -16,44 +16,76 @@
       "ClickUp Marketing Meetings"
     ],
     "partial": [
-      "ClickUp Pages to Optimise (paginated at 100 — SEO backlog may be larger)"
+      "ClickUp Pages to Optimise (paginated at 100 \u2014 SEO backlog may be larger)"
     ],
     "missing": []
   },
   "critical": [
     {
-      "text": "Quantum Australia Conference Adelaide in 12 days (28 Apr) — still 7/10 prep tasks complete. Ship-to-Adelaide depot, Floor Screen Video and Product Plaks remain in 'event templates'. Chase Mark for final product list TODAY so the floor screen video can be rendered this week.",
+      "text": "Quantum Australia Conference Adelaide in 12 days (28 Apr) \u2014 still 7/10 prep tasks complete. Ship-to-Adelaide depot, Floor Screen Video and Product Plaks remain in 'event templates'. Chase Mark for final product list TODAY so the floor screen video can be rendered this week.",
       "source": "Events",
       "severity": "critical"
     },
     {
-      "text": "ClickUp Pro monthly renewal in 7 days (23 Apr) on Thomas's personal card — and the price has jumped to $45/mo ($540/yr) from $26.60. The 'update to annual' note is now urgent: convert before Thu 23 Apr to avoid another month at the hiked rate.",
+      "text": "ClickUp Pro monthly renewal in 7 days (23 Apr) on Thomas's personal card \u2014 and the price has jumped to $45/mo ($540/yr) from $26.60. The 'update to annual' note is now urgent: convert before Thu 23 Apr to avoid another month at the hiked rate.",
       "source": "Finance",
       "severity": "critical"
     },
     {
-      "text": "Zero EDMs sent or scheduled in April — VIAVI EDM (0/1) and Tektronix EDM (0/1) monthly targets both at zero. Quantum Australia is 12 days out with no partner EDM support in market. Draft the QAC 1-week-to-go EDM today so it ships Mon 20 Apr.",
+      "text": "Zero EDMs sent or scheduled in April \u2014 VIAVI EDM (0/1) and Tektronix EDM (0/1) monthly targets both at zero. Quantum Australia is 12 days out with no partner EDM support in market. Draft the QAC 1-week-to-go EDM today so it ships Mon 20 Apr.",
       "source": "Content",
       "severity": "high"
     },
     {
-      "text": "Southern Lights Disrupt wrapped yesterday in Canberra — confirm transport van return, pack-down complete and capture any outstanding post-event LinkedIn content today.",
+      "text": "Southern Lights Disrupt wrapped yesterday in Canberra \u2014 confirm transport van return, pack-down complete and capture any outstanding post-event LinkedIn content today.",
       "source": "Events",
       "severity": "high"
     }
   ],
   "kpis": {
     "content": [
-      { "label": "LinkedIn Posts", "current": 3, "target": 3 },
-      { "label": "EDMs Sent", "current": 0, "target": 1 },
-      { "label": "VIAVI EDM (month)", "current": 0, "target": 1 },
-      { "label": "Tektronix EDM (month)", "current": 0, "target": 1 },
-      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+      {
+        "label": "LinkedIn Posts",
+        "current": 3,
+        "target": 3
+      },
+      {
+        "label": "EDMs Sent",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "VIAVI EDM (month)",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "Tektronix EDM (month)",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "LinkedIn Connections",
+        "current": 0,
+        "target": 1
+      }
     ],
     "website": [
-      { "label": "Website Pages Built", "current": 0, "target": 1 },
-      { "label": "Product Pages Built", "current": 0, "target": 1 },
-      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+      {
+        "label": "Website Pages Built",
+        "current": 3,
+        "target": 1
+      },
+      {
+        "label": "Product Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "SEO Pages Optimised",
+        "current": 0,
+        "target": 1
+      }
     ]
   },
   "meetings": {
@@ -65,7 +97,7 @@
         "date": "",
         "time": "",
         "type": "external",
-        "warning": "No date scheduled — confirm with Tektronix"
+        "warning": "No date scheduled \u2014 confirm with Tektronix"
       }
     ],
     "follow_up": []
@@ -73,14 +105,36 @@
   "content": {
     "due_today": [],
     "due_this_week": [
-      { "name": "800G Pluggable Optics Poster", "partner": "VIAVI", "date": "2026-04-14", "status": "published" },
-      { "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering", "partner": "Tektronix", "date": "2026-04-15", "status": "published" },
-      { "name": "Your Tektronix Oscilloscope Just Got Better", "partner": "Tektronix", "date": "2026-04-16", "status": "scheduled" },
-      { "name": "Quantum Australia Conference 1 week to go", "partner": "EA Elektro-Automatik / Tektronix / Keithley", "date": "2026-04-20", "status": "ready to schedule" }
+      {
+        "name": "800G Pluggable Optics Poster",
+        "partner": "VIAVI",
+        "date": "2026-04-14",
+        "status": "published"
+      },
+      {
+        "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering",
+        "partner": "Tektronix",
+        "date": "2026-04-15",
+        "status": "published"
+      },
+      {
+        "name": "Your Tektronix Oscilloscope Just Got Better",
+        "partner": "Tektronix",
+        "date": "2026-04-16",
+        "status": "scheduled"
+      },
+      {
+        "name": "Quantum Australia Conference 1 week to go",
+        "partner": "EA Elektro-Automatik / Tektronix / Keithley",
+        "date": "2026-04-20",
+        "status": "ready to schedule"
+      }
     ],
     "promotions": {
       "count": 1,
-      "items": ["Trade-In — Save Up to 30% on 4/5/6 Series B MSO"],
+      "items": [
+        "Trade-In \u2014 Save Up to 30% on 4/5/6 Series B MSO"
+      ],
       "ending_soon": 0,
       "end_note": "Trade-In 4/5/6 Series B MSO expires 31 Dec 2026"
     }
@@ -94,9 +148,9 @@
       "tasks_complete": 7,
       "tasks_total": 10,
       "flags": [
-        "Ship to Adelaide depot from Sydney — still in 'event templates', not started",
-        "Floor Screen Video — still in 'event templates', awaiting final product list from Mark",
-        "Product Plaks — still in 'event templates', brief Mark today"
+        "Ship to Adelaide depot from Sydney \u2014 still in 'event templates', not started",
+        "Floor Screen Video \u2014 still in 'event templates', awaiting final product list from Mark",
+        "Product Plaks \u2014 still in 'event templates', brief Mark today"
       ]
     },
     {
@@ -106,7 +160,9 @@
       "days_out": 41,
       "tasks_complete": 0,
       "tasks_total": 14,
-      "flags": ["0/14 prep tasks complete — 6-week lead items (merch, website event page, EDMs, LinkedIn event) due this week"]
+      "flags": [
+        "0/14 prep tasks complete \u2014 6-week lead items (merch, website event page, EDMs, LinkedIn event) due this week"
+      ]
     },
     {
       "name": "Electronex",
@@ -115,7 +171,9 @@
       "days_out": 48,
       "tasks_complete": 0,
       "tasks_total": 14,
-      "flags": ["0/14 prep tasks complete — 8-week lead items overdue, kick off build today"]
+      "flags": [
+        "0/14 prep tasks complete \u2014 8-week lead items overdue, kick off build today"
+      ]
     },
     {
       "name": "Southern Lights Disrupt",
@@ -124,7 +182,9 @@
       "days_out": 0,
       "tasks_complete": 16,
       "tasks_total": 16,
-      "flags": ["Event concluded 15 Apr — confirm transport van return and pack-down close-out"]
+      "flags": [
+        "Event concluded 15 Apr \u2014 confirm transport van return and pack-down close-out"
+      ]
     },
     {
       "name": "Comms Connect Melbourne",
@@ -137,46 +197,86 @@
     }
   ],
   "website": {
-    "backlogs": { "website_pages": 42, "product_pages": 5, "seo": 92 },
+    "backlogs": {
+      "website_pages": 42,
+      "product_pages": 5,
+      "seo": 92
+    },
     "suggested": [
-      { "name": "Electromagnetic Warfare (Military)", "type": "Website" },
-      { "name": "Signal Workshop", "type": "Product" },
-      { "name": "Probing Solutions | High Speed Probes", "type": "SEO" }
+      {
+        "name": "Electromagnetic Warfare (Military)",
+        "type": "Website"
+      },
+      {
+        "name": "Signal Workshop",
+        "type": "Product"
+      },
+      {
+        "name": "Probing Solutions | High Speed Probes",
+        "type": "SEO"
+      }
     ],
-    "seo_warning": "Pages to Optimise pagination hit 100-task cap — true backlog may be larger than 92"
+    "seo_warning": "Pages to Optimise pagination hit 100-task cap \u2014 true backlog may be larger than 92"
   },
   "finance": {
-    "totals": { "monthly": 514, "annual": 6166, "thomas_monthly": 278, "active_subs": 13 },
+    "totals": {
+      "monthly": 514,
+      "annual": 6166,
+      "thomas_monthly": 278,
+      "active_subs": 13
+    },
     "overdue": [],
     "renewals_this_week": [
-      { "name": "Clickup Pro", "date": "2026-04-23", "cost": "$45/mo", "payment": "Thomas Flood", "note": "Price hiked from $26.60 — convert to annual before renewal" }
+      {
+        "name": "Clickup Pro",
+        "date": "2026-04-23",
+        "cost": "$45/mo",
+        "payment": "Thomas Flood",
+        "note": "Price hiked from $26.60 \u2014 convert to annual before renewal"
+      }
     ],
     "thomas_card": [
-      { "name": "Clickup Pro", "cost": "$45.00/mo", "pec": "none" },
-      { "name": "Claude AI", "cost": "$169.00/mo", "pec": "none" },
-      { "name": "Buffer", "cost": "$35.00/mo", "pec": "none" },
-      { "name": "Zapier PRO", "cost": "$29.00/mo", "pec": "none" }
+      {
+        "name": "Clickup Pro",
+        "cost": "$45.00/mo",
+        "pec": "none"
+      },
+      {
+        "name": "Claude AI",
+        "cost": "$169.00/mo",
+        "pec": "none"
+      },
+      {
+        "name": "Buffer",
+        "cost": "$35.00/mo",
+        "pec": "none"
+      },
+      {
+        "name": "Zapier PRO",
+        "cost": "$29.00/mo",
+        "pec": "none"
+      }
     ],
-    "pec_note": "Last approved PEC claim: 12 Feb 2026. No pending submissions. Clickup Pro renews 23 Apr on Thomas card — note says 'update to annual' and monthly price has jumped to $45."
+    "pec_note": "Last approved PEC claim: 12 Feb 2026. No pending submissions. Clickup Pro renews 23 Apr on Thomas card \u2014 note says 'update to annual' and monthly price has jumped to $45."
   },
   "actions": [
     {
       "category": "Events",
       "items": [
         "Quantum Adelaide: chase Mark Waite-Pullan for final product list TODAY so Floor Screen Video can be rendered this week",
-        "Quantum Adelaide: book Sydney→Adelaide depot shipment today — 12 days out and still in template status",
+        "Quantum Adelaide: book Sydney\u2192Adelaide depot shipment today \u2014 12 days out and still in template status",
         "Southern Lights Disrupt: confirm transport van return, booth pack-down complete, and post-event LinkedIn photos captured",
-        "Comms Connect NZ + Electronex: move 14-task templates into live prep TODAY — 6-to-8-week lead items (merch, website banner, event page, EDMs) already overdue"
+        "Comms Connect NZ + Electronex: move 14-task templates into live prep TODAY \u2014 6-to-8-week lead items (merch, website banner, event page, EDMs) already overdue"
       ]
     },
     {
       "category": "Content",
       "items": [
         "Finalise and schedule Quantum Australia 1-week-to-go LinkedIn + EDM + GMB for Mon 20 Apr send",
-        "Draft April VIAVI EDM before month-end — currently 0/1",
-        "Draft April Tektronix EDM before month-end — currently 0/1",
+        "Draft April VIAVI EDM before month-end \u2014 currently 0/1",
+        "Draft April Tektronix EDM before month-end \u2014 currently 0/1",
         "Queue Tektronix series copy: TICP Demo (21 Apr), TSP Toolkit (23 Apr), TUfast Eco Lane (28 Apr)",
-        "Action this week's LinkedIn Connection Requests batch — currently 0/1"
+        "Action this week's LinkedIn Connection Requests batch \u2014 currently 0/1"
       ]
     },
     {
@@ -190,7 +290,7 @@
     {
       "category": "Finance",
       "items": [
-        "URGENT: convert ClickUp Pro to annual plan before Thu 23 Apr — monthly price has jumped to $45 on Thomas's card ($540/yr vs current $540 annualised monthly, confirm annual-plan discount and switch)"
+        "URGENT: convert ClickUp Pro to annual plan before Thu 23 Apr \u2014 monthly price has jumped to $45 on Thomas's card ($540/yr vs current $540 annualised monthly, confirm annual-plan discount and switch)"
       ]
     }
   ],
