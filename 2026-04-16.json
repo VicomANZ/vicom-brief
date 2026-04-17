@@ -78,12 +78,12 @@
       },
       {
         "label": "Product Pages Built",
-        "current": 0,
+        "current": 1,
         "target": 1
       },
       {
         "label": "SEO Pages Optimised",
-        "current": 0,
+        "current": 1,
         "target": 1
       }
     ]
