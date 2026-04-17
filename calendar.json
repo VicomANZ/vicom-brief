@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-16T05:30:00+10:00",
+  "updated": "2026-04-18T05:28:53+10:00",
   "content": [
     {
       "id": "86d1vz6b4",
@@ -314,7 +314,7 @@
       "id": "86d2mcpe2",
       "name": "Your Tektronix Oscilloscope Just Got Better",
       "date": "2026-04-16",
-      "status": "scheduled",
+      "status": "published",
       "type": "content",
       "content_type": [
         "LinkedIn",
@@ -322,7 +322,7 @@
       ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "linkedin_copy": " Download the latest firmware for your 2 Series MSO, 4/5/6 Series B MSOs, and 7 Series DPO oscilloscopes to unlock powerful new features, boost performance, and get critical security updates. https://www.tek.com/en/search?op=&keywords=V2.22.8%20V2.22.7&sort=desc&facets=_templatename%3Dsoftware%26parsedsoftwaretype%3DFirmware\n \nWhat’s available with the latest firmware?\n \nEnhanced Security:\n\n \nExternal CD/DVD drive peripheral support added on Linux-based 2 Series MSOs, 4/5/6 Series B MSOs, and 7 Series DPOs.\n \n \nNew Features for Oscilloscopes with Advanced Analysis Options:\n \n \nAdvanced Jitter Analysis (opt. DJA): New SJ@Freq Measurement measures sinusoidal jitter at specified frequency for PLL and jitter tolerance analysis. \n \n3-Phase Inverter Motor Drive Analysis (opt. IMDA): Sin-Cos Sensor input now supported in DQ0 and all mechanical measurements to correlate rotational position.\n \nWide Bandgap – Double Pulse Test Analysis (opt. WBG-DPT): Parallel Topology Analysis now includes Overshoot, Undershoot, and Damping Factor measurements.\n \n \nNew Options for High-Speed Serial Workflows with the 7 Series DPO:\n \n \nUSB3.2 Tx Automated Compliance Solution available with option 7-CMUSB3.\n \nMIPI CPHY 2.0/1.1/1.0 Tx Compliance Solution available with option 7-CMCPHY20.\n \n64b/66b Line Decode and Search available with option 7-SR64B66B.\n \n \nNew Features for Signal Integrity Modeling Software (option 7-SIM):\n \n \nAutomatic oscilloscope and probe modeling to reduce setup time and errors with auto-loading of S-parameters for the DPO714AX scope and P7700/P7600 probes.\n \nNew check box to enable/disable R, L, and C elements for flexible circuit modeling.\n \nCopy the DUT Source block from the Physical Model into the Simulation Model for fast and consistent setup.\n \n Install the latest Tektronix firmware to enable new standard features and features available with your active software options.    \n",
+      "linkedin_copy": " Download the latest firmware for your 2 Series MSO, 4/5/6 Series B MSOs, and 7 Series DPO oscilloscopes to unlock powerful new features, boost performance, and get critical security updates. https://www.tek.com/en/search?op=&keywords=V2.22.8%20V2.22.7&sort=desc&facets=_templatename%3Dsoftware%26parsedsoftwaretype%3DFirmware\n \nWhat's available with the latest firmware?\n \nEnhanced Security:\n\n \nExternal CD/DVD drive peripheral support added on Linux-based 2 Series MSOs, 4/5/6 Series B MSOs, and 7 Series DPOs.\n \n \nNew Features for Oscilloscopes with Advanced Analysis Options:\n \n \nAdvanced Jitter Analysis (opt. DJA): New SJ@Freq Measurement measures sinusoidal jitter at specified frequency for PLL and jitter tolerance analysis. \n \n3-Phase Inverter Motor Drive Analysis (opt. IMDA): Sin-Cos Sensor input now supported in DQ0 and all mechanical measurements to correlate rotational position.\n \nWide Bandgap – Double Pulse Test Analysis (opt. WBG-DPT): Parallel Topology Analysis now includes Overshoot, Undershoot, and Damping Factor measurements.\n \n \nNew Options for High-Speed Serial Workflows with the 7 Series DPO:\n \n \nUSB3.2 Tx Automated Compliance Solution available with option 7-CMUSB3.\n \nMIPI CPHY 2.0/1.1/1.0 Tx Compliance Solution available with option 7-CMCPHY20.\n \n64b/66b Line Decode and Search available with option 7-SR64B66B.\n \n \nNew Features for Signal Integrity Modeling Software (option 7-SIM):\n \n \nAutomatic oscilloscope and probe modeling to reduce setup time and errors with auto-loading of S-parameters for the DPO714AX scope and P7700/P7600 probes.\n \nNew check box to enable/disable R, L, and C elements for flexible circuit modeling.\n \nCopy the DUT Source block from the Physical Model into the Simulation Model for fast and consistent setup.\n \n Install the latest Tektronix firmware to enable new standard features and features available with your active software options.    \n",
       "edm_subject": "",
       "blog_title": "",
       "gmb_url": "https://www.tek.com/en/search?op=&keywords=V2.22.8%20V2.22.7&sort=desc&facets=_templatename%3Dsoftware%26parsedsoftwaretype%3DFirmware",
@@ -384,6 +384,25 @@
       "url": "https://app.clickup.com/t/86d2mcpta"
     },
     {
+      "id": "86d2nty2f",
+      "name": "Comms Connect New Zealand",
+      "date": "2026-04-27",
+      "status": "ready to schedule",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "EDM",
+        "GMB"
+      ],
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
+      "url": "https://app.clickup.com/t/86d2nty2f"
+    },
+    {
       "id": "86d2mcpu1",
       "name": "Customer Story: Life in the TUfast Eco Lane [4 Series MSO + EA]",
       "date": "2026-04-28",
@@ -426,10 +445,10 @@
       "name": "Southern Lights Disrupt",
       "start_date": "2026-04-15",
       "date": "2026-04-16",
-      "status": "event preperation",
+      "status": "event completed",
       "type": "event",
       "location": "Canberra ACT",
-      "partner": "VIAVI / CRFS / Safran",
+      "partner": "VIAVI / Safran / CRFS",
       "partner_color": "#ab4aba",
       "url": "https://app.clickup.com/t/86d1vyt95"
     },
@@ -441,8 +460,8 @@
       "status": "event preperation",
       "type": "event",
       "location": "Adelaide SA",
-      "partner": "Tektronix / Keithley / EA Elektro-Automatik",
-      "partner_color": "#3e63dd",
+      "partner": "EA Elektro-Automatik / Tektronix / Keithley",
+      "partner_color": "#96c7f2",
       "url": "https://app.clickup.com/t/86d1x972m"
     },
     {
@@ -465,8 +484,8 @@
       "status": "event preperation",
       "type": "event",
       "location": "Sydney NSW",
-      "partner": "Tektronix / Keithley / EA Elektro-Automatik",
-      "partner_color": "#3e63dd",
+      "partner": "EA Elektro-Automatik / Tektronix / Keithley",
+      "partner_color": "#96c7f2",
       "url": "https://app.clickup.com/t/86d1x9541"
     },
     {
@@ -483,6 +502,54 @@
     }
   ],
   "promotions": [
+    {
+      "id": "86d1wtd0p",
+      "name": "Keithley 4200A-SCS — Competitive Trade-In Discount",
+      "date": "2026-03-31",
+      "status": "expired",
+      "type": "promotion",
+      "url": "https://app.clickup.com/t/86d1wtd0p"
+    },
+    {
+      "id": "86d1wtcyb",
+      "name": "Unlock Your Scope’s Potential — 50% Off 4/5/6 Series Upgrades",
+      "date": "2026-03-31",
+      "status": "expired",
+      "type": "promotion",
+      "url": "https://app.clickup.com/t/86d1wtcyb"
+    },
+    {
+      "id": "86d1wtcwb",
+      "name": "Ride the AI Wave — Performance Oscilloscope Upgrade Offer",
+      "date": "2026-03-31",
+      "status": "expired",
+      "type": "promotion",
+      "url": "https://app.clickup.com/t/86d1wtcwb"
+    },
+    {
+      "id": "86d1wtbze",
+      "name": "4/5 Series B MSO — Power Play Bundle Discounts",
+      "date": "2026-03-31",
+      "status": "expired",
+      "type": "promotion",
+      "url": "https://app.clickup.com/t/86d1wtbze"
+    },
+    {
+      "id": "86d1wtbyw",
+      "name": "2 Series MSO — Choose Your Free Upgrade",
+      "date": "2026-03-31",
+      "status": "expired",
+      "type": "promotion",
+      "url": "https://app.clickup.com/t/86d1wtbyw"
+    },
+    {
+      "id": "86d1wtby5",
+      "name": "3 Series MDO — Free Bandwidth Upgrade",
+      "date": "2026-03-31",
+      "status": "expired",
+      "type": "promotion",
+      "url": "https://app.clickup.com/t/86d1wtby5"
+    },
     {
       "id": "86d1wtc0v",
       "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
