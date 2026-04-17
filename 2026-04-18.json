@@ -1,0 +1,309 @@
+{
+  "date": "2026-04-18",
+  "date_label": "Sat 18 Apr 2026",
+  "week_label": "Week of 13 Apr — 19 Apr 2026",
+  "agents": {
+    "reporting": [
+      "ClickUp Content Calendar",
+      "ClickUp Promotion Tracking",
+      "ClickUp LinkedIn Connection Requests",
+      "ClickUp Pages to Optimise",
+      "ClickUp Pages Building (Website)",
+      "ClickUp Product Page Building",
+      "ClickUp Events Calendar & Tasks",
+      "ClickUp Cost Tracking",
+      "ClickUp PEC Tracking",
+      "ClickUp Marketing Meetings"
+    ],
+    "partial": [
+      "ClickUp Pages to Optimise (paginated at 100 — SEO backlog may be larger)"
+    ],
+    "missing": []
+  },
+  "critical": [
+    {
+      "text": "Quantum Australia Conference Adelaide in 10 days (28 Apr) — still 7/10 prep tasks complete. Ship-to-Adelaide depot, Floor Screen Video and Product Plaks remain in 'event templates'. Shipping logistics must be locked in Monday at the latest.",
+      "source": "Events",
+      "severity": "critical"
+    },
+    {
+      "text": "ClickUp Pro monthly renewal in 5 days (23 Apr) on Thomas’s personal card — price is $45/mo ($540/yr). Convert to annual plan before Wednesday to avoid another hiked monthly charge.",
+      "source": "Finance",
+      "severity": "critical"
+    },
+    {
+      "text": "Zero EDMs sent this week (0/1 target). QAC 1-week-to-go EDM is 'ready to schedule' for Mon 20 Apr — confirm copy, subject line and send list today so it ships first thing Monday.",
+      "source": "Content",
+      "severity": "high"
+    },
+    {
+      "text": "Comms Connect NZ (39 days) and Electronex (46 days) both 0/14 prep tasks complete — 8-week lead items (merch, website event page, EDMs, layout) are now overdue. Kick off both Monday.",
+      "source": "Events",
+      "severity": "high"
+    }
+  ],
+  "kpis": {
+    "content": [
+      {
+        "label": "LinkedIn Posts",
+        "current": 3,
+        "target": 3
+      },
+      {
+        "label": "EDMs Sent",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "VIAVI EDM (month)",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "Tektronix EDM (month)",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "LinkedIn Connections",
+        "current": 1,
+        "target": 1
+      }
+    ],
+    "website": [
+      {
+        "label": "Website Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "Product Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "SEO Pages Optimised",
+        "current": 0,
+        "target": 1
+      }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [
+      {
+        "name": "Vicom Marketing Meeting",
+        "date": "2026-04-23",
+        "time": "",
+        "type": "internal",
+        "warning": ""
+      },
+      {
+        "name": "Tektronix QBR Meeting",
+        "date": "",
+        "time": "",
+        "type": "external",
+        "warning": "No date scheduled — confirm with Tektronix"
+      }
+    ],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [],
+    "due_this_week": [
+      {
+        "name": "800G Pluggable Optics Poster",
+        "partner": "VIAVI",
+        "date": "2026-04-14",
+        "status": "published"
+      },
+      {
+        "name": "On-Demand Webinar: Beyond AI-Copy-Paste Engineering",
+        "partner": "Tektronix",
+        "date": "2026-04-15",
+        "status": "published"
+      },
+      {
+        "name": "Your Tektronix Oscilloscope Just Got Better",
+        "partner": "Tektronix",
+        "date": "2026-04-16",
+        "status": "published"
+      },
+      {
+        "name": "Quantum Australia Conference 1 week to go",
+        "partner": "EA Elektro-Automatik / Tektronix / Keithley",
+        "date": "2026-04-20",
+        "status": "ready to schedule"
+      },
+      {
+        "name": "Demo Video: Experience Next-Generation Current Measurement [TICP]",
+        "partner": "Tektronix",
+        "date": "2026-04-21",
+        "status": "ready to schedule"
+      },
+      {
+        "name": "Accelerate Automation: Effortless Script Generation with TSP Toolkit [MP5000 Series]",
+        "partner": "Tektronix",
+        "date": "2026-04-23",
+        "status": "ready to schedule"
+      }
+    ],
+    "promotions": {
+      "count": 1,
+      "items": [
+        "Trade-In — Save Up to 30% on 4/5/6 Series B MSO"
+      ],
+      "ending_soon": 0,
+      "end_note": "Trade-In 4/5/6 Series B MSO expires 31 Dec 2026"
+    }
+  },
+  "events": [
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "28 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 10,
+      "tasks_complete": 7,
+      "tasks_total": 10,
+      "flags": [
+        "Ship to Adelaide depot from Sydney — still in 'event templates', not started",
+        "Floor Screen Video — still in 'event templates', awaiting final product list from Mark",
+        "Product Plaks — still in 'event templates', brief Mark today"
+      ]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "Auckland, New Zealand",
+      "days_out": 39,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "0/14 prep tasks complete — 8-week lead items (merch, website event page, EDMs, LinkedIn event, layout) already overdue"
+      ]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Sydney NSW",
+      "days_out": 46,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "0/14 prep tasks complete — 8-week lead items overdue, kick off build Monday"
+      ]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 179,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": {
+      "website_pages": 41,
+      "product_pages": 5,
+      "seo": 91
+    },
+    "suggested": [
+      {
+        "name": "Computers and Peripherals",
+        "type": "Website"
+      },
+      {
+        "name": "EA-EA-PUB/PUL/PU Industrial Power Units",
+        "type": "Product"
+      },
+      {
+        "name": "Optical Fibre & Network Deployment | OTDR Testing",
+        "type": "SEO"
+      }
+    ],
+    "seo_warning": "Pages to Optimise pagination hit 100-task cap — true backlog may be larger than 91"
+  },
+  "finance": {
+    "totals": {
+      "monthly": 514,
+      "annual": 6166,
+      "thomas_monthly": 278,
+      "active_subs": 13
+    },
+    "overdue": [],
+    "renewals_this_week": [
+      {
+        "name": "Clickup Pro",
+        "date": "2026-04-23",
+        "cost": "$45/mo",
+        "payment": "Thomas Flood",
+        "note": "Price hiked from $26.60 — convert to annual before renewal"
+      }
+    ],
+    "thomas_card": [
+      {
+        "name": "Clickup Pro",
+        "cost": "$45.00/mo",
+        "pec": "none"
+      },
+      {
+        "name": "Claude AI",
+        "cost": "$169.00/mo",
+        "pec": "none"
+      },
+      {
+        "name": "Buffer",
+        "cost": "$35.00/mo",
+        "pec": "none"
+      },
+      {
+        "name": "Zapier PRO",
+        "cost": "$29.00/mo",
+        "pec": "none"
+      }
+    ],
+    "pec_note": "Last approved PEC claim: 12 Feb 2026. No pending submissions. Clickup Pro renews 23 Apr on Thomas card — note says 'update to annual' and monthly price has jumped to $45."
+  },
+  "actions": [
+    {
+      "category": "Events",
+      "items": [
+        "Quantum Adelaide: lock in Sydney→Adelaide depot shipment Monday — 10 days out and still in template status",
+        "Quantum Adelaide: chase Mark Waite-Pullan for final product list so Floor Screen Video and Product Plaks can be completed this week",
+        "Comms Connect NZ + Electronex: move 14-task templates into live prep Monday — merch, website event page, EDMs, LinkedIn event and layout are all overdue against 8-week lead"
+      ]
+    },
+    {
+      "category": "Content",
+      "items": [
+        "QAC 1-week-to-go: finalise EDM + LinkedIn + GMB copy and schedule for Mon 20 Apr send",
+        "TICP Demo Video: schedule LinkedIn + GMB for Tue 21 Apr",
+        "TSP Toolkit MP5000: schedule LinkedIn + GMB for Thu 23 Apr",
+        "Action this week’s LinkedIn Connection Requests batch — currently 0/1 for week (1 completed task was last week’s)"
+      ]
+    },
+    {
+      "category": "Website",
+      "items": [
+        "Move one website page from backlog to in progress (41-page backlog, 0/1 target)",
+        "Start OTDR Testing SEO optimisation — already flagged 'optimise this week'",
+        "Progress CRFS TSCM RFeye Guard product page from 'content gathering' to build"
+      ]
+    },
+    {
+      "category": "Finance",
+      "items": [
+        "URGENT: convert ClickUp Pro to annual plan before Wed 23 Apr — $45/mo on Thomas’s card, check if annual plan offers discount and switch immediately"
+      ]
+    }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 1,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
