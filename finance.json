@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-18T10:00:00+10:00",
+  "updated_at": "2026-04-20T05:00:00+10:00",
   "active": [
     {
       "name": "WP Rocket",
@@ -7,7 +7,7 @@
       "cycle": "Annual",
       "annual": 85,
       "monthly": 7.0,
-      "renewal": "2026-12-16",
+      "renewal": "2026-12-17",
       "payment": "Vicom CC",
       "url": "wp-rocket.me",
       "notes": ""
@@ -18,7 +18,7 @@
       "cycle": "Annual",
       "annual": 420,
       "monthly": 35.0,
-      "renewal": "2027-03-10",
+      "renewal": "2027-03-11",
       "payment": "Thomas Flood",
       "url": "publish.buffer.com",
       "notes": ""
@@ -27,9 +27,9 @@
       "name": "Zapier PRO",
       "category": "AI Tools",
       "cycle": "Annual",
-      "annual": 348.4,
+      "annual": 348,
       "monthly": 29.0,
-      "renewal": "2027-02-11",
+      "renewal": "2027-02-12",
       "payment": "Thomas Flood",
       "url": "zapier.com",
       "notes": ""
@@ -40,7 +40,7 @@
       "cycle": "Annual",
       "annual": 860,
       "monthly": 71.66,
-      "renewal": "2027-02-09",
+      "renewal": "2027-02-10",
       "payment": "Vicom CC",
       "url": "sucuri.net",
       "notes": ""
@@ -51,7 +51,7 @@
       "cycle": "Monthly",
       "annual": 2028,
       "monthly": 169.0,
-      "renewal": "2026-05-02",
+      "renewal": "2026-05-03",
       "payment": "Thomas Flood",
       "url": "claude.ai",
       "notes": ""
@@ -62,7 +62,7 @@
       "cycle": "Biennually",
       "annual": 222,
       "monthly": 18.5,
-      "renewal": "2027-10-28",
+      "renewal": "2027-10-29",
       "payment": "Vicom CC",
       "url": "ventraip.com.au",
       "notes": ""
@@ -71,9 +71,9 @@
       "name": "Website Hosting AUS",
       "category": "Hosting",
       "cycle": "Biennually",
-      "annual": 136.8,
+      "annual": 137,
       "monthly": 11.4,
-      "renewal": "2026-11-27",
+      "renewal": "2026-11-28",
       "payment": "Vicom CC",
       "url": "ventraip.com.au",
       "notes": ""
@@ -84,7 +84,7 @@
       "cycle": "Annual",
       "annual": 322,
       "monthly": 26.85,
-      "renewal": "2027-03-04",
+      "renewal": "2027-03-05",
       "payment": "Vicom CC",
       "url": "www.cognitoforms.com",
       "notes": ""
@@ -93,20 +93,20 @@
       "name": "Canva Pro",
       "category": "Design",
       "cycle": "Annual",
-      "annual": 164.99,
+      "annual": 165,
       "monthly": 13.7,
-      "renewal": "2027-03-02",
+      "renewal": "2027-03-03",
       "payment": "Vicom CC",
       "url": "www.canva.com",
       "notes": ""
     },
     {
-      "name": "Clickup Pro",
+      "name": "ClickUp Pro",
       "category": "CMS",
       "cycle": "Monthly",
       "annual": 540,
       "monthly": 45.0,
-      "renewal": "2026-04-23",
+      "renewal": "2026-04-24",
       "payment": "Thomas Flood",
       "url": "app.clickup.com",
       "notes": "update to annual"
@@ -117,7 +117,7 @@
       "cycle": "Annual",
       "annual": 290,
       "monthly": 24.1,
-      "renewal": "2027-01-23",
+      "renewal": "2027-01-24",
       "payment": "Vicom CC",
       "url": "my.stripo.email",
       "notes": ""
@@ -126,9 +126,9 @@
       "name": "LinkedIn Premium",
       "category": "Social Media",
       "cycle": "Annual",
-      "annual": 704.07,
+      "annual": 704,
       "monthly": 58.6,
-      "renewal": "2026-10-25",
+      "renewal": "2026-10-26",
       "payment": "Vicom CC",
       "url": "www.linkedin.com",
       "notes": ""
@@ -137,9 +137,9 @@
       "name": "Google One Drive",
       "category": "Asset Storage",
       "cycle": "Annual",
-      "annual": 44.99,
+      "annual": 45,
       "monthly": 3.71,
-      "renewal": "2026-10-30",
+      "renewal": "2026-10-31",
       "payment": "Vicom CC",
       "url": "one.google.com",
       "notes": ""

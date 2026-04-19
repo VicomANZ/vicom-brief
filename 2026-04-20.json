@@ -1,0 +1,310 @@
+{
+  "date": "2026-04-20",
+  "date_label": "Mon 20 Apr 2026",
+  "week_label": "Week of 20 Apr — 24 Apr 2026",
+  "agents": {
+    "reporting": [
+      "Content Calendar",
+      "Promotion Tracking",
+      "LinkedIn Connections",
+      "Pages to Optimise",
+      "Pages Building",
+      "Product Pages",
+      "Events Calendar",
+      "Marketing Meetings",
+      "Cost Tracking"
+    ],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    {
+      "text": "QAC 1 week to go content (LinkedIn + EDM + GMB) due today — status: ready to schedule, not yet published",
+      "source": "Content",
+      "severity": "critical"
+    },
+    {
+      "text": "QAC Adelaide in 8 days — 7/10 prep tasks complete, 3 still outstanding",
+      "source": "Events",
+      "severity": "high"
+    },
+    {
+      "text": "Comms Connect NZ in 37 days — 0/14 prep tasks complete, 8-week prep window has passed",
+      "source": "Events",
+      "severity": "high"
+    },
+    {
+      "text": "ClickUp Pro renewal due 24 Apr — consider switching to annual billing",
+      "source": "Finance",
+      "severity": "high"
+    }
+  ],
+  "kpis": {
+    "content": [
+      {
+        "label": "LinkedIn Posts",
+        "current": 3,
+        "target": 3
+      },
+      {
+        "label": "EDMs Sent",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "VIAVI EDM (month)",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "Tektronix EDM (month)",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "LinkedIn Connections",
+        "current": 0,
+        "target": 1
+      }
+    ],
+    "website": [
+      {
+        "label": "Website Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "Product Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "SEO Pages Optimised",
+        "current": 0,
+        "target": 1
+      }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [
+      {
+        "name": "Vicom Marketing Meeting",
+        "date": "Thu 24 Apr",
+        "time": "1:00 PM AEST",
+        "type": "Vicom Internal",
+        "participants": [
+          "Aveet Prasad",
+          "Thomas Flood",
+          "Andrew Norrie",
+          "Shaneel Kumar"
+        ]
+      }
+    ],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [
+      {
+        "name": "Quantum Australia Conference 1 week to go",
+        "status": "ready to schedule",
+        "type": [
+          "LinkedIn Post",
+          "EDM Post",
+          "Google My Business Post"
+        ],
+        "partner": [
+          "EA Elektro-Automatik",
+          "Tektronix",
+          "Keithley"
+        ]
+      }
+    ],
+    "due_this_week": [
+      {
+        "name": "Demo Video: Experience Next-Generation Current Measurement [TICP]",
+        "status": "ready to schedule",
+        "due": "Tue 21 Apr",
+        "type": [
+          "LinkedIn Post",
+          "Google My Business Post"
+        ],
+        "partner": [
+          "Tektronix"
+        ]
+      },
+      {
+        "name": "Accelerate Automation: Effortless Script Generation with TSP Toolkit [MP5000 Series]",
+        "status": "ready to schedule",
+        "due": "Wed 23 Apr",
+        "type": [
+          "LinkedIn Post",
+          "Google My Business Post"
+        ],
+        "partner": [
+          "Tektronix"
+        ]
+      }
+    ],
+    "promotions": {
+      "count": 1,
+      "items": [
+        {
+          "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO",
+          "status": "active",
+          "expires": "30 Sep 2026"
+        }
+      ],
+      "ending_soon": 0,
+      "end_note": ""
+    }
+  },
+  "events": [
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "28 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 8,
+      "tasks_complete": 7,
+      "tasks_total": 10,
+      "flags": [
+        "Ship to Adelaide depot still pending",
+        "Floor Screen Video not started",
+        "Product Plarks not started"
+      ]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 37,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "All subtasks still in template status",
+        "8-week prep tasks now overdue"
+      ]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Australia",
+      "days_out": 44,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "All subtasks still in template status"
+      ]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 177,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": {
+      "website_pages": 41,
+      "product_pages": 5,
+      "seo": 91
+    },
+    "suggested": [
+      {
+        "page": "OTDR Testing",
+        "status": "optimise this week",
+        "list": "Pages to Optimise"
+      },
+      {
+        "page": "CRFS TSCM RFeye Guard",
+        "status": "content gathering",
+        "list": "Product Pages"
+      }
+    ],
+    "seo_warning": null
+  },
+  "finance": {
+    "totals": {
+      "monthly": 514,
+      "annual": 6162,
+      "thomas_monthly": 278,
+      "active_subs": 13
+    },
+    "overdue": [],
+    "renewals_this_week": [
+      {
+        "name": "ClickUp Pro",
+        "date": "24 Apr 2026",
+        "amount": 45.0,
+        "payment": "Thomas Flood"
+      }
+    ],
+    "thomas_card": [
+      {
+        "name": "Claude AI",
+        "monthly": 169.0
+      },
+      {
+        "name": "ClickUp Pro",
+        "monthly": 45.0
+      },
+      {
+        "name": "Buffer",
+        "monthly": 35.0
+      },
+      {
+        "name": "Zapier PRO",
+        "monthly": 29.0
+      }
+    ],
+    "pec_note": ""
+  },
+  "actions": [
+    {
+      "category": "Content",
+      "items": [
+        "Publish QAC 1 week to go LinkedIn + EDM + GMB post — due today",
+        "Schedule Demo Video post for tomorrow",
+        "Schedule Accelerate Automation post for Wednesday"
+      ]
+    },
+    {
+      "category": "Events",
+      "items": [
+        "Finalise QAC Adelaide shipping to depot",
+        "Create floor screen video for QAC Adelaide",
+        "Prepare product plarks for QAC Adelaide",
+        "Begin Comms Connect NZ prep — start website event page and EDM planning"
+      ]
+    },
+    {
+      "category": "LinkedIn",
+      "items": [
+        "Complete weekly LinkedIn connection requests"
+      ]
+    },
+    {
+      "category": "Website",
+      "items": [
+        "Optimise OTDR Testing page (flagged as optimise this week)",
+        "Progress CRFS TSCM RFeye Guard product page"
+      ]
+    },
+    {
+      "category": "Finance",
+      "items": [
+        "Review ClickUp Pro renewal on 24 Apr — switch to annual to save"
+      ]
+    }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 1,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
