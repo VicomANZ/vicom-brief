@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-04-21T05:00:00+10:00",
+  "updated_at": "2026-04-21T09:51:26+10:00",
   "active": [
     {
       "name": "WP Rocket",
       "category": "Website Speed",
       "cycle": "Annual",
       "annual": 85,
-      "monthly": 7.00,
+      "monthly": 7.0,
       "renewal": "2026-12-17",
       "payment": "Vicom CC",
       "url": "wp-rocket.me",
@@ -17,7 +17,7 @@
       "category": "Social Media",
       "cycle": "Annual",
       "annual": 420,
-      "monthly": 35.00,
+      "monthly": 35.0,
       "renewal": "2027-03-11",
       "payment": "Thomas Flood",
       "url": "publish.buffer.com",
@@ -28,7 +28,7 @@
       "category": "AI Tools",
       "cycle": "Annual",
       "annual": 348,
-      "monthly": 29.00,
+      "monthly": 29.0,
       "renewal": "2027-02-12",
       "payment": "Thomas Flood",
       "url": "zapier.com",
@@ -50,7 +50,7 @@
       "category": "AI Tools",
       "cycle": "Monthly",
       "annual": 2028,
-      "monthly": 169.00,
+      "monthly": 169.0,
       "renewal": "2026-05-03",
       "payment": "Thomas Flood",
       "url": "claude.ai",
@@ -61,7 +61,7 @@
       "category": "Hosting",
       "cycle": "Biennually",
       "annual": 222,
-      "monthly": 18.50,
+      "monthly": 18.5,
       "renewal": "2027-10-29",
       "payment": "Vicom CC",
       "url": "ventraip.com.au",
@@ -72,7 +72,7 @@
       "category": "Hosting",
       "cycle": "Biennually",
       "annual": 137,
-      "monthly": 11.40,
+      "monthly": 11.4,
       "renewal": "2026-11-28",
       "payment": "Vicom CC",
       "url": "ventraip.com.au",
@@ -94,7 +94,7 @@
       "category": "Design",
       "cycle": "Annual",
       "annual": 165,
-      "monthly": 13.70,
+      "monthly": 13.7,
       "renewal": "2027-03-03",
       "payment": "Vicom CC",
       "url": "canva.com",
@@ -105,7 +105,7 @@
       "category": "CMS",
       "cycle": "Monthly",
       "annual": 540,
-      "monthly": 45.00,
+      "monthly": 45.0,
       "renewal": "2026-04-24",
       "payment": "Thomas Flood",
       "url": "app.clickup.com",
@@ -116,7 +116,7 @@
       "category": "Email Marketing",
       "cycle": "Annual",
       "annual": 290,
-      "monthly": 24.10,
+      "monthly": 24.1,
       "renewal": "2027-01-24",
       "payment": "Vicom CC",
       "url": "my.stripo.email",
@@ -127,7 +127,7 @@
       "category": "Social Media",
       "cycle": "Annual",
       "annual": 704,
-      "monthly": 58.60,
+      "monthly": 58.6,
       "renewal": "2026-10-26",
       "payment": "Vicom CC",
       "url": "linkedin.com",
@@ -146,9 +146,25 @@
     }
   ],
   "cancelled": [
-    { "name": "Planable", "category": "Social Media", "payment": "Vicom CC" },
-    { "name": "Chat GPT", "category": "AI Tools", "payment": "Vicom CC" },
-    { "name": "Trello Pro", "category": "CMS", "payment": "Vicom CC" },
-    { "name": "PastePixel", "category": "Analytics", "payment": "Vicom CC" }
+    {
+      "name": "Planable",
+      "category": "Social Media",
+      "payment": "Vicom CC"
+    },
+    {
+      "name": "Chat GPT",
+      "category": "AI Tools",
+      "payment": "Vicom CC"
+    },
+    {
+      "name": "Trello Pro",
+      "category": "CMS",
+      "payment": "Vicom CC"
+    },
+    {
+      "name": "PastePixel",
+      "category": "Analytics",
+      "payment": "Vicom CC"
+    }
   ]
 }
