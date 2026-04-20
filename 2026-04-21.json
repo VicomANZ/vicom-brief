@@ -1,0 +1,126 @@
+{
+  "date": "2026-04-21",
+  "date_label": "Tue 21 Apr 2026",
+  "week_label": "Week of 20 Apr — 26 Apr 2026",
+  "agents": {
+    "reporting": ["Content Calendar", "Promotion Tracking", "LinkedIn Connections", "Pages to Optimise", "Pages Building", "Product Pages", "Events", "Marketing Meetings", "Cost Tracking"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    { "text": "QAC Adelaide in 7 days — 3 prep tasks still incomplete (shipping, floor video, product plarks)", "source": "Events", "severity": "high" },
+    { "text": "ClickUp Pro renewal due Friday 24 Apr — consider switching to annual billing", "source": "Finance", "severity": "high" }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 4, "target": 3 },
+      { "label": "EDMs Sent", "current": 1, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 1, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 1, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [
+      { "title": "Vicom Management Meeting - Melbourne", "time": "Tue 21 Apr", "status": "scheduled" }
+    ],
+    "tomorrow": [],
+    "upcoming": [
+      { "title": "Vicom Marketing Meeting", "time": "Fri 24 Apr", "status": "scheduled" }
+    ],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [
+      { "title": "Demo Video: Experience Next-Generation Current Measurement [TICP]", "status": "scheduled", "partner": "Tektronix" }
+    ],
+    "due_this_week": [
+      { "title": "Protectr Fibre Uptime and Security", "status": "scheduled", "due": "2026-04-22", "partner": "VIAVI" },
+      { "title": "Accelerate Automation: Effortless Script Generation with TSP Toolkit [MP5000 Series]", "status": "scheduled", "due": "2026-04-23", "partner": "Tektronix" }
+    ],
+    "promotions": {
+      "count": 1,
+      "items": [
+        { "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO", "status": "active" }
+      ],
+      "ending_soon": 0,
+      "end_note": ""
+    }
+  },
+  "events": [
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "28 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 7,
+      "tasks_complete": 7,
+      "tasks_total": 10,
+      "flags": []
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 36,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["All prep tasks still templates"]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Australia",
+      "days_out": 43,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["All prep tasks still templates"]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 176,
+      "tasks_complete": 0,
+      "tasks_total": 17,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": { "website_pages": 41, "product_pages": 5, "seo": 91 },
+    "suggested": [
+      { "title": "Optical Fibre & Network Deployment | OTDR Testing", "status": "optimise this week" }
+    ],
+    "seo_warning": null
+  },
+  "finance": {
+    "totals": { "monthly": 514, "annual": 6166, "thomas_monthly": 278, "active_subs": 13 },
+    "overdue": [],
+    "renewals_this_week": [
+      { "name": "Clickup Pro", "date": "2026-04-24", "amount": 45.00 }
+    ],
+    "thomas_card": [
+      { "name": "Buffer", "monthly": 35.00 },
+      { "name": "Zapier PRO", "monthly": 29.00 },
+      { "name": "Claude AI", "monthly": 169.00 },
+      { "name": "Clickup Pro", "monthly": 45.00 }
+    ],
+    "pec_note": ""
+  },
+  "actions": [
+    { "category": "Events", "items": ["Complete QAC Adelaide remaining prep — shipping, floor screen video, product plarks due before 28 Apr"] },
+    { "category": "Content", "items": ["Send LinkedIn connection requests this week to hit weekly KPI"] },
+    { "category": "Website", "items": ["Complete OTDR Testing SEO page — marked as optimise this week"] },
+    { "category": "Finance", "items": ["ClickUp Pro renewal Friday — switch to annual billing to save costs"] }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 2,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
