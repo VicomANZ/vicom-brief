@@ -79,18 +79,20 @@
     "today": [
       {
         "name": "Vicom Management Meeting - Melbourne",
-        "time": "Tue 21 Apr",
-        "type": "scheduled",
-        "participants": "",
+        "time": "9:00 AM",
+        "type": "internal",
+        "participants": "Andrew Norrie, Shaneel Kumar, Aveet Prasad, Thomas Flood",
         "warning": ""
       }
     ],
     "tomorrow": [],
     "upcoming": [
       {
-        "title": "Vicom Marketing Meeting",
-        "time": "Fri 24 Apr",
-        "status": "scheduled"
+        "name": "Vicom Marketing Meeting",
+        "date": "2026-04-25",
+        "time": "1:00 PM",
+        "type": "internal",
+        "warning": ""
       }
     ],
     "follow_up": []
@@ -105,16 +107,22 @@
     ],
     "due_this_week": [
       {
-        "title": "Protectr Fibre Uptime and Security",
-        "status": "scheduled",
-        "due": "2026-04-22",
-        "partner": "VIAVI"
+        "name": "Protectr Fibre Uptime and Security",
+        "partner": "VIAVI",
+        "date": "",
+        "status": "scheduled"
       },
       {
-        "title": "Accelerate Automation: Effortless Script Generation with TSP Toolkit [MP5000 Series]",
-        "status": "scheduled",
-        "due": "2026-04-23",
-        "partner": "Tektronix"
+        "name": "Accelerate Automation: Effortless Script Generation with TSP Toolkit [MP5000 Series]",
+        "partner": "Tektronix",
+        "date": "",
+        "status": "scheduled"
+      },
+      {
+        "name": "Protect Fibre Uptime and Security",
+        "partner": "VIAVI",
+        "date": "2026-04-22",
+        "status": "scheduled"
       }
     ],
     "promotions": {
