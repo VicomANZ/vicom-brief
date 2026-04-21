@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-21T09:51:26+10:00",
+  "updated": "2026-04-21T10:11:07+10:00",
   "content": [
     {
       "id": "86d1vz6b4",
@@ -364,6 +364,24 @@
       "blog_title": "",
       "gmb_url": "",
       "url": "https://app.clickup.com/t/86d2mcpr1"
+    },
+    {
+      "id": "86d2protect",
+      "name": "Protect Fibre Uptime and Security",
+      "date": "2026-04-22",
+      "status": "scheduled",
+      "type": "content",
+      "content_type": [
+        "LinkedIn",
+        "GMB"
+      ],
+      "partner": "VIAVI",
+      "partner_color": "#ab4aba",
+      "linkedin_copy": "",
+      "edm_subject": "",
+      "blog_title": "",
+      "gmb_url": "",
+      "url": "https://app.clickup.com/t/86d2protect"
     },
     {
       "id": "86d2mcpta",
