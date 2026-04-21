@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-21T09:51:26+10:00",
+  "updated_at": "2026-04-22T05:00:00+10:00",
   "active": [
     {
       "name": "WP Rocket",
@@ -101,7 +101,7 @@
       "notes": ""
     },
     {
-      "name": "Clickup Pro",
+      "name": "ClickUp Pro",
       "category": "CMS",
       "cycle": "Monthly",
       "annual": 540,
