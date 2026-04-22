@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T05:00:00+10:00",
+  "updated_at": "2026-04-23T05:00:00+10:00",
   "active": [
     {
       "name": "WP Rocket",
@@ -59,7 +59,7 @@
     {
       "name": "Website Hosting NZ",
       "category": "Hosting",
-      "cycle": "Biennually",
+      "cycle": "Biennially",
       "annual": 222,
       "monthly": 18.5,
       "renewal": "2027-10-29",
@@ -70,7 +70,7 @@
     {
       "name": "Website Hosting AUS",
       "category": "Hosting",
-      "cycle": "Biennually",
+      "cycle": "Biennially",
       "annual": 137,
       "monthly": 11.4,
       "renewal": "2026-11-28",
@@ -86,7 +86,7 @@
       "monthly": 26.85,
       "renewal": "2027-03-05",
       "payment": "Vicom CC",
-      "url": "cognitoforms.com",
+      "url": "www.cognitoforms.com",
       "notes": ""
     },
     {
@@ -97,7 +97,7 @@
       "monthly": 13.7,
       "renewal": "2027-03-03",
       "payment": "Vicom CC",
-      "url": "canva.com",
+      "url": "www.canva.com",
       "notes": ""
     },
     {
@@ -130,7 +130,7 @@
       "monthly": 58.6,
       "renewal": "2026-10-26",
       "payment": "Vicom CC",
-      "url": "linkedin.com",
+      "url": "www.linkedin.com",
       "notes": ""
     },
     {
@@ -163,7 +163,7 @@
     },
     {
       "name": "PastePixel",
-      "category": "Analytics",
+      "category": "SEO",
       "payment": "Vicom CC"
     }
   ]

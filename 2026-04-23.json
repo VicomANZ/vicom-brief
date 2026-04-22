@@ -1,0 +1,277 @@
+{
+  "date": "2026-04-23",
+  "date_label": "Thu 23 Apr 2026",
+  "week_label": "Week of 20 Apr — 24 Apr 2026",
+  "agents": {
+    "reporting": [
+      "Content Calendar",
+      "Promotion Tracking",
+      "LinkedIn Connections",
+      "Pages to Optimise",
+      "Pages Building",
+      "Product Pages",
+      "Events",
+      "Marketing Meetings",
+      "Cost Tracking"
+    ],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    {
+      "text": "ClickUp Pro renews TOMORROW (24 Apr) on Thomas's card — notes say update to annual",
+      "source": "Finance",
+      "severity": "high"
+    },
+    {
+      "text": "QAC Adelaide in 5 days — 3 open prep tasks (shipping, floor video, product plarks)",
+      "source": "Events",
+      "severity": "high"
+    },
+    {
+      "text": "LinkedIn Connections KPI at 0/1 — no connection request completed this week",
+      "source": "KPIs",
+      "severity": "high"
+    },
+    {
+      "text": "Website, Product, and SEO page KPIs all at 0/1 this week",
+      "source": "KPIs",
+      "severity": "high"
+    }
+  ],
+  "kpis": {
+    "content": [
+      {
+        "label": "LinkedIn Posts",
+        "current": 4,
+        "target": 3
+      },
+      {
+        "label": "EDMs Sent",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "VIAVI EDM (month)",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "Tektronix EDM (month)",
+        "current": 1,
+        "target": 1
+      },
+      {
+        "label": "LinkedIn Connections",
+        "current": 0,
+        "target": 1
+      }
+    ],
+    "website": [
+      {
+        "label": "Website Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "Product Pages Built",
+        "current": 0,
+        "target": 1
+      },
+      {
+        "label": "SEO Pages Optimised",
+        "current": 0,
+        "target": 1
+      }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [
+      {
+        "name": "Vicom Marketing Meeting",
+        "date": "Fri 24 Apr",
+        "status": "scheduled"
+      }
+    ],
+    "upcoming": [],
+    "follow_up": [
+      {
+        "name": "Vicom Management Meeting - Melbourne",
+        "date": "Tue 21 Apr",
+        "note": "Status still marked as today's meeting — confirm completion and log outcomes"
+      }
+    ]
+  },
+  "content": {
+    "due_today": [
+      {
+        "name": "Accelerate Automation: Effortless Script Generation with TSP Toolkit [MP5000 Series]",
+        "status": "scheduled",
+        "type": "LinkedIn + GMB"
+      }
+    ],
+    "due_this_week": [
+      {
+        "name": "Quantum Australia Conference 1 week to go",
+        "status": "published",
+        "due": "Mon 20 Apr",
+        "type": "LinkedIn + EDM + GMB"
+      },
+      {
+        "name": "Demo Video: Experience Next-Generation Current Measurement [TICP]",
+        "status": "published",
+        "due": "Tue 21 Apr",
+        "type": "LinkedIn + GMB"
+      },
+      {
+        "name": "Protect Fibre Uptime and Security",
+        "status": "published",
+        "due": "Wed 22 Apr",
+        "type": "LinkedIn + GMB"
+      },
+      {
+        "name": "Accelerate Automation: Effortless Script Generation with TSP Toolkit",
+        "status": "scheduled",
+        "due": "Thu 23 Apr",
+        "type": "LinkedIn + GMB"
+      }
+    ],
+    "promotions": {
+      "count": 1,
+      "items": [
+        "Trade-In — Save Up to 30% on 4/5/6 Series B MSO"
+      ],
+      "ending_soon": 0,
+      "end_note": ""
+    }
+  },
+  "events": [
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "28 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": 5,
+      "tasks_complete": 7,
+      "tasks_total": 10,
+      "flags": [
+        "Ship to Adelaide DEPOT not started",
+        "Floor screen video not started",
+        "Product plarks not started"
+      ]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 34,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "All 14 prep tasks still in templates"
+      ]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Sydney NSW",
+      "days_out": 41,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": [
+        "All 14 prep tasks still in templates"
+      ]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 174,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": {
+      "website_pages": 41,
+      "product_pages": 10,
+      "seo": 92
+    },
+    "suggested": [
+      "OTDR Testing — flagged as optimise this week in Pages to Optimise"
+    ],
+    "seo_warning": null
+  },
+  "finance": {
+    "totals": {
+      "monthly": 513.52,
+      "annual": 6166,
+      "thomas_monthly": 278.0,
+      "active_subs": 13
+    },
+    "overdue": [],
+    "renewals_this_week": [
+      "ClickUp Pro — $45/mo on Thomas's card, renews 24 Apr (notes: update to annual)"
+    ],
+    "thomas_card": [
+      {
+        "name": "Buffer",
+        "monthly": 35.0
+      },
+      {
+        "name": "Zapier PRO",
+        "monthly": 29.0
+      },
+      {
+        "name": "Claude AI",
+        "monthly": 169.0
+      },
+      {
+        "name": "ClickUp Pro",
+        "monthly": 45.0
+      }
+    ],
+    "pec_note": ""
+  },
+  "actions": [
+    {
+      "category": "Finance",
+      "items": [
+        "Switch ClickUp Pro to annual billing before tomorrow's renewal (24 Apr)"
+      ]
+    },
+    {
+      "category": "Events",
+      "items": [
+        "Complete QAC Adelaide shipping, floor screen video, and product plarks before 28 Apr",
+        "Start Comms Connect NZ prep — 0/14 tasks still in templates, 34 days to go"
+      ]
+    },
+    {
+      "category": "Content",
+      "items": [
+        "Publish Accelerate Automation LinkedIn post today (scheduled)"
+      ]
+    },
+    {
+      "category": "Website",
+      "items": [
+        "Optimise OTDR Testing page — flagged for this week",
+        "Target at least 1 product page and 1 website page build this week"
+      ]
+    },
+    {
+      "category": "KPIs",
+      "items": [
+        "Complete LinkedIn Connection Requests task to hit 1/week target"
+      ]
+    }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 2,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 1
+  }
+}
