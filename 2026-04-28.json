@@ -1,0 +1,122 @@
+{
+  "date": "2026-04-28",
+  "date_label": "Tue 28 Apr 2026",
+  "week_label": "Week of 27 Apr — 1 May 2026",
+  "agents": {
+    "reporting": ["Content Calendar", "Promotion Tracking", "LinkedIn Connections", "Pages to Optimise", "Pages Building", "Product Pages", "Events Calendar", "Marketing Meetings", "Cost Tracking"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    { "text": "QAC Adelaide starts TODAY — 3/10 prep tasks still incomplete (Ship to Adelaide DEPOT, Floor Screen Video, Product Plarks)", "source": "Events", "severity": "critical" },
+    { "text": "Claude AI renewal due 3 May — review before auto-renew ($169/month on Thomas's card)", "source": "Finance", "severity": "high" },
+    { "text": "Comms Connect NZ in 29 days — 0/14 prep tasks started, LinkedIn Event creation overdue", "source": "Events", "severity": "high" }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 3, "target": 3 },
+      { "label": "EDMs Sent", "current": 1, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 1, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 1, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [
+      { "name": "Customer Story: Life in the TUfast Eco Lane [4 Series MSO + EA]", "status": "ready to schedule", "type": "LinkedIn + GMB" }
+    ],
+    "due_this_week": [
+      { "name": "Comms Connect New Zealand", "due": "2026-04-27", "status": "published", "type": "LinkedIn + EDM + GMB" },
+      { "name": "Primer: Signal integrity Modeling (SIM) featuring 7 Series DPO", "due": "2026-04-30", "status": "ready to schedule", "type": "LinkedIn + GMB" }
+    ],
+    "promotions": {
+      "count": 1,
+      "items": [
+        { "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO", "status": "active", "expires": "2026-12-31" }
+      ],
+      "ending_soon": 0,
+      "end_note": ""
+    }
+  },
+  "events": [
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "28 Apr 2026",
+      "location": "Adelaide",
+      "days_out": 0,
+      "tasks_complete": 7,
+      "tasks_total": 10,
+      "flags": ["Event starts TODAY — 3 prep tasks still incomplete: Ship to Adelaide DEPOT, Floor Screen Video, Product Plarks"]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 29,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["LinkedIn Event creation overdue (due 6 weeks prior)", "All 14 prep tasks still templates"]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Sydney",
+      "days_out": 36,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["LinkedIn Event creation overdue (due 6 weeks prior)", "All 14 prep tasks still templates"]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne",
+      "days_out": 169,
+      "tasks_complete": 0,
+      "tasks_total": 17,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": { "website_pages": 41, "product_pages": 10, "seo": 91 },
+    "suggested": ["OTDR Testing — marked 'optimise this week' in SEO backlog"],
+    "seo_warning": null
+  },
+  "finance": {
+    "totals": { "monthly": 514, "annual": 6168, "thomas_monthly": 278, "active_subs": 13 },
+    "overdue": [],
+    "renewals_this_week": [
+      { "name": "Claude AI", "renewal": "2026-05-03", "monthly": 169.00 }
+    ],
+    "thomas_card": [
+      { "name": "Claude AI", "monthly": 169.00 },
+      { "name": "Clickup Pro", "monthly": 45.00 },
+      { "name": "Buffer", "monthly": 35.00 },
+      { "name": "Zapier PRO", "monthly": 29.00 }
+    ],
+    "pec_note": ""
+  },
+  "actions": [
+    { "category": "Events", "items": ["QAC Adelaide starts TODAY — ensure remaining 3 tasks (Ship to Adelaide DEPOT, Floor Screen Video, Product Plarks) are handled on-site", "Begin Comms Connect NZ prep — all 14 subtasks still templates with 29 days to go, LinkedIn Event creation is overdue"] },
+    { "category": "Content", "items": ["Publish Customer Story TUfast Eco Lane due today (Tue 28 Apr) — status ready to schedule", "Schedule Primer SIM LinkedIn post due Thursday (30 Apr)", "Comms Connect NZ EDM published yesterday — VIAVI EDM monthly target met"] },
+    { "category": "Website", "items": ["Start OTDR Testing page optimisation — marked as priority this week", "No website, product, or SEO pages completed yet this week — 0/3 targets"] },
+    { "category": "LinkedIn", "items": ["Send weekly connection requests — currently 0/1 for the week"] },
+    { "category": "Finance", "items": ["Claude AI renewal due 3 May (this Sunday) — $169/month on Thomas's card", "ClickUp Pro renewal due 24 May — consider switching to annual plan per notes"] }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 0,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
