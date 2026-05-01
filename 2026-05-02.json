@@ -1,0 +1,101 @@
+{
+  "date": "2026-05-02",
+  "date_label": "Sat 2 May 2026",
+  "week_label": "Week of 27 Apr — 1 May 2026",
+  "agents": {
+    "reporting": ["Content Calendar", "Promotion Tracking", "LinkedIn Connections", "Events", "Marketing Meetings", "Website & SEO", "Cost Tracking"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    { "text": "QAC Adelaide ended 30 Apr — 3/10 prep tasks still incomplete", "source": "Events", "severity": "high" },
+    { "text": "Comms Connect NZ in 25 days — 0/14 prep tasks complete, all still templates", "source": "Events", "severity": "high" },
+    { "text": "VIAVI EDM (month) at 0/1 — no VIAVI EDM scheduled for May", "source": "Content", "severity": "high" },
+    { "text": "LinkedIn Connections at 0/1 for the week", "source": "Content", "severity": "high" }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 3, "target": 3 },
+      { "label": "EDMs Sent", "current": 1, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 0, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 2, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [],
+    "due_this_week": [
+      { "name": "Comms Connect New Zealand", "status": "published", "due": "2026-04-27" },
+      { "name": "Customer Story: Life in the TUfast Eco Lane [4 Series MSO + EA]", "status": "published", "due": "2026-04-28" },
+      { "name": "Primer: Signal integrity Modeling (SIM) featuring 7 Series DPO", "status": "published", "due": "2026-04-30" }
+    ],
+    "promotions": { "count": 1, "items": [{ "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO", "status": "active", "end_date": "2026-12-31" }], "ending_soon": 0, "end_note": "" }
+  },
+  "events": [
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 25,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["No LinkedIn Event created", "All 14 prep tasks still templates"]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Sydney NSW",
+      "days_out": 32,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["All 14 prep tasks still templates"]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 165,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": { "website_pages": 41, "product_pages": 10, "seo": 92 },
+    "suggested": [{ "name": "OTDR Testing", "list": "Pages to Optimise", "status": "optimise this week" }],
+    "seo_warning": null
+  },
+  "finance": {
+    "totals": { "monthly": 345, "annual": 4134, "thomas_monthly": 109, "active_subs": 12 },
+    "overdue": [],
+    "renewals_this_week": [],
+    "thomas_card": [
+      { "name": "Buffer", "monthly": 35.00 },
+      { "name": "Zapier PRO", "monthly": 29.00 },
+      { "name": "ClickUp Pro", "monthly": 45.00 }
+    ],
+    "pec_note": ""
+  },
+  "actions": [
+    { "category": "Events", "items": ["Update QAC Adelaide status — event ended with 3 incomplete tasks (Ship to Adelaide, Floor Screen Video, Product Plarks)", "Start Comms Connect NZ prep — 25 days out, all 14 subtasks still templates", "Create LinkedIn Event for Comms Connect NZ — 6 weeks prior deadline has passed"] },
+    { "category": "Content", "items": ["Schedule a VIAVI EDM for May — monthly KPI currently at 0/1"] },
+    { "category": "LinkedIn", "items": ["Complete weekly LinkedIn Connection Requests — KPI at 0/1 with 1 day remaining"] }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 0,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}

@@ -1,17 +1,6 @@
 {
-  "updated_at": "2026-04-28T05:00:00+10:00",
+  "updated_at": "2026-05-02T05:00:00+10:00",
   "active": [
-    {
-      "name": "Claude AI",
-      "category": "AI Tools",
-      "cycle": "Monthly",
-      "annual": 2028,
-      "monthly": 169.00,
-      "renewal": "2026-05-03",
-      "payment": "Thomas Flood",
-      "url": "claude.ai",
-      "notes": ""
-    },
     {
       "name": "Sucuri",
       "category": "Security",
@@ -35,7 +24,7 @@
       "notes": ""
     },
     {
-      "name": "Clickup Pro",
+      "name": "ClickUp Pro",
       "category": "CMS",
       "cycle": "Monthly",
       "annual": 540,
@@ -92,7 +81,7 @@
     {
       "name": "Website Hosting NZ",
       "category": "Hosting",
-      "cycle": "Biennually",
+      "cycle": "Biennially",
       "annual": 222,
       "monthly": 18.50,
       "renewal": "2027-10-29",
@@ -114,7 +103,7 @@
     {
       "name": "Website Hosting AUS",
       "category": "Hosting",
-      "cycle": "Biennually",
+      "cycle": "Biennially",
       "annual": 137,
       "monthly": 11.40,
       "renewal": "2026-11-28",
@@ -145,10 +134,5 @@
       "notes": ""
     }
   ],
-  "cancelled": [
-    { "name": "Planable", "category": "Social Media", "payment": "Vicom CC" },
-    { "name": "Chat GPT", "category": "AI Tools", "payment": "Vicom CC" },
-    { "name": "Trello Pro", "category": "CMS", "payment": "Vicom CC" },
-    { "name": "PastePixel", "category": "Analytics", "payment": "Vicom CC" }
-  ]
+  "cancelled": []
 }
