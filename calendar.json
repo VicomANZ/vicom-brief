@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-01T05:07:24+10:00",
+  "updated": "2026-05-02T05:18:50+10:00",
   "content": [
     {
       "id": "86d1vz6b4",
@@ -322,7 +322,7 @@
       ],
       "partner": "Tektronix",
       "partner_color": "#3e63dd",
-      "linkedin_copy": " Download the latest firmware for your 2 Series MSO, 4/5/6 Series B MSOs, and 7 Series DPO oscilloscopes to unlock powerful new features, boost performance, and get critical security updates. https://www.tek.com/en/search?op=&keywords=V2.22.8%20V2.22.7&sort=desc&facets=_templatename%3Dsoftware%26parsedsoftwaretype%3DFirmware\n \nWhat's available with the latest firmware?\n \nEnhanced Security:\n\n \nExternal CD/DVD drive peripheral support added on Linux-based 2 Series MSOs, 4/5/6 Series B MSOs, and 7 Series DPOs.\n \n \nNew Features for Oscilloscopes with Advanced Analysis Options:\n \n \nAdvanced Jitter Analysis (opt. DJA): New SJ@Freq Measurement measures sinusoidal jitter at specified frequency for PLL and jitter tolerance analysis. \n \n3-Phase Inverter Motor Drive Analysis (opt. IMDA): Sin-Cos Sensor input now supported in DQ0 and all mechanical measurements to correlate rotational position.\n \nWide Bandgap – Double Pulse Test Analysis (opt. WBG-DPT): Parallel Topology Analysis now includes Overshoot, Undershoot, and Damping Factor measurements.\n \n \nNew Options for High-Speed Serial Workflows with the 7 Series DPO:\n \n \nUSB3.2 Tx Automated Compliance Solution available with option 7-CMUSB3.\n \nMIPI CPHY 2.0/1.1/1.0 Tx Compliance Solution available with option 7-CMCPHY20.\n \n64b/66b Line Decode and Search available with option 7-SR64B66B.\n \n \nNew Features for Signal Integrity Modeling Software (option 7-SIM):\n \n \nAutomatic oscilloscope and probe modeling to reduce setup time and errors with auto-loading of S-parameters for the DPO714AX scope and P7700/P7600 probes.\n \nNew check box to enable/disable R, L, and C elements for flexible circuit modeling.\n \nCopy the DUT Source block from the Physical Model into the Simulation Model for fast and consistent setup.\n \n Install the latest Tektronix firmware to enable new standard features and features available with your active software options.    \n",
+      "linkedin_copy": " Download the latest firmware for your 2 Series MSO, 4/5/6 Series B MSOs, and 7 Series DPO oscilloscopes to unlock powerful new features, boost performance, and get critical security updates. https://www.tek.com/en/search?op=&keywords=V2.22.8%20V2.22.7&sort=desc&facets=_templatename%3Dsoftware%26parsedsoftwaretype%3DFirmware\n \nWhat’s available with the latest firmware?\n \nEnhanced Security:\n\n \nExternal CD/DVD drive peripheral support added on Linux-based 2 Series MSOs, 4/5/6 Series B MSOs, and 7 Series DPOs.\n \n \nNew Features for Oscilloscopes with Advanced Analysis Options:\n \n \nAdvanced Jitter Analysis (opt. DJA): New SJ@Freq Measurement measures sinusoidal jitter at specified frequency for PLL and jitter tolerance analysis. \n \n3-Phase Inverter Motor Drive Analysis (opt. IMDA): Sin-Cos Sensor input now supported in DQ0 and all mechanical measurements to correlate rotational position.\n \nWide Bandgap – Double Pulse Test Analysis (opt. WBG-DPT): Parallel Topology Analysis now includes Overshoot, Undershoot, and Damping Factor measurements.\n \n \nNew Options for High-Speed Serial Workflows with the 7 Series DPO:\n \n \nUSB3.2 Tx Automated Compliance Solution available with option 7-CMUSB3.\n \nMIPI CPHY 2.0/1.1/1.0 Tx Compliance Solution available with option 7-CMCPHY20.\n \n64b/66b Line Decode and Search available with option 7-SR64B66B.\n \n \nNew Features for Signal Integrity Modeling Software (option 7-SIM):\n \n \nAutomatic oscilloscope and probe modeling to reduce setup time and errors with auto-loading of S-parameters for the DPO714AX scope and P7700/P7600 probes.\n \nNew check box to enable/disable R, L, and C elements for flexible circuit modeling.\n \nCopy the DUT Source block from the Physical Model into the Simulation Model for fast and consistent setup.\n \n Install the latest Tektronix firmware to enable new standard features and features available with your active software options.    \n",
       "edm_subject": "",
       "blog_title": "",
       "gmb_url": "https://www.tek.com/en/search?op=&keywords=V2.22.8%20V2.22.7&sort=desc&facets=_templatename%3Dsoftware%26parsedsoftwaretype%3DFirmware",
@@ -593,7 +593,7 @@
     },
     {
       "id": "86d1wtcyb",
-      "name": "Unlock Your Scope's Potential — 50% Off 4/5/6 Series Upgrades",
+      "name": "Unlock Your Scope’s Potential — 50% Off 4/5/6 Series Upgrades",
       "date": "2026-03-31",
       "status": "expired",
       "type": "promotion",
