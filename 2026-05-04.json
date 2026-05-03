@@ -1,0 +1,113 @@
+{
+  "date": "2026-05-04",
+  "date_label": "Mon 4 May 2026",
+  "week_label": "Week of 04 May — 10 May 2026",
+  "agents": {
+    "reporting": ["Content Calendar", "Promotion Tracking", "LinkedIn Connections", "Events", "Marketing Meetings", "Website & SEO", "Cost Tracking"],
+    "partial": [],
+    "missing": []
+  },
+  "critical": [
+    { "text": "Electronex Promotion #1 due today — still in draft", "source": "Content", "severity": "critical" },
+    { "text": "Comms Connect NZ in 23 days — 0/14 prep tasks complete, all still templates", "source": "Events", "severity": "high" },
+    { "text": "No event EDM scheduled for Comms Connect NZ — event within 30 days", "source": "Content", "severity": "high" },
+    { "text": "Electronex in 30 days — 0/14 prep tasks complete", "source": "Events", "severity": "high" },
+    { "text": "VIAVI EDM (month) at 0/1 — no VIAVI EDM scheduled for May", "source": "Content", "severity": "high" },
+    { "text": "LinkedIn Posts at 0/3 for the week — new week, no posts scheduled", "source": "Content", "severity": "high" }
+  ],
+  "kpis": {
+    "content": [
+      { "label": "LinkedIn Posts", "current": 0, "target": 3 },
+      { "label": "EDMs Sent", "current": 1, "target": 1 },
+      { "label": "VIAVI EDM (month)", "current": 0, "target": 1 },
+      { "label": "Tektronix EDM (month)", "current": 2, "target": 1 },
+      { "label": "LinkedIn Connections", "current": 0, "target": 1 }
+    ],
+    "website": [
+      { "label": "Website Pages Built", "current": 0, "target": 1 },
+      { "label": "Product Pages Built", "current": 0, "target": 1 },
+      { "label": "SEO Pages Optimised", "current": 0, "target": 1 }
+    ]
+  },
+  "meetings": {
+    "today": [],
+    "tomorrow": [],
+    "upcoming": [],
+    "follow_up": []
+  },
+  "content": {
+    "due_today": [
+      { "name": "Electronex Promotion #1", "status": "draft", "due": "2026-05-04" }
+    ],
+    "due_this_week": [
+      { "name": "Electronex Promotion #1", "status": "draft", "due": "2026-05-04" }
+    ],
+    "promotions": { "count": 1, "items": [{ "name": "Trade-In — Save Up to 30% on 4/5/6 Series B MSO", "status": "active", "end_date": "2026-12-31" }], "ending_soon": 0, "end_note": "" }
+  },
+  "events": [
+    {
+      "name": "Quantum Australia Conference Adelaide",
+      "date": "28 Apr 2026",
+      "location": "Adelaide SA",
+      "days_out": -6,
+      "tasks_complete": 7,
+      "tasks_total": 10,
+      "flags": ["Event completed — 3 tasks still open (Ship to Adelaide, Floor Screen Video, Product Plarks)"]
+    },
+    {
+      "name": "Comms Connect New Zealand",
+      "date": "27 May 2026",
+      "location": "New Zealand",
+      "days_out": 23,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["LinkedIn Event overdue — 6 weeks prior deadline passed", "No event EDM scheduled", "All 14 prep tasks still templates"]
+    },
+    {
+      "name": "Electronex",
+      "date": "3 Jun 2026",
+      "location": "Sydney NSW",
+      "days_out": 30,
+      "tasks_complete": 0,
+      "tasks_total": 14,
+      "flags": ["8-week prep items overdue", "All 14 prep tasks still templates"]
+    },
+    {
+      "name": "Comms Connect Melbourne",
+      "date": "14 Oct 2026",
+      "location": "Melbourne VIC",
+      "days_out": 163,
+      "tasks_complete": 0,
+      "tasks_total": 17,
+      "flags": []
+    }
+  ],
+  "website": {
+    "backlogs": { "website_pages": 41, "product_pages": 10, "seo": 92 },
+    "suggested": [{ "name": "OTDR Testing", "list": "Pages to Optimise", "status": "optimise this week" }],
+    "seo_warning": null
+  },
+  "finance": {
+    "totals": { "monthly": 345, "annual": 4134, "thomas_monthly": 109, "active_subs": 12 },
+    "overdue": [],
+    "renewals_this_week": [],
+    "thomas_card": [
+      { "name": "Buffer", "monthly": 35.00 },
+      { "name": "Zapier PRO", "monthly": 29.00 },
+      { "name": "ClickUp Pro", "monthly": 45.00 }
+    ],
+    "pec_note": ""
+  },
+  "actions": [
+    { "category": "Content", "items": ["Finalise Electronex Promotion #1 — due today, still in draft", "Schedule 3 LinkedIn posts this week to meet 3/week target", "Schedule a VIAVI EDM for May — monthly KPI at 0/1"] },
+    { "category": "Events", "items": ["Start Comms Connect NZ prep — 23 days out, 0/14 subtasks complete", "Create LinkedIn Event for Comms Connect NZ — 6 weeks prior deadline passed", "Start Electronex prep — 30 days out, 0/14 subtasks complete", "Close out QAC Adelaide — 3 tasks still open post-event"] },
+    { "category": "LinkedIn", "items": ["Complete weekly LinkedIn Connection Requests — KPI at 0/1"] },
+    { "category": "Website", "items": ["Optimise OTDR Testing page — marked 'optimise this week'"] }
+  ],
+  "weekly_summary": {
+    "meetings_scheduled": 0,
+    "meetings_completed": 0,
+    "meetings_cancelled": 0,
+    "outstanding_followups": 0
+  }
+}
